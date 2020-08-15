@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::view('/','template_super_administrateur');
+
+Route::group(['prefix'=>'surperadmin'],function (){
+
+    Route::view('/','super_administration.home');
+
 });
