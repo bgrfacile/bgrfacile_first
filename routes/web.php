@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::view('/','template_super_administrateur');
+Route::view('/','welcome');
 
-Route::group(['prefix'=>'surperadmin'],function (){
+Route::group(['prefix'=>'superadmin'],function (){
 
-    Route::view('/','super_administration.home');
-
+    Route::view('/','template_super_administrateur');
 });
