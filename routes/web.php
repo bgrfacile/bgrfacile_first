@@ -20,5 +20,5 @@ Route::view('/','welcome');
 
 Route::group(['prefix'=>'superadmin'],function (){
 
-    Route::view('/','template_super_administrateur');
+    Route::view('/','super_administration.home.home');
 });
