@@ -864,7 +864,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!--  logo -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{route('dashboardG.dashboard')}}">
             <img src="assets/logo.png" class="navbar-brand-img
           mx-auto" alt="...">
         </a>
@@ -881,10 +881,10 @@
                 </a>
                 <!-- Menu -->
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
-                    <a href="profile-posts.html" class="dropdown-item">Profil</a>
-                    <a href="account-general.html" class="dropdown-item">paramètres</a>
+                    <a href="#" class="dropdown-item">Profil</a>
+                    <a href="#" class="dropdown-item">paramètres</a>
                     <hr class="dropdown-divider">
-                    <a href="sign-in.html" class="dropdown-item">Se déconnecter</a>
+                    <a href="#" class="dropdown-item">Se déconnecter</a>
                 </div>
             </div>
         </div>
@@ -900,17 +900,17 @@
                     <div class="collapse show" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <a href="{{route('dashboardG.dashboard')}}" class="nav-link active">
                                     Site
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('dashboardG.users')}}" class="nav-link ">
                                     Utilisateurs
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="3" class="nav-link ">
+                                <a href="{{route('dashboardG.ecole')}}" class="nav-link ">
                                     Ecoles
                                 </a>
                             </li>
@@ -926,7 +926,7 @@
                     <div class="collapse " id="sidebarPages">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('dashboardG.fiches.index')}}" class="nav-link ">
                                     Listes
                                 </a>
                             </li>
@@ -942,7 +942,7 @@
                     <div class="collapse " id="sidebarCours">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('dashboardG.cours.index')}}" class="nav-link ">
                                     Tous les cours
                                 </a>
                             </li>
@@ -958,7 +958,7 @@
                     <div class="collapse " id="sidebarEcole">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{route('dashboardG.ecoles.index')}}" class="nav-link ">
                                     Toutes les écoles
                                 </a>
                             </li>
@@ -974,7 +974,7 @@
                     <div class="collapse" id="sidebarUsers">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link ">
+                                <a href="{{ route('dashboardG.utilisateurs.index') }}" class="nav-link ">
                                     Etudiants
                                 </a>
                             </li>
@@ -1002,7 +1002,7 @@
 {{--            info supplementaire--}}
             <ul class="navbar-nav mb-md-4">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('dashboardG.profil.index') }}">
                         <i class="fe fe-user"></i> profil
                     </a>
                 </li>
@@ -1062,7 +1062,7 @@
 
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                                                <img src="/assets/img/avatars/profiles/avatar-1.jpg" alt="..."
                                                      class="avatar-img rounded-circle"/>
                                             </div>
 
@@ -1090,7 +1090,7 @@
 
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."
+                                                <img src="/assets/img/avatars/profiles/avatar-2.jpg" alt="..."
                                                      class="avatar-img rounded-circle"/>
                                             </div>
 
@@ -1121,7 +1121,7 @@
                     <!-- Toggle photo user -->
                     <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                        <img src="/assets/img/avatars/profiles/avatar-1.jpg" alt="..."
                              class="avatar-img rounded-circle"/>
                     </a>
                     <!-- Menu -->
