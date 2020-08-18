@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bgrfacile
+                    @yield('content')
                 </div>
 
                 <div class="links">

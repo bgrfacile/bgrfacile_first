@@ -5,9 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <!-- Header -->
-                @include('administration_general/fiches/_navigation')
-                <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["orders-matiere", "orders-nom", "orders-type", "orders-auteur", "orders-status", "orders-date","orders-commentaire"]}'>
+            @include('administration_general/fiches/_navigation')
+            <!-- Card -->
+                <div class="card"
+                     data-list='{"valueNames": ["orders-matiere", "orders-nom", "orders-type", "orders-auteur", "orders-status", "orders-date","orders-commentaire"]}'>
                     <div class="card-header">
                         <!-- Search -->
                         <form>
@@ -27,7 +28,8 @@
                             <tr>
                                 <th>
                                     <div class="custom-control custom-checkbox table-checkbox">
-                                        <input type="checkbox" class="list-checkbox-all custom-control-input" name="ordersSelect" id="ordersSelectAll">
+                                        <input type="checkbox" class="list-checkbox-all custom-control-input"
+                                               name="ordersSelect" id="ordersSelectAll">
                                         <label class="custom-control-label" for="ordersSelectAll">&nbsp;</label>
                                     </div>
                                 </th>
@@ -73,7 +75,8 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox table-checkbox">
-                                        <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
+                                        <input type="checkbox" class="list-checkbox custom-control-input"
+                                               name="ordersSelect" id="ordersSelectOne">
                                         <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
                                     </div>
                                 </td>

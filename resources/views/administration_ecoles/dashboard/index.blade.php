@@ -1,5 +1,6 @@
 @extends('welcome')
 
 @section('content')
-    bgrfacile
+    dashboard ecoles
 @endsection
+

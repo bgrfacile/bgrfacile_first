@@ -12,35 +12,19 @@
     <title>bgrfacile | administration generale</title>
 
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="/assets/fonts/feather/feather.css"/>
-    <link rel="stylesheet" href="/assets/libs/flatpickr/dist/flatpickr.min.css"/>
-    <link rel="stylesheet" href="/assets/libs/quill/dist/quill.core.css"/>
-    <link rel="stylesheet" href="/assets/libs/highlightjs/styles/vs2015.css"/>
+    <link rel="stylesheet" href="/assets_template/fonts/feather/feather.css"/>
+    <link rel="stylesheet" href="/assets_template/libs/flatpickr/dist/flatpickr.min.css"/>
+    <link rel="stylesheet" href="/assets_template/libs/quill/dist/quill.core.css"/>
+    <link rel="stylesheet" href="/assets_template/libs/highlightjs/styles/vs2015.css"/>
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="/assets/css/theme.min.css" id="stylesheetLight">
-    <link rel="stylesheet" href="/assets/css/theme-dark.min.css" id="stylesheetDark">
-
+    <link rel="stylesheet" href="/assets_template/css/theme.min.css" id="stylesheetLight">
+    <link rel="stylesheet" href="/assets_template/css/theme-dark.min.css" id="stylesheetDark">
     <style>
         body {
             display: none;
         }
     </style>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag("js", new Date());
-        gtag("config", "UA-156446909-1");
-    </script>
-
 </head>
 
 <body>
@@ -843,10 +827,8 @@
                                         <small class="text-muted">
                                             3h ago
                                         </small>
-
                                     </div>
                                 </div>
-                                <!-- / .row -->
                             </a>
                         </div>
                     </div>
@@ -865,7 +847,7 @@
         </button>
         <!--  logo -->
         <a class="navbar-brand" href="{{route('dashboardG.dashboard')}}">
-            <img src="assets/logo.png" class="navbar-brand-img
+            <img src="/assets_template/logo.png" class="navbar-brand-img
           mx-auto" alt="...">
         </a>
         <!-- version mobile de la naviguation -->
@@ -876,7 +858,7 @@
                 <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-sm avatar-online">
-                        <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                        <img src="/assets_template/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
                     </div>
                 </a>
                 <!-- Menu -->
@@ -894,10 +876,10 @@
 {{--                Dashboards--}}
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button"
-                       aria-expanded="true" aria-controls="sidebarDashboards">
+                       aria-expanded="false" aria-controls="sidebarDashboards">
                         <i class="fe fe-home"></i> Dashboards
                     </a>
-                    <div class="collapse show" id="sidebarDashboards">
+                    <div class="collapse" id="sidebarDashboards">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a href="{{route('dashboardG.dashboard')}}" class="nav-link active">
@@ -919,72 +901,27 @@
                 </li>
 {{--                Fiches--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false"
-                       aria-controls="sidebarPages">
-                        <i class="fe fe-file"></i> Fiches
+                    <a class="nav-link active" href="{{route('dashboardG.fiches.index')}}" >
+                        <i class="fe fe-file-text"></i> Fiches
                     </a>
-                    <div class="collapse " id="sidebarPages">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{route('dashboardG.fiches.index')}}" class="nav-link ">
-                                    Listes
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
 {{--                cours--}}
                 <li class="nav-item">
-                    <a class="nav-link " href="#sidebarCours" data-toggle="collapse" role="button" aria-expanded="false"
-                       aria-controls="sidebarCours">
-                        <i class="fe fe-grid"></i> Cours
+                    <a class="nav-link" href="{{route('dashboardG.cours.index')}}">
+                        <i class="fe fe-book"></i> Cours
                     </a>
-                    <div class="collapse " id="sidebarCours">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{route('dashboardG.cours.index')}}" class="nav-link ">
-                                    Tous les cours
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
 {{--                ecoles--}}
                 <li class="nav-item">
-                    <a class="nav-link " href="#sidebarEcole" data-toggle="collapse" role="button" aria-expanded="false"
-                       aria-controls="sidebarCours">
-                        <i class="fe fe-grid"></i> Ecoles
+                    <a class="nav-link " href="{{route('dashboardG.ecoles.index')}}">
+                        <i class="fe fe-circle"></i> Ecoles
                     </a>
-                    <div class="collapse " id="sidebarEcole">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{route('dashboardG.ecoles.index')}}" class="nav-link ">
-                                    Toutes les écoles
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
 {{--                Utilisateurs--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#sidebarUsers" data-toggle="collapse" role="button" aria-expanded="false"
-                       aria-controls="sidebarAuth">
+                    <a class="nav-link" href="{{ route('dashboardG.utilisateurs.index') }}">
                         <i class="fe fe-users"></i> Utilisateurs
                     </a>
-                    <div class="collapse" id="sidebarUsers">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="{{ route('dashboardG.utilisateurs.index') }}" class="nav-link ">
-                                    Etudiants
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link ">
-                                    professeurs
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
 {{--                Notifications--}}
                 <li class="nav-item d-md-none">
@@ -1035,8 +972,8 @@
                     <a href="#" class="navbar-user-link" role="button" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">
                             <span class="icon active">
-                  <i class="fe fe-bell"></i>
-                </span>
+                                <i class="fe fe-bell"></i>
+                            </span>
                     </a>
 
                     <!-- Menu -->
@@ -1062,7 +999,7 @@
 
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img src="/assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                                                <img src="/assets_template/img/avatars/profiles/avatar-1.jpg" alt="..."
                                                      class="avatar-img rounded-circle"/>
                                             </div>
 
@@ -1090,7 +1027,7 @@
 
                                             <!-- Avatar -->
                                             <div class="avatar avatar-sm">
-                                                <img src="/assets/img/avatars/profiles/avatar-2.jpg" alt="..."
+                                                <img src="/assets_template/img/avatars/profiles/avatar-2.jpg" alt="..."
                                                      class="avatar-img rounded-circle"/>
                                             </div>
 
@@ -1121,15 +1058,15 @@
                     <!-- Toggle photo user -->
                     <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="/assets/img/avatars/profiles/avatar-1.jpg" alt="..."
+                        <img src="/assets_template/img/avatars/profiles/avatar-1.jpg" alt="..."
                              class="avatar-img rounded-circle"/>
                     </a>
                     <!-- Menu -->
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="profile-posts.html" class="dropdown-item">Profil</a>
-                        <a href="account-general.html" class="dropdown-item">paramètres</a>
+                        <a href="#" class="dropdown-item">Profil</a>
+                        <a href="#" class="dropdown-item">paramètres</a>
                         <hr class="dropdown-divider"/>
-                        <a href="sign-in.html" class="dropdown-item">Se déconnecter</a>
+                        <a href="#" class="dropdown-item">Se déconnecter</a>
                     </div>
                 </div>
             </div>
@@ -1144,26 +1081,23 @@
 <!-- JAVASCRIPT
     ================================================== -->
 <!-- Libs JS -->
-<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/libs/%40shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
-<script src="/assets/libs/autosize/dist/autosize.min.js"></script>
-<script src="/assets/libs/chart.js/dist/Chart.min.js"></script>
-<script src="/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
-<script src="/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
-<script src="/assets/libs/highlightjs/highlight.pack.min.js"></script>
-<script src="/assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-<script src="/assets/libs/list.js/dist/list.min.js"></script>
-<script src="/assets/libs/quill/dist/quill.min.js"></script>
-<script src="/assets/libs/select2/dist/js/select2.full.min.js"></script>
-<script src="/assets/libs/chart.js/Chart.extension.js"></script>
-
-<!-- Map -->
-<script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="/assets_template/libs/jquery/dist/jquery.min.js"></script>
+<script src="/assets_template/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets_template/libs/%40shopify/draggable/lib/es5/draggable.bundle.legacy.js"></script>
+<script src="/assets_template/libs/autosize/dist/autosize.min.js"></script>
+<script src="/assets_template/libs/chart.js/dist/Chart.min.js"></script>
+<script src="/assets_template/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="/assets_template/libs/flatpickr/dist/flatpickr.min.js"></script>
+<script src="/assets_template/libs/highlightjs/highlight.pack.min.js"></script>
+<script src="/assets_template/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+<script src="/assets_template/libs/list.js/dist/list.min.js"></script>
+<script src="/assets_template/libs/quill/dist/quill.min.js"></script>
+<script src="/assets_template/libs/select2/dist/js/select2.full.min.js"></script>
+<script src="/assets_template/libs/chart.js/Chart.extension.js"></script>
 
 <!-- Theme JS -->
-<script src="/assets/js/theme.min.js"></script>
-<script src="/assets/js/dashkit.min.js"></script>
+<script src="/assets_template/js/theme.min.js"></script>
+<script src="/assets_template/js/dashkit.min.js"></script>
 
 
 </body>

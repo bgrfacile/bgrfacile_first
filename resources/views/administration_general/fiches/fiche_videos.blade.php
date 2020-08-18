@@ -5,8 +5,8 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <!-- Header -->
-                @include('administration_general/fiches/_navigation')
-                <!-- Card -->
+            @include('administration_general/fiches/_navigation')
+            <!-- Card -->
                 <div class="card" data-list='{"valueNames": ["orders-matiere", "orders-nom", "orders-type", "orders-auteur", "orders-status", "orders-date","orders-commentaire"]}'>
                     <div class="card-header">
                         <!-- Search -->
