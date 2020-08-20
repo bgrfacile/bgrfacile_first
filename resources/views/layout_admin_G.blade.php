@@ -63,7 +63,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-mail"></i>
                                             </div>
                                         </div>
@@ -96,7 +97,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-archive"></i>
                                             </div>
                                         </div>
@@ -129,7 +131,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-code"></i>
                                             </div>
                                         </div>
@@ -162,7 +165,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-git-branch"></i>
                                             </div>
                                         </div>
@@ -195,7 +199,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-mail"></i>
                                             </div>
                                         </div>
@@ -228,7 +233,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-archive"></i>
                                             </div>
                                         </div>
@@ -261,7 +267,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-code"></i>
                                             </div>
                                         </div>
@@ -294,7 +301,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-git-branch"></i>
                                             </div>
                                         </div>
@@ -327,7 +335,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-mail"></i>
                                             </div>
                                         </div>
@@ -360,7 +369,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-archive"></i>
                                             </div>
                                         </div>
@@ -393,7 +403,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-code"></i>
                                             </div>
                                         </div>
@@ -426,7 +437,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm">
-                                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                                            <div
+                                                class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
                                                 <i class="fe fe-git-branch"></i>
                                             </div>
                                         </div>
@@ -466,7 +478,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -497,7 +510,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -528,7 +542,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-offline">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -559,7 +574,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -590,7 +606,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -621,7 +638,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-offline">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -652,7 +670,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -683,7 +702,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -714,7 +734,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-offline">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -745,7 +766,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-1.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -776,7 +798,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-online">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-2.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -807,7 +830,8 @@
 
                                         <!-- Avatar -->
                                         <div class="avatar avatar-sm avatar-offline">
-                                            <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." />
+                                            <img class="avatar-img rounded-circle"
+                                                 src="assets/img/avatars/profiles/avatar-3.jpg" alt="..."/>
                                         </div>
 
                                     </div>
@@ -858,7 +882,8 @@
                 <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     <div class="avatar avatar-sm avatar-online">
-                        <img src="/assets_template/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                        <img src="/assets_template/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle"
+                             alt="...">
                     </div>
                 </a>
                 <!-- Menu -->
@@ -873,7 +898,7 @@
         <!-- Collapse menu burger -->
         <div class="collapse navbar-collapse" id="sidebarCollapse">
             <ul class="navbar-nav">
-{{--                Dashboards--}}
+                {{--                Dashboards--}}
                 <li class="nav-item">
                     <a class="nav-link" href="#sidebarDashboards" data-toggle="collapse" role="button"
                        aria-expanded="false" aria-controls="sidebarDashboards">
@@ -899,31 +924,37 @@
                         </ul>
                     </div>
                 </li>
-{{--                Fiches--}}
+                {{--                Fiches--}}
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{route('dashboardG.fiches.index')}}" >
+                    <a class="nav-link active" href="{{route('dashboardG.fiches.index')}}">
                         <i class="fe fe-file-text"></i> Fiches
                     </a>
                 </li>
-{{--                cours--}}
+                {{--                cours--}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('dashboardG.cours.index')}}">
                         <i class="fe fe-book"></i> Cours
                     </a>
                 </li>
-{{--                ecoles--}}
+                {{--                Exercice et solution--}}
+                <li class="nav-item">
+                    <a class="nav-link " href="{{route('dashboardG.es.index')}}">
+                        <i class="fe fe-send"></i> Exercices et solutions
+                    </a>
+                </li>
+                {{--                ecoles--}}
                 <li class="nav-item">
                     <a class="nav-link " href="{{route('dashboardG.ecoles.index')}}">
                         <i class="fe fe-circle"></i> Ecoles
                     </a>
                 </li>
-{{--                Utilisateurs--}}
+                {{--                Utilisateurs--}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboardG.utilisateurs.index') }}">
                         <i class="fe fe-users"></i> Utilisateurs
                     </a>
                 </li>
-{{--                Notifications--}}
+                {{--                Notifications--}}
                 <li class="nav-item d-md-none">
                     <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">
                         <span class="fe fe-bell"></span> Notifications
@@ -932,11 +963,11 @@
             </ul>
             <!-- Divider -->
             <hr class="navbar-divider my-3">
-{{--            entete nouvelle section --}}
+            {{--            entete nouvelle section --}}
             <h6 class="navbar-heading">
                 Information personnelle
             </h6>
-{{--            info supplementaire--}}
+            {{--            info supplementaire--}}
             <ul class="navbar-nav mb-md-4">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboardG.profil.index') }}">
@@ -944,21 +975,22 @@
                     </a>
                 </li>
             </ul>
-{{--            Pousser le contenu vers le bas--}}
+            {{--            Pousser le contenu vers le bas--}}
             <div class="mt-auto"></div>
-{{--            profil en ecran meduim --}}
+            {{--            profil en ecran meduim --}}
             <div class="navbar-user d-none d-md-flex" id="sidebarUser">
             </div>
         </div>
     </div>
 </nav>
 {{--pas utiliser--}}
-<nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md " id="sidebarSmall" style="display: none"></nav>
+<nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md " id="sidebarSmall"
+     style="display: none"></nav>
 <nav class="navbar navbar-expand-lg " id="topnav" style="display: none"></nav>
 
 {{--contenue principale--}}
 <div class="main-content">
-{{--    navbartop--}}
+    {{--    navbartop--}}
     <nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
         <div class="container-fluid">
             <!-- Form -->

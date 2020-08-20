@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col">
                 <h1 class="header-title text-truncate">
-                    Les fiches
+                    Exercices et Solutions
                 </h1>
             </div>
             <div class="col-auto">
@@ -24,7 +24,7 @@
                 <!-- Buttons -->
                 <a href="{{ route('dashboardG.cours.create') }}" class="btn btn-primary ml-2">
                     <i class="fe fe-plus"></i>
-                    Ajouter une fiche
+                    Exercice ou Solution
                 </a>
             </div>
         </div>
@@ -34,20 +34,12 @@
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                     <li class="nav-item">
                         <a href="{{ route('dashboardG.fiches.index') }}" class="nav-link text-nowrap active">
-                            <i class="fe fe-book-open"></i>
-                            érites <span class="badge badge-pill badge-soft-secondary">627</span>
+                            Exercices <span class="badge badge-pill badge-soft-secondary">627</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('dashboardG.fiches.audios') }}" class="nav-link text-nowrap">
-                            <i class="fe fe-headphones"></i>
-                            audios <span class="badge badge-pill badge-soft-secondary">98</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.videos') }}" class="nav-link text-nowrap">
-                            <i class="fe fe-video"></i>
-                            videos <span class="badge badge-pill badge-soft-secondary">18</span>
+                            Solutions <span class="badge badge-pill badge-soft-secondary">98</span>
                         </a>
                     </li>
                     <li class="nav-item">

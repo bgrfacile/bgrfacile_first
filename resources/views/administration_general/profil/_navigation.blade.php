@@ -47,6 +47,12 @@
                                 Notifications
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('dashboardG.profil.parametres') }}" class="nav-link">
+                                <i class="fe fe-settings"></i>
+                                Parametres
+                            </a>
+                        </li>
                     </ul>
 
                 </div>

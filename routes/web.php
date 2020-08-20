@@ -25,12 +25,18 @@ Route::group(['prefix'=>'adminG'],function (){
     Route::view('/dashboard-ecoles','administration_general.dashboard.ecoles')->name('dashboardG.ecole');
 
     Route::view('/fiches','administration_general.fiches.index')->name('dashboardG.fiches.index');
-    Route::view('/fiches/audios','administration_general.fiches.fiche_audios')->name('dashboardG.fiches.audios');
-    Route::view('/fiches/videos','administration_general.fiches.fiche_videos')->name('dashboardG.fiches.videos');
-    Route::view('/fiches/ecrites','administration_general.fiches.fiche_ecrites')->name('dashboardG.fiches.ecrites');
-    Route::view('/fiches/matieres','administration_general.fiches.fiche_matieres')->name('dashboardG.fiches.matieres');
+    Route::view('/fiches/audios','administration_general.fiches.audios')->name('dashboardG.fiches.audios');
+    Route::view('/fiches/videos','administration_general.fiches.videos')->name('dashboardG.fiches.videos');
+    Route::view('/fiches/brouillants','administration_general.fiches.brouillants')->name('dashboardG.fiches.brouillants');
+    Route::view('/fiches/matieres','administration_general.fiches.matieres')->name('dashboardG.fiches.matieres');
 
     Route::view('/cours','administration_general.cours.index')->name('dashboardG.cours.index');
+    Route::view('/cours/new','administration_general.cours.create')->name('dashboardG.cours.create');
+    Route::view('/cours/brouillants','administration_general.cours.brouillants')->name('dashboardG.cours.brouillants');
+    Route::view('/cours/cycles','administration_general.cours.cycles')->name('dashboardG.cours.cycles');
+
+    Route::view('/es','administration_general.es.index')->name('dashboardG.es.index');
+    Route::view('/es/corriger','administration_general.es.corriger')->name('dashboardG.es.corriger');
 
     Route::view('/ecoles','administration_general.ecoles.index')->name('dashboardG.ecoles.index');
 
@@ -39,6 +45,7 @@ Route::group(['prefix'=>'adminG'],function (){
     Route::view('/profil','administration_general.profil.index')->name('dashboardG.profil.index');
     Route::view('/profil/publications','administration_general.profil.publications')->name('dashboardG.profil.publications');
     Route::view('/profil/notifications','administration_general.profil.notifications')->name('dashboardG.profil.notifications');
+    Route::view('/profil/parametres','administration_general.profil.parametres')->name('dashboardG.profil.parametres');
 });
 
 Route::group(['prefix'=>'adminE'],function (){

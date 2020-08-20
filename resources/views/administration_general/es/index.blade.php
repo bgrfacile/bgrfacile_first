@@ -5,9 +5,9 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <!-- Header -->
-            @include('administration_general/cours/_navigation')
+            @include('administration_general/es/_navigation')
 
-                <!-- Tab content -->
+            <!-- Tab content -->
                 <div class="tab-content">
                     <!-- card line -->
                     <div class="tab-pane fade show active" id="companiesListPane" role="tabpanel"
@@ -330,7 +330,7 @@
                     <div class="tab-pane fade" id="companiesCardsPane" role="tabpanel"
                          aria-labelledby="companiesCardsTab">
                         <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 9, "pagination": {"paginationClass": "list-pagination"}}'
-                            id="companiesCards">
+                             id="companiesCards">
                             <!-- ENTETE -->
                             <div class="row align-items-center mb-4">
                                 <div class="col">

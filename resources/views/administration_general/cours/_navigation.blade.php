@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col">
                 <h1 class="header-title text-truncate">
-                    Les fiches
+                    Les cours
                 </h1>
             </div>
             <div class="col-auto">
@@ -24,7 +24,7 @@
                 <!-- Buttons -->
                 <a href="{{ route('dashboardG.cours.create') }}" class="btn btn-primary ml-2">
                     <i class="fe fe-plus"></i>
-                    Ajouter une fiche
+                    Ajouter un cours
                 </a>
             </div>
         </div>
@@ -33,33 +33,21 @@
             <div class="col">
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                     <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.index') }}" class="nav-link text-nowrap active">
-                            <i class="fe fe-book-open"></i>
-                            érites <span class="badge badge-pill badge-soft-secondary">627</span>
+                        <a href="{{ route('dashboardG.cours.index') }}" class="nav-link text-nowrap active">
+                            <i class="fe fe-cloud"></i>
+                            En ligne <span class="badge badge-pill badge-soft-secondary">627</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.audios') }}" class="nav-link text-nowrap">
-                            <i class="fe fe-headphones"></i>
-                            audios <span class="badge badge-pill badge-soft-secondary">98</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.videos') }}" class="nav-link text-nowrap">
-                            <i class="fe fe-video"></i>
-                            videos <span class="badge badge-pill badge-soft-secondary">18</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.brouillants') }}" class="nav-link text-nowrap">
+                        <a href="{{ route('dashboardG.cours.brouillants') }}" class="nav-link text-nowrap">
                             <i class="fe fe-cloud-off"></i>
-                            hors ligne <span class="badge badge-pill badge-soft-secondary">198</span>
+                            Hors ligne <span class="badge badge-pill badge-soft-secondary">198</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('dashboardG.fiches.matieres') }}" class="nav-link text-nowrap">
-                            <i class="fe fe-book"></i>
-                            matieres <span class="badge badge-pill badge-soft-secondary">198</span>
+                        <a href="{{ route('dashboardG.cours.cycles') }}" class="nav-link text-nowrap">
+                            <i class="fe fe-circle"></i>
+                            Les cycles <span class="badge badge-pill badge-soft-secondary">198</span>
                         </a>
                     </li>
                 </ul>
