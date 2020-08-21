@@ -970,7 +970,7 @@
             {{--            info supplementaire--}}
             <ul class="navbar-nav mb-md-4">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('dashboardG.profil.index') }}">
+                    <a class="nav-link" href="{{ route('users.index') }}">
                         <i class="fe fe-user"></i> profil
                     </a>
                 </li>

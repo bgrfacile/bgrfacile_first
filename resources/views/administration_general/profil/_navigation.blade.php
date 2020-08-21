@@ -16,7 +16,7 @@
                         bgrfacile
                     </h6>
                     <h1 class="header-title">
-                        Dianna Smiley
+                        {{$users[0]['email']}}
                     </h1>
                 </div>
                 <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">

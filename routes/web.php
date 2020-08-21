@@ -42,6 +42,7 @@ Route::group(['prefix'=>'adminG'],function (){
 
     Route::view('/utilisateurs','administration_general.utilisateurs.index')->name('dashboardG.utilisateurs.index');
 
+    Route::resource('/users','AdminG\UsersController');
     Route::view('/profil','administration_general.profil.index')->name('dashboardG.profil.index');
     Route::view('/profil/publications','administration_general.profil.publications')->name('dashboardG.profil.publications');
     Route::view('/profil/notifications','administration_general.profil.notifications')->name('dashboardG.profil.notifications');
@@ -51,3 +52,7 @@ Route::group(['prefix'=>'adminG'],function (){
 Route::group(['prefix'=>'adminE'],function (){
     Route::view('/','administration_ecoles.dashboard.index')->name('dashboardE.dashboard');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

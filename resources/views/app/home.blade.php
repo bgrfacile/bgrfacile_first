@@ -1,5 +1,6 @@
 @extends('welcome')
 
 @section('content')
-    bgrfacile
+    bgrfacile <br>
+    {{url()->current()}}
 @endsection
