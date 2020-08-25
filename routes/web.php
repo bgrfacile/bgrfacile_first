@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::view('/','app.home');
 
+Route::namespace('AdminG')->prefix('adminG')->group(function (){
+    Route::resource('/users','UsersController');
+});
+
 Route::group(['prefix'=>'adminG'],function (){
 
     Route::view('/','administration_general.dashboard.site')->name('dashboardG.dashboard');
@@ -42,7 +46,7 @@ Route::group(['prefix'=>'adminG'],function (){
 
     Route::view('/utilisateurs','administration_general.utilisateurs.index')->name('dashboardG.utilisateurs.index');
 
-    Route::resource('/users','AdminG\UsersController');
+//    Route::resource('/users','AdminG\UsersController');
     Route::view('/profil','administration_general.profil.index')->name('dashboardG.profil.index');
     Route::view('/profil/publications','administration_general.profil.publications')->name('dashboardG.profil.publications');
     Route::view('/profil/notifications','administration_general.profil.notifications')->name('dashboardG.profil.notifications');
