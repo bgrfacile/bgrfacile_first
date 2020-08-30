@@ -927,7 +927,7 @@
                 {{--                Fiches--}}
                 <li class="nav-item">
                     <a class="nav-link active" href="{{route('dashboardG.fiches.index')}}">
-                        <i class="fe fe-file-text"></i> Fiches
+                        <i class="fe fe-file-text"></i> Astuces
                     </a>
                 </li>
                 {{--                cours--}}

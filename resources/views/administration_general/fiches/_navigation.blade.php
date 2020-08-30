@@ -3,7 +3,7 @@
         <div class="row align-items-center">
             <div class="col">
                 <h1 class="header-title text-truncate">
-                    Les fiches
+                    Les Astuces
                 </h1>
             </div>
             <div class="col-auto">
