@@ -7,7 +7,7 @@ Site de cours.
 
 ## Fontionnalitées
 
-###fontionnalitée de bgrfacile
+##fontionnalitée de bgrfacile
 >Le super administrateur du site peut:
 
 - **Géré les astuces** c'est à dire créér,poster,modifier,supprimer les astuces sur le site.
@@ -19,7 +19,7 @@ Site de cours.
 - **Géré des utilisateurs** c'est à dire gere l'ensemble des utilisateur du site.
 
 
-###fonctionnalitée des écoles
+##fonctionnalitée des écoles
 >Une école peut:
 
 - **Gerer l'école** c'est à dire gérer toutes les renseignements de cette école et aussi sa finance 
@@ -32,10 +32,10 @@ Site de cours.
 
 - **Gerer les cours** c'est à dire gere l'ensemble des cours disponsés dans cette école.
 
-###fontionnalitée des étudiants
+##fontionnalitée des étudiants
 
 
-###fonctionnalitée des professeurs
+##fonctionnalitée des professeurs
 
 
 
