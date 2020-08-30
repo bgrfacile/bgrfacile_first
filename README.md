@@ -1,8 +1,8 @@
 <p align="center"><img src="/public/assets_template/logo.png" width="400"></p>
 
 
-## à propos de bgrfacile
 
+## à propos de bgrfacile
 Site de cours.
 
 ## Fontionnalitées
