@@ -6,7 +6,9 @@
 Site de cours.
 
 ## Fontionnalitées
-
+````
+ces fonctionnalités sont amenées à changer et évoluer avec le temps.
+````
 ##fontionnalitée de bgrfacile
 >Le super administrateur du site peut:
 
