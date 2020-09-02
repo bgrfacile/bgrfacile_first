@@ -5,22 +5,22 @@ bgrfacile est un site et aussi une application conçus  avec le but d'aidé les 
 Les fonctionnalités décritent ici sont amenées a changé.
 ````
 
-##Les utilisateurs  
+## Les utilisateurs  
 Les utilisateurs sont toutes les personnes qui auront un but à jouer sur la plate-forme.
 
-##bgrfacile  
+## bgrfacile  
 bgrfacile est le premier utilisateur de la plate-forme. Son rôle administré l'ensemble du site. 
 
-##les écoles  
+## les écoles  
 Chaque école possédant son nombre d'administrateurs définit, l'école a pour rôle de géré __`ses informations personnelles`__, **`ses professeurs`**, **`ses étudiants`**, **`ses cours`**. 
 
-##les professeurs  
+## les professeurs  
 les professeurs sont des utilisateurs qui ont la possibilité de créé du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenues qu'ils ont posté.
 
-##les étudiants  
+## les étudiants  
 les étudiants sont des utilisateurs qui ont la possibilité de __`lire`__, __`commenter`__ de contenue présent sur le site.
 
-##les cours  
+## les cours  
 
 >un cours est un document redigé par un professeur tiers ou un memnbre qualifié de bgrfacile et publier dans la partie cours sur la plateforme.Ce document peut contenir du texte,des images, des vidéos, des fichiers à télécharger et autres.
 
@@ -40,7 +40,7 @@ Chaque niveaux possèdes un certain nombre de matière.
 
 les astuces sont repartis en matières, en notions ou en domaines.    
 
-##les exercices et les solutons  
+## les exercices et les solutons  
 les cours sont souvent accompagné d'exerxcice et solution pour faciliter la compréhension et l'assimilation des notions.  
 Comme pour un cours, les exercices et corrigés sont caractérisés par des niveaux et ensuite par des matières.
 
