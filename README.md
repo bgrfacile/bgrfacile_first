@@ -11,13 +11,18 @@ Les fonctionnalités décritent ici sont amenées a changé.
 `les administrateurs de bgrfacile`, `les administrateurs des écoles`, `les professeurs` et `les étudiants`.  
 
 ### bgrfacile  
-bgrfacile est le premier utilisateur de la plate-forme. Son rôle est d'administré l'ensemble du site. 
+> représenté par des supers administrateurs, bgrfacile est l'acteur qui veille au bon fonctionnement du site.  
+
+
+#### les fonctionnalités de bgrfacile
+chaque administrateur de bgrfacile à la possibilité de  
+* 
+
 
 ### les écoles  
-> représenté par ses administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs structures.  
->  
-#### les fonctionnalités des écoles 
+> représenté par ses administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs structures.    
 
+#### les fonctionnalités des écoles 
 Chaque école a la possibilité de  
 * géré ses informations personnelles
 * géré ses professeurs  
