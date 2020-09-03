@@ -4,16 +4,16 @@ Ce contenue est souvent amené à changé.
 
 ## table de matière
 
-- [à propos de bgrfacile ](#à-propos de bgrfacile)
-- [Les acteurs](#Les acteurs)
+- [à propos de bgrfacile ](#à-propo-de-bgrfacile)
+- [Les acteurs](#Les-acteurs)
   - [bgrfacile](#bgrfacile)
   - [les écoles ](#les-écoles)
-  - [les professeurs](#les professeurs)
-  - [les étudiants](#les etudiants)
-- [les cours](#les cours)
-- [les astuces](#les astuces)
-- [les exercices et les solutons](#les exercices et les solutons)
-- [foires aux idées ](#foires aux idées )
+  - [les professeurs](#les-professeurs)
+  - [les étudiants](#les-etudiants)
+- [les cours](#les-cours)
+- [les astuces](#les-astuces)
+- [les exercices et les solutons](#les-exercices-et-les-solutons)
+- [foires aux idées ](#foires-aux-idées )
 
 # à propos de bgrfacile  
 bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage des étudiants.  
