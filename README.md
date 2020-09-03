@@ -24,7 +24,7 @@ Ce site web  permet non seulement de lire mais aussi de télécharger les cours,
 `les administrateurs de bgrfacile`, `les administrateurs des écoles`, `les professeurs` et `les étudiants`.  
 
 ### bgrfacile  
-> représenté par des supers administrateurs, bgrfacile est l'acteur qui veille au bon fonctionnement du site.  
+> représenté par des supers administrateurs, bgrfacile est moderateur du site, l'acteur qui veille au bon fonctionnement du site.  
 
 
 #### les fonctionnalités de bgrfacile
@@ -74,13 +74,14 @@ les cours sont repartis en __[formation](#les-formations)__ et les formations so
 ce sont des domaines études.
 
 ## les astuces  
->les astuces sont des raccouris pour comprendre une notion, un concept, une notion dans un domaine.
+>les astuces sont des raccouris pour comprendre une notion ou un concept.une astuce est disponible soit au format texte, soit au format vidéo ou soit au format audio.
 
-les astuces sont repartis en matières, en notions ou en domaines.    
+une astuces est classée par rapport à une matière, à une notion ou un domaine particulier.    
 
 ## les exercices et les solutons  
-les cours sont souvent accompagné d'exerxcice et solution pour faciliter la compréhension et l'assimilation des notions.  
-Comme pour un cours, les exercices et corrigés sont caractérisés par des niveaux et ensuite par des matières. 
+>les [cours](#les-cours) sont souvent accompagnés d'exerxcice et solution pour faciliter leur compréhension ou l'assimilation.  
+  
+Comme pour un cours, __les exercices__ et __corrigés__ sont classées par niveaux et ensuite ces niveaux par des matières. 
 
 ## foires aux idées 
 
