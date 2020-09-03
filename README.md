@@ -1,10 +1,9 @@
-
-# à propos de bgrfacile
-bgrfacile est un site et aussi une application conçus  avec le but d'aidé les étudiants dans la recherche de contenue éducatif  et scolaire sur la toile.  
-brgfacile intervient aussi chez les écoles toujours dans le but de facilité la transmission de connaissance.
 ````
-Les fonctionnalités décritent ici sont amenées a changé.
+Les fonctionnalités décritent ici sont amenées à changé.
 ````
+# à propos de bgrfacile  
+bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage des étudiants.  
+Ce site web permet non seulement de lire mais aussi de télécharger les cours, les exercices et leurs corrections faites par les Professeurs agrées par l’état.
 
 # Les acteurs  
 >Les acteurs sont toutes personnes qui ont une part active pour le bon fonctionnement de la plateforme notamment : 
