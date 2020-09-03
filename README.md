@@ -7,31 +7,33 @@ Les fonctionnalités décritent ici sont amenées a changé.
 ````
 
 # Les acteurs  
-Les acteurs sont toutes les personnes qui auront un rôle à jouer sur la plate-forme.
+>Les acteurs sont toutes personnes qui ont une part active pour le bon fonctionnement de la plateforme notamment : 
+`les administrateurs de bgrfacile`, `les administrateurs des écoles`, `les professeurs` et `les étudiants`.  
 
-## bgrfacile  
+### bgrfacile  
 bgrfacile est le premier utilisateur de la plate-forme. Son rôle est d'administré l'ensemble du site. 
 
-## les écoles  
+### les écoles  
 Chaque école possédant son nombre d'administrateurs définit, l'école a pour rôle de géré __`ses informations personnelles`__, __`ses professeurs`__, **`ses étudiants`**, **`ses cours`**. 
 
-## les professeurs  
+### les professeurs  
 les professeurs sont des utilisateurs qui ont la possibilité de créé du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenues qu'ils ont posté.
 
-## les étudiants  
+### les étudiants  
 les étudiants sont des utilisateurs qui ont la possibilité de __`lire`__, __`commenter`__ de contenue présent sur le site.
 
 # les cours  
 
->un cours est un document redigé par un professeur tiers ou un memnbre qualifié de bgrfacile et publier dans la partie cours sur la plateforme.Ce document peut contenir du texte,des images, des vidéos, des fichiers à télécharger et autres.
+> un cours est un document redigé par un professeur tiers ou un memnbre qualifié de bgrfacile et publier dans la partie cours sur la plateforme.Ce document peut contenir du texte,des images, des vidéos, des fichiers à télécharger et autres.
 
 les cours sont repartis en __`formation`__ et les formations sont repartis en __`niveaux`__, enfin chaque niveaux possèdent son nombre de __`matières`__ défini.
 
 ## les formations  
-ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: formation=college et diplôme=bepc``  
+> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: formation=college et diplôme=bepc``  
 
-## les niveaux  
-ce sont les differents étapes d'une formation.Chaque formation possède sont un nombre défini de niveau.
+## les niveaux 
+ 
+> ce sont les differents étapes d'une formation.Chaque formation possède sont un nombre défini de niveau.
 
 ## les matières  
 Chaque niveaux possèdes un certain nombre de matière.
