@@ -7,7 +7,7 @@ Les fonctionnalités décritent ici sont amenées a changé.
 ````
 
 ## Les acteurs  
-Les utilisateurs sont toutes les personnes qui auront un but à jouer sur la plate-forme.
+Les acteurs sont toutes les personnes qui auront un rôle à jouer sur la plate-forme.
 
 ## bgrfacile  
 bgrfacile est le premier utilisateur de la plate-forme. Son rôle administré l'ensemble du site. 
