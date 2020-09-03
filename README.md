@@ -20,7 +20,13 @@ Chaque école possédant son nombre d'administrateurs définit, l'école a pour 
 les professeurs sont des utilisateurs qui ont la possibilité de créé du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenues qu'ils ont posté.
 
 ### les étudiants  
-les étudiants sont des utilisateurs qui ont la possibilité de __`lire`__, __`commenter`__ de contenue présent sur le site.
+> Ce sont des utilisateurs lamda, les étudiants sont les personnes pour lesquels ce produit a été conçu, il s'agit des élève et étudiants mais également pour toute personne désirant s'instruire.  
+
+#### les fonctionnalités ou les actions des étudiants 
+les étudiants ont la possibilité de 
+* lire du contenue  
+* commenter du contenue  
+* subscrire un abonnement.
 
 # les cours  
 
@@ -45,7 +51,11 @@ les astuces sont repartis en matières, en notions ou en domaines.
 
 # les exercices et les solutons  
 les cours sont souvent accompagné d'exerxcice et solution pour faciliter la compréhension et l'assimilation des notions.  
-Comme pour un cours, les exercices et corrigés sont caractérisés par des niveaux et ensuite par des matières.
+Comme pour un cours, les exercices et corrigés sont caractérisés par des niveaux et ensuite par des matières. 
+
+# foires aux idées 
+
+> `styve` créé un flux RSS de l'actualité autour de l'éducation, des mises à jour du site etc.
 
 
 
