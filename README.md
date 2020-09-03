@@ -24,9 +24,9 @@ les professeurs sont des utilisateurs qui ont la possibilité de créé du conte
 
 #### les fonctionnalités ou les actions des étudiants 
 les étudiants ont la possibilité de 
-* lire du contenue  
-* commenter du contenue  
-* subscrire un abonnement.
+* lire   
+* commenter   
+* subscrire 
 
 # les cours  
 
