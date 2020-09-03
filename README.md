@@ -59,19 +59,19 @@ les étudiants ont la possibilité de
 
 ## les cours  
 
-> un cours est un document redigé par un professeur tiers ou un memnbre qualifié de bgrfacile et publier dans la partie cours sur la plateforme.Ce document peut contenir du texte,des images, des vidéos, des fichiers à télécharger et autres.
+> un cours est un document redigé par un professeur tiers ou un memnbre qualifié dans bgrfacile et publier dans la partie cours de la plateforme.Un cours peut contenir du texte,des images, des vidéos, de l'audio, des fichiers à télécharger, illustration interactif ou mini jeux et bien autres choses utiles à la comprégension.
 
-les cours sont repartis en __`formation`__ et les formations sont repartis en __`niveaux`__, enfin chaque niveaux possèdent son nombre de __`matières`__ défini.
+les cours sont repartis en __[formation](#les-formations)__ et les formations sont repartis en __[niveaux](#les-niveaux)__, enfin chaque niveaux possèdent son nombre de __[matières](#les-matières)__ défini.
 
 ### les formations  
-> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: formation=college et diplôme=bepc``  
+> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: formation=college ==> diplôme=bepc``  
 
 ### les niveaux 
  
-> ce sont les differents étapes d'une formation.Chaque formation possède sont un nombre défini de niveau.
+> ce sont les differents étapes d'une formation.Chaque formation possède sont un nombre défini de matières.
 
 ### les matières  
-Chaque niveaux possèdes un certain nombre de matière.
+ce sont des domaines études.
 
 ## les astuces  
 >les astuces sont des raccouris pour comprendre une notion, un concept, une notion dans un domaine.
