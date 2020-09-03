@@ -14,7 +14,15 @@ Les fonctionnalités décritent ici sont amenées a changé.
 bgrfacile est le premier utilisateur de la plate-forme. Son rôle est d'administré l'ensemble du site. 
 
 ### les écoles  
-Chaque école possédant son nombre d'administrateurs définit, l'école a pour rôle de géré __`ses informations personnelles`__, __`ses professeurs`__, **`ses étudiants`**, **`ses cours`**. 
+> représenté par ses administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs structures.  
+>  
+#### les fonctionnalités des écoles 
+
+Chaque école a la possibilité de  
+* géré ses informations personnelles
+* géré ses professeurs  
+* géré ses étudiants  
+* géré ses cours.
 
 ### les professeurs  
 les professeurs sont des utilisateurs qui ont la possibilité de créé du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenues qu'ils ont posté.
