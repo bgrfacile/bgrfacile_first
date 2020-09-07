@@ -2,7 +2,7 @@
 Ce contenue est souvent amené à changé.
 ````
 
-## table de matière
+## Table de matière
 
 - [à propos de bgrfacile ](#à-propo-de-bgrfacile)
 - [Les acteurs](#Les-acteurs)
@@ -15,12 +15,12 @@ Ce contenue est souvent amené à changé.
 - [les exercices et les solutons](#les-exercices-et-les-solutons)
 - [foires aux idées ](#foires-aux-idées )
 
-# à propos de bgrfacile  
+## À-propos de bgrfacile  
 bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage des étudiants.  
 Ce site web  permet non seulement de lire mais aussi de télécharger les cours, les exercices et leurs corrections faites par les Professeurs agrées par l’état.
 
 ## Les acteurs  
->Les acteurs sont toutes personnes qui ont une part active pour le bon fonctionnement de la plateforme notamment : 
+>Les acteurs sont toutes personnes qui ont une rôle active sur le  fonctionnement de la plateforme notamment 
 `les administrateurs de bgrfacile`, `les administrateurs des écoles`, `les professeurs` et `les étudiants`.  
 
 ### bgrfacile  
@@ -36,20 +36,20 @@ chaque administrateur de bgrfacile à la possibilité de
 
 
 ### les écoles  
-> représenté par ses administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs structures.    
+> Représentées par leurs administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs structures.    
 
 #### les fonctionnalités des écoles 
-Chaque école a la possibilité de  
-* géré ses informations personnelles
-* géré ses professeurs  
-* géré ses étudiants  
-* géré ses cours.
+Chaque école a la possibilité de :  
+* gérer ses informations personnelles
+* gérer ses professeurs  
+* gérer ses étudiants  
+* gérer ses cours.
 
 ### les professeurs  
-les professeurs sont des utilisateurs qui ont la possibilité de créé du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenues qu'ils ont posté.
+les professeurs sont des utilisateurs qui ont la possibilité de créer du contenu  **`cours`**, **`exercices`** et **`corriger`**, aussi ils ont la possibilité de **`répondre aux commentaires`** sur les contenus qu'ils ont posté.
 
 ### les étudiants  
-> Ce sont des utilisateurs lamda, les étudiants sont les personnes pour lesquels ce produit a été conçu, il s'agit des élève et étudiants mais également pour toute personne désirant s'instruire.  
+> Ce sont les utilisateurs cible de notre dû site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
 
 #### les fonctionnalités ou les actions des étudiants 
 les étudiants ont la possibilité de 
@@ -83,7 +83,7 @@ une astuces est classée par rapport à une matière, à une notion ou un domain
   
 Comme pour un cours, __les exercices__ et __corrigés__ sont classées par niveaux et ensuite ces niveaux par des matières. 
 
-## foires aux idées 
+## La foires aux idées 
 
 > `styve` créé un flux RSS de l'actualité autour de l'éducation, des mises à jour du site etc.
 
