@@ -1,5 +1,5 @@
 ````
-Ce contenue est souvent amené à changé.
+Ce contenu est succesptible de tout changement.
 ````
 
 ## À-propos de bgrfacile  
@@ -21,67 +21,67 @@ Ce site web  permet non seulement de lire mais aussi de télécharger les cours,
 
 
 ## Les acteurs  
->Les acteurs sont toutes personnes qui ont une rôle active sur le  fonctionnement de la plateforme notamment 
+> Toutes personnes ayant un rôle actif sur le  fonctionnement de la plateforme notamment 
 `les administrateurs pour bgrfacile`, `les administrateurs pour les écoles`, `les professeurs` et `les étudiants`.  
 
 ### bgrfacile  
 > Représenté par des supers administrateurs, bgrfacile est le moderateur du site, l'acteur qui veille au bon fonctionnement du site.  
 
 #### les fonctionnalités de bgrfacile
-Chaque super administrateur à la possibilité de:    
-* Gérer les utilisateurs
-* Gérer les écoles
-* Gérer les cours
-* Gérer les astuces
+Chaque super administrateur a la possibilité de:    
+* Gérer les utilisateurs;
+* Gérer les écoles;
+* Gérer les cours;
+* Gérer les astuces.
 
 
 ### Les écoles  
 > Représentées par de simple administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs écoles.    
 
-#### les fonctionnalitées des écoles 
+#### les fonctionnalités des écoles 
 Chaque école a la possibilité de :  
-* Gérer ses informations personnelles
-* Gérer ses professeurs  
-* Gérer ses étudiants  
+* Gérer ses informations personnelles;
+* Gérer ses professeurs;  
+* Gérer ses étudiants;  
 * Gérer ses cours.
 
 ### Les professeurs  
 > Les professeurs sont des utilisateurs qui ont la possibilité de créer du contenu  **`cours`**, **`exercices`** et **`corriger`** avec la possibilité de recevoir une rémunération pour ce travail fourni.Ils ont aussi la possibilité de **`répondre aux commentaires`** sur les contenus qu'ils ont postés.
 
 ### Les étudiants  
-> Ce sont les utilisateurs cible de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
+> Ce sont les utilisateurs cibles de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
 
 #### Les fonctionnalitées ou les actions des étudiants 
-les étudiants ont la possibilité de :
-* Lire du contenu   
-* Commenter du contenu  
-* Subscrire un abonnement sur le site
+Les étudiants ont la possibilité de :
+* Lire du contenu;   
+* Commenter du contenu;  
+* Subscrire un abonnement sur le site.
 
 ## Les cours  
 
-> un cours est un document redigé par un professeur tiers ou un memnbre qualifié dans bgrfacile et publier dans la partie cours de la plateforme.Un cours peut contenir du texte,des images, des vidéos, de l'audio, des fichiers à télécharger, illustration interactif ou mini jeux et bien autres choses utiles à la compréhension.
+> Un cours est un document redigé par un professeur tiers ou un membre qualifié dans bgrfacile et publié dans la partie cours de la plateforme.Un cours peut contenir du texte,des images, des vidéos, de l'audio, des fichiers à télécharger, illustration interactif ou mini jeux et bien autres choses utiles à la compréhension.
 
-les cours sont repartis en __[formation](#les-formations)__ et les formations sont repartis en __[niveaux](#les-niveaux)__. Chaque niveaux possèdent son nombre de __[matières](#les-matières)__ définis.
+Les cours sont repartis en __[formation](#les-formations)__ et les formations sont repartis en __[niveaux](#les-niveaux)__. Chaque niveaux possèdent son nombre de __[matières](#les-matières)__ définis.
 
 ### Les formations  
-> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: Pour une formation appelé college le diplôme est bepc``  
+> Ce sont des packages représentant un __cycle scolaire__. une formation est censée se terminer par un diplôme quelconque ``exemple: Pour une formation appelée college le diplôme est bepc.``  
 
 ### Les niveaux 
-> ce sont les differents étapes d'une formation.Chaque niveaux possède un nombre défini de matières.
+> Ce sont les differents étapes d'une formation.Chaque niveau possède un nombre défini de matières.
 
 ### Les matières  
-ce sont des domaines études pour un niveau.
+Ce sont des domaines d'études pour un niveau.
 
 ## Les astuces  
->Ce sont des raccouris pour comprendre une notion ou un concept.Sur le site, les astuces sont disponibles en 3formats (texte,video et audio).
+> Ce sont des raccourcis pour comprendre une notion ou un concept.Sur le site, les astuces sont disponibles en 3 formats (texte,video et audio).
 une astuces est classée par rapport à une **matière** ou une **notion** ou un **domaine précis**.    
 
 ## Les exercices et les solutons  
->Sur la plateforme les [cours](#les-cours) sont accompagnés d'exerxcices et solutions pour faciliter la compréhension et l'assimilation des notions.  
-__Les exercices__ et __Les corrigés__ sont classées par niveaux,ces niveaux par des matières mais chaque cours peut être rélier un exercice qui pourra être relié à un corrigé. 
+> Sur la plateforme les [cours](#les-cours) sont accompagnés d'exercices et solutions pour faciliter la compréhension et l'assimilation des notions.  
+__Les exercices__ et __Les corrigés__ sont classés par niveaux,et les niveaux par des matières.Mais chaque cours peut être rélié à un exercice qui pourra être relié à un corrigé. 
 
 ## La foires aux idées 
-> `styve` 02/09/20 créé un flux RSS de l'actualité autour de l'éducation, des mises à jour du site etc.
+> `STYVE` 02/09/20 créé un flux RSS de l'actualité autour de l'éducation, des mises à jour du site etc.
 
 
 
