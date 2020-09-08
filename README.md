@@ -1,5 +1,5 @@
 ````
-Ce contenu est succesptible de tout changement.
+Ce contenu est successible de tout changement.
 ````
 
 ## À-propos de bgrfacile  
