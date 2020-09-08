@@ -64,7 +64,7 @@ les étudiants ont la possibilité de :
 les cours sont repartis en __[formation](#les-formations)__ et les formations sont repartis en __[niveaux](#les-niveaux)__. Chaque niveaux possèdent son nombre de __[matières](#les-matières)__ définis.
 
 ### Les formations  
-> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: Pour une formationMcollege,le diplôme est bepc``  
+> ce sont des packages représentant un __cycle scolaire__. une formation est censé ce terminer par un diplôme quelconque ``exemple: Pour une formation appelé college le diplôme est bepc``  
 
 ### Les niveaux 
 > ce sont les differents étapes d'une formation.Chaque niveaux possède un nombre défini de matières.
