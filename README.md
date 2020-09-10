@@ -16,7 +16,7 @@ Ce site web  permet non seulement de lire mais aussi de télécharger les cours,
   - [Les étudiants](#Les-etudiants)
 - [Les cours](#Les-cours)
 - [Les astuces](#Les-astuces)
-- [Les exercices et les solutons](#Les-exercices-et-les-solutons)
+- [Les exercices et les solutions](#Les-exercices-et-les-solutions)
 - [Foires aux idées ](#Foires-aux-idées )
 
 
@@ -76,7 +76,7 @@ Ce sont des domaines d'études pour un niveau.
 > Ce sont des raccourcis pour comprendre une notion ou un concept.Sur le site, les astuces sont disponibles en 3 formats (texte,video et audio).
 une astuces est classée par rapport à une **matière** ou une **notion** ou un **domaine précis**.    
 
-## Les exercices et les solutons  
+## Les exercices et les solutions  
 > Sur la plateforme les [cours](#les-cours) sont accompagnés d'exercices et solutions pour faciliter la compréhension et l'assimilation des notions.  
 __Les exercices__ et __Les corrigés__ sont classés par niveaux,et les niveaux par des matières.Mais chaque cours peut être rélié à un exercice qui pourra être relié à un corrigé. 
 
