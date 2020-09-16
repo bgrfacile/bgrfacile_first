@@ -13,53 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-Route::view('/','app.home');
-
-Route::namespace('AdminG')->prefix('adminG')->group(function (){
-    Route::resource('/users','UsersController');
+Route::get('/', function () {
+    return view('welcome');
 });
-
-Route::group(['prefix'=>'adminG'],function (){
-
-    Route::view('/','administration_general.dashboard.site')->name('dashboardG.dashboard');
-    Route::view('/dashboard-users','administration_general.dashboard.utilisateurs')->name('dashboardG.users');
-    Route::view('/dashboard-ecoles','administration_general.dashboard.ecoles')->name('dashboardG.ecole');
-
-    Route::view('/fiches','administration_general.fiches.index')->name('dashboardG.fiches.index');
-    Route::view('/fiches/audios','administration_general.fiches.audios')->name('dashboardG.fiches.audios');
-    Route::view('/fiches/videos','administration_general.fiches.videos')->name('dashboardG.fiches.videos');
-    Route::view('/fiches/brouillants','administration_general.fiches.brouillants')->name('dashboardG.fiches.brouillants');
-    Route::view('/fiches/matieres','administration_general.fiches.matieres')->name('dashboardG.fiches.matieres');
-
-    Route::view('/cours','administration_general.cours.index')->name('dashboardG.cours.index');
-    Route::view('/cours/new','administration_general.cours.create')->name('dashboardG.cours.create');
-    Route::view('/cours/brouillants','administration_general.cours.brouillants')->name('dashboardG.cours.brouillants');
-    Route::view('/cours/cycles','administration_general.cours.cycles')->name('dashboardG.cours.cycles');
-
-    Route::view('/es','administration_general.es.index')->name('dashboardG.es.index');
-    Route::view('/es/corriger','administration_general.es.corriger')->name('dashboardG.es.corriger');
-
-    Route::view('/ecoles','administration_general.ecoles.index')->name('dashboardG.ecoles.index');
-
-    Route::view('/utilisateurs','administration_general.utilisateurs.index')->name('dashboardG.utilisateurs.index');
-
-//    Route::resource('/users','AdminG\UsersController');
-    Route::view('/profil','administration_general.profil.index')->name('dashboardG.profil.index');
-    Route::view('/profil/publications','administration_general.profil.publications')->name('dashboardG.profil.publications');
-    Route::view('/profil/notifications','administration_general.profil.notifications')->name('dashboardG.profil.notifications');
-    Route::view('/profil/parametres','administration_general.profil.parametres')->name('dashboardG.profil.parametres');
-});
-
-Route::group(['prefix'=>'adminE'],function (){
-    Route::view('/','administration_ecoles.dashboard.index')->name('dashboardE.dashboard');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');

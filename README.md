@@ -1,90 +1,61 @@
-````
-Ce contenu est successible de tout changement.
-````
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-## À-propos de bgrfacile  
-bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage des étudiants.  
-Ce site web  permet non seulement de lire mais aussi de télécharger les cours, les exercices et leurs corrections faites par les Professeurs agrées par l’état.
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-## Table de matière
+## About Laravel
 
-- [à propos de bgrfacile ](#À-propos-de-bgrfacile)
-- [Les acteurs](#Les-acteurs)
-  - [bgrfacile](#bgrfacile)
-  - [Les écoles ](#Les-écoles)
-  - [Les professeurs](#Les-professeurs)
-  - [Les étudiants](#Les-etudiants)
-- [Les cours](#Les-cours)
-- [Les astuces](#Les-astuces)
-- [Les exercices et les solutions](#Les-exercices-et-les-solutions)
-- [Foires aux idées ](#Foires-aux-idées )
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-## Les acteurs  
-> Toutes personnes ayant un rôle actif sur le  fonctionnement de la plateforme notamment 
-`les administrateurs pour bgrfacile`, `les administrateurs pour les écoles`, `les professeurs` et `les étudiants`.  
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### bgrfacile  
-> Représenté par des supers administrateurs, bgrfacile est le moderateur du site, l'acteur qui veille au bon fonctionnement du site.  
+## Learning Laravel
 
-#### les fonctionnalités de bgrfacile
-Chaque super administrateur a la possibilité de:    
-* Gérer les utilisateurs;
-* Gérer les écoles;
-* Gérer les cours;
-* Gérer les astuces.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-### Les écoles  
-> Représentées par de simple administrateurs, les écoles sont les acteurs qui permetent aux étudiants et professeurs de rester en contact avec leurs écoles.    
+## Laravel Sponsors
 
-#### les fonctionnalités des écoles 
-Chaque école a la possibilité de :  
-* Gérer ses informations personnelles;
-* Gérer ses professeurs;  
-* Gérer ses étudiants;  
-* Gérer ses cours.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Les professeurs  
-> Les professeurs sont des utilisateurs qui ont la possibilité de créer du contenu  **`cours`**, **`exercices`** et **`corriger`** avec la possibilité de recevoir une rémunération pour ce travail fourni.Ils ont aussi la possibilité de **`répondre aux commentaires`** sur les contenus qu'ils ont postés.
+### Premium Partners
 
-### Les étudiants  
-> Ce sont les utilisateurs cibles de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[OP.GG](https://op.gg)**
 
-#### Les fonctionnalitées ou les actions des étudiants 
-Les étudiants ont la possibilité de :
-* Lire du contenu;   
-* Commenter du contenu;  
-* Subscrire un abonnement sur le site.
+## Contributing
 
-## Les cours  
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-> Un cours est un document redigé par un professeur tiers ou un membre qualifié dans bgrfacile et publié dans la partie cours de la plateforme.Un cours peut contenir du texte,des images, des vidéos, de l'audio, des fichiers à télécharger, illustration interactif ou mini jeux et bien autres choses utiles à la compréhension.
+## Code of Conduct
 
-Les cours sont repartis en __[formation](#les-formations)__ et les formations sont repartis en __[niveaux](#les-niveaux)__. Chaque niveaux possèdent son nombre de __[matières](#les-matières)__ définis.
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-### Les formations  
-> Ce sont des packages représentant un __cycle scolaire__. une formation est censée se terminer par un diplôme quelconque ``exemple: Pour une formation appelée college le diplôme est bepc.``  
+## Security Vulnerabilities
 
-### Les niveaux 
-> Ce sont les differents étapes d'une formation.Chaque niveau possède un nombre défini de matières.
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-### Les matières  
-Ce sont des domaines d'études pour un niveau.
+## License
 
-## Les astuces  
-> Ce sont des raccourcis pour comprendre une notion ou un concept.Sur le site, les astuces sont disponibles en 3 formats (texte,video et audio).
-une astuces est classée par rapport à une **matière** ou une **notion** ou un **domaine précis**.    
-
-## Les exercices et les solutions  
-> Sur la plateforme les [cours](#les-cours) sont accompagnés d'exercices et solutions pour faciliter la compréhension et l'assimilation des notions.  
-__Les exercices__ et __Les corrigés__ sont classés par niveaux,et les niveaux par des matières.Mais chaque cours peut être rélié à un exercice qui pourra être relié à un corrigé. 
-
-## La foires aux idées 
-> `STYVE` 02/09/20 créé un flux RSS de l'actualité autour de l'éducation, des mises à jour du site etc.
-
-
-
-
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
