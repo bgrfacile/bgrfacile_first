@@ -42147,15 +42147,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/app2.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/app2.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!**************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app2.scss ./resources/css/app.css ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\bgrfacile_laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\bgrfacile_laravel\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\resources\sass\app2.scss */"./resources/sass/app2.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
