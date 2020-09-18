@@ -1,2 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Nunito);.MS-nav {
+  background: #1E2023 !important;
+}
+
+.MS-item__user {
+  border-top: 1px solid #d2d6dc;
+  border-bottom: 1px solid #d2d6dc;
+}
 
