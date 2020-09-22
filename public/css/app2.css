@@ -1,9 +1,94 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);.MS-nav {
+@import url(https://fonts.googleapis.com/css?family=Nunito);.MS-bold {
+  font-weight: bold;
+}
+
+.MS-nav {
   background: #1E2023 !important;
+}
+
+.MS-baniere {
+  background-color: #476CA4;
 }
 
 .MS-item__user {
   border-top: 1px solid #d2d6dc;
   border-bottom: 1px solid #d2d6dc;
+}
+
+.MS-b_astuces {
+  background-color: #476CA4;
+}
+
+.MS-b_h1 {
+  font-size: 42px;
+}
+
+.MS-b_text {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MS-item__matiere a {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+  transition: 0.3s linear;
+}
+
+.MS-item__matiere a:hover {
+  color: #476CA4;
+}
+
+.bar {
+  position: absolute;
+  width: 79px;
+  height: 4px;
+  background-color: #476CA4;
+  bottom: 0;
+  left: -100px;
+  transition: 0.35s linear;
+}
+
+.MS-item__matiere a:nth-child(1):hover ~ .bar {
+  left: 0;
+}
+
+.MS-item__matiere a:nth-child(2):hover ~ .bar {
+  left: 100px;
+}
+
+.MS-item__matiere a:nth-child(3):hover ~ .bar {
+  left: 200px;
+}
+
+.MS-item__matiere a:nth-child(4):hover ~ .bar {
+  left: 300px;
+}
+
+.MS-item__matiere a:nth-child(5):hover ~ .bar {
+  left: 400px;
+}
+
+.MS-item__matiere a:nth-child(6):hover ~ .bar {
+  left: 500px;
+}
+
+.MS-item__matiere a:nth-child(7):hover ~ .bar {
+  left: 600px;
+}
+
+.MS-item__matiere a:nth-child(8):hover ~ .bar {
+  left: 700px;
+}
+
+.MS-item__matiere a:nth-child(9):hover ~ .bar {
+  left: 800px;
+}
+
+.MS-item__matiere a:nth-child(10):hover ~ .bar {
+  left: 900px;
 }
 
