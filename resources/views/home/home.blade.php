@@ -1,5 +1,6 @@
 @extends('layouts.front')
 
+
 @section('baniere')
     <div class="MS-baniere text-white">
         <div class="container mx-auto flex flex-col md:flex-row items-center py-24 px-24">
@@ -154,9 +155,10 @@
         <div class="flex flex-wrap relative">
             <div class="w-5/6 sm:w-1/2 p-6">
                 <div class="w-1/2 mx-auto mt-12 mb-12">
-                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Etudiants</h3>
                     <p class="text-gray-600 mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
+                        posuere et sit amet ligula.
                         <br><br>
                         <a class="text-orange-500 underline" href="#">connectez-vous</a>
                     </p>
@@ -179,7 +181,7 @@
             </div>
             <div class="w-5/6 sm:w-1/2 p-6">
                 <div class="w-1/2 mx-auto mt-12 mb-12">
-                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Professeurs</h3>
                     <p class="text-gray-600 mb-8">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum
                         eu nunc commodo posuere et sit amet ligula.
@@ -919,7 +921,7 @@
             </div>
             <div class="w-5/6 sm:w-1/2 p-6">
                 <div class="w-2/3 mx-auto mt-12 mb-12">
-                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit amet</h3>
+                    <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">écoles ou instituts</h3>
                     <p class="text-gray-600 mb-8">Get started with just your email and the name of your school. It’s as
                         simple as that -- no payments or credit card information required.</p>
                     <button
@@ -1714,4 +1716,10 @@
 
         </div>
     </section>
+@endsection
+
+@section('script')
+    <script>
+
+    </script>
 @endsection

@@ -92,3 +92,46 @@
   left: 900px;
 }
 
+.like {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-image: url("/assets/images/like.png");
+  position: absolute;
+  top: 100%;
+  left: 92%;
+  transform: translate(-60%, -50%);
+  background-color: aliceblue;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.anim-like {
+  -webkit-animation-name: anim-like;
+          animation-name: anim-like;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: steps(28);
+          animation-timing-function: steps(28);
+}
+
+@-webkit-keyframes anim-like {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes anim-like {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+

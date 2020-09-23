@@ -25,7 +25,7 @@
 </head>
 <body class="antialiased">
 <header>
-    <nav class="MS-nav flex items-center justify-between flex-wrap p-6">
+    <nav class="MS-nav flex items-center justify-between flex-wrap p-3">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 512 512" xml:space="preserve">
@@ -70,9 +70,9 @@
             </button>
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="flex text-base lg:flex-grow">
+            <div class="block text-base lg:flex-grow lg:flex">
                 <a href="{{ url('/') }}"
-                   class="flex items-center mt-4 lg:mt-0 text-teal-200 hover:text-white mr-4">
+                   class="flex items-center mt-4 lg:mt-0 text-white hover:text-teal-200 mr-4">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 16 14" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -81,7 +81,7 @@
                     <span>Home</span>
                 </a>
                 <a href="{{ route('astuces.index') }}"
-                   class="flex items-center mt-4  lg:mt-0 text-teal-200 hover:text-white mr-4">
+                   class="flex items-center mt-4  lg:mt-0 text-white hover:text-teal-200 mr-4">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -94,7 +94,7 @@
                     <span>cours</span>
                 </a>
                 <a href="{{ route('ecoles.index') }}"
-                   class="flex items-center mt-4 lg:mt-0 text-teal-200 hover:text-white mr-4">
+                   class="flex items-center mt-4 lg:mt-0 text-white hover:text-teal-200 mr-4">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 20 16" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -103,7 +103,7 @@
                     <span>écoles</span>
                 </a>
                 <a href="{{ route('qui-sommes-nous') }}"
-                   class="flex items-center mt-4 lg:mt-0 text-teal-200 hover:text-white">
+                   class="flex items-center mt-4 lg:mt-0 text-white hover:text-teal-200 mr-4">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 14 14" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -114,19 +114,19 @@
             </div>
 
             @if (Route::has('login'))
-                <div class="block">
+                <div class="flex items-center">
+                    <svg class="inline-block mr-4 h-4" viewBox="0 0 12 12" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.7197 10.3078L9.18343 7.77151C9.86852 6.73645 10.1448 5.48385 9.95863 4.25664C9.77248 3.02943 9.13719 1.9151 8.17598 1.12976C7.21477 0.344416 5.99614 -0.0559507 4.75646 0.00630775C3.51678 0.0685662 2.3444 0.589013 1.46671 1.46671C0.589013 2.3444 0.0685662 3.51678 0.00630775 4.75646C-0.0559507 5.99614 0.344416 7.21477 1.12976 8.17598C1.9151 9.13719 3.02943 9.77248 4.25664 9.95863C5.48385 10.1448 6.73645 9.86852 7.77151 9.18343L10.3078 11.7197C10.4961 11.9016 10.7483 12.0022 11.0101 12C11.272 11.9977 11.5224 11.8927 11.7075 11.7075C11.8927 11.5224 11.9977 11.272 12 11.0101C12.0022 10.7483 11.9016 10.4961 11.7197 10.3078ZM2.02697 5.02256C2.02697 4.43009 2.20266 3.85092 2.53182 3.3583C2.86098 2.86568 3.32882 2.48172 3.8762 2.25499C4.42357 2.02827 5.02588 1.96894 5.60697 2.08453C6.18806 2.20011 6.72182 2.48542 7.14076 2.90436C7.5597 3.3233 7.845 3.85706 7.96059 4.43815C8.07618 5.01924 8.01685 5.62155 7.79012 6.16892C7.56339 6.71629 7.17944 7.18414 6.68682 7.5133C6.1942 7.84246 5.61503 8.01815 5.02256 8.01815C4.22808 8.01815 3.46614 7.70254 2.90436 7.14076C2.34257 6.57898 2.02697 5.81704 2.02697 5.02256Z"
+                            fill="white"/>
+                    </svg>
                     @auth
-                            <div class="relative w-12 h-12">
-                                <img class="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user image" />
-                                <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>
-                            </div>
+                        <div class="relative w-10 h-10">
+                            <img class="rounded-full border border-gray-100 shadow-sm" src="https://randomuser.me/api/portraits/women/81.jpg" alt="user image" />
+{{--                            <div class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2"></div>--}}
+                        </div>
                     @else
-                        <svg class="inline-block mr-4 h-4" viewBox="0 0 12 12" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M11.7197 10.3078L9.18343 7.77151C9.86852 6.73645 10.1448 5.48385 9.95863 4.25664C9.77248 3.02943 9.13719 1.9151 8.17598 1.12976C7.21477 0.344416 5.99614 -0.0559507 4.75646 0.00630775C3.51678 0.0685662 2.3444 0.589013 1.46671 1.46671C0.589013 2.3444 0.0685662 3.51678 0.00630775 4.75646C-0.0559507 5.99614 0.344416 7.21477 1.12976 8.17598C1.9151 9.13719 3.02943 9.77248 4.25664 9.95863C5.48385 10.1448 6.73645 9.86852 7.77151 9.18343L10.3078 11.7197C10.4961 11.9016 10.7483 12.0022 11.0101 12C11.272 11.9977 11.5224 11.8927 11.7075 11.7075C11.8927 11.5224 11.9977 11.272 12 11.0101C12.0022 10.7483 11.9016 10.4961 11.7197 10.3078ZM2.02697 5.02256C2.02697 4.43009 2.20266 3.85092 2.53182 3.3583C2.86098 2.86568 3.32882 2.48172 3.8762 2.25499C4.42357 2.02827 5.02588 1.96894 5.60697 2.08453C6.18806 2.20011 6.72182 2.48542 7.14076 2.90436C7.5597 3.3233 7.845 3.85706 7.96059 4.43815C8.07618 5.01924 8.01685 5.62155 7.79012 6.16892C7.56339 6.71629 7.17944 7.18414 6.68682 7.5133C6.1942 7.84246 5.61503 8.01815 5.02256 8.01815C4.22808 8.01815 3.46614 7.70254 2.90436 7.14076C2.34257 6.57898 2.02697 5.81704 2.02697 5.02256Z"
-                                fill="white"/>
-                        </svg>
                         <a href="{{ route('login') }}"
                            class="inline-block text-base px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0">
                             Se connecter
@@ -142,5 +142,6 @@
     @yield('content')
 </div>
 
+@yield('script')
 </body>
 </html>
