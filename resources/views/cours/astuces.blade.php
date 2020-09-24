@@ -46,12 +46,12 @@
                     </a>
                 </li>
             </ul>
-            <form class="flex items-center h-12">
+            <form class="flex items-center h-12 w-full sm:w-auto md:w-auto lg:w-auto">
                 <input
                     class="appearance-none w-full h-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="username"
                     type="search" placeholder="recherche...">
-                <button type="submit" class="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 h-12 w-full">
+                <button type="submit" class="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 h-12 w-12">
                     <svg class="inline-block h-4" viewBox="0 0 12 12" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -62,12 +62,92 @@
             </form>
         </nav>
 
-        <div class="container w-full  mx-auto px-12">
-            <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-1">
+        <div class="container w-full mx-auto px-2 sm:px-4 md:px-8 lg:px-12">
+            <div
+                class="block sm:block md:block lg:grid xl:grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4">
+                <div class="col-span-4 sm:col-span-1 md:col-span-1 lg:col-span-1 ">
                     <section class="mb-5 text-center">
                         <h3 class="MS-bold w-full bg-white p-3 uppercase">formation</h3>
-                        <div class="MS-bold w-full text-white bg-black uppercase p-3 cursor-pointer">collège</div>
+                        <a href="#modal_formation" data-modal="1"
+                           class="MS-js-modal MS-bold block w-full text-white bg-black uppercase p-3 cursor-pointer">collège</a>
+                        <aside id="modal_formation" class="modal z-50" style="display: none" aria-hidden="true"
+                               role="dialog" aria-labelledby="titleModal">
+                            <div class="MS-js-modal-stop modal-wrapper z-50">
+                                <button class="MS-js-modal-close">close</button>
+                                <h1 id="titleModal">liste de nos formations</h1>
+                                <p>There's one way and only one way to determine if an animal is intelligent. Dissect
+                                    its brain! So, how 'bout them Knicks? Michelle, I don't regret this, but I both rue
+                                    and lament it. I'm a thing. We can't compete with Mom! Her company is big and evil!
+                                    Ours is small and neutral!</p>
+                                <p>It's okay, Bender. I like cooking too. <strong> Michelle, I don't regret this, but I
+                                        both rue and lament it.</strong> <em> I decline the title of Iron Cook and
+                                        accept the lesser title of Zinc Saucier, which I just made up.</em> Uhh… also,
+                                    comes with double prize money.</p>
+                                <h2>Noooooo!</h2>
+                                <a href="#" style="color: red">coucou</a>
+                                <p>There's one way and only one way to determine if an animal is intelligent. Dissect
+                                    its brain! Fry! Quit doing the right thing, you jerk! A true inspiration for the
+                                    children. The alien mothership is in orbit here. If we can hit that bullseye, the
+                                    rest of the dominoes will fall like a house of cards. Checkmate.</p>
+                                <ol>
+                                    <li>
+                                        <input type="text" placeholder="coucouc">
+                                    </li>
+                                    <li>Your best is an idiot!</li>
+                                    <li>Bender, quit destroying the universe!</li>
+                                    <li>Would you censor the Venus de Venus just because you can see her spewers?</li>
+
+                                </ol>
+
+                                <h3>Soothe us with sweet lies.</h3>
+                                <p>We need rest. The spirit is willing, but the flesh is spongy and bruised. Wow, you
+                                    got that off the Internet? In my day, the Internet was only used to download
+                                    pornography. The alien mothership is in orbit here. If we can hit that bullseye, the
+                                    rest of the dominoes will fall like a house of cards. Checkmate.</p>
+                                <ul>
+
+                                    <li>Say it in Russian!</li>
+                                    <li>Shut up and get to the point!</li>
+                                    <li>Tell her you just want to talk. It has nothing to do with mating.</li>
+
+                                </ul>
+
+                                <p>Ummm…to eBay? Well, thanks to the Internet, I'm now bored with sex. Is there a place
+                                    on the web that panders to my lust for violence? I just want to talk. It has nothing
+                                    to do with mating. Fry, that doesn't make sense.</p>
+                                <p>Moving along… Oh, I think we should just stay friends. Hey, guess what you're
+                                    accessories to. Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough
+                                    to feel ways about stuff!</p>
+                                <input type="text" placeholder="coucouc">
+                                <p>Maybe I love you so much I love you no matter who you are pretending to be. Look,
+                                    everyone wants to be like Germany, but do we really have the pure strength of
+                                    'will'? How much did you make me? Are you crazy? I can't swallow that.</p>
+                                <p>Hey, you add a one and two zeros to that or we walk! Fatal. Can I use the gun? I
+                                    usually try to keep my sadness pent up inside where it can fester quietly as a
+                                    mental illness.</p>
+                                <p>Yes! In your face, Gandhi! Oh, I think we should just stay friends. Oh, but you can.
+                                    But you may have to metaphorically make a deal with the devil. And by "devil", I
+                                    mean Robot Devil. And by "metaphorically", I mean get your coat.</p>
+                                <p>Kif might! Daddy Bender, we're hungry. You can see how I lived before I met you. Tell
+                                    them I hate them. You guys aren't Santa! You're not even robots. How dare you lie in
+                                    front of Jesus?</p>
+                                <p>Do a flip! Hey, what kinda party is this? There's no booze and only one hooker. I
+                                    haven't felt much of anything since my guinea pig died. With a warning label this
+                                    big, you know they gotta be fun! Hey, guess what you're accessories to.</p>
+                                <p>Isn't it true that you have been paid for your testimony? Why did you bring us here?
+                                    Hey, you add a one and two zeros to that or we walk! No! The kind with looting and
+                                    maybe starting a few fires!</p>
+                                <p>Now, now. Perfectly symmetrical violence never solved anything. Now that the, uh,
+                                    garbage ball is in space, Doctor, perhaps you can help me with my sexual
+                                    inhibitions? Yes. You gave me a dollar and some candy.</p>
+                                <p>Now what? Yes, I saw. You were doing well, until everyone died. I guess if you want
+                                    children beaten, you have to do it yourself. Switzerland is small and neutral! We
+                                    are more like Germany, ambitious and misunderstood!</p>
+                                <p>Who am I making this out to? A sexy mistake. But existing is basically all I do! Fry,
+                                    you can't just sit here in the dark listening to classical music. Who's brave enough
+                                    to fly into something we all keep calling a death sphere?</p>
+                            </div>
+                        </aside>
                     </section>
                     <section class="mb-5 text-center">
                         <h3 class="MS-bold w-full bg-white p-3 uppercase">niveau</h3>
@@ -96,22 +176,26 @@
                     </section>
                 </div>
 
-                <div class="col-span-3 flex flex-col">
-                    <div class="mb-4">
+                <div class="flex flex-col grid-cols-1 sm:col-span-3 md:col-span-3 lg:col-span-3">
+                    <div class="flex mb-4 items-center justify-between bg-white">
+                        <div class="flex h-full items-center justify-center w-7">
+                            <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        </div>
                         <nav
-                            class="MS-item__matiere w-full  bg-white flex items-center relative overflow-hidden text-center">
-                            <a href="#" class="w-full py-4"><i class="fas fa-chevron-left"></i></a>
+                            class="MS-item__matiere flex-1 bg-white flex items-center relative overflow-hidden text-center">
                             <a href="#" class="w-full py-4">Mathematiques</a>
                             <a href="#" class="w-full py-4">Histoire</a>
-                            <a href="#" class="w-full py-4">Géàgraphe</a>
-                            <a href="#" class="w-full py-4">Géàgraphe</a>
-                            <a href="#" class="w-full py-4">Géàgraphe</a>
-                            <a href="#" class="w-full py-4">Géàgraphe</a>
+                            <a href="#" class="w-full py-4">Géographe</a>
+                            <a href="#" class="w-full py-4">Géographe</a>
+                            <a href="#" class="w-full py-4">Géographe</a>
+                            <a href="#" class="w-full py-4">Géographe</a>
                             <a href="#" class="w-full py-4">Physique</a>
                             <a href="#" class="w-full py-4">Chimie</a>
-                            <a href="#" class="w-full py-4"><i class="fas fa-chevron-right"></i></a>
                             <div class="bar"></div>
                         </nav>
+                        <div class="flex h-full items-center justify-center w-7">
+                            <a href="#" class="bg-white"><i class="fas fa-chevron-right"></i></a>
+                        </div>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-3">
@@ -122,8 +206,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -150,8 +237,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -178,8 +268,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -206,8 +299,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -234,8 +330,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -262,8 +361,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -290,8 +392,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -318,8 +423,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -346,8 +454,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -374,8 +485,11 @@
                                     <small>name du prof</small>
                                 </div>
                                 <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z" fill="black" fill-opacity="0.87"/>
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                              fill="black" fill-opacity="0.87"/>
                                     </svg>
                                     <small>favoris</small>
                                 </div>
@@ -400,6 +514,44 @@
             </div>
         </div>
     </div>
+    <style>
+        .modal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            animation: fadeIn .3s both;
+        }
+
+        *:focus {
+            box-shadow: 0 0 10px #476CA4;
+        }
+
+        .modal-wrapper {
+            overflow: auto;
+            background-color: #fff;
+            width: 600px;
+            /*height: 400px;*/
+            max-width: calc(100vw - 20px);
+            max-height: calc(100vh - 20px);
+            padding: 20px;
+            animation: slipFromTop .5s both;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to{opacity: 1;}
+        }
+        @keyframes slipFromTop {
+            from {transform: translateY(-50px)}
+            to{transform: translateY(0px)}
+        }
+    </style>
 @endsection
 
 
@@ -410,7 +562,7 @@
         let countLike = 0;
         like.addEventListener('click', () => {
 
-            if(countLike === 0) {
+            if (countLike === 0) {
                 like.classList.toggle('anim-like');
                 countLike = 1;
                 like.style.backgroundPosition = 'right';
@@ -425,5 +577,75 @@
             like.classList.toggle('anim-like');
         })
 
+    </script>
+    <script>
+        let modal = null;
+        const focusableSelector = 'button, a, input, textarea';
+        let focusables = [];
+        let previouslyFocusedElement = null;
+        const openModal = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            modal = document.querySelector(e.target.getAttribute('href'));
+            focusables = Array.from(modal.querySelectorAll(focusableSelector));
+            previouslyFocusedElement = document.querySelector(':focus');
+            modal.style.display = null;
+            focusables[0].focus()
+            modal.removeAttribute('aria-hidden');
+            modal.setAttribute('aria-modal', 'true');
+            modal.addEventListener('click', closeModal);
+            modal.querySelector('.MS-js-modal-close').addEventListener('click', closeModal);
+            modal.querySelector('.MS-js-modal-stop').addEventListener('click', stopPropagation);
+        };
+
+        const closeModal = function (e) {
+            if (modal === null) return
+            if (previouslyFocusedElement !== null) {
+                previouslyFocusedElement.focus()
+            }
+            e.preventDefault();
+            e.stopPropagation();
+
+            modal.style.display = "none";
+            modal.setAttribute('aria-hidden', 'true');
+            modal.removeAttribute('aria-modal');
+            modal.removeEventListener('click', closeModal);
+            modal.querySelector('.MS-js-modal-close').removeEventListener('click', closeModal)
+            modal.querySelector('.MS-js-modal-stop').removeEventListener('click', stopPropagation);
+            modal = null;
+        };
+
+        const stopPropagation = function (e) {
+            e.stopPropagation()
+        };
+
+        const focusInModal = function (e) {
+            e.preventDefault();
+            let index = focusables.findIndex(f => f === modal.querySelector(':focus'))
+            if (e.shitkey === true) {
+                index--;
+            } else {
+                index++;
+            }
+            if (index >= focusables.length) {
+                index = 0
+            }
+            if (index < 0) {
+                index = focusables.length - 1
+            }
+            focusables[index].focus()
+        };
+
+        document.querySelectorAll('.MS-js-modal').forEach(a => {
+            a.addEventListener('click', openModal)
+        });
+        window.addEventListener('keydown', function (e) {
+            if (e.key === "Escape" || e.key === "Esc") {
+                closeModal(e)
+            }
+            if (e.key === "Tab" && modal != null) {
+                focusInModal(e);
+            }
+        })
     </script>
 @endsection
