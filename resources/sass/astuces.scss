@@ -9,8 +9,22 @@
     margin-left: auto;
     margin-right: auto;
 }
-.MS-item__matiere{
+.MS-nav-section{
+    font-weight: bold;
+}
+.MS-nav-section:hover{
+    border-bottom: 2px solid black;
+    background-color: #fff;
+    color: black;
+}
 
+
+.MS-nav-active{
+    border-bottom: 2px solid black;
+    background-color: #fff;
+    color: black;
+}
+.MS-item__matiere{
 a{
     //width: 100%!important;
     font-size: 18px;

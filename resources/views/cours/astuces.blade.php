@@ -1,16 +1,26 @@
 @extends('layouts.front')
 
 @section('baniere')
-    <div class="h-64">
-        <div class="MS-b_astuces h-full bg-gray-100 flex items-center justify-center">
-            <div class="text-white text-center">
-                <h1 class="MS-b_h1">section cours</h1>
-                <p class=" MS-b_text mb-9">Découvrer des millions de cours rédiger par les professeurs qualifiés</p>
-                <button
-                    class="ml-3 bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">
-                    visiter
-                </button>
-            </div>
+{{--    <div class="h-64">--}}
+{{--        <div class="MS-b_astuces h-full bg-gray-100 flex items-center justify-center">--}}
+{{--            <div class="text-white text-center">--}}
+{{--                <h1 class="MS-b_h1">section cours</h1>--}}
+{{--                <p class=" MS-b_text mb-9">Découvrer des millions de cours rédiger par les professeurs qualifiés</p>--}}
+{{--                <button--}}
+{{--                    class="ml-3 bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">--}}
+{{--                    visiter--}}
+{{--                </button>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
+<div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+    <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+        <div class="text-center">
+            <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl mb-9">section cours <span class="underline text-blue-400"></span></h1>
+            <a href="#bar" class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                visiter
+            </a>
         </div>
     </div>
 @endsection
@@ -18,30 +28,30 @@
 
 @section('content')
     <div class="bg-gray-200">
-        <nav
+        <nav id="bar"
             class="flex flex-wrap items-center bg-gray-200 sticky top-0 z-50 shadow mb-5">
             <ul class="flex-1 flex items-center">
                 <li class="w-1/4 h-12">
                     <a href="#"
-                       class="inline-flex justify-center items-center w-full h-full bg-black text-white">
+                       class="MS-nav-section inline-flex justify-center items-center w-full h-full">
                         Astuces
                     </a>
                 </li>
                 <li class="w-1/4 h-12">
                     <a href="#"
-                       class="inline-flex justify-center items-center w-full h-full text-black hover:text-white hover:bg-black">
+                       class="MS-nav-section MS-nav-active inline-flex justify-center items-center w-full h-full">
                         Cours
                     </a>
                 </li>
                 <li class="w-1/4 h-12">
                     <a href="#"
-                       class="inline-flex justify-center items-center w-full h-full text-black hover:text-white hover:bg-black">
+                       class="MS-nav-section inline-flex justify-center items-center w-full h-full">
                         Exercices
                     </a>
                 </li>
                 <li class="w-1/4 h-12">
                     <a href="#"
-                       class="inline-flex justify-center items-center w-full h-full text-black hover:text-white hover:bg-black">
+                       class="MS-nav-section inline-flex justify-center items-center w-full h-full">
                         Corrigés
                     </a>
                 </li>
@@ -153,17 +163,27 @@
                         <h3 class="MS-bold w-full bg-white p-3 uppercase">niveau</h3>
                         <div class="MS-bold w-full uppercase p-3 cursor-pointer">
                             <form action="#">
-                                <div class="flex">
-                                    <input type="checkbox" id="3">
-                                    <label for="3">3eme</label>
-                                </div>
-                                <div class="flex">
-                                    <input type="checkbox" id="4">
-                                    <label for="4">4eme</label>
-                                </div>
-                                <div class="flex">
-                                    <input type="checkbox" id="5">
-                                    <label for="5">5eme</label>
+                                <div class="bg-gray-200">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <div class="flex flex-col">
+                                            <label class="inline-flex items-center mt-3">
+                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked>
+                                                <span class="ml-2 text-gray-700">3eme</span>
+                                            </label>
+                                            <label class="inline-flex items-center mt-3">
+                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <span class="ml-2 text-gray-700">4eme</span>
+                                            </label>
+                                            <label class="inline-flex items-center mt-3">
+                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <span class="ml-2 text-gray-700">5eme</span>
+                                            </label>
+                                            <label class="inline-flex items-center mt-3">
+                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <span class="ml-2 text-gray-700">6eme</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -198,7 +218,7 @@
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-3">
+                    <div class="grid md:grid-cols-3 gap-4 px-2 xl:px-0 md:px-0">
                         <article class="bg-white rounded">
                             <header class="flex p-2">
                                 <div class="flex-1">
@@ -590,7 +610,7 @@
             focusables = Array.from(modal.querySelectorAll(focusableSelector));
             previouslyFocusedElement = document.querySelector(':focus');
             modal.style.display = null;
-            focusables[0].focus()
+            focusables[0].focus();
             modal.removeAttribute('aria-hidden');
             modal.setAttribute('aria-modal', 'true');
             modal.addEventListener('click', closeModal);
@@ -605,14 +625,17 @@
             }
             e.preventDefault();
             e.stopPropagation();
-
-            modal.style.display = "none";
+            window.setTimeout( function () {
+                modal.style.display = "none";
+                modal = null;
+                }, 500);
+            // modal.style.display = "none";
             modal.setAttribute('aria-hidden', 'true');
             modal.removeAttribute('aria-modal');
             modal.removeEventListener('click', closeModal);
             modal.querySelector('.MS-js-modal-close').removeEventListener('click', closeModal)
             modal.querySelector('.MS-js-modal-stop').removeEventListener('click', stopPropagation);
-            modal = null;
+            // modal = null;
         };
 
         const stopPropagation = function (e) {
