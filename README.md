@@ -3,8 +3,8 @@ Ce contenu est successible de tout changement.
 ````
 
 ## À-propos de bgrfacile  
-bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage des étudiants.  
-Ce site web  permet non seulement de lire mais aussi de télécharger les cours, les exercices et leurs corrections faites par les Professeurs agrées par l’état.
+bgrfacile est une plateforme qui permet de promouvoir l’éducation et l’apprentissage dans le milieu scolaire.  
+Ce site web accompagner d'une application android et IOS permet non seulement de lire mais aussi de télécharger les cours, les exercices et leurs corrections faites par les professeurs agrées par l’état.
 
 ## Table de matière
 
