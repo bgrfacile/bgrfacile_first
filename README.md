@@ -50,13 +50,16 @@ Chaque école a la possibilité de :
 > un professeur qui appartient à une école à la possibilité de publier un cours qui ne va apparaitre que dans la section de cette école.
 
 ### Les étudiants  
-> Ce sont les utilisateurs cibles de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
+> Ce sont les utilisateurs cibles de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc.
+> un étudiant qui appartient à une école à la possibilté de recevoir des cours venant de professeur de cette école. 
 
 #### Les fonctionnalitées ou les actions des étudiants 
 Les étudiants ont la possibilité de :
-* Lire du contenu;   
-* Commenter du contenu;  
-* Subscrire un abonnement sur le site.
+* Acceder au cours;   
+* Acceder au astuces;  
+* Subscrire un abonnement;
+* Envoyer un corriger à un cours reçu;
+* Recevoir un cours d'une école;
 
 ## Les cours  
 
