@@ -828,11 +828,11 @@
             <div class="flex flex-wrap mx-auto">
                 <ul class="ml-auto mr-auto flex justify-between text-center">
                     <li class="p-8">
-                        <h6 class="text-2xl">450</h6>
+                        <h6 class="text-2xl">50</h6>
                         <h5 class="text-3xl">Etudiants</h5>
                     </li>
                     <li class="p-8">
-                        <h6 class="text-2xl">33</h6>
+                        <h6 class="text-2xl">330</h6>
                         <h5 class="text-3xl">Professeurs</h5>
                     </li>
                     <li class="p-8">

@@ -10,7 +10,7 @@ Ce site web  permet non seulement de lire mais aussi de télécharger les cours,
 
 - [à propos de bgrfacile ](#À-propos-de-bgrfacile)
 - [Les acteurs](#Les-acteurs)
-  - [bgrfacile](#bgrfacile)
+  - [L'administration](#bgrfacile)
   - [Les écoles ](#Les-écoles)
   - [Les professeurs](#Les-professeurs)
   - [Les étudiants](#Les-etudiants)
@@ -22,10 +22,10 @@ Ce site web  permet non seulement de lire mais aussi de télécharger les cours,
 
 ## Les acteurs  
 > Toutes personnes ayant un rôle actif sur le  fonctionnement de la plateforme notamment 
-`les administrateurs pour bgrfacile`, `les administrateurs pour les écoles`, `les professeurs` et `les étudiants`.  
+`les administrateurs`, `les écoles`, `les professeurs` et `les étudiants`.  
 
-### bgrfacile  
-> Représenté par des supers administrateurs, bgrfacile est le moderateur du site, l'acteur qui veille au bon fonctionnement du site.  
+### Les administrateurs  
+> bgrfacile est représenté par des administrateurs, bgrfacile est le moderateur du site, l'acteur qui veille au bon fonctionnement du site.  
 
 #### les fonctionnalités de bgrfacile
 Chaque super administrateur a la possibilité de:    
