@@ -47,6 +47,7 @@ Chaque école a la possibilité de :
 
 ### Les professeurs  
 > Les professeurs sont des utilisateurs qui ont la possibilité de créer du contenu  **`cours`**, **`exercices`** et **`corriger`** avec la possibilité de recevoir une rémunération pour ce travail fourni.Ils ont aussi la possibilité de **`répondre aux commentaires`** sur les contenus qu'ils ont postés.
+> un professeur qui appartient à une école à la possibilité de publier un cours qui ne va apparaitre que dans la section de cette école.
 
 ### Les étudiants  
 > Ce sont les utilisateurs cibles de notre du site, toutes personnes ayant le désir d'apprendre sur cette plateforme à savoir les élèves, les étudiants, les autodidactes, etc. 
