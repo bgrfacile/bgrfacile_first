@@ -217,7 +217,7 @@
 
                         @else
                             <a href="{{ route('login') }}"
-                               class="inline-block text-base px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white lg:mt-0">
+                               class="hidden sm:block inline-block text-base px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white lg:mt-0">
                                 Se connecter
                             </a>
                         @endif

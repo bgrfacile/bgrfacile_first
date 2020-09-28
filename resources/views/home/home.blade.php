@@ -824,9 +824,9 @@
 @section('content')
     <section class="bg-white">
         <div class="container mx-auto">
-            <div class="flex items-center">
+            <div class="flex items-center p-8 sm:p-0">
                 <ul class="w-full flex justify-around text-center">
-                    <li class="p-8">
+                    <li class="mx-4">
                         <svg class="h-20 w-20" viewBox="0 0 510.468 510.468"
                              xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -1025,7 +1025,7 @@
                         <h6 class="text-3xl">50</h6>
                         <h5 class="text-base">Etudiants</h5>
                     </li>
-                    <li class="p-8">
+                    <li class="mx-4">
                         <svg class="h-20 w-20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                             <path d="m72 200v-40a136 136 0 0 1 136-136 136 136 0 0 1 136 136v40z" fill="#734b39"/>
                             <circle cx="312" cy="200" fill="#f0c6a4" r="32"/>
@@ -1067,7 +1067,7 @@
                         <h6 class="text-3xl">330</h6>
                         <h5 class="text-base">Professeurs</h5>
                     </li>
-                    <li class="p-8">
+                    <li class="mx-4">
                         <svg class="h-20 w-20" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <path style="fill:#77D7ED;" d="M512,256c0,44.823-11.525,86.96-31.766,123.6c-7.239,13.113-15.6,25.515-24.938,37.085
@@ -1315,10 +1315,7 @@
         <div class="flex flex-wrap relative items-center">
             <div class="w-full sm:w-1/2 p-0 sm:p-4">
                 <svg class="mx-auto" viewBox="0 0 438 274" version="1.1"
-                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <title>step1-create</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
+                     xmlns="http://www.w3.org/2000/svg">
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g id="Exports" transform="translate(0.000000, -55.000000)">
                             <g id="step1-create" transform="translate(0.000000, 56.000000)">
@@ -2069,10 +2066,11 @@
     </section>
 
     {{--    fonctionnalitées--}}
-    <section class="bg-white mt-6 mb-12">
-        <div class="container max-w-5xl mx-auto m-8">
-            <h3 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">fonctionnalitées</h3>
-    </section>
+{{--    <section class="bg-white mt-6 mb-12">--}}
+{{--        <div class="container max-w-5xl mx-auto m-8">--}}
+{{--            <h3 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">fonctionnalitées</h3>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     {{--    Disponible sur mobile--}}
     <section class="bg-gray-100">
