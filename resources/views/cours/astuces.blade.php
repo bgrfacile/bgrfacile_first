@@ -80,9 +80,9 @@
                         <h3 class="MS-bold w-full bg-white p-3 uppercase">formation</h3>
                         <a href="#modal_formation" data-modal="1"
                            class="MS-js-modal MS-bold block w-full text-white bg-black uppercase p-3 cursor-pointer">collège</a>
-                        <aside id="modal_formation" class="modal z-50" style="display: none" aria-hidden="true"
+                        <aside id="modal_formation" class="modal z-50 " style="display: none" aria-hidden="true"
                                role="dialog" aria-labelledby="titleModal">
-                            <div class="MS-js-modal-stop modal-wrapper z-50">
+                            <div class="MS-js-modal-stop modal-wrapper z-50 h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
                                 <button class="MS-js-modal-close">close</button>
                                 <h1 id="titleModal">liste de nos formations</h1>
                                 <p>There's one way and only one way to determine if an animal is intelligent. Dissect
@@ -193,6 +193,34 @@
                         <div class="w-full uppercase p-3">
                             pas de programme trouvé.
                         </div>
+                    </section>
+                    <section class="mb-5 text-center">
+                        <button onclick="document.getElementById('myModal').showModal()" id="btn" class="py-3 px-10 bg-gray-800 text-white rounded text shadow-xl">
+                            Open
+                        </button>
+                        <dialog id="myModal" class="h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
+
+                            <div class="flex flex-col w-full h-auto ">
+                                <!-- Header -->
+                                <div class="flex w-full h-auto justify-center items-center">
+                                    <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                                        Modal Header
+                                    </div>
+                                    <div onclick="document.getElementById('myModal').close();" class="flex w-1/12 h-auto justify-center cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                    </div>
+                                    <!--Header End-->
+                                </div>
+                                <!-- Modal Content-->
+                                <div class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
+                                    This is a text inside the modal. You can add your content here.
+                                </div>
+                                <!-- End of Modal Content-->
+
+
+
+                            </div>
+                        </dialog>
                     </section>
                 </div>
 
@@ -534,44 +562,7 @@
             </div>
         </div>
     </div>
-    <style>
-        .modal {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            animation: fadeIn .3s both;
-        }
 
-        *:focus {
-            box-shadow: 0 0 10px #476CA4;
-        }
-
-        .modal-wrapper {
-            overflow: auto;
-            background-color: #fff;
-            width: 600px;
-            /*height: 400px;*/
-            max-width: calc(100vw - 20px);
-            max-height: calc(100vh - 20px);
-            padding: 20px;
-            animation: slipFromTop .5s both;
-        }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to{opacity: 1;}
-        }
-        @keyframes slipFromTop {
-            from {transform: translateY(-50px)}
-            to{transform: translateY(0px)}
-        }
-    </style>
 @endsection
 
 

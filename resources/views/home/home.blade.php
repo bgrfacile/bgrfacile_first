@@ -2066,11 +2066,64 @@
     </section>
 
     {{--    fonctionnalitées--}}
-{{--    <section class="bg-white mt-6 mb-12">--}}
-{{--        <div class="container max-w-5xl mx-auto m-8">--}}
-{{--            <h3 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">fonctionnalitées</h3>--}}
-{{--        </div>--}}
-{{--    </section>--}}
+
+<section class="mt-8 mb-8">
+    <h3 class="text-center font-bold text-5xl  tracking-wide relative">Notre tarification</h3>
+
+    <div class="flex flex-row justify-center my-4 text-sm tracking-tight font-medium text-gray-700">
+        <p class="mx-3">Annuellement</p>
+
+        <!-- Toggle Button -->
+        <label for="toggle" class="flex items-center cursor-pointer">
+            <!-- toggle -->
+            <div class="relative">
+                <!-- hidden input -->
+                <input id="toggle" type="checkbox" class="hidden" onclick="myFunction()" />
+                <!-- line -->
+                <div class="w-10 h-3 bg-gray-400 rounded-full shadow-inner"></div>
+                <!-- dot -->
+                <div class="toggle_dot absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+            </div>
+        </label>
+
+        <p class="mx-3">Mensuel</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:transform md:scale-75 lg:scale-100 justify-center">
+        <div class="border rounded-lg md:rounded-r-none text-center p-5 mx-auto md:mx-0 my-2 md:my-6 bg-gray-100 font-medium z-10 shadow-lg">
+            <div class="">Etudiants et professeur</div>
+            <div id="month" class="font-bold text-6xl month hidden">&dollar;19.99</div>
+            <div id="annual" class="font-bold text-6xl annual">&dollar;199.99</div>
+            <hr>
+            <div class="text-sm my-3">Accès aux cours</div>
+            <hr>
+            <div class="text-sm my-3">Accès aux exercices</div>
+            <hr>
+            <div class="text-sm my-3">Accès aux corrigés</div>
+            <hr>
+            <a href="#" target="_blank">
+                <div class="bg-gradient-base border border-blue-600 hover:bg-white text-white hover:text-blue-600 font-bold uppercase text-xs mt-5 py-2 px-4 rounded cursor-pointer">Learn More</div>
+            </a>
+        </div>
+
+        <div class="border-transparent rounded-lg text-center p-5 mx-auto md:mx-0 my-2 bg-gradient text-white font-medium z-10 shadow-lg">
+            <div class="py-4">écoles</div>
+                <div id="month" class="font-bold text-6xl month hidden">&dollar;24.99</div>
+                <div id="annual" class="font-bold text-6xl annual">&dollar;249.99</div>
+                <hr>
+                <div class="text-sm my-3">Acces gratuit sur toute la platform aux membres</div>
+                <hr>
+                <div class="text-sm my-3">Administration sur l'évolution de chaque élève</div>
+                <hr>
+                <div class="text-sm my-3">Administration de l'école</div>
+                <hr>
+                <a href="#" target="_blank">
+                    <div class="bg-white border border-white hover:bg-transparent text-blue-600 hover:text-white font-bold uppercase text-xs mt-5 py-2 mpx-4 rounded cursor-pointer">Learn More</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     {{--    Disponible sur mobile--}}
     <section class="bg-gray-100">
@@ -2374,7 +2427,20 @@
 @endsection
 
 @section('script')
+    <!--JS for toggle-->
     <script>
-
+        function myFunction() {
+            var x = document.querySelectorAll('.annual');
+            var y = document.querySelectorAll('.month');
+            for (var i = 0; i < x.length; i++) {
+                if (document.getElementById("toggle").checked == true) {
+                    x[i].classList.add('hidden');
+                    y[i].classList.remove('hidden');
+                } else {
+                    x[i].classList.remove('hidden');
+                    y[i].classList.add('hidden');
+                }
+            }
+        }
     </script>
 @endsection
