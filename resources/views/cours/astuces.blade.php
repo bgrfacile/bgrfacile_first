@@ -562,32 +562,28 @@
             </div>
         </div>
     </div>
-
 @endsection
 
 
 @section('script')
     <script>
-        const like = document.querySelector('.like');
-
-        let countLike = 0;
-        like.addEventListener('click', () => {
-
-            if (countLike === 0) {
-                like.classList.toggle('anim-like');
-                countLike = 1;
-                like.style.backgroundPosition = 'right';
-            } else {
-                countLike = 0;
-                like.style.backgroundPosition = 'left';
-            }
-
+        const like = document.querySelectorAll('.like');
+        like.forEach(link=>{
+            let countLike = 0;
+            link.addEventListener('click', () => {
+                if (countLike === 0) {
+                    link.classList.toggle('anim-like');
+                    countLike = 1;
+                    link.style.backgroundPosition = 'right';
+                } else {
+                    countLike = 0;
+                    link.style.backgroundPosition = 'left';
+                }
+            });
+            link.addEventListener('animationend', () => {
+                link.classList.toggle('anim-like');
+            })
         });
-
-        like.addEventListener('animationend', () => {
-            like.classList.toggle('anim-like');
-        })
-
     </script>
     <script>
         let modal = null;

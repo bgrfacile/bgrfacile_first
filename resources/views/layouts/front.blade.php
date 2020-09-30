@@ -275,9 +275,9 @@
 
     @yield('baniere')
 </header>
-<div>
+<main role="main">
     @yield('content')
-</div>
+</main>
 <!--Footer-->
 <footer class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
     <a class="text-gray-500 no-underline hover:no-underline" href="#">© bgrfacile 2020</a>
