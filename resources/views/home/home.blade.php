@@ -1024,8 +1024,9 @@
                     <h6 class="text-3xl">50</h6>
                     <h5 class="text-base">Etudiants</h5>
                 </li>
-                <li class="mb-3 sm">
-                    <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <li class="mb-3 sm:mb-0">
+                    <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" viewBox="0 0 512 512"
+                         xmlns="http://www.w3.org/2000/svg">
                         <path d="m72 200v-40a136 136 0 0 1 136-136 136 136 0 0 1 136 136v40z" fill="#734b39"/>
                         <circle cx="312" cy="200" fill="#f0c6a4" r="32"/>
                         <circle cx="104" cy="200" fill="#f0c6a4" r="32"/>
@@ -1066,7 +1067,7 @@
                     <h6 class="text-3xl">330</h6>
                     <h5 class="text-base">Professeurs</h5>
                 </li>
-                <li class="mb-3 sm">
+                <li class="mb-3 sm:mb-0">
                     <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <path style="fill:#77D7ED;" d="M512,256c0,44.823-11.525,86.96-31.766,123.6c-7.239,13.113-15.6,25.515-24.938,37.085
@@ -1282,7 +1283,7 @@
             </div>
             <div class="mx-auto w-full sm:w-1/2 p-2 sm:p-4">
                 <img class="max-w-full h-auto overflow-hidden"
-                     src="{{ asset('/assets/images/test.jpg') }}"
+                     src="https://images.unsplash.com/photo-1567057420215-0afa9aa9253a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80"
                      alt="illustration d'un étudiant sur bgrfacile">
             </div>
         </div>
@@ -1293,7 +1294,7 @@
         <div class="flex flex-wrap items-center relative">
             <div class="order-2 md:order-1 mx-auto w-full sm:w-1/2 p-2 sm:p-4">
                 <img class="max-w-full h-auto overflow-hidden"
-                     src="{{ asset('/assets/images/test2.jpg') }}"
+                     src="https://images.unsplash.com/photo-1541000020894-321f175f5a69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
                      alt="illustration d'un professeur sur bgrfacile">
             </div>
             <div class="order-1 md:order-2 mx-auto mt-3 mb-auto w-full sm:w-1/2 p-2 sm:p-4">
@@ -2056,9 +2057,12 @@
                 </p>
             </div>
             <div class="mx-auto w-full sm:w-1/2 p-2 sm:p-4">
-                <img class="max-w-full h-auto overflow-hidden"
-                     src="{{ asset('/assets/images/test.jpg') }}"
-                     alt="">
+{{--                <img class="max-w-full h-auto overflow-hidden"--}}
+{{--                     src="{{ asset('/assets/images/test.jpg') }}"--}}
+{{--                     alt="">--}}
+                <iframe class="shadow-lg" width="560" height="315" src="https://www.youtube.com/embed/BHACKCNDMW8?start=5" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
         </div>
     </section>
