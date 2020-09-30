@@ -2057,12 +2057,12 @@
                 </p>
             </div>
             <div class="mx-auto w-full sm:w-1/2 p-2 sm:p-4">
-{{--                <img class="max-w-full h-auto overflow-hidden"--}}
-{{--                     src="{{ asset('/assets/images/test.jpg') }}"--}}
-{{--                     alt="">--}}
-                <iframe class="shadow-lg" width="560" height="315" src="https://www.youtube.com/embed/BHACKCNDMW8?start=5" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <img class="max-w-full h-auto overflow-hidden"
+                     src="https://image.freepik.com/vecteurs-libre/retour-arriere-plan-du-tableau-noir_23-2148589205.jpg"
+                     alt="">
+{{--                <iframe class="shadow-lg" width="560" height="560" src="https://www.youtube.com/embed/BHACKCNDMW8?start=5" frameborder="0"--}}
+{{--                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"--}}
+{{--                        allowfullscreen></iframe>--}}
             </div>
         </div>
     </section>
