@@ -825,7 +825,7 @@
     <section class="bg-white">
         <div class="flex flex-wrap items-center justify-center p-2 sm:p-8">
             <ul class="w-full flex sm:flex-row justify-around text-center">
-                <li class="mb-3 sm:mb-0">
+                <li class="">
                     <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" viewBox="0 0 510.468 510.468"
                          xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -1024,7 +1024,7 @@
                     <h6 class="text-3xl">50</h6>
                     <h5 class="text-base">Etudiants</h5>
                 </li>
-                <li class="mb-3 sm:mb-0">
+                <li class="">
                     <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" viewBox="0 0 512 512"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d="m72 200v-40a136 136 0 0 1 136-136 136 136 0 0 1 136 136v40z" fill="#734b39"/>
@@ -1067,7 +1067,7 @@
                     <h6 class="text-3xl">330</h6>
                     <h5 class="text-base">Professeurs</h5>
                 </li>
-                <li class="mb-3 sm:mb-0">
+                <li class="">
                     <svg class="h-10 sm:h-15 w-10 sm:w-15 mx-auto" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <path style="fill:#77D7ED;" d="M512,256c0,44.823-11.525,86.96-31.766,123.6c-7.239,13.113-15.6,25.515-24.938,37.085
@@ -2046,7 +2046,7 @@
 
     {{--    Interraction avec son école--}}
     <section class="bg-gray-100 mt-6 mb-12">
-        <div class="flex flex-wrap items-center relative">
+        <div class="flex flex-wrap flex-col md:flex-row items-center relative">
             <div class="mt-3 mb-auto w-full sm:w-1/2 p-2 sm:p-4">
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Interraction avec son école</h3>
                 <p class="text-gray-600 mb-8">
