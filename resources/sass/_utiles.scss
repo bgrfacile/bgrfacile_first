@@ -87,9 +87,9 @@ My modal
      animation: fadeIn .3s both;
  }
 
-*:focus {
-    box-shadow: 0 0 10px #476CA4;
-}
+//*:focus {
+//    box-shadow: 0 0 10px #476CA4;
+//}
 
 .modal-wrapper {
     overflow: auto;

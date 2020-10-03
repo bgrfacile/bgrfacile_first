@@ -13,6 +13,10 @@ Route::get('/', function () {
     return view('home.home');
 });
 
+Route::get('/search',function (){
+   return view('search.search');
+})->name('search');
+
 Route::get('/ecoles',function (){
    return view('ecoles.index');
 })->name('ecoles.index');

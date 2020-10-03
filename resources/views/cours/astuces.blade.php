@@ -27,7 +27,7 @@
 
 
 @section('content')
-    <div class="bg-gray-200">
+    <div class="bg-gray-200 py-12">
         <nav id="bar"
             class="flex flex-wrap items-center bg-gray-200 sticky top-0 z-50 shadow mb-5">
             <ul class="flex-1 flex items-center">
@@ -273,8 +273,11 @@
                             </div>
                             <footer class="flex justify-between p-4">
                                 <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
+                                <div class="flex overflow-hidden">
+                                    <img class="inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
+                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 </div>
                             </footer>
                         </article>
