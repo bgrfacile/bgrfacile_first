@@ -119,8 +119,8 @@ My modal
   max-width: calc(100vw - 20px);
   max-height: calc(100vh - 20px);
   padding: 20px;
-  -webkit-animation: slipFromTop 0.5s both;
-          animation: slipFromTop 0.5s both;
+  -webkit-animation: slipFromTop 0.4s both;
+          animation: slipFromTop 0.4s both;
 }
 
 @-webkit-keyframes fadeIn {
