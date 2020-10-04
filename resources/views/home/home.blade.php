@@ -896,7 +896,7 @@
                             </g>
                         </g>
                     </svg>
-                    <h6 class="text-3xl">50</h6>
+                    <h6 class="count text-3xl">50</h6>
                     <h5 class="text-base">Etudiants</h5>
                 </li>
                 <li class="">
@@ -939,7 +939,7 @@
                             fill="#4f5659"/>
                         <circle cx="248" cy="192" fill="#452d23" r="8"/>
                     </svg>
-                    <h6 class="text-3xl">330</h6>
+                    <h6 class="count text-3xl">330</h6>
                     <h5 class="text-base">Professeurs</h5>
                 </li>
                 <li class="">
@@ -1137,7 +1137,7 @@
 		C468.335,155.822,456.267,151.171,441.322,151.113z"/>
                         </g>
                     </svg>
-                    <h6 class="text-3xl">12</h6>
+                    <h6 class="count text-3xl">12</h6>
                     <h5 class="text-base">Ecoles</h5>
                 </li>
             </ul>
@@ -2315,6 +2315,7 @@
 @endsection
 
 @section('script')
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!--JS for toggle-->
     <script>
         function myFunction() {
@@ -2330,5 +2331,17 @@
                 }
             }
         }
+
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
     </script>
 @endsection

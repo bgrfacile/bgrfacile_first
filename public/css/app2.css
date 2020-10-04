@@ -111,14 +111,10 @@ My modal
           animation: fadeIn 0.3s both;
 }
 
-*:focus {
-  box-shadow: 0 0 10px #476CA4;
-}
-
 .modal-wrapper {
   overflow: auto;
   background-color: #fff;
-  width: 600px;
+  width: 80%;
   /*height: 400px;*/
   max-width: calc(100vw - 20px);
   max-height: calc(100vh - 20px);

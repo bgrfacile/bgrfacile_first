@@ -23,6 +23,7 @@
             </a>
         </div>
     </div>
+</div>
 @endsection
 
 
@@ -83,79 +84,413 @@
                         <aside id="modal_formation" class="modal z-50 " style="display: none" aria-hidden="true"
                                role="dialog" aria-labelledby="titleModal">
                             <div class="MS-js-modal-stop modal-wrapper z-50 h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
-                                <button class="MS-js-modal-close">close</button>
-                                <h1 id="titleModal">liste de nos formations</h1>
-                                <p>There's one way and only one way to determine if an animal is intelligent. Dissect
-                                    its brain! So, how 'bout them Knicks? Michelle, I don't regret this, but I both rue
-                                    and lament it. I'm a thing. We can't compete with Mom! Her company is big and evil!
-                                    Ours is small and neutral!</p>
-                                <p>It's okay, Bender. I like cooking too. <strong> Michelle, I don't regret this, but I
-                                        both rue and lament it.</strong> <em> I decline the title of Iron Cook and
-                                        accept the lesser title of Zinc Saucier, which I just made up.</em> Uhh… also,
-                                    comes with double prize money.</p>
-                                <h2>Noooooo!</h2>
-                                <a href="#" style="color: red">coucou</a>
-                                <p>There's one way and only one way to determine if an animal is intelligent. Dissect
-                                    its brain! Fry! Quit doing the right thing, you jerk! A true inspiration for the
-                                    children. The alien mothership is in orbit here. If we can hit that bullseye, the
-                                    rest of the dominoes will fall like a house of cards. Checkmate.</p>
-                                <ol>
-                                    <li>
-                                        <input type="text" placeholder="coucouc">
-                                    </li>
-                                    <li>Your best is an idiot!</li>
-                                    <li>Bender, quit destroying the universe!</li>
-                                    <li>Would you censor the Venus de Venus just because you can see her spewers?</li>
+{{--                                <button class="MS-js-modal-close">close</button>--}}
+                                <div class="flex items-center">
+                                    <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                                        Modal Header
+                                    </div>
+                                    <div class="MS-js-modal-close flex w-1/12 h-auto justify-center cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                    </div>
+                                </div>
+                                <section class="flex flex-row flex-wrap mx-auto">
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
 
-                                </ol>
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
 
-                                <h3>Soothe us with sweet lies.</h3>
-                                <p>We need rest. The spirit is willing, but the flesh is spongy and bruised. Wow, you
-                                    got that off the Internet? In my day, the Internet was only used to download
-                                    pornography. The alien mothership is in orbit here. If we can hit that bullseye, the
-                                    rest of the dominoes will fall like a house of cards. Checkmate.</p>
-                                <ul>
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
 
-                                    <li>Say it in Russian!</li>
-                                    <li>Shut up and get to the point!</li>
-                                    <li>Tell her you just want to talk. It has nothing to do with mating.</li>
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
 
-                                </ul>
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
 
-                                <p>Ummm…to eBay? Well, thanks to the Internet, I'm now bored with sex. Is there a place
-                                    on the web that panders to my lust for violence? I just want to talk. It has nothing
-                                    to do with mating. Fry, that doesn't make sense.</p>
-                                <p>Moving along… Oh, I think we should just stay friends. Hey, guess what you're
-                                    accessories to. Ah, the 'Breakfast Club' soundtrack! I can't wait til I'm old enough
-                                    to feel ways about stuff!</p>
-                                <input type="text" placeholder="coucouc">
-                                <p>Maybe I love you so much I love you no matter who you are pretending to be. Look,
-                                    everyone wants to be like Germany, but do we really have the pure strength of
-                                    'will'? How much did you make me? Are you crazy? I can't swallow that.</p>
-                                <p>Hey, you add a one and two zeros to that or we walk! Fatal. Can I use the gun? I
-                                    usually try to keep my sadness pent up inside where it can fester quietly as a
-                                    mental illness.</p>
-                                <p>Yes! In your face, Gandhi! Oh, I think we should just stay friends. Oh, but you can.
-                                    But you may have to metaphorically make a deal with the devil. And by "devil", I
-                                    mean Robot Devil. And by "metaphorically", I mean get your coat.</p>
-                                <p>Kif might! Daddy Bender, we're hungry. You can see how I lived before I met you. Tell
-                                    them I hate them. You guys aren't Santa! You're not even robots. How dare you lie in
-                                    front of Jesus?</p>
-                                <p>Do a flip! Hey, what kinda party is this? There's no booze and only one hooker. I
-                                    haven't felt much of anything since my guinea pig died. With a warning label this
-                                    big, you know they gotta be fun! Hey, guess what you're accessories to.</p>
-                                <p>Isn't it true that you have been paid for your testimony? Why did you bring us here?
-                                    Hey, you add a one and two zeros to that or we walk! No! The kind with looting and
-                                    maybe starting a few fires!</p>
-                                <p>Now, now. Perfectly symmetrical violence never solved anything. Now that the, uh,
-                                    garbage ball is in space, Doctor, perhaps you can help me with my sexual
-                                    inhibitions? Yes. You gave me a dollar and some candy.</p>
-                                <p>Now what? Yes, I saw. You were doing well, until everyone died. I guess if you want
-                                    children beaten, you have to do it yourself. Switzerland is small and neutral! We
-                                    are more like Germany, ambitious and misunderstood!</p>
-                                <p>Who am I making this out to? A sexy mistake. But existing is basically all I do! Fry,
-                                    you can't just sit here in the dark listening to classical music. Who's brave enough
-                                    to fly into something we all keep calling a death sphere?</p>
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <!-- Card Component -->
+                                    <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
+                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                            <div class="md:flex-shrink-0">
+                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                            </div>
+                                            <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
+        <span class="text-xs font-medium text-blue-600 uppercase">
+          Web Programming
+        </span>
+                                                <div class="flex flex-row items-center">
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                        </svg>
+                                                        <span>1.5k</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                        </svg>
+                                                        <span>25</span>
+                                                    </div>
+
+                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                        </svg>
+                                                        <span>7</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                                <a href="#" class="hover:underline">
+                                                    <h2 class="text-2xl font-bold tracking-normal text-gray-800">
+                                                        Ho to Yawn in 7 Days
+                                                    </h2>
+                                                </a>
+                                            </div>
+                                            <hr class="border-gray-300">
+                                            <p class="flex flex-row flex-wrap w-full px-4 py-2 overflow-hidden text-sm text-justify text-gray-700">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, magni
+                                                fugiat, odit incidunt necessitatibus aut nesciunt exercitationem aliquam
+                                                id voluptatibus quisquam maiores officia sit amet accusantium aliquid
+                                                quo obcaecati quasi.
+                                            </p>
+                                            <hr class="border-gray-300">
+                                            <section class="px-4 py-2 mt-2">
+                                                <div class="flex items-center justify-between">
+                                                    <div class="flex items-center flex-1">
+                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <div class="flex flex-col mx-2">
+                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                                Fajrian Aidil Pratama
+                                                            </a>
+                                                            <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-1 text-xs text-gray-600">9 minutes read</p>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </aside>
                     </section>

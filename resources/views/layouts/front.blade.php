@@ -124,7 +124,7 @@
                     <div class="ml-4 flex items-center md:ml-6">
                         {{--                        recherche button--}}
                         <button
-                            class="p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
+                            class="mr-4 p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
                             aria-label="Notifications">
                             <a href="{{ route('search') }}">
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none"
@@ -139,43 +139,58 @@
                         </button>
 
                         <!-- Profile dropdown -->
-                        <div @click.away="open = false" class="ml-3 relative" x-data="{ open: false }">
-                            <div>
-                                <button @click="open = !open"
-                                        class="relative max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid"
-                                        id="user-menu" aria-label="User menu" aria-haspopup="true"
-                                        x-bind:aria-expanded="open">
-                                    <img class="h-8 w-8 rounded-full"
-                                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                         alt="">
-                                    <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
-                                </button>
-                            </div>
-                            <div x-show="open"
-                                 x-description="Profile dropdown panel, show/hide based on dropdown state."
-                                 x-transition:enter="transition ease-out duration-100"
-                                 x-transition:enter-start="transform opacity-0 scale-95"
-                                 x-transition:enter-end="transform opacity-100 scale-100"
-                                 x-transition:leave="transition ease-in duration-75"
-                                 x-transition:leave-start="transform opacity-100 scale-100"
-                                 x-transition:leave-end="transform opacity-0 scale-95"
-                                 class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
-                                 style="display: none;">
-                                <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical"
-                                     aria-labelledby="user-menu">
+                        @auth
+                            <div @click.away="open = false" class="mr-3 relative" x-data="{ open: false }">
+                                <div>
+                                    <button @click="open = !open"
+                                            class="relative max-w-xs flex items-center text-sm rounded-full text-white focus:outline-none focus:shadow-solid"
+                                            id="user-menu" aria-label="User menu" aria-haspopup="true"
+                                            x-bind:aria-expanded="open">
+                                        <img class="h-8 w-8 rounded-full"
+                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                             alt="">
+                                        <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
+                                    </button>
+                                </div>
+                                <div x-show="open"
+                                     x-description="Profile dropdown panel, show/hide based on dropdown state."
+                                     x-transition:enter="transition ease-out duration-100"
+                                     x-transition:enter-start="transform opacity-0 scale-95"
+                                     x-transition:enter-end="transform opacity-100 scale-100"
+                                     x-transition:leave="transition ease-in duration-75"
+                                     x-transition:leave-start="transform opacity-100 scale-100"
+                                     x-transition:leave-end="transform opacity-0 scale-95"
+                                     class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+                                     style="display: none;">
+                                    <div class="py-1 rounded-md bg-white shadow-xs" role="menu"
+                                         aria-orientation="vertical"
+                                         aria-labelledby="user-menu">
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                       role="menuitem">Ton profil</a>
+                                        <a href="{{ url('/login') }}"
+                                           class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                           role="menuitem">Ton profil</a>
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                       role="menuitem">Parametres</a>
+                                        {{--                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"--}}
+                                        {{--                                       role="menuitem">Parametres</a>--}}
 
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                       role="menuitem">Déconnexion</a>
+                                        {{--                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"--}}
+                                        {{--                                       role="menuitem">Déconnexion</a>--}}
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @else
+                            <div class="">
+                                <a href="{{ url('/login') }}"
+                                    class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
+                                    Connexion
+                                </a>
+                                <a href="{{ url('/register') }}"
+                                    class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">
+                                    Inscription
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 {{--                burger pour modile--}}
@@ -256,31 +271,38 @@
 
             </div>
             <div class="pt-4 pb-3 border-t border-gray-700">
-                <div class="flex items-center px-5 space-x-3">
-                    <div class="flex-shrink-0 relative">
-                        <img class="h-10 w-10 rounded-full"
-                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                             alt="">
-                        <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
+                @auth
+                    <div class="flex items-center px-5 space-x-3">
+                        <div class="flex-shrink-0 relative">
+                            <img class="h-10 w-10 rounded-full"
+                                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                 alt="">
+                            <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-base font-medium leading-none text-white">john Doe</div>
+                            <div class="text-sm font-medium leading-none text-gray-400">étudiant</div>
+                        </div>
                     </div>
-                    <div class="space-y-1">
-                        <div class="text-base font-medium leading-none text-white">john Doe</div>
-                        <div class="text-sm font-medium leading-none text-gray-400">étudiant</div>
+                    <div class="mt-3 px-2 space-y-1">
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Votre
+                            profil</a>
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Parametre</a>
+
+                        <a href="#"
+                           class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Déconnexion</a>
+
                     </div>
-                </div>
-                <div class="mt-3 px-2 space-y-1">
-
-                    <a href="#"
-                       class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Votre
-                        profil</a>
-
-                    <a href="#"
-                       class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Parametre</a>
-
-                    <a href="#"
-                       class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Déconnexion</a>
-
-                </div>
+                @else
+                    <div class="flex items-center px-5 space-x-3">
+                        <button class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Connexion</button>
+                        <button class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Inscription</button>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>
