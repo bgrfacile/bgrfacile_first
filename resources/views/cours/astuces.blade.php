@@ -1,36 +1,39 @@
 @extends('layouts.front')
 
 @section('baniere')
-{{--    <div class="h-64">--}}
-{{--        <div class="MS-b_astuces h-full bg-gray-100 flex items-center justify-center">--}}
-{{--            <div class="text-white text-center">--}}
-{{--                <h1 class="MS-b_h1">section cours</h1>--}}
-{{--                <p class=" MS-b_text mb-9">Découvrer des millions de cours rédiger par les professeurs qualifiés</p>--}}
-{{--                <button--}}
-{{--                    class="ml-3 bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">--}}
-{{--                    visiter--}}
-{{--                </button>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    {{--    <div class="h-64">--}}
+    {{--        <div class="MS-b_astuces h-full bg-gray-100 flex items-center justify-center">--}}
+    {{--            <div class="text-white text-center">--}}
+    {{--                <h1 class="MS-b_h1">section cours</h1>--}}
+    {{--                <p class=" MS-b_text mb-9">Découvrer des millions de cours rédiger par les professeurs qualifiés</p>--}}
+    {{--                <button--}}
+    {{--                    class="ml-3 bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">--}}
+    {{--                    visiter--}}
+    {{--                </button>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 
-<div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
-    <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-        <div class="text-center">
-            <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl mb-9">section cours <span class="underline text-blue-400"></span></h1>
-            <a href="#bar" class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                visiter
-            </a>
+    <div class="w-full bg-cover bg-center"
+         style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
+        <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
+            <div class="text-center">
+                <h1 class="text-white text-2xl font-semibold uppercase md:text-3xl mb-9">section cours <span
+                        class="underline text-blue-400"></span></h1>
+                <a href="#bar"
+                   class="mt-4 px-4 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                    visiter
+                </a>
+            </div>
         </div>
     </div>
-</div>
 @endsection
 
 
 @section('content')
-    <div class="bg-gray-200 py-12">
+    <div class="bg-gray-200 pb-12">
         <nav id="bar"
-            class="flex flex-wrap items-center bg-gray-200 sticky top-0 z-50 shadow mb-5">
+             class="flex flex-wrap items-center bg-gray-200 sticky top-0 z-50 shadow mb-5">
             <ul class="flex-1 flex items-center">
                 <li class="w-1/4 h-12">
                     <a href="#"
@@ -83,53 +86,79 @@
                            class="MS-js-modal MS-bold block w-full text-white bg-black uppercase p-3 cursor-pointer">collège</a>
                         <aside id="modal_formation" class="modal z-50 " style="display: none" aria-hidden="true"
                                role="dialog" aria-labelledby="titleModal">
-                            <div class="MS-js-modal-stop modal-wrapper z-50 h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
-{{--                                <button class="MS-js-modal-close">close</button>--}}
+                            <div
+                                class="MS-js-modal-stop modal-wrapper z-50 h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
+                                {{--                                <button class="MS-js-modal-close">close</button>--}}
                                 <div class="flex items-center">
-                                    <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                                    <div
+                                        class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
                                         Modal Header
                                     </div>
                                     <div class="MS-js-modal-close flex w-1/12 h-auto justify-center cursor-pointer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
                                     </div>
                                 </div>
                                 <section class="flex flex-row flex-wrap mx-auto">
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -147,9 +176,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -162,40 +194,59 @@
                                     </div>
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -213,9 +264,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -228,40 +282,59 @@
                                     </div>
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -279,9 +352,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -294,40 +370,59 @@
                                     </div>
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -345,9 +440,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -360,40 +458,59 @@
                                     </div>
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -411,9 +528,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -426,40 +546,59 @@
                                     </div>
                                     <!-- Card Component -->
                                     <div class="transition-all duration-150 flex w-full px-4 py-6 md:w-1/2 lg:w-1/3">
-                                        <div class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
+                                        <div
+                                            class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
                                             <div class="md:flex-shrink-0">
-                                                <img src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png" alt="Blog Cover" class="object-fill w-full rounded-lg rounded-b-none md:h-56">
+                                                <img
+                                                    src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
+                                                    alt="Blog Cover"
+                                                    class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                             </div>
                                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
         <span class="text-xs font-medium text-blue-600 uppercase">
           Web Programming
         </span>
                                                 <div class="flex flex-row items-center">
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                                         </svg>
                                                         <span>1.5k</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center mr-2">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                                                         </svg>
                                                         <span>25</span>
                                                     </div>
 
-                                                    <div class="text-xs font-medium text-gray-500 flex flex-row items-center">
-                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                                                    <div
+                                                        class="text-xs font-medium text-gray-500 flex flex-row items-center">
+                                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke-width="2"
+                                                                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
                                                         </svg>
                                                         <span>7</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <hr class="border-gray-300">
-                                            <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
+                                            <div
+                                                class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
                                                 <a href="#" class="hover:underline">
                                                     <h2 class="text-2xl font-bold tracking-normal text-gray-800">
                                                         Ho to Yawn in 7 Days
@@ -477,9 +616,12 @@
                                             <section class="px-4 py-2 mt-2">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center flex-1">
-                                                        <img class="object-cover h-10 rounded-full" src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg" alt="Avatar">
+                                                        <img class="object-cover h-10 rounded-full"
+                                                             src="https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg"
+                                                             alt="Avatar">
                                                         <div class="flex flex-col mx-2">
-                                                            <a href="" class="font-semibold text-gray-700 hover:underline">
+                                                            <a href=""
+                                                               class="font-semibold text-gray-700 hover:underline">
                                                                 Fajrian Aidil Pratama
                                                             </a>
                                                             <span class="mx-1 text-xs text-gray-600">28 Sep 2020</span>
@@ -502,7 +644,8 @@
                                     <div class="flex flex-col items-center justify-center">
                                         <div class="flex flex-col">
                                             <label class="inline-flex items-center mt-3">
-                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600" checked>
+                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600"
+                                                       checked>
                                                 <span class="ml-2 text-gray-700">3eme</span>
                                             </label>
                                             <label class="inline-flex items-center mt-3">
@@ -530,7 +673,8 @@
                         </div>
                     </section>
                     <section class="mb-5 text-center">
-                        <button onclick="document.getElementById('myModal').showModal()" id="btn" class="py-3 px-10 bg-gray-800 text-white rounded text shadow-xl">
+                        <button onclick="document.getElementById('myModal').showModal()" id="btn"
+                                class="py-3 px-10 bg-gray-800 text-white rounded text shadow-xl">
                             Open
                         </button>
                         <dialog id="myModal" class="h-auto w-11/12 md:w-1/2 p-5  bg-white rounded-md ">
@@ -538,20 +682,27 @@
                             <div class="flex flex-col w-full h-auto ">
                                 <!-- Header -->
                                 <div class="flex w-full h-auto justify-center items-center">
-                                    <div class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
+                                    <div
+                                        class="flex w-10/12 h-auto py-3 justify-center items-center text-2xl font-bold">
                                         Modal Header
                                     </div>
-                                    <div onclick="document.getElementById('myModal').close();" class="flex w-1/12 h-auto justify-center cursor-pointer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                    <div onclick="document.getElementById('myModal').close();"
+                                         class="flex w-1/12 h-auto justify-center cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
                                     </div>
                                     <!--Header End-->
                                 </div>
                                 <!-- Modal Content-->
-                                <div class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
+                                <div
+                                    class="flex w-full h-auto py-10 px-2 justify-center items-center bg-gray-200 rounded text-center text-gray-500">
                                     This is a text inside the modal. You can add your content here.
                                 </div>
                                 <!-- End of Modal Content-->
-
 
 
                             </div>
@@ -582,319 +733,51 @@
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-4 px-2 xl:px-0 md:px-0">
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
+                        @foreach($datas as $course)
+                            <article class="bg-white rounded">
+                                <header class="flex p-2">
+                                    <div class="flex-1">
+                                        <h4 class="MS-bold">{{ $course->name }}</h4>
+{{--                                        <small>name du prof</small>--}}
+                                    </div>
+                                    <div class="flex flex-col justify-center items-center ml-2">
+                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
+                                                  fill="black" fill-opacity="0.87"/>
+                                        </svg>
+                                        <small>favoris</small>
+                                    </div>
+                                </header>
+                                <div class="relative">
+                                    <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
+                                    <div class="like">
+                                    </div>
                                 </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
+                                <div class="MS-content__article min-h-4 p-3 pt-5">
+                                    {{ $course->description }}
                                 </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3 pt-5">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div class="flex overflow-hidden">
-                                    <img class="inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80" alt="">
-                                    <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
-                        <article class="bg-white rounded">
-                            <header class="flex p-2">
-                                <div class="flex-1">
-                                    <h4 class="MS-bold">Name du cours</h4>
-                                    <small>name du prof</small>
-                                </div>
-                                <div class="flex flex-col justify-center items-center ml-2">
-                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"
-                                              fill="black" fill-opacity="0.87"/>
-                                    </svg>
-                                    <small>favoris</small>
-                                </div>
-                            </header>
-                            <div class="relative">
-                                <img class="w-full" src="{{asset('assets/images/image_card.png')}}" alt="">
-                                <div class="like">
-                                </div>
-                            </div>
-                            <div class="MS-content__article min-h-4 p-3">
-                                lorem ipsums lorem ipsums lorem ipsums
-                            </div>
-                            <footer class="flex justify-between p-4">
-                                <a href="#">LIRE</a>
-                                <div>
-                                    124 likes
-                                </div>
-                            </footer>
-                        </article>
+                                <footer class="flex justify-between p-4">
+                                    <a href="#">LIRE</a>
+                                    <div class="flex overflow-hidden">
+                                        <img class="inline-block h-6 w-6 rounded-full text-white shadow-solid"
+                                             src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                             alt="">
+                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"
+                                             src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                             alt="">
+                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"
+                                             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                                             alt="">
+                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"
+                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                             alt="">
+                                    </div>
+                                    {{ $course->like }} likes
+                                </footer>
+                            </article>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -906,7 +789,7 @@
 @section('script')
     <script>
         const like = document.querySelectorAll('.like');
-        like.forEach(link=>{
+        like.forEach(link => {
             let countLike = 0;
             link.addEventListener('click', () => {
                 if (countLike === 0) {
@@ -950,10 +833,10 @@
             }
             e.preventDefault();
             e.stopPropagation();
-            window.setTimeout( function () {
+            window.setTimeout(function () {
                 modal.style.display = "none";
                 modal = null;
-                }, 500);
+            }, 500);
             // modal.style.display = "none";
             modal.setAttribute('aria-hidden', 'true');
             modal.removeAttribute('aria-modal');

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 | Routes reliees au vues visible par les utilisateurs landa
 |
 */
+//Route::get('profile', [UserController::class, 'show'])->middleware('auth');
 Route::get('/', function () {
     return view('home.home');
 });
@@ -26,7 +28,9 @@ Route::get('/qui-sommes-nous',function (){
 })->name('qui-sommes-nous');
 
 Route::get('/cours/astuces',function (){
-    return view('cours.astuces');
+    $datas = DB::table('courses')->get();
+//    dd($datas);
+    return view('cours.astuces',['datas'=>$datas]);
 })->name('astuces.index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
