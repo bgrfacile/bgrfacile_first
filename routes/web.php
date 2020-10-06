@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.home');
 });
+Route::get('/roles', function () {
+    return view('role');
+})->middleware('role:super-admin|admin|writer');
 
 Route::get('/search',function (){
    return view('search.search');
@@ -29,9 +33,12 @@ Route::get('/qui-sommes-nous',function (){
 
 Route::get('/cours/astuces',function (){
     $datas = DB::table('courses')->get();
-//    dd($datas);
     return view('cours.astuces',['datas'=>$datas]);
 })->name('astuces.index');
+
+Route::get('/profil',function (){
+    return view('profil.profil');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');

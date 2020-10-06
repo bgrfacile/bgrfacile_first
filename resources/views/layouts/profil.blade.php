@@ -19,8 +19,6 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased">
-        @inertia
-
 <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
     <div x-data="{ open: false }"
          class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -81,23 +79,6 @@
     </div>
 </div>
 
-
-        @role('super-admin')
-        Je suis super-admin!
-        @else
-        Je ne suis pas super-admin!...
-        @endrole
-        <br>
-        @role('writer')
-        Je suis writer!
-        @else
-        Je ne suis pas writer!...
-        @endrole
-        <br>
-        @role('admin')
-        Je suis admin!
-        @else
-        Je ne suis pas admin!...
-        @endrole
+@yield('contenue')
 </body>
 </html>
