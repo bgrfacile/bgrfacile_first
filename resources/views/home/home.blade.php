@@ -2,7 +2,7 @@
 
 
 @section('baniere')
-    <div class="bg-indigo-900 relative overflow-hidden ">
+    <div class="bg-indigo-900 relative overflow-hidden " style="z-index: -300;">
         <div class="inset-0 bg-black opacity-25 absolute"></div>
         <div class="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-24 xl:py-40">
             <div class="lg:w-3/5 xl:w-2/5 flex flex-col items-start relative z-10">

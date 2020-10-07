@@ -35,7 +35,7 @@ class CreateNewUser implements CreatesNewUsers
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
             ]);
-            return $user->assignRole(Role::create(['name' => 'super-admin']));
+            return $user->assignRole('super-admin');
         }else{
 
              $user = User::create([
@@ -43,7 +43,7 @@ class CreateNewUser implements CreatesNewUsers
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
             ]);
-            return $user->assignRole(Role::create(['name' => 'etudiant']));
+            return $user->assignRole('etudiant');
         }
 
 

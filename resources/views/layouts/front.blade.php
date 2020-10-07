@@ -65,6 +65,8 @@
                             </svg>
                         </a>
                     </div>
+
+{{--                    liste pour grand ecran--}}
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
 
@@ -80,19 +82,63 @@
                             </a>
 
 
-                            <a href="{{ route('astuces.index') }}"
-                               class="flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
-                                </svg>
-                                Cours
-                            </a>
+{{--                            <a href="{{ route('astuces.index') }}"--}}
+{{--                               class="flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">--}}
+{{--                                <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"--}}
+{{--                                     xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                    <path--}}
+{{--                                        d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>--}}
+{{--                                    <path fill-rule="evenodd" clip-rule="evenodd"--}}
+{{--                                          d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>--}}
+{{--                                    <path fill-rule="evenodd" clip-rule="evenodd"--}}
+{{--                                          d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>--}}
+{{--                                </svg>--}}
+{{--                                Cours--}}
+{{--                            </a>--}}
+
+                            <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                <button @click="open = !open"
+                                        class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
+                                    </svg>
+                                    <span>Cours</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                                         class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd"
+                                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                     x-transition:enter-start="transform opacity-0 scale-95"
+                                     x-transition:enter-end="transform opacity-100 scale-100"
+                                     x-transition:leave="transition ease-in duration-75"
+                                     x-transition:leave-start="transform opacity-100 scale-100"
+                                     x-transition:leave-end="transform opacity-0 scale-95"
+                                     class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                        <a href="{{ route('astuces.index') }}"
+                                           class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                            Astuces</a>
+                                        <a href="#"
+                                           class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                            Cours</a>
+                                        <a href="#"
+                                           class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                            Exercices</a>
+                                        <a href="#"
+                                           class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                            Corrigés</a>
+                                    </div>
+                                </div>
+                            </div>
 
 
                             <a href="{{ route('ecoles.index') }}"
@@ -166,21 +212,17 @@
                                          aria-orientation="vertical"
                                          aria-labelledby="user-menu">
 
-                                        <a href="{{ url('/login') }}"
+                                        <a href="{{ url('/profil') }}"
                                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                            role="menuitem">Ton profil</a>
-
-                                        {{--                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"--}}
-                                        {{--                                       role="menuitem">Parametres</a>--}}
-
-                                        {{--                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"--}}
-                                        {{--                                       role="menuitem">Déconnexion</a>--}}
+                                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                           role="menuitem">Déconnexion</a>
 
                                     </div>
                                 </div>
                             </div>
                         @else
-                            <div class="">
+                            <div>
                                 <a href="{{ url('/login') }}"
                                     class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
                                     Connexion
@@ -218,6 +260,7 @@
         {{--contenue pour le mobile--}}
         <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Open" x-state:off="closed"
              :class="{ 'block': open, 'hidden': !open }" class="hidden md:hidden">
+            {{--                    liste pour petit ecran--}}
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
 
@@ -232,19 +275,49 @@
                 </a>
 
 
-                <a href="{{ route('astuces.index') }}"
-                   class="flex px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
-                    </svg>
-                    Cours
-                </a>
+                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                    <button @click="open = !open"
+                            class="flex px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                        <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
+                        </svg>
+                        <span>Cours</span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                             class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd"
+                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                         x-transition:enter-start="transform opacity-0 scale-95"
+                         x-transition:enter-end="transform opacity-100 scale-100"
+                         x-transition:leave="transition ease-in duration-75"
+                         x-transition:leave-start="transform opacity-100 scale-100"
+                         x-transition:leave-end="transform opacity-0 scale-95"
+                         class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                        <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                            <a href="{{ route('astuces.index') }}"
+                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                Astuces</a>
+                            <a href="#"
+                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                Cours</a>
+                            <a href="#"
+                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                Exercices</a>
+                            <a href="#"
+                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                Corrigés</a>
+                        </div>
+                    </div>
+                </div>
 
 
                 <a href="{{ route('ecoles.index') }}"
@@ -270,11 +343,12 @@
 
 
             </div>
-            <div class="pt-4 pb-3 border-t border-gray-700">
+
+            <div class="pt-4 pb-3 border-t border-gray-700" >
                 @auth
                     <div class="flex items-center px-5 space-x-3">
                         <div class="flex-shrink-0 relative">
-                            <img class="h-10 w-10 rounded-full"
+                            <img class="h-10 w-10 rounded-full z-0"
                                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
                                  alt="">
                             <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
@@ -291,22 +365,20 @@
                             profil</a>
 
                         <a href="#"
-                           class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Parametre</a>
-
-                        <a href="#"
                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Déconnexion</a>
 
                     </div>
                 @else
                     <div class="flex items-center px-5 space-x-3">
-                        <button class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Connexion</button>
-                        <button class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Inscription</button>
+                        <a href="{{ url('/login') }}" class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Connexion</a>
+                        <a href="{{ url('/register') }}" class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Inscription</a>
                     </div>
                 @endif
             </div>
         </div>
     </nav>
-    <div>
+
+    <div style="z-index: -200">
         @yield('baniere')
     </div>
 </header>
