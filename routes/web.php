@@ -19,6 +19,10 @@ Route::get('/roles', function () {
     return view('role');
 })->middleware('role:super-admin|admin|writer');
 
+Route::get('/faq',function (){
+    return view('faq.faq');
+})->name('faq');
+
 Route::get('/search',function (){
    return view('search.search');
 })->name('search');
