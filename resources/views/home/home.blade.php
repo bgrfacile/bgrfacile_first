@@ -705,7 +705,7 @@
         <div class="flex mb-2 lg:mx-10 lg:mb-4">
             <div
                 class="text-iron-dark text-center flex-1 md:flex md:items-baseline md:flex-auto md:px-4 lg:justify-center border-r border-baby-blue">
-                <div class="text-3xl font-circular md:pr-1">
+                <div class="count text-3xl font-circular md:pr-1">
                     340
                 </div>
                 <div class="text-xl">
@@ -714,7 +714,7 @@
             </div>
             <div
                 class="text-iron-dark text-center flex-1 md:flex md:items-baseline md:flex-auto md:px-4 lg:justify-center border-r border-baby-blue">
-                <div class="text-3xl font-circular md:pr-1">
+                <div class="count text-3xl font-circular md:pr-1">
                     23
                 </div>
                 <div class="text-xl">
@@ -723,7 +723,7 @@
             </div>
             <div
                 class="text-iron-dark text-center flex-1 md:flex md:items-baseline md:flex-auto md:px-4 lg:justify-center">
-                <div class="text-3xl font-circular md:pr-1">
+                <div class="count text-3xl font-circular md:pr-1">
                     24
                 </div>
                 <div class="text-xl">
@@ -848,14 +848,14 @@
                 background-repeat: no-repeat;
                 /*background-position: 100% 100%;*/
                 background-image: url("{{ asset('assets/svg/draw_teacher.svg') }}");
-                background-position: right -100px bottom;
+                background-position: left -100px bottom;
                 background-size: 65%;
             }
         }
     </style>
     <section class="vs-bg-courses2 container mx-auto">
-        <div class="max-w-6xl mx-auto pt-10 px-5 md:px-10 md:pt-32 lg:px-0">
-            <div class="md:w-1/2 xl:w-7/12">
+        <div class="flex max-w-6xl mx-auto pt-10 px-5 md:px-10 md:pt-32 lg:px-0">
+            <div class="md:w-1/2 xl:w-7/12 ml-auto">
                 <div>
                     <div class="font-medium font-circular text-4xl text-center mb-3 md:text-left">
                         Vous êtes professeur!
@@ -885,16 +885,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="flex flex-col sm:flex-row mt-10">
-                    <a href="{{ url('/cours/astuces') }}" style="background: black;"
-                       class="mb-3 bg-dark sm:mb-0 flex items-center text-white bg-transparent hover:bg-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-white hover:border-transparent">
-                        Connexion
-                    </a>
-                    <a href="{{ url('/ecoles') }}" style="background: rebeccapurple;"
-                       class="bg-dark ml-0 sm:ml-3 flex items-center text-white bg-transparent hover:bg-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-white hover:border-transparent">
-                        S'identifier
-                    </a>
-                </p>
+
                 <div class="hidden pt-10 pb-14 lg:pt-20 md:flex lg:mr-32">
                     <div
                         class="flex-1 h-18 text-white text-3xs uppercase font-medium justify-center flex items-center text-center px-4 rounded-lg mx-1 lg:text-sm lg:mx-2"
@@ -931,7 +922,7 @@
     </section>
 
     {{--    écoles ou instituts--}}
-    <section class="bg-white mt-6 mb-12">
+    <section class="bg-gray-100 pt-6 pb-12">
         <div class="flex flex-wrap items-center relative">
             <div class="w-full sm:w-1/2 p-2 sm:p-4">
                 <svg class="mx-auto" viewBox="0 0 438 274" version="1.1"
@@ -1653,8 +1644,7 @@
                     </g>
                 </svg>
             </div>
-{{--            <div class="w-full sm:w-1/2 p-2 sm:p-4">--}}
-            <div class="md:w-1/2 xl:w-7/12">
+            <div class="w-full sm:w-1/2 p-2 sm:p-4">
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-2">Vous êtes une école!</h3>
                 <p class="text-gray-600 mb-6">Get started with just your email and the name of your school. It’s as
                     simple as that -- no payments or credit card information required.</p>
@@ -1667,7 +1657,7 @@
     </section>
 
     {{--    Interraction avec son école--}}
-    <section class="bg-gray-100 mt-6 mb-12">
+    <section class="bg-gray-100 pt-6 pb-12">
         <div class="flex flex-wrap flex-col md:flex-row items-center relative">
             <div class="mt-3 mb-auto w-full sm:w-1/2 p-2 sm:p-4">
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Interraction avec son école</h3>
@@ -1752,7 +1742,7 @@
     </section>
 
     {{--    Disponible sur mobile--}}
-    <section class="bg-gray-100">
+    <section class="">
         <div class="container pt-6 md:pt-12 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
             <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
                 <h3 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
