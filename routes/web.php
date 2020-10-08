@@ -44,6 +44,10 @@ Route::get('/profil',function (){
     return view('profil.profil');
 });
 
+Route::get('/profil/about',function (){
+    return view('profil.about');
+});
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
