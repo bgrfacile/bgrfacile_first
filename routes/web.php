@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('profile', [UserController::class, 'show'])->middleware('auth');
 Route::get('/', function () {
     return view('home.home');
-});
+})->name('home');
 Route::get('/roles', function () {
     return view('role');
 })->middleware('role:super-admin|admin|writer');

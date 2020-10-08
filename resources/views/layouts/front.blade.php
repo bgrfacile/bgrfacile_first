@@ -72,7 +72,8 @@
 
 
                             <a href="{{ url('/') }}"
-                               class="flex px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">
+                               class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
                                 <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 16 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -81,26 +82,11 @@
                                 Home
                             </a>
 
-
-{{--                            <a href="{{ route('astuces.index') }}"--}}
-{{--                               class="flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">--}}
-{{--                                <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"--}}
-{{--                                     xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                    <path--}}
-{{--                                        d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>--}}
-{{--                                    <path fill-rule="evenodd" clip-rule="evenodd"--}}
-{{--                                          d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>--}}
-{{--                                    <path fill-rule="evenodd" clip-rule="evenodd"--}}
-{{--                                          d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>--}}
-{{--                                </svg>--}}
-{{--                                Cours--}}
-{{--                            </a>--}}
-
                             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                 <button @click="open = !open"
-                                        class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
-                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
+                                        class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
+                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none">
                                         <path
                                             d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -142,7 +128,8 @@
 
 
                             <a href="{{ route('ecoles.index') }}"
-                               class="flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                               class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                                 <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 20 16" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -153,7 +140,8 @@
 
 
                             <a href="{{ route('qui-sommes-nous') }}"
-                               class="flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                               class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                                 <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 14 14" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -183,7 +171,6 @@
                                 </svg>
                             </a>
                         </button>
-
                         <!-- Profile dropdown -->
                         @auth
                             <div @click.away="open = false" class="mr-3 relative" x-data="{ open: false }">
@@ -263,9 +250,9 @@
             {{--                    liste pour petit ecran--}}
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
-
                 <a href="{{ url('/') }}"
-                   class="flex px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">
+                   class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 16 14" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -274,10 +261,10 @@
                     Home
                 </a>
 
-
                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                     <button @click="open = !open"
-                            class="flex px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                            class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                         <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -319,9 +306,9 @@
                     </div>
                 </div>
 
-
                 <a href="{{ route('ecoles.index') }}"
-                   class="flex px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                   class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 20 16" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -330,9 +317,9 @@
                     Ècoles
                 </a>
 
-
                 <a href="{{ route('qui-sommes-nous') }}"
-                   class="flex px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                   class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 14 14" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -340,7 +327,6 @@
                     </svg>
                     Qui sommes nous?
                 </a>
-
 
             </div>
 
