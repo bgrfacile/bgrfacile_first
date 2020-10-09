@@ -66,7 +66,7 @@
                         </a>
                     </div>
 
-{{--                    liste pour grand ecran--}}
+                    {{--                    liste pour grand ecran--}}
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
 
@@ -95,7 +95,8 @@
                                               d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
                                     </svg>
                                     <span>Cours</span>
-                                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
+                                    <svg fill="currentColor" viewBox="0 0 20 20"
+                                         :class="{'rotate-180': open, 'rotate-0': !open}"
                                          class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                                         <path fill-rule="evenodd"
                                               d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -211,11 +212,11 @@
                         @else
                             <div>
                                 <a href="{{ url('/login') }}"
-                                    class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
+                                   class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
                                     Connexion
                                 </a>
                                 <a href="{{ url('/register') }}"
-                                    class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">
+                                   class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">
                                     Inscription
                                 </a>
                             </div>
@@ -330,7 +331,7 @@
 
             </div>
 
-            <div class="pt-4 pb-3 border-t border-gray-700" >
+            <div class="pt-4 pb-3 border-t border-gray-700">
                 @auth
                     <div class="flex items-center px-5 space-x-3">
                         <div class="flex-shrink-0 relative">
@@ -356,8 +357,10 @@
                     </div>
                 @else
                     <div class="flex items-center px-5 space-x-3">
-                        <a href="{{ url('/login') }}" class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Connexion</a>
-                        <a href="{{ url('/register') }}" class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Inscription</a>
+                        <a href="{{ url('/login') }}"
+                           class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Connexion</a>
+                        <a href="{{ url('/register') }}"
+                           class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Inscription</a>
                     </div>
                 @endif
             </div>
@@ -375,47 +378,43 @@
 <footer>
     <div class="bg-gray-100">
         <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-center">
-            <div class="p-5 w-48 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">Home</div>
-                <a class="my-3 block" href="/#">Services <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Products <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">About Us <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Pricing <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Partners <span class="text-teal-600 text-xs p-1">New</span></a>
+            <div class="p-5 flex-1 ">
+                <div class="text-xs uppercase text-gray-500 font-medium">site</div>
+                <p class="my-3">
+                    <img
+                        src="https://www.grafikart.fr/assets/logo-footer-f0a333a1c7b2c1833354864ad7c405e0396d894732bf03abb902f2281e6c942e.png">
+                </p>
+                <p>Après avoir appris sur Internet quoi de plus normal que de partager à son tour ? Passionné par le web
+                    depuis un peu plus de 15 ans maintenant j'aime partager mes compétences et mes découvertes avec les
+                    personnes qui ont cette même passion pour le web</p>
             </div>
+
             <div class="p-5 w-48 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">User</div>
-                <a class="my-3 block" href="/#">Sign in <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">New Account <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Demo <span class="text-teal-600 text-xs p-1">New</span></a><a
-                    class="my-3 block" href="/#">Career <span
-                        class="text-teal-600 text-xs p-1">We're hiring</span></a><a class="my-3 block" href="/#">Surveys
-                    <span class="text-teal-600 text-xs p-1">New</span></a>
-            </div>
-            <div class="p-5 w-48 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">Resources</div>
-                <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
-            </div>
-            <div class="p-5 w-48 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">Product</div>
-                <a class="my-3 block" href="/#">Our Products <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Great Deals <span class="text-teal-600 text-xs p-1">New</span></a><a
-                    class="my-3 block" href="/#">Analytics <span class="text-teal-600 text-xs p-1"></span></a><a
-                    class="my-3 block" href="/#">Mobile <span class="text-teal-600 text-xs p-1"></span></a>
+                <div class="text-xs uppercase text-gray-500 font-medium">Pages</div>
+                <a class="my-3 block" href="/#">Accueil <span class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="/#">Cours <span class="text-teal-600 text-xs p-1">New</span></a>
+                <a class="my-3 block" href="/#">Astuces <span class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="/#">Exercices <span class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="/#">Corrigés <span class="text-teal-600 text-xs p-1"></span></a>
             </div>
             <div class="p-5 w-48 ">
                 <div class="text-xs uppercase text-gray-500 font-medium">Support</div>
-                <a class="my-3 block" href="{{ route('faq') }}">Help Center <span class="text-teal-600 text-xs p-1"></span></a>
-                <a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="{{ route('faq') }}">Centre d'aide <span
+                        class="text-teal-600 text-xs p-1"></span></a>
+                <a class="my-3 block" href="/#">Politique de confidentialité <span
+                        class="text-teal-600 text-xs p-1"></span></a>
                 <a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
             </div>
             <div class="p-5 w-48 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">Contact us</div>
-                <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span
-                        class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com
-                    <span class="text-teal-600 text-xs p-1"></span></a>
+                <div class="text-xs uppercase text-gray-500 font-medium">Nous contacter</div>
+                <a class="my-3 block" href="/#">
+                    Pointe-Noire, CONGO
+                    <span class="text-teal-600 text-xs p-1"></span>
+                </a>
+                <a class="my-3 block" href="mailto:bgrfacile.contact@gmail.com">
+                    bgrfacile.contact@gmail.com
+                    <span class="text-teal-600 text-xs p-1"></span>
+                </a>
             </div>
         </div>
     </div>
@@ -423,52 +422,48 @@
     <div class="bg-gray-100 pt-2 ">
         <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
       md:flex-row max-w-6xl">
-            <div class="mt-2">© Copyright 2020. All Rights Reserved.</div>
+            <div class="mt-2">© Copyright 2020. Tous droits réservés.</div>
             <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
                 <a href="/#" class="w-6 mx-1">
-                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%"
-                         height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                         xmlns:serif="http://www.serif.com/"
+
+                    <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%" height="100%" viewBox="-1 0 512 512"
                          style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-               <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
-                  5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
-                  -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
-                  0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
-                  -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
-                  0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
-                  -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
-                  0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
-                  -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
-                  -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
-                  1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
-                  -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
-                  6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
-                  0.771,-0.67 1.054,-1.093Z"></path>
-            </svg>
+                        <path
+                            d="m10.894531 512c-2.875 0-5.671875-1.136719-7.746093-3.234375-2.734376-2.765625-3.789063-6.78125-2.761719-10.535156l33.285156-121.546875c-20.722656-37.472656-31.648437-79.863282-31.632813-122.894532.058594-139.941406 113.941407-253.789062 253.871094-253.789062 67.871094.0273438 131.644532 26.464844 179.578125 74.433594 47.925781 47.972656 74.308594 111.742187 74.289063 179.558594-.0625 139.945312-113.945313 253.800781-253.867188 253.800781 0 0-.105468 0-.109375 0-40.871093-.015625-81.390625-9.976563-117.46875-28.84375l-124.675781 32.695312c-.914062.238281-1.84375.355469-2.761719.355469zm0 0"
+                            fill="#e5e5e5"/>
+                        <path
+                            d="m10.894531 501.105469 34.46875-125.871094c-21.261719-36.839844-32.445312-78.628906-32.429687-121.441406.054687-133.933594 109.046875-242.898438 242.976562-242.898438 64.992188.027344 125.996094 25.324219 171.871094 71.238281 45.871094 45.914063 71.125 106.945313 71.101562 171.855469-.058593 133.929688-109.066406 242.910157-242.972656 242.910157-.007812 0 .003906 0 0 0h-.105468c-40.664063-.015626-80.617188-10.214844-116.105469-29.570313zm134.769531-77.75 7.378907 4.371093c31 18.398438 66.542969 28.128907 102.789062 28.148438h.078125c111.304688 0 201.898438-90.578125 201.945313-201.902344.019531-53.949218-20.964844-104.679687-59.09375-142.839844-38.132813-38.160156-88.832031-59.1875-142.777344-59.210937-111.394531 0-201.984375 90.566406-202.027344 201.886719-.015625 38.148437 10.65625 75.296875 30.875 107.445312l4.804688 7.640625-20.40625 74.5zm0 0"
+                            fill="#fff"/>
+                        <path
+                            d="m19.34375 492.625 33.277344-121.519531c-20.53125-35.5625-31.324219-75.910157-31.3125-117.234375.050781-129.296875 105.273437-234.488282 234.558594-234.488282 62.75.027344 121.644531 24.449219 165.921874 68.773438 44.289063 44.324219 68.664063 103.242188 68.640626 165.898438-.054688 129.300781-105.28125 234.503906-234.550782 234.503906-.011718 0 .003906 0 0 0h-.105468c-39.253907-.015625-77.828126-9.867188-112.085938-28.539063zm0 0"
+                            fill="#64b161"/>
+                        <g fill="#fff">
+                            <path
+                                d="m10.894531 501.105469 34.46875-125.871094c-21.261719-36.839844-32.445312-78.628906-32.429687-121.441406.054687-133.933594 109.046875-242.898438 242.976562-242.898438 64.992188.027344 125.996094 25.324219 171.871094 71.238281 45.871094 45.914063 71.125 106.945313 71.101562 171.855469-.058593 133.929688-109.066406 242.910157-242.972656 242.910157-.007812 0 .003906 0 0 0h-.105468c-40.664063-.015626-80.617188-10.214844-116.105469-29.570313zm134.769531-77.75 7.378907 4.371093c31 18.398438 66.542969 28.128907 102.789062 28.148438h.078125c111.304688 0 201.898438-90.578125 201.945313-201.902344.019531-53.949218-20.964844-104.679687-59.09375-142.839844-38.132813-38.160156-88.832031-59.1875-142.777344-59.210937-111.394531 0-201.984375 90.566406-202.027344 201.886719-.015625 38.148437 10.65625 75.296875 30.875 107.445312l4.804688 7.640625-20.40625 74.5zm0 0"/>
+                            <path
+                                d="m195.183594 152.246094c-4.546875-10.109375-9.335938-10.3125-13.664063-10.488282-3.539062-.152343-7.589843-.144531-11.632812-.144531-4.046875 0-10.625 1.523438-16.1875 7.597657-5.566407 6.074218-21.253907 20.761718-21.253907 50.632812 0 29.875 21.757813 58.738281 24.792969 62.792969 3.035157 4.050781 42 67.308593 103.707031 91.644531 51.285157 20.226562 61.71875 16.203125 72.851563 15.191406 11.132813-1.011718 35.917969-14.6875 40.976563-28.863281 5.0625-14.175781 5.0625-26.324219 3.542968-28.867187-1.519531-2.527344-5.566406-4.046876-11.636718-7.082032-6.070313-3.035156-35.917969-17.726562-41.484376-19.75-5.566406-2.027344-9.613281-3.035156-13.660156 3.042969-4.050781 6.070313-15.675781 19.742187-19.21875 23.789063-3.542968 4.058593-7.085937 4.566406-13.15625 1.527343-6.070312-3.042969-25.625-9.449219-48.820312-30.132812-18.046875-16.089844-30.234375-35.964844-33.777344-42.042969-3.539062-6.070312-.058594-9.070312 2.667969-12.386719 4.910156-5.972656 13.148437-16.710937 15.171875-20.757812 2.023437-4.054688 1.011718-7.597657-.503906-10.636719-1.519532-3.035156-13.320313-33.058594-18.714844-45.066406zm0 0"
+                                fill-rule="evenodd"/>
+                        </g>
+                    </svg>
                 </a>
                 <a href="/#" class="w-6 mx-1">
                     <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%"
-                         height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                         xmlns:serif="http://www.serif.com/"
+                         height="100%" viewBox="0 0 24 24"
                          style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-               <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                        <path id="Facebook" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
                   5.373,-12 12,-12c6.627,0 12,5.373
                   12,12Zm-11.278,0l1.294,0l0.172,-1.617l-1.466,0l0.002,-0.808c0,-0.422
                   0.04,-0.648 0.646,-0.648l0.809,0l0,-1.616l-1.295,0c-1.555,0 -2.103,0.784
                   -2.103,2.102l0,0.97l-0.969,0l0,1.617l0.969,0l0,4.689l1.941,0l0,-4.689Z"></path>
-            </svg>
+                    </svg>
                 </a>
                 <a href="/#" class="w-6 mx-1">
                     <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%"
-                         height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                         xmlns:serif="http://www.serif.com/"
+                         height="100%" viewBox="0 0 24 24"
                          style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-               <g id="Layer_1">
-                   <circle id="Oval" cx="12" cy="12" r="12"></circle>
-                   <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
+                        <g id="Layer_1">
+                            <circle id="Oval" cx="12" cy="12" r="12"></circle>
+                            <path id="Shape" d="M19.05,8.362c0,-0.062 0,-0.125 -0.063,-0.187l0,-0.063c-0.187,-0.562
                      -0.687,-0.937 -1.312,-0.937l0.125,0c0,0 -2.438,-0.375 -5.75,-0.375c-3.25,0
                      -5.75,0.375 -5.75,0.375l0.125,0c-0.625,0 -1.125,0.375
                      -1.313,0.937l0,0.063c0,0.062 0,0.125 -0.062,0.187c-0.063,0.625 -0.25,1.938
@@ -482,16 +477,14 @@
                      -0.204,-0.34l0,-4.631c0,-0.136 0.068,-0.273 0.204,-0.341c0.136,-0.068
                      0.272,-0.068 0.409,0l3.201,2.316c0.068,0.068 0.136,0.204
                      0.136,0.34c0.068,0.136 0,0.273 -0.136,0.341Z" style="fill: rgb(255, 255, 255);"></path>
-               </g>
-            </svg>
+                        </g>
+                    </svg>
                 </a>
                 <a href="/#" class="w-6 mx-1">
                     <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%"
-                         height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                         xmlns:serif="http://www.serif.com/"
+                         height="100%" viewBox="0 0 24 24"
                          style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-               <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
+                        <path id="Shape" d="M7.3,0.9c1.5,-0.6 3.1,-0.9 4.7,-0.9c1.6,0 3.2,0.3 4.7,0.9c1.5,0.6 2.8,1.5
                   3.8,2.6c1,1.1 1.9,2.3 2.6,3.8c0.7,1.5 0.9,3 0.9,4.7c0,1.7 -0.3,3.2
                   -0.9,4.7c-0.6,1.5 -1.5,2.8 -2.6,3.8c-1.1,1 -2.3,1.9 -3.8,2.6c-1.5,0.7
                   -3.1,0.9 -4.7,0.9c-1.6,0 -3.2,-0.3 -4.7,-0.9c-1.5,-0.6 -2.8,-1.5
@@ -505,21 +498,27 @@
                   -0.8,0.8 -0.9,1.3l-0.1,-1.3l-3,0l0.1,2l0,6.5l3,0l0,-4.5c0,-0.6 0.1,-1.1
                   0.4,-1.5c0.3,-0.4 0.6,-0.5 1.1,-0.5c0.5,0 0.9,0.2 1.1,0.5c0.2,0.3 0.4,0.8
                   0.4,1.5l0,4.5l2.9,0Z"></path>
-            </svg>
+                    </svg>
                 </a>
                 <a href="/#" class="w-6 mx-1">
                     <svg class="fill-current cursor-pointer text-gray-500 hover:text-gray-400" width="100%"
-                         height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                         xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
-                         xmlns:serif="http://www.serif.com/"
+                         height="100%" viewBox="0 0 24 24"
                          style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-               <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
-                  -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
-                  -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
-                  0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
-                  0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
-                  -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
-            </svg>
+                        <path id="Twitter" d="M24,12c0,6.627 -5.373,12 -12,12c-6.627,0 -12,-5.373 -12,-12c0,-6.627
+                  5.373,-12 12,-12c6.627,0 12,5.373 12,12Zm-6.465,-3.192c-0.379,0.168
+                  -0.786,0.281 -1.213,0.333c0.436,-0.262 0.771,-0.676
+                  0.929,-1.169c-0.408,0.242 -0.86,0.418 -1.341,0.513c-0.385,-0.411
+                  -0.934,-0.667 -1.541,-0.667c-1.167,0 -2.112,0.945 -2.112,2.111c0,0.166
+                  0.018,0.327 0.054,0.482c-1.754,-0.088 -3.31,-0.929
+                  -4.352,-2.206c-0.181,0.311 -0.286,0.674 -0.286,1.061c0,0.733 0.373,1.379
+                  0.94,1.757c-0.346,-0.01 -0.672,-0.106 -0.956,-0.264c-0.001,0.009
+                  -0.001,0.018 -0.001,0.027c0,1.023 0.728,1.877 1.694,2.07c-0.177,0.049
+                  -0.364,0.075 -0.556,0.075c-0.137,0 -0.269,-0.014 -0.397,-0.038c0.268,0.838
+                  1.048,1.449 1.972,1.466c-0.723,0.566 -1.633,0.904 -2.622,0.904c-0.171,0
+                  -0.339,-0.01 -0.504,-0.03c0.934,0.599 2.044,0.949 3.237,0.949c3.883,0
+                  6.007,-3.217 6.007,-6.008c0,-0.091 -0.002,-0.183 -0.006,-0.273c0.413,-0.298
+                  0.771,-0.67 1.054,-1.093Z"></path>
+                    </svg>
                 </a>
             </div>
         </div>
