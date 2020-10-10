@@ -176,6 +176,42 @@ My modal
   border-bottom: 1px solid #d2d6dc;
 }
 
+@media (min-width: 1024px) {
+  .vs-bg-courses {
+    background-position: 100% 100%;
+    background-image: url("/assets/svg/man speakers.svg");
+    background-size: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .vs-bg-courses {
+    background-repeat: no-repeat;
+    /*background-position: 100% 100%;*/
+    background-image: url("/assets/svg/man speakers.svg");
+    background-position: right -100px bottom;
+    background-size: 65%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .vs-bg-courses2 {
+    background-position: 100% 100%;
+    background-image: url("/assets/svg/draw_teacher.svg");
+    background-size: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .vs-bg-courses2 {
+    background-repeat: no-repeat;
+    /*background-position: 100% 100%;*/
+    background-image: url("/assets/svg/draw_teacher.svg");
+    background-position: left -100px bottom;
+    background-size: 65%;
+  }
+}
+
 .MS-b_astuces {
   background-color: #476CA4;
 }
