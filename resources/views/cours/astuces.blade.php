@@ -163,75 +163,11 @@
                 </div>
 
                 <div class="flex flex-col grid-cols-1 sm:col-span-3 md:col-span-3 lg:col-span-3">
-                    <div class="flex mb-4 items-center justify-between bg-white">
-                        <div class="flex h-full items-center justify-center w-7">
-                            <a href="#"><i class="fas fa-chevron-left"></i></a>
-                        </div>
-                        <nav
-                            class="MS-item__matiere flex-1 bg-white flex items-center relative overflow-hidden text-center">
-                            <a href="#" class="w-full py-4">Mathematiques</a>
-                            <a href="#" class="w-full py-4">Histoire</a>
-                            <a href="#" class="w-full py-4">Géographe</a>
-                            <a href="#" class="w-full py-4">Géographe</a>
-                            <a href="#" class="w-full py-4">Géographe</a>
-                            <a href="#" class="w-full py-4">Géographe</a>
-                            <a href="#" class="w-full py-4">Physique</a>
-                            <a href="#" class="w-full py-4">Chimie</a>
-                            <div class="bar"></div>
-                        </nav>
-                        <div class="flex h-full items-center justify-center w-7">
-                            <a href="#" class="bg-white"><i class="fas fa-chevron-right"></i></a>
-                        </div>
-                    </div>
+{{--                    slide-carousel--}}
+                    @include('cours.slide-cours')
 
                     <div class="grid md:grid-cols-3 gap-4 px-2 xl:px-0 md:px-0">
                         @foreach($datas as $course)
-{{--                            <article class="bg-white rounded">--}}
-{{--                                <header class="flex p-2">--}}
-{{--                                    <div class="flex-1">--}}
-{{--                                        <h4 class="MS-bold">{{ $course->name }}</h4>--}}
-{{--                                        <small>name du prof</small>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="flex flex-col justify-center items-center ml-2">--}}
-{{--                                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none"--}}
-{{--                                             xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                            <path fill-rule="evenodd" clip-rule="evenodd"--}}
-{{--                                                  d="M12 0H2C0.9 0 0 0.9 0 2V18L7 15L14 18V2C14 0.9 13.1 0 12 0Z"--}}
-{{--                                                  fill="black" fill-opacity="0.87"/>--}}
-{{--                                        </svg>--}}
-{{--                                        <small>favoris</small>--}}
-{{--                                    </div>--}}
-{{--                                </header>--}}
-{{--                                <div class="relative">--}}
-{{--                                    <img class="w-full" src="{{ $course->image }}" alt="">--}}
-{{--                                    <div class="like">--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="MS-content__article min-h-4 p-3 pt-5">--}}
-{{--                                    {{ $course->description }}--}}
-{{--                                </div>--}}
-{{--                                <footer class="flex justify-between p-4">--}}
-{{--                                    <a href="#">LIRE</a>--}}
-{{--                                    <div class="flex overflow-hidden">--}}
-{{--                                        <img class="inline-block h-6 w-6 rounded-full text-white shadow-solid"--}}
-{{--                                             src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"--}}
-{{--                                             alt="">--}}
-{{--                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"--}}
-{{--                                             src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"--}}
-{{--                                             alt="">--}}
-{{--                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"--}}
-{{--                                             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"--}}
-{{--                                             alt="">--}}
-{{--                                        <img class="-ml-1 inline-block h-6 w-6 rounded-full text-white shadow-solid"--}}
-{{--                                             src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"--}}
-{{--                                             alt="">--}}
-{{--                                    </div>--}}
-{{--                                    {{ $course->like }} likes--}}
-{{--                                </footer>--}}
-{{--                            </article>--}}
-
-
-
                             <div class="transition-all duration-150 flex ">
                                 <div
                                     class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">

@@ -19,11 +19,6 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
-    <style>
-        body {
-            font-family: 'Nunito';
-        }
-    </style>
 </head>
 <body class="antialiased">
 <header>
@@ -69,8 +64,6 @@
                     {{--                    liste pour grand ecran--}}
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
-
-
                             <a href="{{ url('/') }}"
                                class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
