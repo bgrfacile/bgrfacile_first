@@ -8,8 +8,9 @@
             <div class="lg:w-3/5 xl:w-2/5 flex flex-col items-start relative z-10">
                 <span class="font-mitr uppercase text-indigo-500">bgrfacile</span>
 
-                <h1 class="font-roboto-slab text-4xl sm:text-6xl text-red-400 leading-tight mt-4">Facilitant<br>
-                    l’apprentissage</h1>
+                <h1 class="font-roboto-slab text-4xl sm:text-6xl text-red-400 leading-tight mt-4">
+                    Un site pour les cours et les écoles
+                </h1>
 
                 <div class="max-w-md">
                     <p class="font-source-sans-pro text-white mt-6 text-lg">Découvrer une nouvelle facon
@@ -17,7 +18,7 @@
                         d’enseigner et partager vos connaissances.</p>
                 </div>
 
-                <p class="flex flex-col sm:flex-row mt-10">
+                <p class="flex flex-col sm:flex-row mt-10" style="z-index: 1000">
                     <a href="{{ url('/cours/astuces') }}"
                        class="mb-3 sm:mb-0 flex items-center text-white bg-transparent hover:bg-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-white hover:border-transparent">
                         <svg class="mr-1" width="17" height="16" viewBox="0 0 17 16" fill="none"

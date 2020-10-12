@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns:x-state="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,43 +27,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <a href="{{ url('/') }}">
-                            <svg class="h-8 w-8" viewBox="0 0 512 512">
-                                <g>
-                                    <path style="fill:#FFFFFF;" d="M59.733,46.933h-25.6c-14.121,0.042-25.558,11.479-25.6,25.6v332.8
-    		c0.042,14.121,11.479,25.558,25.6,25.6H51.2l34.133-358.4C85.292,58.412,73.855,46.975,59.733,46.933z"/>
-                                    <path style="fill:#A4C2F7;" d="M477.867,430.933H290.133c-18.192,1.505-32.628,15.942-34.133,34.133V72.533
-    		c0.041-14.121,11.479-25.559,25.6-25.6h196.267c14.121,0.041,25.559,11.479,25.6,25.6v332.8
-    		C503.425,419.455,491.988,430.892,477.867,430.933z"/>
-                                    <g>
-                                        <path style="fill:#E3E7F2;" d="M452.267,430.933H290.133c-18.192,1.505-32.628,15.942-34.133,34.133V72.533
-    			c0.041-14.121,11.479-25.559,25.6-25.6h170.667c14.121,0.041,25.559,11.479,25.6,25.6v332.8
-    			C477.825,419.455,466.388,430.892,452.267,430.933z"/>
-                                        <path style="fill:#E3E7F2;" d="M59.733,430.933h162.133c18.192,1.505,32.628,15.942,34.133,34.133V72.533
-    			c-0.041-14.121-11.479-25.559-25.6-25.6H59.733c-14.121,0.041-25.559,11.479-25.6,25.6v332.8
-    			C34.175,419.455,45.612,430.892,59.733,430.933z"/>
-                                    </g>
-                                    <g>
-                                        <path style="fill:#428DFF;" d="M256,473.6c-2.263,0.001-4.434-0.898-6.035-2.499c-1.6-1.6-2.499-3.771-2.499-6.035V72.533
-    			c0.02-18.843,15.29-34.113,34.133-34.133h196.267C496.71,38.42,511.98,53.69,512,72.533v332.8
-    			c-0.02,18.843-15.29,34.113-34.133,34.133H290.133c-13.451,1.535-24.065,12.149-25.6,25.6c0.001,2.263-0.898,4.434-2.499,6.035
-    			S258.263,473.601,256,473.6z M281.6,55.467c-9.421,0.011-17.056,7.645-17.067,17.067v359.758c7.209-6.03,16.209-9.508,25.6-9.892
-    			h187.733c9.421-0.011,17.056-7.645,17.067-17.067v-332.8c-0.011-9.421-7.645-17.056-17.067-17.067H281.6z"/>
-                                        <path style="fill:#428DFF;" d="M256,473.6c-2.263,0.001-4.434-0.898-6.035-2.499c-1.6-1.6-2.499-3.771-2.499-6.035
-    			c-1.535-13.451-12.149-24.065-25.6-25.6H34.133C15.29,439.447,0.02,424.176,0,405.333v-332.8C0.02,53.69,15.29,38.42,34.133,38.4
-    			H230.4c18.843,0.02,34.113,15.29,34.133,34.133v392.533c0.001,2.263-0.898,4.434-2.499,6.035S258.263,473.601,256,473.6L256,473.6
-    			z M34.133,55.467c-9.421,0.011-17.056,7.645-17.067,17.067v332.8c0.011,9.421,7.645,17.056,17.067,17.067h187.733
-    			c9.391,0.384,18.391,3.861,25.6,9.892V72.533c-0.011-9.421-7.645-17.056-17.067-17.067H34.133z"/>
-                                    </g>
-                                </g>
-                            </svg>
+                        <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
+                            <img class="h-full w-full " src="{{ asset('assets/images/logo-white.png') }}" alt="logo de bgrfacile">
                         </a>
-                    </div>
-
-                    {{--                    liste pour grand ecran--}}
+                    {{--liste pour grand ecran--}}
                     <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
+                        <div class="ml-5 flex items-baseline space-x-4">
                             <a href="{{ url('/') }}"
                                class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
@@ -77,8 +46,8 @@
 
                             <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                 <button @click="open = !open"
-                                        class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
-                               'flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
+                                        class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                                     <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none">
                                         <path
                                             d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
@@ -90,7 +59,7 @@
                                     <span>Cours</span>
                                     <svg fill="currentColor" viewBox="0 0 20 20"
                                          :class="{'rotate-180': open, 'rotate-0': !open}"
-                                         class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                         class="block w-4 h-4 ml-1 transition-transform duration-200 transform">
                                         <path fill-rule="evenodd"
                                               d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                               clip-rule="evenodd"></path>
@@ -102,7 +71,7 @@
                                      x-transition:leave="transition ease-in duration-75"
                                      x-transition:leave-start="transform opacity-100 scale-100"
                                      x-transition:leave-end="transform opacity-0 scale-95"
-                                     class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+                                     class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
                                     <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                                         <a href="{{ route('astuces.index') }}"
                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
@@ -372,14 +341,15 @@
     <div class="bg-gray-100">
         <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-center">
             <div class="p-5 flex-1 ">
-                <div class="text-xs uppercase text-gray-500 font-medium">site</div>
                 <p class="my-3">
                     <img
-                        src="https://www.grafikart.fr/assets/logo-footer-f0a333a1c7b2c1833354864ad7c405e0396d894732bf03abb902f2281e6c942e.png">
+                            src="{{ asset('assets/images/logo-black.png') }}">
                 </p>
-                <p>Après avoir appris sur Internet quoi de plus normal que de partager à son tour ? Passionné par le web
-                    depuis un peu plus de 15 ans maintenant j'aime partager mes compétences et mes découvertes avec les
-                    personnes qui ont cette même passion pour le web</p>
+                <p>
+                    Pour réussir, travailler dur, ne jamais abandonner et surtout chérir une obsession magnifique.
+                    <br>
+                    <strong>Walt Disney</strong>
+                </p>
             </div>
 
             <div class="p-5 w-48 ">

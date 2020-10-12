@@ -1,19 +1,6 @@
 @extends('layouts.front')
 
 @section('baniere')
-    {{--    <div class="h-64">--}}
-    {{--        <div class="MS-b_astuces h-full bg-gray-100 flex items-center justify-center">--}}
-    {{--            <div class="text-white text-center">--}}
-    {{--                <h1 class="MS-b_h1">section cours</h1>--}}
-    {{--                <p class=" MS-b_text mb-9">Découvrer des millions de cours rédiger par les professeurs qualifiés</p>--}}
-    {{--                <button--}}
-    {{--                    class="ml-3 bg-transparent hover:bg-gray-900 text-gray-900 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-gray-900 hover:border-transparent">--}}
-    {{--                    visiter--}}
-    {{--                </button>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
-
     <div class="w-full bg-cover bg-center"
          style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
         <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
@@ -132,20 +119,20 @@
                                     <div class="flex flex-col items-center justify-center">
                                         <div class="flex flex-col">
                                             <label class="inline-flex items-center mt-3">
-                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600"
-                                                       checked>
+                                                <input type="radio" class="form-checkbox h-5 w-5 text-blue-600"
+                                                       checked name="niveau">
                                                 <span class="ml-2 text-gray-700">3eme</span>
                                             </label>
                                             <label class="inline-flex items-center mt-3">
-                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <input type="radio" class="form-checkbox h-5 w-5 text-blue-600" name="niveau">
                                                 <span class="ml-2 text-gray-700">4eme</span>
                                             </label>
                                             <label class="inline-flex items-center mt-3">
-                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <input type="radio" class="form-checkbox h-5 w-5 text-blue-600" name="niveau">
                                                 <span class="ml-2 text-gray-700">5eme</span>
                                             </label>
                                             <label class="inline-flex items-center mt-3">
-                                                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                                                <input type="radio" class="form-checkbox h-5 w-5 text-blue-600" name="niveau">
                                                 <span class="ml-2 text-gray-700">6eme</span>
                                             </label>
                                         </div>
