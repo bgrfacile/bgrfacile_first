@@ -5,6 +5,12 @@
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.rawgit.com/shuvroroy/youtube-clone/883c8d9a/public/css/main.css">
+    <form method="POST" action="{{ url('/logout') }}">
+      @csrf
+        <button class="block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out w-full text-left">
+            Logout
+        </button>
+    </form>
     <div class="bg-white font-sans">
         {{--        banner--}}
         <div class="bg-cover h-112">

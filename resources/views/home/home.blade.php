@@ -698,6 +698,12 @@
 
 
 @section('content')
+    <form method="POST" action="{{ url('/logout') }}">
+        @csrf
+        <button class="block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out w-full text-left">
+            Logout
+        </button>
+    </form>
     <section class="bg-white max-w-6xl mx-auto pt-20 md:pt-30 md:px-10">
         <h3 class="font-circular text-xl text-sea-light uppercase text-center font-bold tracking-widest mb-5">
             NOUS AVONS TOUT CE DONT VOUS AVEZ BESOIN
