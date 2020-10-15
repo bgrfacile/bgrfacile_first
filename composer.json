@@ -17,7 +17,8 @@
         "laravel/jetstream": "^1.2",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.0",
-        "spatie/laravel-permission": "^3.17"
+        "spatie/laravel-permission": "^3.17",
+        "ckeditor/ckeditor": "dev-full/4.13.x"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
