@@ -47,7 +47,7 @@
 
                                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                     <button @click="open = !open"
-                                            class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                                            class="{{ Request::segment(1) === 'cours'||'astuces' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                                         <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none">
                                             <path
@@ -77,13 +77,13 @@
                                             <a href="{{ route('astuces.index') }}"
                                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Astuces</a>
-                                            <a href="#"
+                                            <a href="{{ route('cours.index') }}"
                                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Cours</a>
-                                            <a href="#"
+                                            <a href="{{ route('exercices.index') }}"
                                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Exercices</a>
-                                            <a href="#"
+                                            <a href="{{ route('corriges.index') }}"
                                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Corrigés</a>
                                         </div>
@@ -166,8 +166,13 @@
                                             <a href="{{ url('/profil') }}"
                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                                role="menuitem">Ton profil</a>
-                                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                               role="menuitem">Déconnexion</a>
+
+                                            <form method="POST" action="{{ url('/logout') }}">
+                                                @csrf
+                                                <button class="block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out w-full text-left">
+                                                    Déconnexion
+                                                </button>
+                                            </form>
 
                                         </div>
                                     </div>

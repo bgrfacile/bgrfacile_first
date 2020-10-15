@@ -5,12 +5,7 @@
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"
           href="https://cdn.rawgit.com/shuvroroy/youtube-clone/883c8d9a/public/css/main.css">
-    <form method="POST" action="{{ url('/logout') }}">
-      @csrf
-        <button class="block pl-3 pr-4 py-2 border-l-4 border-indigo-400 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out w-full text-left">
-            Logout
-        </button>
-    </form>
+
     <div class="bg-white font-sans">
         {{--        banner--}}
         <div class="bg-cover h-112">
@@ -24,7 +19,7 @@
                              alt="channel_logo">
                         <div class="ml-6">
                             <div class="text-2xl font-normal flex items-center">
-                                <span class="mr-2">John Doe</span>
+                                <span class="mr-2">{{ auth()->user()->name }}</span>
 {{--                                <span--}}
 {{--                                    class="w-3 h-3 text-white inline-block text-center rounded-full bg-grey-dark text-2xs">--}}
 {{--                                    &#10003;--}}
@@ -47,11 +42,11 @@
                         </li>
                         <li class="text-center py-3 px-8">
                             <a href="#"
-                               class="hover:text-black">Contenues</a>
+                               class="hover:text-black">favoris</a>
                         </li>
                         <li class="text-center py-3 px-8">
-                            <a href="#"
-                               class="hover:text-black">Playlists</a>
+                            <a href="{{ route('my_course') }}"
+                               class="hover:text-black">Mes cours</a>
                         </li>
                     </ul>
                 </div>
