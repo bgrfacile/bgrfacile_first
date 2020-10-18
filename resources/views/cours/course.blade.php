@@ -154,7 +154,7 @@
                     @include('cours.slide-cours')
 
                     <div class="grid md:grid-cols-3 gap-4 px-2 xl:px-0 md:px-0">
-                        @foreach($datas as $course)
+                        @foreach($courses as $course)
                             <div class="transition-all duration-150 flex ">
                                 <div
                                     class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl">
@@ -206,7 +206,7 @@
                                     </div>
                                     <hr class="border-gray-300">
                                     <div class="flex flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto">
-                                        <a href="#" class="hover:underline">
+                                            <a href="{{ route('cours.show',['cour'=>$course->id]) }}" class="hover:underline">
                                             <h2 class="text-3xl font-bold tracking-normal text-gray-800">
                                                 {{ $course->name }}
                                             </h2>

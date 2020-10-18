@@ -47,7 +47,7 @@
 
                                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                     <button @click="open = !open"
-                                            class="{{ Request::segment(1) === 'cours'||'astuces' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                                            class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
                                         <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none">
                                             <path

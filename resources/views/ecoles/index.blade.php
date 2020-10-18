@@ -144,4 +144,23 @@
             Action!
         </button>
     </section>
+
+    <section class="container">
+        <h3>Parmi les professeurs sur le site</h3>
+        <div class="grid">
+            <div>
+                i
+            </div>
+
+            <div class="landing-v4-ads-wrapper"><div class="landing-v4-ads-pic"><div class="img" data-src="/images/annonces/professeur-home-prof-francais-litterature-lycee-college-donne-cours-particuliers-preparation-bac-francais-brevet.jpg" style="background-image: url(&quot;/images/annonces/professeur-home-prof-francais-litterature-lycee-college-donne-cours-particuliers-preparation-bac-francais-brevet.jpg&quot;);"></div><div class="landing-v4-ads-pic-mask"></div><div class="landing-v4-ads-pic-text-container"><p class="landing-v4-ads-pic-firstname">Julie</p><div class="landing-v4-ads-pic-location">
+                            <span class="landing-v4-ads-pic-icon geolocation"></span>
+                            <span class="landing-v4-ads-pic-text">Six-Fours-les-Plages</span></div></div></div><div class="landing-v4-ads-badge"><span class="landing-v4-ads-badge-chips landing-v4-ads-badge-pricing"><span>75€/h</span> <span class="dot">·</span> <span class="landing-v4-ads-badge-free-lesson">1<sup>er</sup> cours offert</span></span>
+                    <div class="landing-v4-ads-badge-chips landing-v4-ads-badge-rating">
+                        <span class="landing-v4-ads-badge-rating-text">5,0</span>
+                        <span class="landing-v4-ads-badge-rating-icon star-fullV2"></span>
+                        <span class="landing-v4-ads-badge-rating-view-count">77 avis</span></div>
+                </div><h3 class="landing-v4-ads-text">Prof de français et de littérature en lycée et collège donne cours particuliers. préparation au bac de français et au brevet des collèges.</h3></div>
+
+        </div>
+    </section>
 @endsection
