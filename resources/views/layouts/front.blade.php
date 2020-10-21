@@ -21,7 +21,7 @@
 
 </head>
 <body class="antialiased">
-<div class="flex flex-col">
+<div class="flex flex-col justify-between">
     <header>
         <nav style="z-index: 2000!important;" x-data="{ open: false }" @keydown.window.escape="open = false"
              class="MS-nav bg-gray-800">
@@ -339,7 +339,7 @@
         </div>
     </header>
 
-    <main class="flex-1 h-full" role="main">
+    <main class=" flex-1" role="main">
         @yield('content')
     </main>
 

@@ -94,8 +94,8 @@ class ProfilController extends Controller
     public function favoris(){
         $favories = DB::table('favories')
             ->leftJoin('courses', 'favories.user_id', '=', 'courses.id')
+            ->where('favories.user_id','=',auth()->id())
             ->get();
-
         return view('profil.favoris',['favories'=>$favories]);
     }
 }
