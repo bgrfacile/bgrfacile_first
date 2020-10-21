@@ -77,6 +77,8 @@ Route::get('/profil',[ProfilController::class, 'index'])->name('profil.index');
 
 Route::get('/profil/my_course',[ProfilController::class, 'my_course'])->name('my_course');
 
+Route::get('/profil/favoris',[ProfilController::class, 'favoris'])->name('profil.favoris');
+
 Route::get('/profil/about',function (){
     return view('profil.about');
 });

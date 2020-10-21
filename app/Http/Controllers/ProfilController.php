@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Favory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -88,5 +89,13 @@ class ProfilController extends Controller
 //        $courses = DB::table('courses')->where('id',auth()->user()->id)->orderBy('created_at','desc')->get();
         $courses = User::find(auth()->user()->id)->courses;
         return view('profil.my_course', ['courses' => $courses]);
+    }
+
+    public function favoris(){
+        $favories = DB::table('favories')
+            ->leftJoin('courses', 'favories.user_id', '=', 'courses.id')
+            ->get();
+
+        return view('profil.favoris',['favories'=>$favories]);
     }
 }

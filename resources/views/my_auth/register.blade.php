@@ -40,7 +40,7 @@
         <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
             <p class="text-center text-3xl">Inscription.</p>
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
 
                 <div>
@@ -61,6 +61,11 @@
                 <div class="mt-4">
                     <x-jet-label value="{{ __('Confirm Password') }}" />
                     <x-jet-input class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                </div>
+
+                <div class="mt-4">
+                    <x-jet-label value="Image de profil" />
+                    <x-jet-input class="block mt-1 w-full" type="file" name="image" required />
                 </div>
 
                 <div class="flex items-center justify-end mt-4">

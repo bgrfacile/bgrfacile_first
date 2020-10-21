@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app2.css') }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
+    @yield('ressourceCSS')
 
 </head>
 <body class="antialiased">
@@ -338,9 +338,11 @@
             @yield('baniere')
         </div>
     </header>
+
     <main class="flex-1 h-full" role="main">
         @yield('content')
     </main>
+
     <!--Footer-->
     <footer>
         <div class="bg-gray-100">
