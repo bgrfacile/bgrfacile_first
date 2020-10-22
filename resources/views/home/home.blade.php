@@ -30,7 +30,7 @@
             </div>
             <div class="w-full px-3">
                 <img
-                    src="{{ asset('assets/images/imgP_HomePage.png') }}"
+                    src="{{ asset('assets/images/imgP_HomePage.svg') }}"
                     alt="garçon qui étudie">
             </div>
         </div>
@@ -148,7 +148,7 @@
                         alt="">
                 </div>
                 <span
-                    class="font-bold text-blue-600 text-lg">
+                    class="font-bold text-blue-600 text-lg text-center">
                     crée un cours
                 </span>
             </a>
@@ -162,7 +162,7 @@
                         alt="">
                 </div>
                 <span
-                    class="font-bold text-blue-600 text-lg">
+                    class="font-bold text-blue-600 text-lg text-center">
                     donner un exercice ou une solution
                 </span>
             </a>
@@ -176,7 +176,7 @@
                         alt="">
                 </div>
                 <span
-                    class="font-bold text-blue-600 text-lg">
+                    class="font-bold text-blue-600 text-lg text-center">
                     rédiger une astuces
                 </span>
             </a>
@@ -986,8 +986,7 @@
                             class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">
                             <img
                                 class="w-full"
-                                src="{{ asset('assets/images/google-play.svg') }}"
-                                alt="">
+                                src="{{ asset('assets/images/google-play.svg') }}">
                         </a>
                         <span class="font-bold text-lg text-gray-600">
                             Google Play
@@ -999,8 +998,7 @@
                             class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">
                             <img
                                 class="w-full"
-                                src="{{ asset('assets/images/app-store.svg') }}"
-                                alt="">
+                                src="{{ asset('assets/images/app-store.svg') }}">
                         </a>
                         <span class="font-bold text-lg text-gray-600">
                             App Store
