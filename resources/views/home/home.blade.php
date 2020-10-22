@@ -2,8 +2,8 @@
 
 
 @section('baniere')
-    <div class="container mx-auto">
-        <div class="w-3/4 mx-auto flex justify-center items-center py-10">
+    <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+        <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-10">
             <div class="w-full px-3">
                 <strong
                     class="uppercase text-xl text-gray-600">
@@ -18,14 +18,16 @@
                     d’enseigner et partager vos connaissances.
                 </p>
                 <p class="flex">
-                    <button
+                    <a
+                        href="{{ route('cours.index') }}"
                         class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg">
                         Lisez nos cours
-                    </button>
-                    <button
+                    </a>
+                    <a
+                        href="{{ route('ecoles.index') }}"
                         class="ml-2 py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md">
                         Accéder aux écoles
-                    </button>
+                    </a>
                 </p>
             </div>
             <div class="w-full px-3">
@@ -99,7 +101,7 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <a href="#" class="font-bold text-bold text-blue-500">Cours</a><br>
+                <a href="{{ route('cours.index') }}" class="font-bold text-bold text-blue-500">Cours</a><br>
                 Les cours est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
                 Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
@@ -115,7 +117,7 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <strong class="text-bold text-blue-500">Exercices et solutions</strong> <br>
+                <a href="#" class="font-bold text-bold text-blue-500">Exercices et solutions</a> <br>
                 Lorem est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
                 Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
@@ -196,10 +198,11 @@
                     en avant les bienfondés de votre établissement.
                 </p>
                 <p class="flex mb-4">
-                    <button
+                    <a
+                        href="{{ url('/ecoles#creeSonEcole') }}"
                         class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg">
                         En savoir plus >
-                    </button>
+                    </a>
                 </p>
             </div>
 
@@ -901,7 +904,10 @@
     </section>
     {{--tarifs--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
-        <h3 class="text-center font-bold text-5xl  tracking-wide relative">Notre tarification</h3>
+        <h2
+            class="mb-2 text-3xl font-bold text-blue-600 text-center">
+            Notre tarification
+        </h2>
 
         <div class="flex flex-row justify-center my-4 text-sm tracking-tight font-medium text-gray-700">
             <p class="mx-3">Annuellement</p>

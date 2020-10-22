@@ -145,7 +145,7 @@
         </button>
     </section>
 
-    <section class="container">
+    <section class="container" id="creeSonEcole">
         <h3>Parmi les professeurs sur le site</h3>
         <div class="grid">
             <div>
