@@ -55,12 +55,12 @@ class LoginController extends Controller
     }
     public function googleRedirect(){
         $user = Socialite::driver('google')->user();
-//        dd($user->getEmail());
+        dd($user->getAvatar());
         $user = User::firstOrCreate([
             'email'=>$user->getEmail()
         ],[
             'name'=>$user->name,
-            'profile_photo_path'=>$user->picture,
+            'profile_photo_path'=>$user->getAvatar(),
             'password'=> Hash::make(Str::random(24)),
         ]);
         Auth::login($user,true);
