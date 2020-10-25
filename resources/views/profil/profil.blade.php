@@ -32,7 +32,7 @@
                                         <div class="mt-2 h-16 w-16">
                                             <img
                                                 class="w-full"
-                                                src="storage/{{ auth()->user()->profile_photo_path }}"
+                                                src="{{ auth()->user()->profile_photo_path }}"
                                                 alt="{{ auth()->user()->name }}">
                                         </div>
                                         <div class="mt-2" style="display: none;"><span

@@ -179,6 +179,7 @@
                 <span class="text-center text-xs text-gray-700">ou inscrivez-vous avec</span>
             </div>
             <div class="flex items-center w-full mt-4 mb-5">
+{{--                Google--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
                         href="#"
@@ -211,18 +212,20 @@
                         </svg>
                     </a>
                 </div>
+{{--                facebook--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2">
                     <a
-                        href="#"
+                        href="{{ route('login.facebook') }}"
                         class="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                         <svg class="h-6 w-6 fill-current text-gray-700" viewBox="0 0 512 512">
                             <path d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
                         </svg>
                     </a>
                 </div>
+{{--                github--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
-                        href="#"
+                        href="{{ route('login.github') }}"
                         class="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                         <svg
                             class="h-6 w-6 fill-current text-gray-700"

@@ -50,7 +50,7 @@ class CreateNewUser implements CreatesNewUsers
         $user->password = Hash::make($input['password']);
         if (request()->hasFile('image')) {
 //            $user->profile_photo_path = request('image')->store('profile-photos', 'public');
-            $user->profile_photo_path = $input['image']->store('profile-photos', 'public');
+            $user->profile_photo_path ='storage/' . $input['image']->store('profile-photos', 'public');
         }else{
             $user->profile_photo_path = "https://ui-avatars.com/api/?name={$input['name']}";
         }

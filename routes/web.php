@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -92,6 +93,16 @@ Route::get('/profil/ecole',function (){
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::get('login/github', [LoginController::class, 'github'])->name('login.github');
+Route::get('login/github/callback', [LoginController::class, 'githubRedirect'])->name('callback.github');
+
+Route::get('login/facebook', [LoginController::class, 'facebook'])->name('login.facebook');
+Route::get('login/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('callback.facebook');
+
+Route::get('login/google', [LoginController::class, 'google'])->name('login.google');
+Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])->name('callback.google');
+
 
 /*
 |--------------------------------------------------------------------------
