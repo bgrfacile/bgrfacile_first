@@ -39,6 +39,9 @@ Route::get('/ecoles',function (){
 Route::get('/qui-sommes-nous',function (){
     return view('qui-sommes-nous.index');
 })->name('qui-sommes-nous');
+Route::get('/politique-de-confidentialite',function (){
+    return view('politique-de-confidentialite.index');
+})->name('politique');
 
 /*
  * Cours
