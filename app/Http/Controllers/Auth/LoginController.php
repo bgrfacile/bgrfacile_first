@@ -26,7 +26,7 @@ class LoginController extends Controller
     public function githubRedirect()
     {
         $user = Socialite::driver('github')->user();
-        $this->roleUser($user);
+        $user= $this->roleUser($user);
         Auth::login($user,true);
         return redirect('/profil');
     }
@@ -45,7 +45,7 @@ class LoginController extends Controller
     }
     public function googleRedirect(){
         $user = Socialite::driver('google')->user();
-        $this->roleUser($user);
+        $user= $this->roleUser($user);
         Auth::login( $user,true);
         return redirect('/profil');
     }
@@ -69,9 +69,11 @@ class LoginController extends Controller
         if ($nbUser === 0) {
             $user = $this->saveUser($user);
             $user->assignRole('super-admin');
+            return $user;
         } else {
             $user = $this->saveUser($user);
             $user->assignRole('etudiant');
+            return $user;
         }
     }
 }
