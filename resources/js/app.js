@@ -5,8 +5,6 @@ import  Vue from 'vue';
 import { InertiaApp } from '@inertiajs/inertia-vue';
 import { InertiaForm } from 'laravel-jetstream';
 import PortalVue from 'portal-vue';
-import $ from "jquery";
-import slick from 'slick-carousel';
 
 Vue.use(InertiaApp);
 Vue.use(InertiaForm);

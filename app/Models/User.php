@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+class User extends Authenticatable implements HasMedia
 {
     use HasApiTokens;
     use HasFactory;
@@ -31,7 +32,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'profile-photos'
+        'profile_photo_path'
     ];
 
     /**
@@ -66,5 +67,10 @@ class User extends Authenticatable
 
     public function courses(){
         return $this->hasMany('App\Models\Course');
+    }
+    //media method
+    public function clearMediaCollection(string $collectionName = 'default'): HasMedia
+    {
+        // TODO: Implement clearMediaCollection() method.
     }
 }

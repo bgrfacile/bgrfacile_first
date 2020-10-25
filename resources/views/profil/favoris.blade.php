@@ -1,5 +1,12 @@
 @extends('layouts.front')
 
+@section('ressourceCSS')
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.rawgit.com/shuvroroy/youtube-clone/883c8d9a/public/css/main.css">
+@endsection
+
 @section('baniere')
     @include('layouts.partials.baniere_profil')
 @endsection
@@ -33,5 +40,4 @@
         </div>
 
     </div>
-
 @endsection

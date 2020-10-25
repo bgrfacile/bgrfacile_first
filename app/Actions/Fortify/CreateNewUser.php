@@ -3,6 +3,7 @@
 namespace App\Actions\Fortify;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -13,12 +14,14 @@ class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
 
+
     /**
      * Validate and create a newly registered user.
      *
      * @param array $input
      * @return \App\Models\User
      */
+
     public function create(array $input)
     {
         Validator::make($input, [
@@ -31,24 +34,27 @@ class CreateNewUser implements CreatesNewUsers
 
         $nbUser = DB::table('users')->count();
         if ($nbUser === 0) {
-            $user = User::create([
-                'name' => $input['name'],
-                'email' => $input['email'],
-                'profile_photo_path' => request('image')->store('profile-photos', 'public'),
-                'password' => Hash::make($input['password']),
-            ]);
+            $user = $this->saveUser($input);
             return $user->assignRole('super-admin');
         } else {
-            $path = request('image')->store('profile-photos', 'public');
-            $user = User::create([
-                'name' => $input['name'],
-                'email' => $input['email'],
-                'profile_photo_path' => $path,
-                'password' => Hash::make($input['password']),
-            ]);
+            $user = $this->saveUser($input);
             return $user->assignRole('etudiant');
         }
+    }
 
-
+    private function saveUser(array $input)
+    {
+        $user = new User();
+        $user->name = $input['name'];
+        $user->email = $input['email'];
+        $user->password = Hash::make($input['password']);
+        if (request()->hasFile('image')) {
+//            $user->profile_photo_path = request('image')->store('profile-photos', 'public');
+            $user->profile_photo_path = $input['image']->store('profile-photos', 'public');
+        }else{
+            $user->profile_photo_path = "https://ui-avatars.com/api/?name={$input['name']}";
+        }
+        $user->save();
+        return $user;
     }
 }

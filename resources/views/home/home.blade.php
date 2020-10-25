@@ -14,7 +14,7 @@
                     Rien que pour étudier, tout ce qu’il faut pour étudier.
                 </h1>
                 <p class="mb-2 text-gray-700">
-                    Découvrer une nouvelle facon d’apprendre,
+                    Découvrer une nouvelle façon d’apprendre,
                     d’enseigner et partager vos connaissances.
                 </p>
                 <p class="flex">

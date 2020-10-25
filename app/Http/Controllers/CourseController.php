@@ -43,7 +43,7 @@ class CourseController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'content' => $request->content,
-            'user_id'=>auth()->user()->id
+            'user_id'=> auth()->user()->id
         ]);
         return Redirect::to('/profil/my_course');
     }
