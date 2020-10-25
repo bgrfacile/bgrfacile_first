@@ -145,8 +145,8 @@
                                                     id="user-menu" aria-label="User menu" aria-haspopup="true"
                                                     x-bind:aria-expanded="open">
                                                 <img class="h-8 w-8 rounded-full"
-                                                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
-                                                     alt="">
+                                                     src="{{ auth()->user()->profile_photo_path }}"
+                                                     alt="{{ auth()->user()->name }}">
                                                 <div class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
                                             </button>
                                         </div>
