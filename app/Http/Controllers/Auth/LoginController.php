@@ -12,21 +12,15 @@ use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
-
     /**
      * Redirigez l'utilisateur vers la page d'authentification GitHub.
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function github()
     {
         return Socialite::driver('github')->redirect();
     }
-
-
     /**
      * Obtenez les informations utilisateur de GitHub.
-     *
      */
     public function githubRedirect()
     {
@@ -35,7 +29,6 @@ class LoginController extends Controller
          * Si utilisateur existe pas ajouter le
          * Si utilisateur exite recuper ces informations puis connecter lui
          * dans les deux cas, authentifiez l'utilisateur dans l'application et redirigez-le ensuite
-         *
          * */
         $user = User::firstOrCreate([
             'email'=>$user->getEmail()
@@ -43,13 +36,9 @@ class LoginController extends Controller
             'name'=>$user->getNickname(),
             'profile_photo_path'=>$user->getAvatar(),
             'password'=> Hash::make(Str::random(24)),
-//            'remember_token'=>$user->token,
         ]);
-
         Auth::login($user,true);
-
         return redirect('/profil');
-        // $user->token;
     }
 
     public function facebook(){
@@ -66,6 +55,24 @@ class LoginController extends Controller
     }
     public function googleRedirect(){
         $user = Socialite::driver('google')->user();
-        dd($user);
+        $user = User::firstOrCreate([
+            'email'=>$user->getEmail()
+        ],[
+            'name'=>$user->getNickname(),
+            'profile_photo_path'=>$user->getAvatar(),
+            'password'=> Hash::make(Str::random(24)),
+        ]);
+        Auth::login($user,true);
+        return redirect('/profil');
+    }
+
+    private function saveUser($user){
+        return User::firstOrCreate([
+            'email'=>$user->getEmail()
+        ],[
+            'name'=>$user->getNickname(),
+            'profile_photo_path'=>$user->getAvatar(),
+            'password'=> Hash::make(Str::random(24)),
+        ]);
     }
 }
