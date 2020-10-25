@@ -70,8 +70,8 @@ class LoginController extends Controller
         return User::firstOrCreate([
             'email'=>$user->getEmail()
         ],[
-            'name'=>$user->getNickname(),
-            'profile_photo_path'=>$user->getAvatar(),
+            'name'=>$user->name,
+            'profile_photo_path'=>$user->picture,
             'password'=> Hash::make(Str::random(24)),
         ]);
     }
