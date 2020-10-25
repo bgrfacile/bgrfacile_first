@@ -37,6 +37,7 @@ class LoginController extends Controller
             'profile_photo_path'=>$user->getAvatar(),
             'password'=> Hash::make(Str::random(24)),
         ]);
+        $user->assignRole('etudiant');
         Auth::login($user,true);
         return redirect('/profil');
     }
@@ -63,17 +64,9 @@ class LoginController extends Controller
             'profile_photo_path'=>$user->getAvatar(),
             'password'=> Hash::make(Str::random(24)),
         ]);
+        $user->assignRole('etudiant');
         Auth::login($user,true);
         return redirect('/profil');
     }
 
-    private function saveUser($user){
-        return User::firstOrCreate([
-            'email'=>$user->getEmail()
-        ],[
-            'name'=>$user->getNickname(),
-            'profile_photo_path'=>$user->getAvatar(),
-            'password'=> Hash::make(Str::random(24)),
-        ]);
-    }
 }
