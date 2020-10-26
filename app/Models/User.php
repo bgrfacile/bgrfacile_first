@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Scout\Searchable;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
@@ -22,6 +23,7 @@ class User extends Authenticatable implements HasMedia
     use TwoFactorAuthenticatable;
     use HasRoles;
     use InteractsWithMedia;
+    use Searchable;
 
     /**
      * The attributes that are mass assignable.
