@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\DB;
 
 class ProfilController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware([
+            'auth:sanctum',
+            'verified'
+        ]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -97,5 +106,13 @@ class ProfilController extends Controller
             ->where('favories.user_id','=',auth()->id())
             ->get();
         return view('profil.favoris',['favories'=>$favories]);
+    }
+
+    public function about_me(){
+        return view('profil.about');
+    }
+
+    public function my_ecole(){
+        return view('profil.ecole');
     }
 }
