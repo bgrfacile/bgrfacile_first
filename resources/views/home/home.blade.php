@@ -32,8 +32,9 @@
             </div>
             <div class="w-full px-3">
                 <img
-                    src="{{ asset('assets/images/imgP_HomePage.svg') }}"
-                    alt="garçon qui étudie">
+                    src="{{ asset('assets/images/dessin1_homePage.png') }}"
+                    alt="garçon qui étudie"
+                    title="#MyArt@Lb14">
             </div>
         </div>
     </div>
@@ -48,18 +49,18 @@
         </h3>
         <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-lg md:text-4xl count">12828959</strong>
-                <p class="text-xl text-gray-600">Cours</p>
+                <strong class="text-xl md:text-4xl count">12828959</strong>
+                <p class="text-base md:text-xl text-gray-600">Cours</p>
             </div>
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-lg md:text-4xl count">182959</strong>
-                <p class="text-xl text-gray-600">Exercises et solutions</p>
+                <strong class="text-xl md:text-4xl count">182959</strong>
+                <p class="text-base md:text-xl text-gray-600">Exercises et solutions</p>
             </div>
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-lg md:text-4xl count">12895</strong>
-                <p class="text-xl text-gray-600">Astuces</p>
+                <strong class="text-xl md:text-4xl count">12895</strong>
+                <p class="text-base md:text-xl text-gray-600">Astuces</p>
             </div>
         </div>
     </section>
@@ -81,27 +82,11 @@
             <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
                 <img
                     class="w-full"
-                    src="{{ asset('assets/images/solution.svg') }}"
-                    alt="">
-            </div>
-            <p class="w-full flex-1 pl-5">
-                <a href="#" class="font-bold text-bold text-blue-500">Astuces</a><br>
-                Les astuces est réservé aux apprenants, veuillez donc vous
-                inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
-                Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
-                des astuces afin de facilités vos études.
-            </p>
-        </div>
-
-        <div class="flex justify-center mb-10 ext-gray-600">
-            <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
-                <img
-                    class="w-full"
                     src="{{ asset('assets/images/course.svg') }}"
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <a href="{{ route('cours.index') }}" class="font-bold text-bold text-blue-500">Cours</a><br>
+                <strong>Cours <a href="{{ url('/login') }}" class="font-bold text-bold text-blue-500">(un compte est requie)</a></strong><br>
                 Les cours est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
                 Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
@@ -117,8 +102,25 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <a href="#" class="font-bold text-bold text-blue-500">Exercices et solutions</a> <br>
+                <strong>Exercices et solutions <a href="#" class="font-bold text-bold text-blue-500">(un compte est requie)</a></strong>
+                <br>
                 Lorem est réservé aux apprenants, veuillez donc vous
+                inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
+                Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
+                des astuces afin de facilités vos études.
+            </p>
+        </div>
+        <div class="flex justify-center mb-10 ext-gray-600">
+            <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
+                <img
+                    class="w-full"
+                    src="{{ asset('assets/images/solution.svg') }}"
+                    alt="">
+            </div>
+            <p class="w-full flex-1 pl-5">
+                <strong>Astuces <a href="#" class="font-bold text-bold text-blue-500">(Accès gratuit)</a></strong>
+                <br>
+                Les astuces est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
                 Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
                 des astuces afin de facilités vos études.
@@ -132,8 +134,8 @@
             Espace professeurs
         </h2>
         <p class="text-gray-600 mb-5">
-            Chers professeurs prenez le soin de vous inscrire afin de permettre de mieux classer votre contenue
-            bgrfacile vous donne la possibilité de dispenser vos cours en ligne, de mettre en valeur votre savoir-faire.
+            À la base, toute personne inscrite possède automatiquement le statut d'étudiant. Mais le site offre la
+            possibilité de changer de status, d'étudiant à celui de professeurs en remplissant les informations nécessaires.
         </p>
         <p class="text-gray-600 mb-5">
             Chers professeurs prenez le soin de vous inscrire afin de permettre de mieux classer votre contenue

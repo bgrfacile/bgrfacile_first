@@ -1,166 +1,227 @@
 @extends('layouts.front')
 
 @section('baniere')
-    <div class="container">
-        <div class="text-center px-3 lg:px-0">
-            <h1 class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">
-                L'espace école
-            </h1>
-            <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">
-                acceder à un espace reserver aux écoles
-            </p>
+    {{--    <div class="container">--}}
+    {{--        <div class="text-center px-3 lg:px-0">--}}
+    {{--            <h1 class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">--}}
+    {{--                L'espace école--}}
+    {{--            </h1>--}}
+    {{--            <p class="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">--}}
+    {{--                acceder à un espace reserver aux écoles--}}
+    {{--            </p>--}}
 
-            <button class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-black text-white">
-                cree votre école
-            </button>
-            <a href="#" class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
-                Acceder à votre école
-            </a>
-        </div>
+    {{--            <button class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-black text-white">--}}
+    {{--                cree votre école--}}
+    {{--            </button>--}}
+    {{--            <a href="#" class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">--}}
+    {{--                Acceder à votre école--}}
+    {{--            </a>--}}
+    {{--        </div>--}}
 
-        <div class="flex items-center w-full mx-auto content-end">
-            <div class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"></div>
-        </div>
-    </div>
+    {{--        <div class="flex items-center w-full mx-auto content-end">--}}
+    {{--            <div class="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl"></div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 @endsection
 
 @section('content')
-
-    <section class="bg-gray-100 border-b py-8">
-        <div class="grid grid-cols-2 lg:grid-cols-3"><div class="text-center mb-10 md:mb-20 lg:border-l-0 lg:border-r lg:border-baby-blue"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(64, 184, 132, 0.2);"><img style="width: 72px;" class="lazyLoad isLoaded" src="/images/sales/tech/vue.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    Vue.js
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    Access a huge catalog of Vue.js courses to help you with anything from setting up your first Vue application to developing advanced user interfaces.
-                </div></div><div class="text-center mb-10 md:mb-20 lg:border-l-0 md:border-l md:border-baby-blue lg:border-r lg:border-baby-blue"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(64, 184, 132, 0.2);"><img style="width: 73px;" class="lazyLoad isLoaded" src="/images/sales/tech/nuxt.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    Nuxt.js
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    Starting with the Fundamentals of the framework we guide you from scaffolding to deploying your Nuxt.js applications.
-                </div></div><div class="text-center mb-10 md:mb-20 lg:border-l-0"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(93, 214, 191, 0.2);"><img style="width: 58px;" class="lazyLoad isLoaded" src="/images/sales/tech/vuex.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    Vuex
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    Vuex is a state management pattern + library for Vue.js applications. Learn all the Vuex best practices with Vue School.
-                </div></div><div class="text-center mb-10 md:mb-20 lg:border-l-0 md:border-l md:border-baby-blue lg:border-r lg:border-baby-blue"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(199, 59, 0, 0.2);"><img style="width: 55px;" class="lazyLoad isLoaded" src="/images/sales/tech/jest.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    Testing &amp; Jest
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    Ready to improve your daily life by writing better tests? We’ll teach you all the testing jargon and techniques you need to know to test your Vue apps with confidence.
-                </div></div><div class="text-center mb-10 md:mb-20 lg:border-l-0 lg:border-r lg:border-baby-blue"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(231, 44, 172, 0.2);"><img style="width: 55px;" class="lazyLoad isLoaded" src="/images/sales/tech/graphql.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    GraphQL
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    GraphQL is a query language for APIs and a runtime to execute said queries. At Vue School you will learn GraphQL and how to use it with Vue.js using Vue Apollo.
-                </div></div><div class="text-center mb-10 md:mb-20 lg:border-l-0 md:border-l md:border-baby-blue"><div class="w-24 h-24 inline-flex items-center justify-center rounded mb-5" style="background-color: rgba(138, 201, 64, 0.2);"><img style="width: 55px;" class="lazyLoad isLoaded" src="/images/sales/tech/js.png"></div> <div class="mb-4 text-2xl font-bold font-circular">
-                    JavaScript
-                </div> <div class="px-5 text-sm leading-relaxed text-iron-dark md:text-base">
-                    Javascript is a prerequisite in order to start learning Vue.js. We will teach you modern JavaScript, starting with ES6.
-                </div></div></div>
-    </section>
-
-    <section class="bg-gray-100 py-8">
-        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-            <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800">
-                Pricing
-            </h2>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+    {{--presentation--}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto mb-20 px-4 pt-40 text-center pb-10">
+            <h1 class="text-6xl font-bold">écoles en ligne</h1>
+            <p class="text-xl mb-8">
+                l'école en ligne que propose <strong>bgrfacile</strong>
+                est tout simplement la présence d'une école traditionnelle de la place sur la toile internet et
+                accessible à tous avec des avantages
+                <a href="#fonctionnalite">décrites ici</a>
+            </p>
+            <p class="flex justify-center">
+                <a href="#"
+                   class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-black text-white">
+                    cree votre école
+                </a>
+                <a href="#"
+                   class="inline-block mx-auto lg:mx-0 hover:underline bg-transparent text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
+                    Acceder à votre école
+                </a>
+            </p>
+            <div class="w-11/12 mx-auto">
+                <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/fS5SyhuIusM"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
             </div>
-
-            <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-                <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-                    <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-                        <div class="p-8 text-3xl font-bold text-center border-b-4">
-                            Free
-                        </div>
-                        <ul class="w-full text-center text-sm">
-                            <li class="border-b py-4">Thing</li>
-                            <li class="border-b py-4">Thing</li>
-                            <li class="border-b py-4">Thing</li>
-                        </ul>
-                    </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                        <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                            £0 <span class="text-base">for one user</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
-                                Sign Up
-                            </button>
-                        </div>
-                    </div>
+        </div>
+    </section>
+    {{--etape de creation--}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto px-4 text-center">
+            <h2>étape de la creation d'une école</h2>
+            <p class="mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="flex mb-4">
+                <div class="w-1/3 h-12">
+                    <svg class="h-4 w-4 mx-auto" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="fj text-purple-600" width="64" height="64" rx="32"></rect>
+                        <path class="fq wv" stroke-width="2" stroke-linecap="square" d="M21 23h22v18H21z" fill="none"
+                              fill-rule="evenodd"></path>
+                        <path class="fq wp" d="M26 28h12M26 32h12M26 36h5" stroke-width="2"
+                              stroke-linecap="square"></path>
+                    </svg>
+                    <h4 class=""><span class="lu">1</span>. Acquisition</h4>
+                    <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</p>
                 </div>
-
-                <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 gradient shadow hover:shadow-lg z-10">
-                    <div class="flex-1 rounded-t rounded-b-none overflow-hidden">
-                        <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
-                        <ul class="w-full text-center text-base font-bold">
-                            <li class="py-4">Thing</li>
-                            <li class="py-4">Thing</li>
-                            <li class="py-4">Thing</li>
-                            <li class="py-4">Thing</li>
-                        </ul>
-                    </div>
-                    <div class="flex-none mt-auto rounded-b rounded-t-none overflow-hidden p-6">
-                        <div class="w-full pt-6 text-4xl font-bold text-center">
-                            £x.99 <span class="text-base">/ per user</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
-                                Sign Up
-                            </button>
-                        </div>
-                    </div>
+                <div class="w-1/3 h-12">
+                    <svg class="h-4 w-4 mx-auto" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="fj text-purple-600" width="64" height="64" rx="32"></rect>
+                        <g fill="none" fill-rule="evenodd">
+                            <path class="fq wv" d="M40 22a2 2 0 012 2v16a2 2 0 01-2 2H24a2 2 0 01-2-2V24a2 2 0 012-2"
+                                  stroke-width="2" stroke-linecap="square"></path>
+                            <path class="fq wp" stroke-width="2" stroke-linecap="square"
+                                  d="M36 32l-4-3-4 3V22h8z"></path>
+                        </g>
+                    </svg>
+                    <h4 class=""><span class="lu">2</span>. Activation</h4>
+                    <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</p>
                 </div>
-
-                <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-                    <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
-                        <div class="p-8 text-3xl font-bold text-center border-b-4">
-                            Pro
-                        </div>
-                        <ul class="w-full text-center text-sm">
-                            <li class="border-b py-4">Thing</li>
-                            <li class="border-b py-4">Thing</li>
-                            <li class="border-b py-4">Thing</li>
-                        </ul>
-                    </div>
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                        <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
-                            £x.99 <span class="text-base">/ per user</span>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <button class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
-                                Sign Up
-                            </button>
-                        </div>
-                    </div>
+                <div class="w-1/3 h-12">
+                    <svg class="h-4 w-4 mx-auto" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect class="fj text-purple-600" width="64" height="64" rx="32"></rect>
+                        <path class="fq wv" stroke-width="2" stroke-linecap="square" d="M21 35l4 4 12-15" fill="none"
+                              fill-rule="evenodd"></path>
+                        <path class="fq wp" d="M42 29h-3M42 34h-7M42 39H31" stroke-width="2"
+                              stroke-linecap="square"></path>
+                    </svg>
+                    <h4 class=""><span class="lu">3</span>. Retention</h4>
+                    <p class="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</p>
                 </div>
             </div>
         </div>
     </section>
+    {{-- etudiant--}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+            <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-10">
+                <div class="w-full px-3">
 
+                    <p class="mb-2 text-gray-700">
+                        ce que les etudiants peuvent faire
+                    </p>
+
+                </div>
+                <div class="w-full px-3">
+                    <img
+                        src="{{ asset('assets/images/dessin1_homePage.png') }}"
+                        alt="garçon qui étudie"
+                        title="#MyArt@Lb14">
+                </div>
+            </div>
+        </div>
+    </section>
+    {{--prof --}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+            <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-10">
+                <div class="w-full px-3">
+                    <img
+                        src="{{ asset('assets/images/dessin1_homePage.png') }}"
+                        alt="garçon qui étudie"
+                        title="#MyArt@Lb14">
+                </div>
+                <div class="w-full px-3">
+
+                    <p class="mb-2 text-gray-700">
+                        ce que les professeurs peuvent faire
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    {{--fonctionnalite--}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+            <h2 class="text-center">Les fonctionnalites offre</h2>
+            <ul class="nv cx mi _p _a">
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+                <li><h4 class="rz ro sa">Publishing industries for previewing layouts?</h4>
+                    <p class="rq lu">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum.</p></li>
+            </ul>
+        </div>
+    </section>
+    {{--price--}}
+    <section>
+        <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+        <div class="flex mb-4">
+            <div class="w-1/3 h-12">
+                <div class="fa np ng rw uv _ aos-init aos-animate" data-aos="fade-up" data-aos-delay="700">
+                    <div class="sm af na tj">
+                        <div class="h4 text-purple-600 si">Essential</div>
+                        <div class="nd nx sa"><span x-text="priceOutput.plan1[value][0]" class="bf xm ro lu">$</span> <span
+                                x-text="priceOutput.plan1[value][1]" class="h2">49</span> <span
+                                x-text="priceOutput.plan1[value][2]" class="ro lu">/mo</span></div>
+                        <div class="lu">Better insights for growing businesses that want more customers.</div>
+                    </div>
+                    <div class="ro sh">Features include:</div>
+                </div>
+            </div>
+            <div class="w-1/3 h-12">
+                <div class="fa np ng rw uv _ aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                    <div class="fu fl fc bp ol">
+                        <div class="nd r_ bi uy uk bg lv ye nr">Most Popular</div>
+                    </div>
+                    <div class="sm af na tj">
+                        <div class="h4 text-purple-600 si">Premium</div>
+                        <div class="nd nx sa"><span x-text="priceOutput.plan2[value][0]" class="bf xm ro lu">$</span> <span
+                                x-text="priceOutput.plan2[value][1]" class="h2">79</span> <span
+                                x-text="priceOutput.plan2[value][2]" class="ro lu">/mo</span></div>
+                        <div class="lu">Better insights for growing businesses that want more customers.</div>
+                    </div>
+                    <div class="ro sh">All features of Essential plus:</div>
+
+                </div>
+            </div>
+            <div class="w-1/3 h-12">
+                <div class="fa np ng rw uv _ aos-init aos-animate" data-aos="fade-up" data-aos-delay="800">
+                    <div class="sm af na tj">
+                        <div class="h4 text-purple-600 si">Premium</div>
+                        <div class="nd nx sa"><span x-text="priceOutput.plan3[value][0]" class="bf xm ro lu">$</span> <span
+                                x-text="priceOutput.plan3[value][1]" class="h2">129</span> <span
+                                x-text="priceOutput.plan3[value][2]" class="ro lu">/mo</span></div>
+                        <div class="lu">Better insights for growing businesses that want more customers.</div>
+                    </div>
+                    <div class="ro sh">All features of Essential plus:</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    {{--acceder aux ecole--}}
     <section class="gradient w-full mx-auto text-center pt-6 pb-12">
         <h3 class="my-4 text-3xl font-extrabold">
             Acceder à votre école
         </h3>
 
-        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
+        <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
             Action!
         </button>
-    </section>
-
-    <section class="container" id="creeSonEcole">
-        <h3>Parmi les professeurs sur le site</h3>
-        <div class="grid">
-            <div>
-                i
-            </div>
-
-            <div class="landing-v4-ads-wrapper"><div class="landing-v4-ads-pic"><div class="img" data-src="/images/annonces/professeur-home-prof-francais-litterature-lycee-college-donne-cours-particuliers-preparation-bac-francais-brevet.jpg" style="background-image: url(&quot;/images/annonces/professeur-home-prof-francais-litterature-lycee-college-donne-cours-particuliers-preparation-bac-francais-brevet.jpg&quot;);"></div><div class="landing-v4-ads-pic-mask"></div><div class="landing-v4-ads-pic-text-container"><p class="landing-v4-ads-pic-firstname">Julie</p><div class="landing-v4-ads-pic-location">
-                            <span class="landing-v4-ads-pic-icon geolocation"></span>
-                            <span class="landing-v4-ads-pic-text">Six-Fours-les-Plages</span></div></div></div><div class="landing-v4-ads-badge"><span class="landing-v4-ads-badge-chips landing-v4-ads-badge-pricing"><span>75€/h</span> <span class="dot">·</span> <span class="landing-v4-ads-badge-free-lesson">1<sup>er</sup> cours offert</span></span>
-                    <div class="landing-v4-ads-badge-chips landing-v4-ads-badge-rating">
-                        <span class="landing-v4-ads-badge-rating-text">5,0</span>
-                        <span class="landing-v4-ads-badge-rating-icon star-fullV2"></span>
-                        <span class="landing-v4-ads-badge-rating-view-count">77 avis</span></div>
-                </div><h3 class="landing-v4-ads-text">Prof de français et de littérature en lycée et collège donne cours particuliers. préparation au bac de français et au brevet des collèges.</h3></div>
-
-        </div>
     </section>
 @endsection
