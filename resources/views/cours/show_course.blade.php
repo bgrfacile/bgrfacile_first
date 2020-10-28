@@ -1,7 +1,3 @@
-{{--lecture du cours: <br>--}}
-{{--<strong>--}}
-{{--    {{ $course->name }}--}}
-{{--</strong>--}}
 @extends('layouts.readCourse')
 
 @section('main')
@@ -37,7 +33,7 @@
 
     <div class="w-full md:w-7/12 mx-auto" xmlns:x-transition="http://www.w3.org/1999/xhtml">
         <div class="mx-5 my-3 text-sm">
-            Cours de <a href="" class=" text-red-600 font-bold tracking-widest">matière du cours</a>
+            La <a href="" class=" text-red-600 font-bold tracking-widest">matière du cours</a>
         </div>
         <div class="w-full text-gray-800 text-4xl px-5 font-bold leading-none">
             {{ $course->name }}
@@ -47,30 +43,14 @@
             {{ $course->description }}
         </div>
 
-        <div class="mx-5">
-            <img
-                src="https://cdn.dribbble.com/users/1804127/screenshots/14134443/dribbble-01.png">
-        </div>
-
-        <div class="w-full text-gray-600 text-normal mx-5">
-            <p class="border-b py-3">Georgia Gov. Brian Kemp speaks to the media during a press conference. | Kevin C.
-                Cox/Getty Images</p>
-        </div>
-
-        <div class="w-full text-gray-600 font-thin italic px-5 pt-3">
-            By <strong class="text-gray-700">Quint Forgey</strong><br>
-            07/17/2020 09:57 AM EDT<br>
-            Updated: 07/17/2020 10:33 AM EDT
-        </div>
-
         <div class="px-5 w-full mx-auto">
-            {{ $course->content }}
+            {!! $course->content !!}
         </div>
     </div>
 
     {{--    <div class="bg-gray-100 h-screen" style="min-height: 500px;">--}}
     <div
-         @keydown.window.escape="open = false" class="fixed inset-0 overflow-hidden">
+        @keydown.window.escape="open = false" class="fixed inset-0 overflow-hidden">
         <div class="absolute overflow-hidden">
             <div x-show="open" x-description="Background overlay, show/hide based on slide-over state."
                  x-transition:enter="ease-in-out duration-500" x-transition:enter-start="opacity-0"

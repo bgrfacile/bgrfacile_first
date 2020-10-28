@@ -363,9 +363,7 @@
                         src="{{ asset('assets/images/logo-black.png') }}">
                 </p>
                 <p>
-                    Pour réussir, travailler dur, ne jamais abandonner et surtout chérir une obsession magnifique.
-                    <br>
-                    <strong>Walt Disney</strong>
+                    Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
                 </p>
             </div>
             <div class="flex-1 flex flex-col md:flex-row">
