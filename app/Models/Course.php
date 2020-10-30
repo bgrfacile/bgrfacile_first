@@ -18,6 +18,6 @@ class Course extends Model implements HasMedia
         'name',
         'description',
         'content',
-        'user_id'
+        'user_id',
     ];
 }

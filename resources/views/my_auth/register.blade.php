@@ -33,6 +33,7 @@
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
 
+                {{--image--}}
                 <div class="mb-5 text-center">
                     <div class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
                         <img id="image" class="object-cover w-full h-32 rounded-full" :src="image"
@@ -63,82 +64,73 @@
 								reader.onload = (e) => image = e.target.result;
 								reader.readAsDataURL(file);">
                 </div>
-
+                {{--name--}}
                 <div>
-                    <label class="block font-medium text-sm text-gray-700">
-                        Name
-                    </label>
-                    <input
-                        class="form-input rounded-md shadow-sm block mt-1 w-full"
-                        type="text"
-                        name="name"
-                        required="required"
-                        autofocus="autofocus"
-                        autocomplete="name"
-                        value="{{ old('name') }}">
-                </div>
-
-                <div class="mt-4">
-
-                    <label class="block font-medium text-sm text-gray-700">
-                        Email
-                    </label>
-                    <input
-                        class="form-input rounded-md shadow-sm block mt-1 w-full"
-                        type="email"
-                        name="email"
-                        required="required"
-                        autofocus="autofocus"
-                        autocomplete="email"
-                        value="{{ old('email') }}">
-                </div>
-
-                <div class="mt-4" x-data="{ show: true }">
-                    <label class="block font-medium text-sm text-gray-700">
-                        Password
+                    <label for="name" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
+                        Nom
                     </label>
                     <div class="relative">
                         <input
-                            class="form-input rounded-md shadow-sm block mt-1 w-full"
-                            :type="show ? 'password' : 'text'"
-                            name="password"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="votre nom"
                             required="required"
-                            autocomplete="new-password">
-                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-
-                            <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
-                                 :class="{'hidden': !show, 'block':show }" xmlns="http://www.w3.org/2000/svg"
-                                 viewbox="0 0 576 512">
-                                <path fill="currentColor"
-                                      d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z">
-                                </path>
-                            </svg>
-
-                            <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
-                                 :class="{'block': !show, 'hidden':show }" xmlns="http://www.w3.org/2000/svg"
-                                 viewbox="0 0 640 512">
-                                <path fill="currentColor"
-                                      d="M320 400c-75.85 0-137.25-58.71-142.9-133.11L72.2 185.82c-13.79 17.3-26.48 35.59-36.72 55.59a32.35 32.35 0 0 0 0 29.19C89.71 376.41 197.07 448 320 448c26.91 0 52.87-4 77.89-10.46L346 397.39a144.13 144.13 0 0 1-26 2.61zm313.82 58.1l-110.55-85.44a331.25 331.25 0 0 0 81.25-102.07 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64a308.15 308.15 0 0 0-147.32 37.7L45.46 3.37A16 16 0 0 0 23 6.18L3.37 31.45A16 16 0 0 0 6.18 53.9l588.36 454.73a16 16 0 0 0 22.46-2.81l19.64-25.27a16 16 0 0 0-2.82-22.45zm-183.72-142l-39.3-30.38A94.75 94.75 0 0 0 416 256a94.76 94.76 0 0 0-121.31-92.21A47.65 47.65 0 0 1 304 192a46.64 46.64 0 0 1-1.54 10l-73.61-56.89A142.31 142.31 0 0 1 320 112a143.92 143.92 0 0 1 144 144c0 21.63-5.29 41.79-13.9 60.11z">
-                                </path>
-                            </svg>
-
-                        </div>
+                            autofocus="autofocus"
+                            autocomplete="name"
+                            value="{{ old('name') }}"
+                            class="text-sm sm:text-base relative w-full
+                        border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2 @if($errors->has('name'))border-red-500 @endif">
 
                     </div>
-
+                    @if($errors->has('name'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('name') }}
+                        </span>
+                    @endif
                 </div>
 
-                <div class="mt-4" x-data="{ show: true }">
-                    <label class="block font-medium text-sm text-gray-700">
-                        Confirm Password
+                {{--                email--}}
+                <div class="mt-4">
+
+                    <label for="email"
+                           class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
+                        Email
                     </label>
                     <div class="relative">
-                    <input
-                        class="form-input rounded-md shadow-sm block mt-1 w-full"
-                        :type="show ? 'password' : 'text'"
-                        name="password_confirmation"
-                        required="required"
-                        autocomplete="new-password">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="votre email"
+                            required="required"
+                            autofocus="autofocus"
+                            autocomplete="email"
+                            value="{{ old('email') }}"
+                            class="text-sm sm:text-base relative w-full
+                            border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2 @if($errors->has('email'))border-red-500 @endif">
+                    </div>
+                    @if($errors->has('email'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('email') }}
+                        </span>
+                    @endif
+                </div>
+
+                {{--                mot de passe--}}
+                <div class="mt-4" x-data="{ show: true }">
+                    <label for="password" class="block font-medium text-sm text-gray-700">
+                        Mot de passe
+                    </label>
+                    <div class="relative">
+                        <input
+                            :type="show ? 'password' : 'text'"
+                            name="password"
+                            id="password"
+                            placeholder="password"
+                            required="required"
+                            autocomplete="new-password"
+                            class="text-sm sm:text-base relative w-full
+                            border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2 @if($errors->has('password'))border-red-500 @endif">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
 
                             <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
@@ -158,10 +150,57 @@
                             </svg>
 
                         </div>
-
                     </div>
+                    @if($errors->has('password'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('password') }}
+                        </span>
+                    @endif
                 </div>
 
+                {{--                confirmation mot de passe--}}
+                <div class="mt-4" x-data="{ show: true }">
+                    <label for="password_confirmation" class="block font-medium text-sm text-gray-700">
+                        Confirmez le mot de passe
+                    </label>
+                    <div class="relative">
+                        <input
+                            :type="show ? 'password' : 'text'"
+                            name="password_confirmation"
+                            id="password_confirmation"
+                            placeholder="password confirmation"
+                            required="required"
+                            autocomplete="new-password"
+                            class="text-sm sm:text-base relative w-full
+                            border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2 @if($errors->has('password_confirmation'))border-red-500 @endif">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+
+                            <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
+                                 :class="{'hidden': !show, 'block':show }" xmlns="http://www.w3.org/2000/svg"
+                                 viewbox="0 0 576 512">
+                                <path fill="currentColor"
+                                      d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z">
+                                </path>
+                            </svg>
+
+                            <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
+                                 :class="{'block': !show, 'hidden':show }" xmlns="http://www.w3.org/2000/svg"
+                                 viewbox="0 0 640 512">
+                                <path fill="currentColor"
+                                      d="M320 400c-75.85 0-137.25-58.71-142.9-133.11L72.2 185.82c-13.79 17.3-26.48 35.59-36.72 55.59a32.35 32.35 0 0 0 0 29.19C89.71 376.41 197.07 448 320 448c26.91 0 52.87-4 77.89-10.46L346 397.39a144.13 144.13 0 0 1-26 2.61zm313.82 58.1l-110.55-85.44a331.25 331.25 0 0 0 81.25-102.07 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64a308.15 308.15 0 0 0-147.32 37.7L45.46 3.37A16 16 0 0 0 23 6.18L3.37 31.45A16 16 0 0 0 6.18 53.9l588.36 454.73a16 16 0 0 0 22.46-2.81l19.64-25.27a16 16 0 0 0-2.82-22.45zm-183.72-142l-39.3-30.38A94.75 94.75 0 0 0 416 256a94.76 94.76 0 0 0-121.31-92.21A47.65 47.65 0 0 1 304 192a46.64 46.64 0 0 1-1.54 10l-73.61-56.89A142.31 142.31 0 0 1 320 112a143.92 143.92 0 0 1 144 144c0 21.63-5.29 41.79-13.9 60.11z">
+                                </path>
+                            </svg>
+
+                        </div>
+                    </div>
+                    @if($errors->has('password_confirmation'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('password_confirmation') }}
+                        </span>
+                    @endif
+                </div>
+
+                {{--                submit--}}
                 <div class="flex items-center justify-end mt-4">
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                         Déja enregistré?
@@ -179,7 +218,7 @@
                 <span class="text-center text-xs text-gray-700">ou inscrivez-vous avec</span>
             </div>
             <div class="flex items-center w-full mt-4 mb-5">
-{{--                Google--}}
+                {{--                Google--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
                         href="{{ route('login.google') }}"
@@ -212,17 +251,18 @@
                         </svg>
                     </a>
                 </div>
-{{--                facebook--}}
+                {{--                facebook--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2">
                     <a
                         href="#"
                         class="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                         <svg class="h-6 w-6 fill-current text-gray-700" viewBox="0 0 512 512">
-                            <path d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
+                            <path
+                                d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
                         </svg>
                     </a>
                 </div>
-{{--                github--}}
+                {{--                github--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
                         href="{{ route('login.github') }}"
@@ -232,7 +272,8 @@
                             enable-background="new 0 0 24 24"
                             viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"/>
+                            <path
+                                d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"/>
                         </svg>
                     </a>
                 </div>

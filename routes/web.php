@@ -1,22 +1,25 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Models\User;
-use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\LevelsController;
+use App\Http\Controllers\SubjectsController;
+use App\Http\Controllers\TrainingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfilController;
 
+
 /*
-|--------------------------------------------------------------------------
-| Site
-|--------------------------------------------------------------------------
-*/
+ * home Page
+ * */
 Route::get('/', function () {
     return view('home.home');
 })->name('home');
+Route::get('/demo', function () {
+    return view('demo');
+})->name('demo');
 /*
- * pages
+ * autres pages
  * */
 Route::get('/faq',function (){
     return view('faq.faq');
@@ -72,15 +75,26 @@ Route::get('/corriges',function (){
 /*
  * Profil
  * */
-Route::get('/profil',[ProfilController::class, 'index'])->name('profil.index');
+Route::prefix('profil')->group(function () {
+    Route::get('/',[ProfilController::class, 'index'])->name('profil.index');
 
-Route::get('/profil/my_course',[ProfilController::class, 'my_course'])->name('my_course');
+    Route::get('/edit',[ProfilController::class, 'edit'])->name('profil.edit');
 
-Route::get('/profil/favoris',[ProfilController::class, 'favoris'])->name('profil.favoris');
+    Route::get('/myFavoris',[ProfilController::class, 'myFavoris'])->name('profil.myFavoris');
 
-Route::get('/profil/about',[ProfilController::class, 'about_me'])->name('profil.about');
+    Route::get('/myCourses',[ProfilController::class, 'myCourses'])->name('profil.myCourses');
 
-Route::get('/profil/ecole',[ProfilController::class, 'my_ecole'])->name('profil.ecole');
+    Route::get('/myExercises',[ProfilController::class, 'myExercises'])->name('profil.myExercises');
+
+    Route::get('/myCorrected',[ProfilController::class, 'myCorrected'])->name('profil.myCorrected');
+
+    Route::get('/mySchool',[ProfilController::class, 'mySchool'])->name('profil.mySchool');
+
+    Route::get('/myDashbord',[ProfilController::class, 'myDashbord'])->name('profil.myDashbord');
+
+    Route::get('/myFactures',[ProfilController::class, 'myFactures'])->name('profil.myFactures');
+});
+
 
 /*
  * Auth
@@ -101,11 +115,24 @@ Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])-
 
 /*
 |--------------------------------------------------------------------------
+| Administration des écoles
+|--------------------------------------------------------------------------
+*/
+Route::get('/dashbord-school', function (){
+    return view('dashboard_ecole.home.home');
+});
+
+/*
+|--------------------------------------------------------------------------
 | Administration du site
 |--------------------------------------------------------------------------
-|
 */
 
-Route::get('/g', function (){
-    return view('dashboard_general.home.home');
+Route::prefix('dashbord-admin')->group(function () {
+    Route::get('/', function (){
+        return view('dashboard_admin.home.home');
+    });
+    Route::resource('trainings', TrainingsController::class);
+    Route::resource('levels', LevelsController::class);
+    Route::resource('subjects', SubjectsController::class);
 });

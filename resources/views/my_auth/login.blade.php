@@ -49,30 +49,40 @@
                 @csrf
 
                 <div>
-                    <label class="block font-medium text-sm text-gray-700">
+                    <label for="email" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
                         Email
                     </label>
-                    <input
-                        class="form-input rounded-md shadow-sm block mt-1 w-full"
-                        type="email"
-                        name="email"
-                        required="required"
-                        autofocus="autofocus"
-                        value="{{ old('email') }}">
+                    <div class="relative">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            required="required"
+                            placeholder="votre email"
+                            autofocus="autofocus"
+                            value="{{ old('email') }}"
+                            class="text-sm sm:text-base relative w-full
+                            border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2 @if($errors->has('email'))border-red-500 @endif">
+                    </div>
+                    @if($errors->has('email'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('email') }}
+                        </span>
+                    @endif
                 </div>
 
                 <div class="mt-4" x-data="{ show: true }">
-                    <label class="block font-medium text-sm text-gray-700">
+                    <label for="password" class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">
                         Password
                     </label>
                     <div class="relative">
                         <input
-                            class="form-input rounded-md shadow-sm block mt-1 w-full"
-                            {{--                            type="password" --}}
                             :type="show ? 'password' : 'text'"
                             name="password"
                             required="required"
-                            autocomplete="current-password">
+                            autocomplete="current-password"
+                            class="text-sm sm:text-base relative w-full
+                            border rounded placeholder-gray-400 focus:border-indigo-400 focus:outline-none py-2 pr-2 pl-2">
                         <div class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
 
                             <svg class="h-6 text-gray-700" fill="none" @click="show = !show"
@@ -93,7 +103,11 @@
 
                         </div>
                     </div>
-
+                    @if($errors->has('password'))
+                        <span class="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+			            {{ $errors->first('password') }}
+                        </span>
+                    @endif
                 </div>
 
                 <div class="block mt-4">
@@ -124,7 +138,7 @@
                 <span class="text-center text-xs text-gray-700">ou connectez-vous avec</span>
             </div>
             <div class="flex items-center w-full mt-4 mb-5">
-{{--                google--}}
+                {{--                google--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
                         href="{{ route('login.google') }}"
@@ -157,18 +171,18 @@
                         </svg>
                     </a>
                 </div>
-{{--                facebook--}}
+                {{--                facebook--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2">
                     <a
                         href="#"
                         class="appearance-none flex items-center justify-center block w-full bg-gray-100 text-gray-700 shadow border border-gray-500 rounded-lg py-3 px-3 leading-tight hover:bg-gray-200 hover:text-gray-700 focus:outline-none">
                         <svg class="h-6 w-6 fill-current text-gray-700" viewBox="0 0 512 512">
-                            <pathphp
-                                d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></pathphp>
+                            <path
+                                d="M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z"></path>
                         </svg>
                     </a>
                 </div>
-{{--                github--}}
+                {{--                github--}}
                 <div class="w-full md:w-1/3 px-3 pt-4 mx-2 border-t border-gray-400">
                     <a
                         href="{{ route('login.github') }}"

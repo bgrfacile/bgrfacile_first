@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\Levels;
+use App\Models\Subjects;
+use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -17,8 +20,16 @@ class CourseController extends Controller
      */
     public function index()
     {
+        $trainings = Training::all();
+        $levels = Levels::all();
+        $subjects = Subjects::all();
         $courses = Course::all();
-        return view('cours.course', ['courses' => $courses]);
+        return view('cours.course', [
+            'courses' => $courses,
+            'trainings' => $trainings,
+            'levels' => $levels,
+            'subjects' => $subjects,
+        ]);
     }
 
     /**
@@ -28,6 +39,7 @@ class CourseController extends Controller
      */
     public function create()
     {
+        $this->middleware(['auth:sanctum', 'verified']);
         return view('cours.create');
     }
 
@@ -39,6 +51,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
+        $this->middleware(['auth:sanctum', 'verified']);
         $courses = Course::create([
             'name' => $request->name,
             'description' => $request->description,
