@@ -8,6 +8,7 @@
     <div class="mx-0 md:mx-16">
         <div class="container mx-auto pt-8">
             {{--            cv--}}
+
             <div
                 class="min-h-screen">
                 <div class="px-2 md:px-0">
@@ -17,13 +18,13 @@
                             <div class="relative mt-8 mb-4">
                                 <img
                                     class="absolute mx-auto rounded-full h-24 w-24 flex items-center justify-center"
-                                    src="https://picsum.photos/200"
-                                    alt=""
+                                    src="{{ auth()->user()->profile_photo_path }}"
+                                    alt="{{ auth()->user()->name }}"
                                     style="left: 50%;transform: translate(-50%, -50%);">
                                 <div class="bg-teal-500 rounded-lg">
                                     <div class="text-center py-8">
                                         <h3 class="font-sans text-2xl font-bold mt-4 mb-2">
-                                            John Doe
+                                            {{ auth()->user()->name }}
                                         </h3>
                                         <p class="text-white text-base">
                                             étudiant

@@ -10,7 +10,7 @@
                     bgrfacile
                 </strong>
                 <h1
-                    class="mb-2 text-3xl font-bold">
+                    class="mb-2 text-3xl font-bold text-blue-600">
                     Rien que pour étudier, tout ce qu’il faut pour étudier.
                 </h1>
                 <p class="mb-2 text-gray-700">
@@ -20,21 +20,25 @@
                 <p class="flex">
                     <a
                         href="{{ route('cours.index') }}"
-                        class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg">
+                        class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                         Lisez nos cours
                     </a>
                     <a
                         href="{{ route('ecoles.index') }}"
-                        class="ml-2 py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md">
+                        class="ml-2 py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline">
                         Accéder aux écoles
                     </a>
                 </p>
             </div>
             <div class="w-full px-3">
-                <img
-                    src="{{ asset('assets/images/dessin1_homePage.png') }}"
-                    alt="garçon qui étudie"
-                    title="#MyArt@Lb14">
+                <div class="w-full h-72 rounded-lg">
+                    <img
+                        src="{{ asset('assets/images/bgr dessin3.3.png') }}"
+                        alt="garçon qui étudie"
+                        title="#MyArt@Lb14"
+                        class="w-full h-full">
+                </div>
+
             </div>
         </div>
     </div>
@@ -44,35 +48,38 @@
 @section('content')
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h3
-            class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center">
+            class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center text-blue-600">
             NOUS AVONS TOUT CE DONT VOUS AVEZ BESOIN
         </h3>
         <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                 <strong class="text-xl md:text-4xl count">12828959</strong>
-                <p class="text-base md:text-xl text-gray-600">Cours</p>
+                <p class="font-bold text-base md:text-xl text-gray-800">Cours</p>
             </div>
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                 <strong class="text-xl md:text-4xl count">182959</strong>
-                <p class="text-base md:text-xl text-gray-600">Exercises et solutions</p>
+                <p class="font-bold text-base md:text-xl text-gray-800">Exercises et solutions</p>
             </div>
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                 <strong class="text-xl md:text-4xl count">12895</strong>
-                <p class="text-base md:text-xl text-gray-600">Astuces</p>
+                <p class="font-bold text-base md:text-xl text-gray-800">Astuces</p>
             </div>
         </div>
     </section>
     {{--    Etudiants--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4">
+            class="text-2xl font-bold mb-4 text-blue-600">
             Espace Etudiants
         </h2>
         <p class="text-gray-600 mb-10">
 
-            Cet espace est réservé aux apprenants, veuillez donc vous inscrire afin de nous permettre de mettre en votre
+            Une fois <a href="{{ url('/login') }}"
+                        class="font-bold text-bold text-blue-500 hover:underline">connecté</a>, vous avez accès à
+            differents espace. L'espace étudiant est réservé aux apprenants, veuillez donc vous inscrire afin de nous
+            permettre de mettre en votre
             disposition, ce qu’il faut pour votre apprentissage.
             Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et des
             astuces afin de facilités vos études.
@@ -86,7 +93,7 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <strong>Cours <a href="{{ url('/login') }}" class="font-bold text-bold text-blue-500">(un compte est requie)</a></strong><br>
+                <strong>Cours </strong><br>
                 Les cours est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
                 Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
@@ -102,7 +109,7 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <strong>Exercices et solutions <a href="#" class="font-bold text-bold text-blue-500">(un compte est requie)</a></strong>
+                <strong>Exercices et solutions </strong>
                 <br>
                 Lorem est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
@@ -118,7 +125,7 @@
                     alt="">
             </div>
             <p class="w-full flex-1 pl-5">
-                <strong>Astuces <a href="#" class="font-bold text-bold text-blue-500">(Accès gratuit)</a></strong>
+                <strong>Astuces</strong><span class="italic text-blue-500">(accès gratuit)</span>
                 <br>
                 Les astuces est réservé aux apprenants, veuillez donc vous
                 inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
@@ -130,12 +137,13 @@
     {{--    Professeurs--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4">
+            class="text-2xl font-bold mb-4 text-blue-600">
             Espace professeurs
         </h2>
         <p class="text-gray-600 mb-5">
             À la base, toute personne inscrite possède automatiquement le statut d'étudiant. Mais le site offre la
-            possibilité de changer de status, d'étudiant à celui de professeurs en remplissant les informations nécessaires.
+            possibilité de changer de status, d'étudiant à celui de professeurs en remplissant les informations
+            nécessaires.
         </p>
         <p class="text-gray-600 mb-5">
             Chers professeurs prenez le soin de vous inscrire afin de permettre de mieux classer votre contenue
@@ -191,7 +199,7 @@
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2
-                    class="mb-2 text-3xl font-bold">
+                    class="mb-2 text-3xl font-bold text-blue-600">
                     Espace école
                 </h2>
                 <p class="mb-2 text-gray-700">
@@ -202,7 +210,7 @@
                 <p class="flex mb-4">
                     <a
                         href="{{ url('/ecoles#creeSonEcole') }}"
-                        class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg">
+                        class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                         En savoir plus >
                     </a>
                 </p>
@@ -905,72 +913,142 @@
         </div>
     </section>
     {{--tarifs--}}
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
-        <h2
-            class="mb-2 text-3xl font-bold text-blue-600 text-center">
-            Notre tarification
-        </h2>
+    <section class="relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
+        <div class="text-center">
+            <h2 class="text-3xl leading-tight font-bold text-white">Looking for the perfect rate for your home?</h2>
+        </div>
 
-        <div class="flex flex-row justify-center my-4 text-sm tracking-tight font-medium text-gray-700">
-            <p class="mx-3">Annuellement</p>
-
-            <!-- Toggle Button -->
-            <label for="toggle" class="flex items-center cursor-pointer">
-                <!-- toggle -->
-                <div class="relative">
-                    <!-- hidden input -->
-                    <input id="toggle" type="checkbox" class="hidden" onclick="myFunction()"/>
-                    <!-- line -->
-                    <div class="w-10 h-3 bg-gray-400 rounded-full shadow-inner"></div>
-                    <!-- dot -->
-                    <div class="toggle_dot absolute w-5 h-5 bg-white rounded-full shadow inset-y-0 left-0"></div>
+        <div class="flex flex-col md:flex-row items-start justify-between mt-12">
+            <div class="w-full bg-white shadow-lg rounded-lg p-8 md:mx-2 lg:mx-4">
+                <div>
+                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Journalier</h4>
+                    <div class="mb-2 flex items-baseline font-bold">
+                        <span class="text-gray-500 text-xl">Frcfa</span>
+                        <span class="text-gray-500 text-3xl">100</span>
+                        <span class="text-gray-500 text-base">/jour</span>
+                    </div>
+                    <p class="pb-5 border-b">Better insights for growing businesses that want more customers.</p>
+                    <div class="font-semibold mb-2">Features include:</div>
+                    <ul class="">
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>50 Placeholder text commonly</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Consectetur adipiscing elit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Excepteur sint occaecat cupidatat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Officia deserunt mollit anim</span>
+                        </li>
+                    </ul>
                 </div>
-            </label>
-
-            <p class="mx-3">Mensuel</p>
-        </div>
-
-        <div class="flex flex-col md:flex-row md:transform md:scale-75 lg:scale-100 justify-center">
-            <div
-                class="border rounded-lg md:rounded-r-none text-center p-5 mx-auto md:mx-0 my-2 md:my-6 bg-gray-100 font-medium z-10 shadow-lg">
-                <div class="">Etudiants et professeur</div>
-                <div id="month" class="font-bold text-6xl month hidden">&dollar;19.99</div>
-                <div id="annual" class="font-bold text-6xl annual">&dollar;199.99</div>
-                <hr>
-                <div class="text-sm my-3">Accès aux cours</div>
-                <hr>
-                <div class="text-sm my-3">Accès aux exercices</div>
-                <hr>
-                <div class="text-sm my-3">Accès aux corrigés</div>
-                <hr>
-                <a href="#" target="_blank">
-                    <div
-                        class="bg-gradient-base border border-blue-600 hover:bg-white text-white hover:text-blue-600 font-bold uppercase text-xs mt-5 py-2 px-4 rounded cursor-pointer">
-                        Learn More
-                    </div>
-                </a>
+                <div
+                    class=" border p-3 mt-2">
+                    <a
+                        href="#"
+                        class="block text-center bg-blue-600 p-2 text-white font-medium">
+                        star
+                    </a>
+                </div>
             </div>
 
-            <div
-                class="border-transparent rounded-lg text-center p-5 mx-auto md:mx-0 my-2 bg-gradient text-white font-medium z-10 shadow-lg">
-                <div class="py-4">écoles</div>
-                <div id="month" class="font-bold text-6xl month hidden">&dollar;24.99</div>
-                <div id="annual" class="font-bold text-6xl annual">&dollar;249.99</div>
-                <hr>
-                <div class="text-sm my-3">Acces gratuit sur toute la platform aux membres</div>
-                <hr>
-                <div class="text-sm my-3">Administration sur l'évolution de chaque élève</div>
-                <hr>
-                <div class="text-sm my-3">Administration de l'école</div>
-                <hr>
-                <a href="#" target="_blank">
-                    <div
-                        class="bg-white border border-white hover:bg-transparent text-blue-600 hover:text-white font-bold uppercase text-xs mt-5 py-2 mpx-4 rounded cursor-pointer">
-                        Learn More
+            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
+                <div>
+                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Mensuel</h4>
+                    <div class="mb-2 flex items-baseline font-bold">
+                        <span class="text-gray-500 text-xl">Frcfa</span>
+                        <span class="text-gray-500 text-3xl">500</span>
+                        <span class="text-gray-500 text-base">/mois</span>
                     </div>
-                </a>
+                    <p class="pb-5 border-b">Better insights for growing businesses that want more customers.</p>
+                    <div class="font-semibold mb-2">Features include:</div>
+                    <ul class="">
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>50 Placeholder text commonly</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Consectetur adipiscing elit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Excepteur sint occaecat cupidatat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Officia deserunt mollit anim</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class=" border p-3 mt-2">
+                    <a
+                        href="#"
+                        class="block text-center bg-blue-600 text-white p-2 font-medium">
+                        star
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
+                <img src="images/icon-home-3.svg" alt="" class="mx-auto h-32">
+                <h4 class="text-xl font-bold leading-tight mt-8">Choose the fair rate</h4>
+                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
+    </section>
+    <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
+        <div
+            class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
+            <div class="w-full md:w-2/3">
+                <h2 class="text-3xl leading-tight font-bold">Aider nous! faites un don</h2>
+                <p class="mt-2 md:max-w-md">Contact our Customer Support that is always ready to help you with any
+                    possible questions, problems or
+                    information.</p>
+            </div>
+
+            <div class="w-full md:w-1/3 md:text-right mt-6 md:mt-0">
+                <a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">Go to Support</a>
+            </div>
         </div>
     </section>
 
@@ -1070,6 +1148,7 @@
             </div>
         </div>
     </section>
+
 @endsection
 
 @section('script')
@@ -1077,20 +1156,6 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <!--JS for toggle-->
     <script>
-        function myFunction() {
-            var x = document.querySelectorAll('.annual');
-            var y = document.querySelectorAll('.month');
-            for (var i = 0; i < x.length; i++) {
-                if (document.getElementById("toggle").checked == true) {
-                    x[i].classList.add('hidden');
-                    y[i].classList.remove('hidden');
-                } else {
-                    x[i].classList.remove('hidden');
-                    y[i].classList.add('hidden');
-                }
-            }
-        }
-
         $('.count').each(function () {
             $(this).prop('Counter', 0).animate({
                 Counter: $(this).text()

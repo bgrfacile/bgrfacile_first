@@ -23,43 +23,42 @@
 </head>
 <body>
 <div class="flex flex-col min-h-screen items-stretch">
-    <header>
-        <nav style="z-index: 2000!important;" x-data="{ open: false }" @keydown.window.escape="open = false"
-             class="MS-nav bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="sticky top-0 bg-white">
+        <nav x-data="{ open: false }"
+             @keydown.window.escape="open = false"
+             class="text-gray-800 shadow">
+            <div
+                class="container w-full md:w-3/4 mx-auto max-w-7xl px-2">
                 <div class="flex items-center justify-between h-16">
-                    <div class="flex items-center">
-                        <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
-                            <img class="h-full w-full " src="{{ asset('assets/images/logo-white.png') }}"
-                                 alt="logo de bgrfacile">
-                        </a>
+                    <div class="flex items-center justify-between flex-1">
+                        <div>
+                            <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
+                                <img class="h-full w-full " src="{{ asset('assets/images/logo-black.png') }}"
+                                     alt="logo de bgrfacile">
+                            </a>
+                        </div>
+
                         {{--liste pour grand ecran--}}
+                        <div class="md:flex-1 flex justify-between">
                         <div class="hidden md:block">
-                            <div class="ml-5 flex items-baseline space-x-4">
+                            <div class="ml-5 flex items-center space-x-4">
                                 <a href="{{ url('/') }}"
-                                   class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
-                               'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
-                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 16 14" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M14.7891 6.89065L8.35311 0.459399C8.30677 0.412967 8.25173 0.376131 8.19114 0.350997C8.13054 0.325864 8.06559 0.312927 7.99999 0.312927C7.93439 0.312927 7.86943 0.325864 7.80884 0.350997C7.74825 0.376131 7.6932 0.412967 7.64686 0.459399L1.21093 6.89065C1.02343 7.07815 0.917176 7.33284 0.917176 7.59846C0.917176 8.15002 1.36561 8.59846 1.91718 8.59846L2.5953 8.59846L2.5953 13.1875C2.5953 13.4641 2.81874 13.6875 3.0953 13.6875L6.99999 13.6875L6.99999 10.1875L8.74999 10.1875L8.74999 13.6875L12.9047 13.6875C13.1812 13.6875 13.4047 13.4641 13.4047 13.1875L13.4047 8.59846L14.0828 8.59846C14.3484 8.59846 14.6031 8.49377 14.7906 8.30471C15.1797 7.91409 15.1797 7.28127 14.7891 6.89065Z"/>
-                                    </svg>
-                                    Home
+                                   class="{{ Route::currentRouteNamed('home') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                               'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
+                                    Accueil
+                                </a>
+
+                                <a href="{{ route('ecoles.index') }}"
+                                   class="{{ Request::segment(1) === 'ecoles' ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                               'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
+                                    Écoles en ligne
                                 </a>
 
                                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
                                     <button @click="open = !open"
-                                            class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
-                               'flex items-center justify-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                                        <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none">
-                                            <path
-                                                d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
-                                        </svg>
-                                        <span>Cours</span>
+                                            class="{{ Request::segment(1) === 'cours' ? 'bg-transparent flex items-center justify-center px-3 py-2 text-sm font-bold text-blue-500':
+                               'bg-transparent flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500 hover:bg-gray-50' }}">
+                                        <span>Contenus</span>
                                         <svg fill="currentColor" viewBox="0 0 20 20"
                                              :class="{'rotate-180': open, 'rotate-0': !open}"
                                              class="block w-4 h-4 ml-1 transition-transform duration-200 transform">
@@ -77,66 +76,48 @@
                                          class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
                                         <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
                                             <a href="{{ route('cours.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Cours</a>
                                             <a href="{{ route('exercices.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Exercices</a>
                                             <a href="{{ route('corriges.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Corrigés</a>
                                             <a href="{{ route('astuces.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Astuces</a>
                                         </div>
                                     </div>
                                 </div>
 
-
-                                <a href="{{ route('ecoles.index') }}"
-                                   class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
-                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 20 16" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.77778 -4.274e-07L2.33127e-07 5.33333L9.77778 10.6667L17.7778 6.30222L17.7778 12.4444L19.5556 12.4444L19.5556 5.33333L9.77778 -4.274e-07ZM3.55556 9.04889L3.55556 12.6044L9.77778 16L16 12.6044L16 9.04889L9.77778 12.4444L3.55556 9.04889Z"/>
-                                    </svg>
-                                    Ècoles
-                                </a>
-
-
                                 <a href="{{ route('qui-sommes-nous') }}"
-                                   class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
-                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                                    <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 14 14" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M12.9231 12.9234H6.9999C6.19051 12.9267 5.38919 12.7625 4.64632 12.4412C3.90345 12.1198 3.23508 11.6483 2.68323 11.0562C1.55157 9.85276 0.985734 8.27776 1.08957 6.62109C1.27332 3.65134 3.6504 1.27309 6.62073 1.08876C6.74907 1.08059 6.8774 1.07709 7.00398 1.07709C8.51055 1.07253 9.96114 1.64776 11.0552 2.68359C11.6474 3.23535 12.1191 3.90368 12.4406 4.64656C12.762 5.38944 12.9263 6.1908 12.9231 7.00026V12.9234ZM11.7926 1.89842C10.3704 0.562006 8.51073 -0.108244 6.55423 0.0142559C3.04373 0.233006 0.232067 3.04467 0.0139004 6.55517C-0.10685 8.51109 0.562234 10.3719 1.89865 11.7935C2.55423 12.4889 3.34475 13.0432 4.22186 13.4227C5.09897 13.8021 6.04425 13.9986 6.9999 14.0003H13.4615C13.759 14.0003 13.9999 13.7593 13.9999 13.4624V7.00026C13.9981 6.04454 13.8015 5.09923 13.4219 4.22212C13.0424 3.34501 12.488 2.55453 11.7926 1.89901V1.89842ZM9.42307 8.88501H4.57673C4.43394 8.88501 4.29699 8.94173 4.19602 9.0427C4.09504 9.14368 4.03832 9.28063 4.03832 9.42342C4.03832 9.56622 4.09504 9.70317 4.19602 9.80414C4.29699 9.90511 4.43394 9.96184 4.57673 9.96184H9.42307C9.56586 9.96184 9.70281 9.90511 9.80379 9.80414C9.90476 9.70317 9.96148 9.56622 9.96148 9.42342C9.96148 9.28063 9.90476 9.14368 9.80379 9.0427C9.70281 8.94173 9.56586 8.88501 9.42307 8.88501ZM4.57673 5.11609H9.42307C9.56594 5.11609 9.70296 5.05933 9.80399 4.9583C9.90502 4.85728 9.96177 4.72025 9.96177 4.57738C9.96177 4.43451 9.90502 4.29748 9.80399 4.19646C9.70296 4.09543 9.56594 4.03867 9.42307 4.03867H4.57673C4.43386 4.03867 4.29684 4.09543 4.19581 4.19646C4.09478 4.29748 4.03803 4.43451 4.03803 4.57738C4.03803 4.72025 4.09478 4.85728 4.19581 4.9583C4.29684 5.05933 4.43386 5.11609 4.57673 5.11609ZM2.96148 6.46242C2.82183 6.46702 2.68943 6.52573 2.59227 6.62615C2.49511 6.72656 2.44079 6.86082 2.44079 7.00055C2.44079 7.14028 2.49511 7.27453 2.59227 7.37495C2.68943 7.47536 2.82183 7.53407 2.96148 7.53867H11.0383C11.1811 7.53867 11.3181 7.48195 11.419 7.38097C11.52 7.28 11.5767 7.14305 11.5767 7.00026C11.5767 6.85746 11.52 6.72051 11.419 6.61954C11.3181 6.51857 11.1811 6.46184 11.0383 6.46184H2.96148V6.46242Z"/>
-                                    </svg>
+                                   class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                               'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
                                     Qui sommes nous?
                                 </a>
 
                             </div>
                         </div>
-                    </div>
-                    {{--                contenue sur grand ecran--}}
-                    <div class="hidden md:block">
-                        <div class="ml-4 flex items-center md:ml-6">
-                            {{--                        recherche button--}}
-                            <button
-                                class="mr-4 p-1 border-2 border-transparent text-gray-400 rounded-full hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
-                                aria-label="Notifications">
-                                <a href="{{ route('search') }}">
-                                    <svg class="h-6 w-6" stroke="currentColor" fill="none"
-                                         viewBox="0 0 52.966 52.966">
-                                        <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                        <button
+                            class="p-1 border-2 border-transparent text-gray-500 rounded-full hover:text-blue-500 focus:outline-none focus:text-white focus:bg-gray-700"
+                            aria-label="Notifications">
+                            <a href="{{ route('search') }}">
+                                <svg class="h-6 w-6" stroke="currentColor" fill="none"
+                                     viewBox="0 0 52.966 52.966">
+                                    <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
                                         c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
                                         C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
                                         S32.459,40,21.983,40z"/>
 
-                                    </svg>
-                                </a>
-                            </button>
+                                </svg>
+                            </a>
+                        </button>
+                        </div>
+                    </div>
+                    {{--                contenue sur grand ecran--}}
+                    <div class="hidden md:block">
+                        <div class="ml-4 flex items-center md:ml-6">
                             <!-- Profile dropdown -->
                             @auth
                                 <div @click.away="open = false" class="mr-3 relative" x-data="{ open: false }">
@@ -182,20 +163,20 @@
                                     </div>
                                 </div>
                             @else
-                                <div>
+                                <div class="flex flex-wrap">
                                     <a href="{{ url('/login') }}"
-                                       class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">
+                                       class="block font-bold bg-transparent text-blue-500  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-blue-700">
                                         Connexion
                                     </a>
                                     <a href="{{ url('/register') }}"
-                                       class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">
-                                        Inscription
+                                       class="block bg-blue-600 text-white font-bold py-2 px-3 rounded  hover:bg-transparent hover:text-gray-900 hover:bg-gray-100">
+                                        crée un compte
                                     </a>
                                 </div>
                             @endif
                         </div>
                     </div>
-                    {{--                burger pour modile--}}
+                    {{--                burger --}}
                     <div class="-mr-2 flex md:hidden">
                         <button @click="open = !open"
                                 class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
@@ -220,35 +201,27 @@
             </div>
             {{--contenue pour le mobile--}}
             <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Open" x-state:off="closed"
-                 :class="{ 'block': open, 'hidden': !open }" class="hidden md:hidden">
+                 :class="{ 'block': open, 'hidden': !open }" class="hidden md:hidden bg-gray-800">
                 {{--                    liste pour petit ecran--}}
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 
                     <a href="{{ url('/') }}"
                        class="{{ Route::currentRouteNamed('home') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-white':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-white hover:text-white hover:bg-gray-700' }}">
-                        <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 16 14" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.7891 6.89065L8.35311 0.459399C8.30677 0.412967 8.25173 0.376131 8.19114 0.350997C8.13054 0.325864 8.06559 0.312927 7.99999 0.312927C7.93439 0.312927 7.86943 0.325864 7.80884 0.350997C7.74825 0.376131 7.6932 0.412967 7.64686 0.459399L1.21093 6.89065C1.02343 7.07815 0.917176 7.33284 0.917176 7.59846C0.917176 8.15002 1.36561 8.59846 1.91718 8.59846L2.5953 8.59846L2.5953 13.1875C2.5953 13.4641 2.81874 13.6875 3.0953 13.6875L6.99999 13.6875L6.99999 10.1875L8.74999 10.1875L8.74999 13.6875L12.9047 13.6875C13.1812 13.6875 13.4047 13.4641 13.4047 13.1875L13.4047 8.59846L14.0828 8.59846C14.3484 8.59846 14.6031 8.49377 14.7906 8.30471C15.1797 7.91409 15.1797 7.28127 14.7891 6.89065Z"/>
-                        </svg>
-                        Home
+                        Accueil
+                    </a>
+
+                    <a href="{{ route('ecoles.index') }}"
+                       class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
+                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
+                        Écoles en ligne
                     </a>
 
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button @click="open = !open"
                                 class="{{ Request::segment(1) === 'cours' ? 'bg-gray-900 flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                            <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 17 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M4.05844 1.77778C4.05844 1.73625 4.07775 1.65433 4.19354 1.56171C4.31024 1.46837 4.49936 1.3913 4.73485 1.3913H14.2045C14.44 1.3913 14.6292 1.46837 14.7459 1.56171C14.8616 1.65433 14.881 1.73625 14.881 1.77778V9.35266C14.881 9.39418 14.8616 9.4761 14.7459 9.56872C14.6292 9.66207 14.44 9.73913 14.2045 9.73913H7.85345C7.75652 9.89203 7.64924 10.0374 7.53264 10.1741C8.18339 10.3235 8.77665 10.6589 9.2564 11.1304H14.2045C15.1572 11.1304 16.2338 10.4871 16.2338 9.35266V1.77778C16.2338 0.643367 15.1572 0 14.2045 0H4.73485C3.78219 0 2.70563 0.643367 2.70563 1.77778V4.44485C3.10915 4.17426 3.5669 3.98203 4.05844 3.88917V1.77778Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M0.767983 12.0399C1.26855 11.4679 1.96368 11.1304 2.70563 11.1304H6.76407C7.50602 11.1304 8.20115 11.4679 8.70172 12.0399C9.20016 12.6095 9.4697 13.3677 9.4697 14.1449V15.3043C9.4697 15.6885 9.16686 16 8.79329 16C8.41972 16 8.11689 15.6885 8.11689 15.3043V14.1449C8.11689 13.6922 7.95884 13.2708 7.69618 12.9706C7.43563 12.6729 7.09848 12.5217 6.76407 12.5217H2.70563C2.37122 12.5217 2.03406 12.6729 1.77352 12.9706C1.51086 13.2708 1.35281 13.6922 1.35281 14.1449V15.3043C1.35281 15.6885 1.04998 16 0.676407 16C0.302838 16 0 15.6885 0 15.3043V14.1449C0 13.3677 0.269536 12.6095 0.767983 12.0399Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M4.73485 6.26087C3.98771 6.26087 3.38204 6.88378 3.38204 7.65217C3.38204 8.42057 3.98771 9.04348 4.73485 9.04348C5.48199 9.04348 6.08766 8.42057 6.08766 7.65217C6.08766 6.88378 5.48199 6.26087 4.73485 6.26087ZM2.02922 7.65217C2.02922 6.11538 3.24057 4.86957 4.73485 4.86957C6.22913 4.86957 7.44048 6.11538 7.44048 7.65217C7.44048 9.18897 6.22913 10.4348 4.73485 10.4348C3.24057 10.4348 2.02922 9.18897 2.02922 7.65217Z"/>
-                            </svg>
-                            <span>Cours</span>
+                            <span>Contenus</span>
                             <svg fill="currentColor" viewBox="0 0 20 20"
                                  :class="{'rotate-180': open, 'rotate-0': !open}"
                                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -281,25 +254,11 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('ecoles.index') }}"
-                       class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
-                               'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                        <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 20 16" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.77778 -4.274e-07L2.33127e-07 5.33333L9.77778 10.6667L17.7778 6.30222L17.7778 12.4444L19.5556 12.4444L19.5556 5.33333L9.77778 -4.274e-07ZM3.55556 9.04889L3.55556 12.6044L9.77778 16L16 12.6044L16 9.04889L9.77778 12.4444L3.55556 9.04889Z"/>
-                        </svg>
-                        Ècoles
-                    </a>
+
 
                     <a href="{{ route('qui-sommes-nous') }}"
                        class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                        <svg class="mr-2 fill-current h-4 w-4" viewBox="0 0 14 14" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M12.9231 12.9234H6.9999C6.19051 12.9267 5.38919 12.7625 4.64632 12.4412C3.90345 12.1198 3.23508 11.6483 2.68323 11.0562C1.55157 9.85276 0.985734 8.27776 1.08957 6.62109C1.27332 3.65134 3.6504 1.27309 6.62073 1.08876C6.74907 1.08059 6.8774 1.07709 7.00398 1.07709C8.51055 1.07253 9.96114 1.64776 11.0552 2.68359C11.6474 3.23535 12.1191 3.90368 12.4406 4.64656C12.762 5.38944 12.9263 6.1908 12.9231 7.00026V12.9234ZM11.7926 1.89842C10.3704 0.562006 8.51073 -0.108244 6.55423 0.0142559C3.04373 0.233006 0.232067 3.04467 0.0139004 6.55517C-0.10685 8.51109 0.562234 10.3719 1.89865 11.7935C2.55423 12.4889 3.34475 13.0432 4.22186 13.4227C5.09897 13.8021 6.04425 13.9986 6.9999 14.0003H13.4615C13.759 14.0003 13.9999 13.7593 13.9999 13.4624V7.00026C13.9981 6.04454 13.8015 5.09923 13.4219 4.22212C13.0424 3.34501 12.488 2.55453 11.7926 1.89901V1.89842ZM9.42307 8.88501H4.57673C4.43394 8.88501 4.29699 8.94173 4.19602 9.0427C4.09504 9.14368 4.03832 9.28063 4.03832 9.42342C4.03832 9.56622 4.09504 9.70317 4.19602 9.80414C4.29699 9.90511 4.43394 9.96184 4.57673 9.96184H9.42307C9.56586 9.96184 9.70281 9.90511 9.80379 9.80414C9.90476 9.70317 9.96148 9.56622 9.96148 9.42342C9.96148 9.28063 9.90476 9.14368 9.80379 9.0427C9.70281 8.94173 9.56586 8.88501 9.42307 8.88501ZM4.57673 5.11609H9.42307C9.56594 5.11609 9.70296 5.05933 9.80399 4.9583C9.90502 4.85728 9.96177 4.72025 9.96177 4.57738C9.96177 4.43451 9.90502 4.29748 9.80399 4.19646C9.70296 4.09543 9.56594 4.03867 9.42307 4.03867H4.57673C4.43386 4.03867 4.29684 4.09543 4.19581 4.19646C4.09478 4.29748 4.03803 4.43451 4.03803 4.57738C4.03803 4.72025 4.09478 4.85728 4.19581 4.9583C4.29684 5.05933 4.43386 5.11609 4.57673 5.11609ZM2.96148 6.46242C2.82183 6.46702 2.68943 6.52573 2.59227 6.62615C2.49511 6.72656 2.44079 6.86082 2.44079 7.00055C2.44079 7.14028 2.49511 7.27453 2.59227 7.37495C2.68943 7.47536 2.82183 7.53407 2.96148 7.53867H11.0383C11.1811 7.53867 11.3181 7.48195 11.419 7.38097C11.52 7.28 11.5767 7.14305 11.5767 7.00026C11.5767 6.85746 11.52 6.72051 11.419 6.61954C11.3181 6.51857 11.1811 6.46184 11.0383 6.46184H2.96148V6.46242Z"/>
-                        </svg>
                         Qui sommes nous?
                     </a>
 
@@ -321,7 +280,6 @@
                             </div>
                         </div>
                         <div class="mt-3 px-2 space-y-1">
-
                             <a href="{{ url('/profil') }}"
                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Votre
                                 profil</a>
@@ -345,10 +303,11 @@
                 </div>
             </div>
         </nav>
+    </header>
         <div>
             @yield('baniere')
         </div>
-    </header>
+
 
     <main class="flex-1" role="main">
         @yield('content')
@@ -356,7 +315,7 @@
 
 
     <footer class="bg-gray-100">
-        <div class="container w-full md:w-3/4 mx-auto px-4 flex flex-wrap">
+        <div class="container max-w-6xl md:max-w-6xl mx-auto px-4 flex flex-wrap">
             <div class="md:w-1/2 w-full">
                 <p class="my-3">
                     <img
