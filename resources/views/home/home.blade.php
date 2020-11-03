@@ -10,7 +10,7 @@
                     bgrfacile
                 </strong>
                 <h1
-                    class="mb-2 text-3xl font-bold text-blue-600">
+                    class="mb-2 text-3xl font-bold text-gray-800">
                     Rien que pour étudier, tout ce qu’il faut pour étudier.
                 </h1>
                 <p class="mb-2 text-gray-700">
@@ -48,7 +48,7 @@
 @section('content')
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h3
-            class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center text-blue-600">
+            class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center text-gray-800">
             NOUS AVONS TOUT CE DONT VOUS AVEZ BESOIN
         </h3>
         <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
@@ -71,136 +71,156 @@
     {{--    Etudiants--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4 text-blue-600">
-            Espace Etudiants
+            class="text-2xl font-bold mb-4 text-gray-800">
+            Étudiants
         </h2>
         <p class="text-gray-600 mb-10">
 
             Une fois <a href="{{ url('/login') }}"
-                        class="font-bold text-bold text-blue-500 hover:underline">connecté</a>, vous avez accès à
-            differents espace. L'espace étudiant est réservé aux apprenants, veuillez donc vous inscrire afin de nous
-            permettre de mettre en votre
-            disposition, ce qu’il faut pour votre apprentissage.
-            Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et des
-            astuces afin de facilités vos études.
+                        class="font-bold text-bold text-blue-500 hover:underline">votre compte créé</a> vous avez
+            <strong>le statut étudiant</strong> (c'est le statut par défaut). Le
+            statut étudiant est réservé aux
+            apprenants, veuillez donc compléter toutes
+            les informations nécessaires afin de nous permettre de mettre en votre disposition ce qu’il faut pour votre
+            apprentissage. Chaque étudiant à la possibilité d'accéder aux contenus des cours, des exercices et des
+            solutions (<a href="#price" class="underline italic">cela nécessite d'activation d'un forfait</a>).Les
+            étudiants
+            ont aussi accès à des astuces (aucun
+            forfait n'est nécessaire).
+
 
         </p>
         <div class="flex justify-center mb-10 ext-gray-600">
             <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
                 <img
                     class="w-full"
-                    src="{{ asset('assets/images/course.svg') }}"
-                    alt="">
+                    src="{{ asset('assets/images/course.svg') }}">
             </div>
-            <p class="w-full flex-1 pl-5">
-                <strong>Cours </strong><br>
-                Les cours est réservé aux apprenants, veuillez donc vous
-                inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
-                Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
-                des astuces afin de facilités vos études.
-            </p>
+            <div class="w-full flex-1 pl-5">
+                <p class="mb-2">
+                    <strong>Cours </strong><br>
+                    Le cours est ce document rédiger par un professeur agréé et mise en ligne par celui-ci pour les
+                    apprenants afin de parfaire leur connaissance.
+                    Les cours sont structurés de la façon suivante: un cours et liés à une matière qui elle-même est
+                    liée à
+                    un niveau et sont liés à une formation (sur le site une formation représente un cycle scolaire)
+                </p>
+                <a
+                    class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
+                    href="{{ route('cours.index') }}">Accéder</a>
+            </div>
+
         </div>
 
         <div class="flex justify-center mb-10 ext-gray-600">
             <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
                 <img
                     class="w-full"
-                    src="{{ asset('assets/images/exercise.svg') }}"
-                    alt="">
+                    src="{{ asset('assets/images/exercise.svg') }}">
             </div>
-            <p class="w-full flex-1 pl-5">
-                <strong>Exercices et solutions </strong>
-                <br>
-                Lorem est réservé aux apprenants, veuillez donc vous
-                inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
-                Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
-                des astuces afin de facilités vos études.
-            </p>
+            <div class="w-full flex-1 pl-5">
+                <p class="mb-2">
+                    <strong>Exercices et solutions </strong>
+                    <br>
+                    Ce sont des entrainements qui aident à mieux comprendre son cours. Les exercices sont la plupart du
+                    temps liés à des cours et chaque solution est liée à son tour à un exercice.Tout comme pour les
+                    cours, les exercices et solutions sont répartis selon l'ordre <em class="underline">formation >
+                        niveaux > matière</em>.
+                </p>
+                <a
+                    class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
+                    href="{{ route('exercices.index') }}">Accéder</a>
+            </div>
         </div>
         <div class="flex justify-center mb-10 ext-gray-600">
             <div class="rounded-full h-16 w-16 p-2 flex items-center justify-center bg-gray-50">
                 <img
                     class="w-full"
-                    src="{{ asset('assets/images/solution.svg') }}"
-                    alt="">
+                    src="{{ asset('assets/images/solution.svg') }}">
             </div>
-            <p class="w-full flex-1 pl-5">
-                <strong>Astuces</strong><span class="italic text-blue-500">(accès gratuit)</span>
-                <br>
-                Les astuces est réservé aux apprenants, veuillez donc vous
-                inscrire afin de nous permettre de mettre en votre disposition, ce qu’il faut pour votre apprentissage.
-                Bgrfacile met à votre disposition, des cours, des exercices et solutions pour plus de compréhension et
-                des astuces afin de facilités vos études.
-            </p>
+            <div class="w-full flex-1 pl-5">
+                <p class="mb-2">
+                    <strong>Astuces</strong>
+                    <br>
+                    cette section est réservée pour un ensemble d'element très utilise pour l'apprenant mais qui ne
+                    pourrait pas se retrouver dans une section précédemment cite. Par exemple des polycopies très
+                    utilies dans certaines formations ou des pots Cats audio de certains documents.
+                </p>
+                <a
+                    class="py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
+                    href="{{ route('astuces.index') }}">Accéder</a>
+            </div>
         </div>
     </section>
     {{--    Professeurs--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4 text-blue-600">
-            Espace professeurs
+            class="text-2xl font-bold mb-4 text-gray-800">
+            Professeurs
         </h2>
         <p class="text-gray-600 mb-5">
-            À la base, toute personne inscrite possède automatiquement le statut d'étudiant. Mais le site offre la
-            possibilité de changer de status, d'étudiant à celui de professeurs en remplissant les informations
-            nécessaires.
+            À la base, toutes personnes inscrites possèdent automatiquement le statut d'étudiant. Mais le site offre la
+            possibilité de changer de status, passer de son statut d'étudiant vers celui de professeurs et bénéficier de
+            nouvelle possibilité. L'utilisateur peut alors créer du contenue sur le site en plus de lire.
         </p>
         <p class="text-gray-600 mb-5">
-            Chers professeurs prenez le soin de vous inscrire afin de permettre de mieux classer votre contenue
-            bgrfacile vous donne la possibilité de dispenser vos cours en ligne, de mettre en valeur votre savoir-faire.
+            Un utilisateur devenu professeurs à la possibilité de <strong>recevoir une rémunération</strong> pour le
+            contenu fourni à la
+            plate-forme, c'est pourquoi il est recommandé de fournir le nécessaire afin de confirmer votre identité
+            entant que formateur avant de mettre en valeur votre savoir-faire.
         </p>
-        <div class="flex justify-around mb-10 ">
-            <a
-                href="#"
-                class="flex flex-col justify-center items-center">
-                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">
-                    <img
-                        class="w-full"
-                        src="{{ asset('assets/images/create.svg') }}"
-                        alt="">
-                </div>
-                <span
-                    class="font-bold text-blue-600 text-lg text-center">
-                    crée un cours
-                </span>
-            </a>
-            <a
-                href="#"
-                class="flex flex-col justify-center items-center">
-                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">
-                    <img
-                        class="w-full"
-                        src="{{ asset('assets/images/transfer.svg') }}"
-                        alt="">
-                </div>
-                <span
-                    class="font-bold text-blue-600 text-lg text-center">
-                    donner un exercice ou une solution
-                </span>
-            </a>
-            <a
-                href="#"
-                class="flex flex-col justify-center items-center">
-                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">
-                    <img
-                        class="w-full"
-                        src="{{ asset('assets/images/copywriting.svg') }}"
-                        alt="">
-                </div>
-                <span
-                    class="font-bold text-blue-600 text-lg text-center">
-                    rédiger une astuces
-                </span>
-            </a>
-        </div>
+        {{--        <div class="flex justify-around mb-10 ">--}}
+        {{--            <a--}}
+        {{--                href="#"--}}
+        {{--                class="flex flex-col justify-center items-center">--}}
+        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
+        {{--                    <img--}}
+        {{--                        class="w-full"--}}
+        {{--                        src="{{ asset('assets/images/create.svg') }}"--}}
+        {{--                        alt="">--}}
+        {{--                </div>--}}
+        {{--                <span--}}
+        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
+        {{--                    crée un cours--}}
+        {{--                </span>--}}
+        {{--            </a>--}}
+        {{--            <a--}}
+        {{--                href="#"--}}
+        {{--                class="flex flex-col justify-center items-center">--}}
+        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
+        {{--                    <img--}}
+        {{--                        class="w-full"--}}
+        {{--                        src="{{ asset('assets/images/transfer.svg') }}"--}}
+        {{--                        alt="">--}}
+        {{--                </div>--}}
+        {{--                <span--}}
+        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
+        {{--                    donner un exercice ou une solution--}}
+        {{--                </span>--}}
+        {{--            </a>--}}
+        {{--            <a--}}
+        {{--                href="#"--}}
+        {{--                class="flex flex-col justify-center items-center">--}}
+        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
+        {{--                    <img--}}
+        {{--                        class="w-full"--}}
+        {{--                        src="{{ asset('assets/images/copywriting.svg') }}"--}}
+        {{--                        alt="">--}}
+        {{--                </div>--}}
+        {{--                <span--}}
+        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
+        {{--                    rédiger une astuces--}}
+        {{--                </span>--}}
+        {{--            </a>--}}
+        {{--        </div>--}}
     </section>
     {{--    écoles ou instituts --}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2
-                    class="mb-2 text-3xl font-bold text-blue-600">
-                    Espace école
+                    class="mb-2 text-3xl font-bold text-gray-800">
+                    École en ligne
                 </h2>
                 <p class="mb-2 text-gray-700">
                     Seules les écoles enregistrées sont affichées sur la plateforme. N’oubliez donc pas de vous abonner
@@ -913,9 +933,9 @@
         </div>
     </section>
     {{--tarifs--}}
-    <section class="relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
+    <section id="price" class="relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
-            <h2 class="text-3xl leading-tight font-bold text-white">Looking for the perfect rate for your home?</h2>
+            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le tarif idéal pour vous</h2>
         </div>
 
         <div class="flex flex-col md:flex-row items-start justify-between mt-12">
@@ -927,8 +947,9 @@
                         <span class="text-gray-500 text-3xl">100</span>
                         <span class="text-gray-500 text-base">/jour</span>
                     </div>
-                    <p class="pb-5 border-b">Better insights for growing businesses that want more customers.</p>
-                    <div class="font-semibold mb-2">Features include:</div>
+                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 1 jour
+                        exactement</p>
+                    <div class="font-semibold mb-2">Vous pouvez:</div>
                     <ul class="">
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -965,10 +986,10 @@
                     </ul>
                 </div>
                 <div
-                    class=" border p-3 mt-2">
+                    class=" border p-3 mt-2 rounded-lg">
                     <a
                         href="#"
-                        class="block text-center bg-blue-600 p-2 text-white font-medium">
+                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
                         star
                     </a>
                 </div>
@@ -982,8 +1003,9 @@
                         <span class="text-gray-500 text-3xl">500</span>
                         <span class="text-gray-500 text-base">/mois</span>
                     </div>
-                    <p class="pb-5 border-b">Better insights for growing businesses that want more customers.</p>
-                    <div class="font-semibold mb-2">Features include:</div>
+                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 30 jours
+                        exactement</p>
+                    <div class="font-semibold mb-2">vous pouvez:</div>
                     <ul class="">
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1020,19 +1042,69 @@
                     </ul>
                 </div>
                 <div
-                    class=" border p-3 mt-2">
+                    class=" border p-3 mt-2 rounded-lg">
                     <a
                         href="#"
-                        class="block text-center bg-blue-600 text-white p-2 font-medium">
+                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
                         star
                     </a>
                 </div>
             </div>
 
             <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
-                <img src="images/icon-home-3.svg" alt="" class="mx-auto h-32">
-                <h4 class="text-xl font-bold leading-tight mt-8">Choose the fair rate</h4>
-                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div>
+                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>
+                    <div class="mb-2 flex items-baseline font-bold">
+                        <span class="text-gray-500 text-xl">Frcfa</span>
+                        <span class="text-gray-500 text-3xl">6000</span>
+                        <span class="text-gray-500 text-base">/an</span>
+                    </div>
+                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois
+                        exactement</p>
+                    <div class="font-semibold mb-2">vous pouvez:</div>
+                    <ul class="">
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>50 Placeholder text commonly</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Consectetur adipiscing elit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Excepteur sint occaecat cupidatat</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Officia deserunt mollit anim</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class=" border p-3 mt-2 rounded-lg">
+                    <a
+                        href="#"
+                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
+                        star
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1040,14 +1112,14 @@
         <div
             class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
             <div class="w-full md:w-2/3">
-                <h2 class="text-3xl leading-tight font-bold">Aider nous! faites un don</h2>
-                <p class="mt-2 md:max-w-md">Contact our Customer Support that is always ready to help you with any
-                    possible questions, problems or
-                    information.</p>
+                <h2 class="text-3xl leading-tight font-bold">Soutenez-nous! faites un don</h2>
+                <p class="mt-2 md:max-w-md">
+                    Si vous souhaitez soutenir le site, autrement qu'en souscrivant à un forfait, vous pouvez
+                    aussi faire un don.
             </div>
 
             <div class="w-full md:w-1/3 md:text-right mt-6 md:mt-0">
-                <a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">Go to Support</a>
+                <a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">je veux faire un don</a>
             </div>
         </div>
     </section>
@@ -1057,7 +1129,7 @@
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2
-                    class="mb-2 text-3xl font-bold text-blue-600">
+                    class="mb-2 text-3xl font-bold text-gray-800">
                     Disponible sur mobile
                 </h2>
                 <p class="mb-2 text-gray-700">
