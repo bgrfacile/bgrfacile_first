@@ -14,7 +14,6 @@ class Levels extends Model
         'training_id'
     ];
     protected $table = 'levels';
-    protected $dateFormat = 'U';
 
 
 
