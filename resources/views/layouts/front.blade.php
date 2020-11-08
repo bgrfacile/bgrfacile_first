@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "csrf-token" content = "{{csrf_token ()}}">
 
     <title>Bgrfacile</title>
 
@@ -28,12 +29,12 @@
              @keydown.window.escape="open = false"
              class="text-gray-800 shadow">
             <div
-                class="container w-full md:w-3/4 mx-auto max-w-7xl px-2">
-                <div class="flex items-center justify-between h-16">
+                class="container w-full md:w-3/4 mx-auto max-w-7xl px-2 relative">
+                <div class="flex items-center justify-between h-16 relative">
                     <div class="flex items-center justify-between flex-1">
                         <div>
                             <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
-                                <img class="h-full w-full " src="{{ asset('assets/images/logo-black.png') }}"
+                                <img class="h-full w-full " src="{{ asset('assets/images/BGRfacile3.png') }}"
                                      alt="logo de bgrfacile">
                             </a>
                         </div>
@@ -75,7 +76,7 @@
                                          x-transition:leave-end="transform opacity-0 scale-95"
                                          class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
                                         <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                                            <a href="{{ route('cours.index') }}"
+                                            <a href="{{ route('contenu.cours') }}"
                                                class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                                 Cours</a>
                                             <a href="{{ route('exercices.index') }}"
@@ -147,7 +148,7 @@
                                              aria-orientation="vertical"
                                              aria-labelledby="user-menu">
 
-                                            <a href="{{ url('/profil') }}"
+                                            <a href="{{ route('profil.index') }}"
                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                                role="menuitem">Ton profil</a>
 
@@ -238,7 +239,7 @@
                              x-transition:leave-end="transform opacity-0 scale-95"
                              class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
                             <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                                <a href="{{ route('cours.index') }}"
+                                <a href="{{ route('contenu.cours') }}"
                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
                                     Cours</a>
                                 <a href="{{ route('exercices.index') }}"
@@ -280,7 +281,7 @@
                             </div>
                         </div>
                         <div class="mt-3 px-2 space-y-1">
-                            <a href="{{ url('/profil') }}"
+                            <a href="{{ route('profil.index') }}"
                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Votre
                                 profil</a>
 
@@ -317,10 +318,12 @@
     <footer class="bg-gray-100">
         <div class="container max-w-6xl md:max-w-6xl mx-auto px-4 flex flex-wrap">
             <div class="md:w-1/2 w-full">
-                <p class="my-3">
-                    <img
-                        src="{{ asset('assets/images/logo-black.png') }}">
-                </p>
+                <div>
+                    <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
+                        <img class="h-full w-full " src="{{ asset('assets/images/BGRfacile3.png') }}"
+                             alt="logo de bgrfacile">
+                    </a>
+                </div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

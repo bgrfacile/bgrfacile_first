@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Subjects extends Model
 {
     use HasFactory;
-    protected $fillable=[
-      'name'
+    protected $fillable = [
+        'name',
+        'level_id'
     ];
     protected $table = 'subjects';
 
-    public function level(){
+    public function level()
+    {
         return $this->belongsTo(Levels::class);
     }
 }

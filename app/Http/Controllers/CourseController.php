@@ -40,7 +40,10 @@ class CourseController extends Controller
     public function create()
     {
         $this->middleware(['auth:sanctum', 'verified']);
-        return view('cours.create');
+        $subjects = Subjects::all();
+        return view('cours.create',[
+            'subjects'=>$subjects
+        ]);
     }
 
     /**
@@ -56,9 +59,10 @@ class CourseController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'content' => $request->content,
-            'user_id'=> auth()->user()->id
+            'user_id'=> auth()->user()->id,
+            'subject_id'=>$request->subject,
         ]);
-        return Redirect::to('/profil/my_course');
+        return Redirect()->route('contenu.cours');
     }
 
     /**

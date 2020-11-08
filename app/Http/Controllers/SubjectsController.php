@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Levels;
 use App\Models\Subjects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -31,7 +32,10 @@ class SubjectsController extends Controller
     public function create()
     {
         $this->middleware(['auth:sanctum', 'verified']);
-        return view('dashboard_admin.subjects.create');
+        $levels = Levels::all();
+        return view('dashboard_admin.subjects.create',[
+            'levels'=>$levels
+        ]);
     }
 
     /**
@@ -44,7 +48,8 @@ class SubjectsController extends Controller
     {
         $this->middleware(['auth:sanctum', 'verified']);
         $subjects = Subjects::create([
-            'name'=>$request->name
+            'name'=>$request->name,
+            'level_id'=>$request->level
         ]);
         return Redirect::to('/dashbord-admin/subjects');
     }

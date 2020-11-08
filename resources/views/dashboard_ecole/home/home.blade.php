@@ -1,1 +1,2 @@
-dashbord d'une école
+@extends('layouts.backend_ecole')
+

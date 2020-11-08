@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <form action="{{ route('cours.store') }}" method="post">
+    <form action="{{ route('course.store') }}" method="post">
         @csrf
         @method('post')
         <div class="w-full h-full flex flex-wrap">
@@ -75,7 +75,11 @@
                         {{--			                Invalid username field !--}}
                         {{--		                </span>--}}
                     </div>
-
+                    <select name="subject">
+                        @foreach($subjects as $subject)
+                            <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+                        @endforeach
+                    </select>
                     <div class="flex flex-col mb-4 pt-4">
                         <label
                             class="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"

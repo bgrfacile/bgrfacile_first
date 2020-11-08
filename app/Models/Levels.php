@@ -14,6 +14,9 @@ class Levels extends Model
         'training_id'
     ];
     protected $table = 'levels';
+    protected $dateFormat = 'U';
+
+
 
     public function training(){
         return $this->belongsTo(Training::class);

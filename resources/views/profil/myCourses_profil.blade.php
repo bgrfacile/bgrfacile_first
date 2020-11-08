@@ -45,7 +45,7 @@
                 </table>
             </div>
             <div class="w-1/4 py-6">
-                <a href="{{ route('cours.create') }}">cree un cour</a>
+                <a href="{{ route('course.create') }}">cree un cour</a>
             </div>
         </div>
 @endsection

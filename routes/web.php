@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ChargementCourseController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\TrainingsController;
@@ -47,7 +48,11 @@ Route::get('/contact',function (){
 /*
  * Cours
  * */
-Route::resource('cours', CourseController::class);
+Route::resource('course', CourseController::class);
+Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
+Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
+//Route::post('/cours',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
+Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');
 
 /*
  * Astuces
@@ -112,27 +117,33 @@ Route::get('login/facebook/callback', [LoginController::class, 'facebookRedirect
 Route::get('login/google', [LoginController::class, 'google'])->name('login.google');
 Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])->name('callback.google');
 
+/*
+|--------------------------------------------------------------------------
+| Administration du site
+|--------------------------------------------------------------------------
+*/
+Route::prefix('dashboard-admin')->group(function () {
+    Route::get('/', function (){
+        return view('dashboard_admin.home.home');
+    })->name('dashboard.index');
+
+    Route::get('/options_cours', function (){
+        return view('dashboard_admin.options_courses.index');
+    })->name('option.index');
+
+    Route::resource('trainings', TrainingsController::class);
+    Route::resource('levels', LevelsController::class);
+    Route::resource('subjects', SubjectsController::class);
+});
 
 /*
 |--------------------------------------------------------------------------
 | Administration des écoles
 |--------------------------------------------------------------------------
 */
-Route::get('/dashbord-school', function (){
-    return view('dashboard_ecole.home.home');
-});
-
-/*
-|--------------------------------------------------------------------------
-| Administration du site
-|--------------------------------------------------------------------------
-*/
-
-Route::prefix('dashbord-admin')->group(function () {
+Route::prefix('dashboard-ecole')->group(function () {
     Route::get('/', function (){
-        return view('dashboard_admin.home.home');
+        return view('dashboard_ecole.home.home');
     });
-    Route::resource('trainings', TrainingsController::class);
-    Route::resource('levels', LevelsController::class);
-    Route::resource('subjects', SubjectsController::class);
+
 });

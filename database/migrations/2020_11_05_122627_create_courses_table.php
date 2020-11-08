@@ -17,6 +17,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('user_id')->constrained();
+            $table->foreignId('subject_id')->constrained();
             $table->string('description')->nullable();
             $table->longText('content');
             $table->string('image')->nullable();

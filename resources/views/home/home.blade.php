@@ -19,7 +19,7 @@
                 </p>
                 <p class="flex">
                     <a
-                        href="{{ route('cours.index') }}"
+                        href="{{ route('contenu.cours') }}"
                         class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                         Lisez nos cours
                     </a>
@@ -107,7 +107,7 @@
                 </p>
                 <a
                     class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
-                    href="{{ route('cours.index') }}">Accéder</a>
+                    href="{{ route('contenu.cours') }}">Accéder</a>
             </div>
 
         </div>
@@ -933,7 +933,7 @@
         </div>
     </section>
     {{--tarifs--}}
-    <section id="price" class="relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
+    <section id="price" class=" bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
             <h2 class="text-3xl leading-tight font-bold text-white">choisissez le tarif idéal pour vous</h2>
         </div>
@@ -950,14 +950,14 @@
                     <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 1 jour
                         exactement</p>
                     <div class="font-semibold mb-2">Vous pouvez:</div>
-                    <ul class="">
+                    <ul>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>50 Placeholder text commonly</span>
+                            <span>Accès aux cours</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -965,7 +965,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Consectetur adipiscing elit</span>
+                            <span>Accès aux exercices</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -973,7 +973,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Excepteur sint occaecat cupidatat</span>
+                            <span>Accès aux corrige</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -981,12 +981,11 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Officia deserunt mollit anim</span>
+                            <span>Accès aux astuces</span>
                         </li>
                     </ul>
                 </div>
-                <div
-                    class=" border p-3 mt-2 rounded-lg">
+                <div class=" border p-3 mt-2 rounded-lg">
                     <a
                         href="#"
                         class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
@@ -1006,14 +1005,14 @@
                     <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 30 jours
                         exactement</p>
                     <div class="font-semibold mb-2">vous pouvez:</div>
-                    <ul class="">
+                    <ul>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>50 Placeholder text commonly</span>
+                            <span>Accès aux cours</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1021,7 +1020,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Consectetur adipiscing elit</span>
+                            <span>Accès aux exercices</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1029,7 +1028,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Excepteur sint occaecat cupidatat</span>
+                            <span>Accès aux corrige</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1037,7 +1036,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Officia deserunt mollit anim</span>
+                            <span>Accès aux astuces</span>
                         </li>
                     </ul>
                 </div>
@@ -1062,14 +1061,14 @@
                     <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois
                         exactement</p>
                     <div class="font-semibold mb-2">vous pouvez:</div>
-                    <ul class="">
+                    <ul>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>50 Placeholder text commonly</span>
+                            <span>Accès aux cours</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1077,7 +1076,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Consectetur adipiscing elit</span>
+                            <span>Accès aux exercices</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1085,7 +1084,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Excepteur sint occaecat cupidatat</span>
+                            <span>Accès aux corrige</span>
                         </li>
                         <li class="flex items-center">
                             <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
@@ -1093,7 +1092,7 @@
                                 <path
                                     d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
                             </svg>
-                            <span>Officia deserunt mollit anim</span>
+                            <span>Accès aux astuces</span>
                         </li>
                     </ul>
                 </div>
@@ -1108,7 +1107,7 @@
             </div>
         </div>
     </section>
-    <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
+    <section class=" px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
         <div
             class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
             <div class="w-full md:w-2/3">

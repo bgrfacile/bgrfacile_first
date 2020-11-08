@@ -32,7 +32,7 @@
     </section>
 
     {{-- etudiant--}}
-    <section class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-32">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-32">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest">Dans une école </h6>
@@ -54,7 +54,7 @@
     </section>
     {{--prof --}}
 
-    <section class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="bg-gray-400 w-full h-72 rounded-lg"></div>
@@ -78,7 +78,7 @@
     </section>
 
     {{--    lier les etapes de la creation d'une ecole aux fonctionnalites lier a une ecole--}}
-    <section id="creeSonEcole" class="relative bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section id="creeSonEcole" class="bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
@@ -232,7 +232,7 @@
 
     {{--juste apres lister les pric relatif au differentess offre et fonctionnalite que offre bgrfacile price--}}
 
-    <section class="relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
+    <section class="bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
             <h2 class="text-3xl leading-tight font-bold text-white">Looking for the perfect rate for your home?</h2>
         </div>
@@ -257,7 +257,7 @@
             </div>
         </div>
     </section>
-    <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
+    <section class="px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
         <div
             class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
             <div class="w-full md:w-2/3">
@@ -274,7 +274,7 @@
     </section>
 
     {{--acceder aux ecole--}}
-    <section class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="w-full h-72 rounded-lg">
