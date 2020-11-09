@@ -6,13 +6,13 @@
 @section('content')
     {{--presentation--}}
     <section>
-        <div class="container w-full md:w-3/4 mx-auto mb-10 px-4 pt-8 text-center">
+        <div class="container w-full md:w-3/4 mx-auto px-4 py-8 text-center">
             <h1 class="text-5xl font-bold">écoles en ligne</h1>
             <p class="text-xl mb-8">
                 l'école en ligne est un espace virtuel crée pour les écoles traditionnelles.Chaque école le désirant
                 peut créé son espace en ligne.
             </p>
-            <p class="flex justify-center flex-wrap mb-8">
+            <p class="flex justify-center flex-wrap mb-4">
                 <a href="#"
                    class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-blue-600 text-white">
                     cree son école
@@ -22,57 +22,85 @@
                     Acceder à une école
                 </a>
             </p>
-            <div class="w-11/12 mx-auto">
-                <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/fS5SyhuIusM"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-            </div>
+            {{--            <div class="w-11/12 mx-auto">--}}
+            {{--                <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/fS5SyhuIusM"--}}
+            {{--                        frameborder="0"--}}
+            {{--                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"--}}
+            {{--                        allowfullscreen></iframe>--}}
+            {{--            </div>--}}
         </div>
     </section>
 
     {{-- etudiant--}}
-    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-32">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-12">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
-                <h6 class="text-sm uppercase font-semibold tracking-widest">Dans une école </h6>
-                <h2 class="text-3xl leading-tight font-bold mt-4">Les étudiants</h2>
+                {{--                <h6 class="text-sm uppercase font-semibold tracking-widest">Dans une école </h6>--}}
+                <h2 class="flex items-center text-3xl leading-tight font-bold mt-4">
+                    <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 444.819 444.819">
+                        <g>
+                            <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                        </g>
+                    </svg>
+                    <span>Les étudiants</span>
+                </h2>
                 <p class="mt-2 leading-relaxed">
-                    Une école en ligne receuille les étudiants, un utilisateur étudiant dans une école posseder
-                    different avantage à
-                    faire par d'une école notament le faite que si cette école possède un forfait à jour, cette étudiant
-                    se voit offret un assèc gratuit à l'ensemble de nos contenus
+                    Sur la platforme est present des étudiants de divers horizon sans distinctions.Mais dans le cadre
+                    d'une école en ligne, seul les étudiants possédant les acces nécessaures peuvent y acceder.
+                    un étudiant qui appartient à une école en ligne voir dans son profil de nouvelle fonctionnalité lui
+                    permettant d'intéragir avec sa scolaroté
                 </p>
             </div>
 
             <div class="w-full lg:w-1/2 lg:px-8">
-                <div class="bg-gray-400 w-full h-72 rounded-lg"></div>
-
-                <p class="italic text-sm mt-2 text-right">Aenean ante nisi, gravida non mattis semper.</p>
+                <div class="w-full h-72 rounded-lg">
+                    <img
+                        src="{{ asset('assets/images/bgr dessin2.2.png') }}"
+                        alt="..."
+                        class="w-full h-full object-cover">
+                </div>
             </div>
         </div>
     </section>
+
     {{--prof --}}
-
-    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
-        <div class="flex flex-col md:flex-row lg:-mx-8">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12">
+        <div class="flex flex-col-reverse md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
-                <div class="bg-gray-400 w-full h-72 rounded-lg"></div>
-
-                <p class="italic text-sm mt-2 text-right">Aenean ante nisi, gravida non mattis semper.</p>
+                <div class="w-full h-72 rounded-lg">
+                    <img
+                        src="{{ asset('assets/images/bgr dessin1.1.png') }}"
+                        alt="..."
+                        class="w-full h-full object-cover">
+                </div>
             </div>
             <div class="w-full lg:w-1/2 lg:px-8">
-                <h6 class="text-sm uppercase font-semibold tracking-widest">Patient testimonials</h6>
-                <h2 class="text-3xl leading-tight font-bold mt-4">Why choose the Mesothelioma Center?</h2>
-                <p class="mt-2 leading-relaxed">Aenean ut tellus tellus. Suspendisse potenti. Nullam tincidunt lacus
-                    tellus,
-                    sed aliquam est vehicula a. Pellentesque consectetur condimentum nulla, eleifend condimentum purus
-                    vehicula
-                    in. Donec convallis sollicitudin facilisis. Integer nisl ligula, accumsan non tincidunt ac,
-                    imperdiet in
-                    enim. Donec efficitur ullamcorper metus, eu venenatis nunc. Nam eget neque tempus, mollis sem a,
-                    faucibus
-                    mi.</p>
+                <h2 class="flex items-center text-3xl leading-tight font-bold mt-4">
+                    <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 444.819 444.819">
+                        <g>
+                            <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                        </g>
+                    </svg>
+                    <span>Les professeurs</span>
+                </h2>
+                <p class="mt-2 leading-relaxed">
+                    Sur la platforme, chaque proffesseur inscrit est libre et indépendant de partéger ces compétences
+                    sans aucuns attache.
+                    Mais dans le cadre d'une école en ligne, un professeur à la possibilité d'adere à une ou plusieurs
+                    écoles.
+                    Apres adession à un école un professeur à la possibilté d'administré une classe et d'autre
+                    fonctionnalité propre à une école en ligne.
+                </p>
             </div>
         </div>
     </section>
@@ -82,47 +110,93 @@
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
-                <h2 class="text-3xl leading-tight font-bold mt-4">Comment faire pour créer une école?</h2>
-                <p class="text-lg mt-4">Excellence in Dentistry in the Heart of NY</p>
-                <p class="mt-2 leading-relaxed">Donec convallis sollicitudin facilisis. Integer nisl ligula, accumsan
-                    non
-                    tincidunt ac, imperdiet in enim.
-                    Donec efficitur ullamcorper metus, eu venenatis nunc. Nam eget neque tempus, mollis sem a, faucibus
-                    mi.</p>
+                <h2 class="flex items-center  text-3xl leading-tight font-bold mt-4">
+                    <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 444.819 444.819">
+                        <g>
+                            <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                        </g>
+                    </svg>
+                    <span>Comment créé son école en ligne</span>
+                </h2>
+                <p class="mb-2 mt-2 leading-relaxed">
+                    La création se fait en plusieurs étapes.
+                </p>
             </div>
 
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="flex">
                     <div>
-                        <div class="w-16 h-16 bg-blue-600 rounded-full"></div>
+                        <div
+                            class="flex justify-center items-center text-white font-bold w-16 h-16 bg-blue-600 rounded-full">
+                            1
+                        </div>
                     </div>
                     <div class="ml-8">
-                        <h4 class="text-xl font-bold">Everything You Need Under One Roof</h4>
-                        <p class="mt-2 leading-relaxed">Our comprehensive services allow you to receive all needed
-                            dental care
-                            right here in our state-of-art
-                            office – from dental cleanings and fillings to dental implants and extractions.</p>
+                        <h4 class="text-xl font-bold">Remplir les informations nécessaires</h4>
+                        <p class="mt-2 leading-relaxed">
+                            un formulaire de création est fourni lorsqu'une école traditionnelle désirée crée son espace
+                            en ligne. Renseigner les informations exactes sur votre structure est une étape essentielle
+                            lors de la création de son espace en ligne.
+                        </p>
                     </div>
                 </div>
 
                 <div class="flex mt-8">
                     <div>
-                        <div class="w-16 h-16 bg-blue-600 rounded-full"></div>
+                        <div
+                            class="flex justify-center items-center text-white font-bold w-16 h-16 bg-blue-600 rounded-full">
+                            2
+                        </div>
                     </div>
                     <div class="ml-8">
-                        <h4 class="text-xl font-bold">Our Patient-Focused Approach</h4>
-                        <p class="mt-2 leading-relaxed">Your treatment plan will perfectly match your needs, lifestyle,
-                            and goals.
-                            Even if it’s been years
-                            since you last visited the dentist, we can help. Our comfortable office, compassionate team,
-                            and
-                            minimally-invasive treatments will help you feel completely at ease.</p>
+                        <h4 class="text-xl font-bold">Validation de la demande</h4>
+                        <p class="mt-2 leading-relaxed">
+                            Après le remplissage du formulaire une demande est envoyée à <strong>l'équipe
+                                bgrfacile</strong>. La seconde
+                            étape consiste au traitement et la validation de ces données par l'équipe.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex mt-8">
+                    <div>
+                        <div
+                            class="flex justify-center items-center text-white font-bold w-16 h-16 bg-blue-600 rounded-full">
+                            3
+                        </div>
+                    </div>
+                    <div class="ml-8">
+                        <h4 class="text-xl font-bold">La rencontre</h4>
+                        <p class="mt-2 leading-relaxed">
+                            Une fois qu'une demande est acceptée, un <strong>mail</strong> est envoyé à l'établissement
+                            pour une
+                            rencontre avec <strong>l'équipe bgrfacile.</strong>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="flex flex-col md:flex-row mt-24 text-center md:-mx-4">
+        <div class="my-12">
+            <h2 class="flex items-center text-3xl leading-tight font-bold text-gray-800">
+                <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                     viewBox="0 0 444.819 444.819">
+                    <g>
+                        <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                    </g>
+                </svg>
+                <span>Les fonctionnalités</span>
+            </h2>
+        </div>
+        <div class="flex flex-col md:flex-row mt-8 text-center md:-mx-4">
             <div class="bg-white rounded-lg shadow-lg p-8 md:mx-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-6" width="77" height="80" viewBox="0 0 77 80">
                     <path d="M51 0a26 26 0 1 1-26 26A26 26 0 0 1 51 0z" fill="#bee3f8"></path>
@@ -175,7 +249,7 @@
                 <a href="#" class="block mt-4">Read More</a>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row mt-24 text-center md:-mx-4">
+        <div class="flex flex-col md:flex-row mt-8 text-center md:-mx-4">
             <div class="bg-white rounded-lg shadow-lg p-8 md:mx-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-6" width="77" height="80" viewBox="0 0 77 80">
                     <path d="M51 0a26 26 0 1 1-26 26A26 26 0 0 1 51 0z" fill="#bee3f8"></path>
@@ -231,44 +305,195 @@
     </section>
 
     {{--juste apres lister les pric relatif au differentess offre et fonctionnalite que offre bgrfacile price--}}
-
     <section class="bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
-            <h2 class="text-3xl leading-tight font-bold text-white">Looking for the perfect rate for your home?</h2>
+            <h2 class="text-3xl leading-tight font-bold text-white">differentes forfait pour les écoles</h2>
         </div>
 
         <div class="flex flex-col md:flex-row items-start justify-between mt-12">
             <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4">
-                <img src="images/icon-home-1.svg" alt="" class="mx-auto h-32">
-                <h4 class="text-xl font-bold leading-tight mt-8">Apply with your home</h4>
-                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div>
+                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">standard</h4>
+                    <div class="mb-2 flex items-baseline font-bold">
+                        <span class="text-gray-500 text-xl">Frcfa</span>
+                        <span class="text-gray-500 text-3xl">100000</span>
+                        <span class="text-gray-500 text-base">/annéé scolaire</span>
+                    </div>
+                    <p class="pb-5 border-b">
+                        Le prix évolue selon la taille de votre établissement
+                    </p>
+                    <div class="font-semibold mb-2">Vous pouvez:</div>
+                    <ul>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux cours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux exercices</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux corrige</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux astuces</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" border p-3 mt-2 rounded-lg">
+                    <a
+                        href="#"
+                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
+                        star
+                    </a>
+                </div>
             </div>
 
             <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
-                <img src="images/icon-home-2.svg" alt="" class="mx-auto h-32">
-                <h4 class="text-xl font-bold leading-tight mt-8">Complete the form</h4>
-                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div>
+                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Complet</h4>
+                    <div class="mb-2 flex items-baseline font-bold">
+                        <span class="text-gray-500 text-xl">Frcfa</span>
+                        <span class="text-gray-500 text-3xl">150000</span>
+                        <span class="text-gray-500 text-base">/année scolaire</span>
+                    </div>
+                    <p class="pb-5 border-b">
+                        Le prix évolue selon la taille de votre établissement
+                    </p>
+                    <div class="font-semibold mb-2">vous pouvez:</div>
+                    <ul>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux cours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux exercices</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux corrige</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
+                            </svg>
+                            <span>Accès aux astuces</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class=" border p-3 mt-2 rounded-lg">
+                    <a
+                        href="#"
+                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
+                        star
+                    </a>
+                </div>
             </div>
 
-            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
-                <img src="images/icon-home-3.svg" alt="" class="mx-auto h-32">
-                <h4 class="text-xl font-bold leading-tight mt-8">Choose the fair rate</h4>
-                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+{{--            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
+{{--                <div>--}}
+{{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>--}}
+{{--                    <div class="mb-2 flex items-baseline font-bold">--}}
+{{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
+{{--                        <span class="text-gray-500 text-3xl">6000</span>--}}
+{{--                        <span class="text-gray-500 text-base">/an</span>--}}
+{{--                    </div>--}}
+{{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois--}}
+{{--                        exactement</p>--}}
+{{--                    <div class="font-semibold mb-2">vous pouvez:</div>--}}
+{{--                    <ul>--}}
+{{--                        <li class="flex items-center">--}}
+{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                <path--}}
+{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Accès aux cours</span>--}}
+{{--                        </li>--}}
+{{--                        <li class="flex items-center">--}}
+{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                <path--}}
+{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Accès aux exercices</span>--}}
+{{--                        </li>--}}
+{{--                        <li class="flex items-center">--}}
+{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                <path--}}
+{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Accès aux corrige</span>--}}
+{{--                        </li>--}}
+{{--                        <li class="flex items-center">--}}
+{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                <path--}}
+{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+{{--                            </svg>--}}
+{{--                            <span>Accès aux astuces</span>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--                <div--}}
+{{--                    class=" border p-3 mt-2 rounded-lg">--}}
+{{--                    <a--}}
+{{--                        href="#"--}}
+{{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
+{{--                        star--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </section>
     <section class="px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
         <div
             class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
             <div class="w-full md:w-2/3">
-                <h2 class="text-3xl leading-tight font-bold">Need help?</h2>
-                <p class="mt-2 md:max-w-md">Contact our Customer Support that is always ready to help you with any
-                    possible questions, problems or
-                    information.</p>
+                <h2 class="text-3xl leading-tight font-bold">Soutenez-nous! faites un don</h2>
+                <p class="mt-2 md:max-w-md">
+                    Si vous souhaitez soutenir le site, autrement qu'en souscrivant à un forfait, vous pouvez
+                    aussi faire un don.
+                </p>
             </div>
 
             <div class="w-full md:w-1/3 md:text-right mt-6 md:mt-0">
-                <a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">Go to Support</a>
+                <a href="#" class="inline-block px-6 py-4 bg-blue-600 text-white rounded-lg">je veux faire un don</a>
             </div>
         </div>
     </section>
@@ -289,15 +514,30 @@
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
                 <h2 class="text-3xl leading-tight font-bold mt-4">Rechercher vos écoles</h2>
-                <p class="mt-2 leading-relaxed">Aenean ut tellus tellus. Suspendisse potenti. Nullam tincidunt lacus
-                    tellus,
-                    sed aliquam est vehicula a. Pellentesque consectetur condimentum nulla, eleifend condimentum purus
-                    vehicula
-                    in. Donec convallis sollicitudin facilisis. Integer nisl ligula, accumsan non tincidunt ac,
-                    imperdiet in
-                    enim. Donec efficitur ullamcorper metus, eu venenatis nunc. Nam eget neque tempus, mollis sem a,
-                    faucibus
-                    mi.</p>
+                <p class="my-3 leading-relaxed">
+                    Nous vous offrons la possibilité de rechercher une école en particulier et de lire les informations
+                    concernant celle-ci.
+                </p>
+                <div class="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
+                    <div class="flex flex-wrap items-stretch w-full h-full mb-6 relative">
+                        <div class="flex">
+                                    <span
+                                        class="flex items-center leading-normal bg-transparent rounded rounded-r-none border border-r-0 border-none lg:px-3 py-2 whitespace-no-wrap text-grey-dark text-sm">
+                                        <svg width="18" height="18" class="w-4 lg:w-auto" viewBox="0 0 18 18"
+                                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8.11086 15.2217C12.0381 15.2217 15.2217 12.0381 15.2217 8.11086C15.2217 4.18364 12.0381 1 8.11086 1C4.18364 1 1 4.18364 1 8.11086C1 12.0381 4.18364 15.2217 8.11086 15.2217Z"
+                                                stroke="#455A64" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16.9993 16.9993L13.1328 13.1328" stroke="#455A64"
+                                                  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                        </div>
+                        <input type="text"
+                               class="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin"
+                               placeholder="Search">
+                    </div>
+                </div>
             </div>
         </div>
     </section>

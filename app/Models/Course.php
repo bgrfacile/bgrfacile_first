@@ -12,7 +12,7 @@ class Course extends Model implements HasMedia
 {
     use HasFactory;
     use InteractsWithMedia;
-    use Searchable;
+//    use Searchable;
 
     protected $fillable = [
         'name',

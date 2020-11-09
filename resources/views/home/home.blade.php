@@ -11,10 +11,10 @@
                 </strong>
                 <h1
                     class="mb-2 text-3xl font-bold text-gray-800">
-                    Rien que pour étudier, tout ce qu’il faut pour étudier.
+                    Rien que pour étudier, tout ce qu’il faut.
                 </h1>
                 <p class="mb-2 text-gray-700">
-                    Découvrer une nouvelle façon d’apprendre,
+                    Découvrez une nouvelle façon d’apprendre,
                     d’enseigner et partager vos connaissances.
                 </p>
                 <p class="flex">
@@ -36,7 +36,7 @@
                         src="{{ asset('assets/images/bgr dessin3.3.png') }}"
                         alt="garçon qui étudie"
                         title="#MyArt@Lb14"
-                        class="w-full h-full">
+                        class="w-full h-full object-cover">
                 </div>
 
             </div>
@@ -71,11 +71,20 @@
     {{--    Etudiants--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4 text-gray-800">
-            Étudiants
+            class="flex items-center text-2xl font-bold mb-4 text-gray-800">
+            <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 viewBox="0 0 444.819 444.819">
+                <g>
+                    <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                </g>
+            </svg>
+            <span>Étudiants</span>
         </h2>
         <p class="text-gray-600 mb-10">
-
             Une fois <a href="{{ url('/login') }}"
                         class="font-bold text-bold text-blue-500 hover:underline">votre compte créé</a> vous avez
             <strong>le statut étudiant</strong> (c'est le statut par défaut). Le
@@ -83,7 +92,7 @@
             apprenants, veuillez donc compléter toutes
             les informations nécessaires afin de nous permettre de mettre en votre disposition ce qu’il faut pour votre
             apprentissage. Chaque étudiant à la possibilité d'accéder aux contenus des cours, des exercices et des
-            solutions (<a href="#price" class="underline italic">cela nécessite d'activation d'un forfait</a>).Les
+            solutions (<a href="#price" class="underline italic">cela nécessite d'activation d'un forfait</a>). Les
             étudiants
             ont aussi accès à des astuces (aucun
             forfait n'est nécessaire).
@@ -99,11 +108,10 @@
             <div class="w-full flex-1 pl-5">
                 <p class="mb-2">
                     <strong>Cours </strong><br>
-                    Le cours est ce document rédiger par un professeur agréé et mise en ligne par celui-ci pour les
-                    apprenants afin de parfaire leur connaissance.
-                    Les cours sont structurés de la façon suivante: un cours et liés à une matière qui elle-même est
-                    liée à
-                    un niveau et sont liés à une formation (sur le site une formation représente un cycle scolaire)
+                    Le cours est ce document rédigé par un professeur agréé et mise en ligne par celui-ci pour les
+                    apprenants afin de parfaire leur connaissance. Les cours sont structurés de la façon suivante : un
+                    cours et liés à une matière qui elle-même est liée à un niveau et sont liés à une formation (sur le
+                    site une formation représente un cycle scolaire)
                 </p>
                 <a
                     class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
@@ -155,8 +163,18 @@
     {{--    Professeurs--}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <h2
-            class="text-2xl font-bold mb-4 text-gray-800">
-            Professeurs
+            class="flex items-center text-2xl font-bold mb-4 text-gray-800">
+            <svg class="h-4 w-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 viewBox="0 0 444.819 444.819">
+                <g>
+                    <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                </g>
+            </svg>
+            <span>Professeurs</span>
         </h2>
         <p class="text-gray-600 mb-5">
             À la base, toutes personnes inscrites possèdent automatiquement le statut d'étudiant. Mais le site offre la
@@ -169,58 +187,24 @@
             plate-forme, c'est pourquoi il est recommandé de fournir le nécessaire afin de confirmer votre identité
             entant que formateur avant de mettre en valeur votre savoir-faire.
         </p>
-        {{--        <div class="flex justify-around mb-10 ">--}}
-        {{--            <a--}}
-        {{--                href="#"--}}
-        {{--                class="flex flex-col justify-center items-center">--}}
-        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
-        {{--                    <img--}}
-        {{--                        class="w-full"--}}
-        {{--                        src="{{ asset('assets/images/create.svg') }}"--}}
-        {{--                        alt="">--}}
-        {{--                </div>--}}
-        {{--                <span--}}
-        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
-        {{--                    crée un cours--}}
-        {{--                </span>--}}
-        {{--            </a>--}}
-        {{--            <a--}}
-        {{--                href="#"--}}
-        {{--                class="flex flex-col justify-center items-center">--}}
-        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
-        {{--                    <img--}}
-        {{--                        class="w-full"--}}
-        {{--                        src="{{ asset('assets/images/transfer.svg') }}"--}}
-        {{--                        alt="">--}}
-        {{--                </div>--}}
-        {{--                <span--}}
-        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
-        {{--                    donner un exercice ou une solution--}}
-        {{--                </span>--}}
-        {{--            </a>--}}
-        {{--            <a--}}
-        {{--                href="#"--}}
-        {{--                class="flex flex-col justify-center items-center">--}}
-        {{--                <div class="rounded-full h-16 w-16 p-2 mb-2 flex items-center justify-center bg-gray-50">--}}
-        {{--                    <img--}}
-        {{--                        class="w-full"--}}
-        {{--                        src="{{ asset('assets/images/copywriting.svg') }}"--}}
-        {{--                        alt="">--}}
-        {{--                </div>--}}
-        {{--                <span--}}
-        {{--                    class="font-bold text-blue-600 text-lg text-center">--}}
-        {{--                    rédiger une astuces--}}
-        {{--                </span>--}}
-        {{--            </a>--}}
-        {{--        </div>--}}
     </section>
     {{--    écoles ou instituts --}}
     <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2
-                    class="mb-2 text-3xl font-bold text-gray-800">
-                    École en ligne
+                    class="flex items-center mb-2 text-3xl font-bold text-gray-800">
+                    <svg class="h-4 w-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 444.819 444.819">
+                        <g>
+                            <path d="M352.025,196.712L165.884,10.848C159.029,3.615,150.469,0,140.187,0c-10.282,0-18.842,3.619-25.697,10.848L92.792,32.264
+		c-7.044,7.043-10.566,15.604-10.566,25.692c0,9.897,3.521,18.56,10.566,25.981l138.753,138.473L92.786,361.168
+		c-7.042,7.043-10.564,15.604-10.564,25.693c0,9.896,3.521,18.562,10.564,25.98l21.7,21.413
+		c7.043,7.043,15.612,10.564,25.697,10.564c10.089,0,18.656-3.521,25.697-10.564l186.145-185.864
+		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
+                        </g>
+                    </svg>
+                    <span>École en ligne</span>
                 </h2>
                 <p class="mb-2 text-gray-700">
                     Seules les écoles enregistrées sont affichées sur la plateforme. N’oubliez donc pas de vous abonner
@@ -935,7 +919,7 @@
     {{--tarifs--}}
     <section id="price" class=" bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
-            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le tarif idéal pour vous</h2>
+            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le forfait idéal pour vous</h2>
         </div>
 
         <div class="flex flex-col md:flex-row items-start justify-between mt-12">

@@ -29,7 +29,7 @@
              @keydown.window.escape="open = false"
              class="text-gray-800 shadow">
             <div
-                class="container w-full md:w-3/4 mx-auto max-w-7xl px-2 relative">
+                class="container w-full mx-auto max-w-7xl px-2 relative">
                 <div class="flex items-center justify-between h-16 relative">
                     <div class="flex items-center justify-between flex-1">
                         <div>

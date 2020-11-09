@@ -23,7 +23,7 @@ class User extends Authenticatable implements HasMedia
     use TwoFactorAuthenticatable;
     use HasRoles;
     use InteractsWithMedia;
-    use Searchable;
+//    use Searchable;
 
     /**
      * The attributes that are mass assignable.
