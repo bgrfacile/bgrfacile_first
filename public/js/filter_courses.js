@@ -99,3 +99,7 @@ $selects.forEach(function ($select) {
     new LinkedSelect($select);
 });
 
+let $selectCharger = document.querySelector('.subject');
+$selectCharger.addEventListener('change', function () {
+    location
+});

@@ -46,7 +46,7 @@
 
 
 @section('content')
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <section class="container w-full md:w-3/4 mx-auto mb-12 px-4">
         <h3
             class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center text-gray-800">
             NOUS AVONS TOUT CE DONT VOUS AVEZ BESOIN
@@ -69,7 +69,7 @@
         </div>
     </section>
     {{--    Etudiants--}}
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <section class="container w-full md:w-3/4 mx-auto mb-2 px-4">
         <h2
             class="flex items-center text-2xl font-bold mb-4 text-gray-800">
             <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -161,7 +161,7 @@
         </div>
     </section>
     {{--    Professeurs--}}
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <section class="container w-full md:w-3/4 mx-auto mb-2 px-4">
         <h2
             class="flex items-center text-2xl font-bold mb-4 text-gray-800">
             <svg class="h-4 w-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -189,7 +189,7 @@
         </p>
     </section>
     {{--    écoles ou instituts --}}
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <section class="container w-full md:w-3/4 mx-auto mb-2 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2
@@ -1108,7 +1108,7 @@
     </section>
 
     {{--    Disponible sur mobile--}}
-    <section class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <section class="container w-full md:w-3/4 mx-auto mb-4 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
                 <h2

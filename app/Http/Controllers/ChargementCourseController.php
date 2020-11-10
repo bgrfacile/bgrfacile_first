@@ -36,6 +36,11 @@ class ChargementCourseController extends Controller
             $items = Subjects::where('level_id', (int)$request->filter)->get();
             $items = $items->toArray();
         }
+        elseif ($type === 'subject'){
+            $items = Course::where('subject_id', (int)$request->filter)->get();
+            return view('cours.course');
+//            $items = $items->toArray();
+        }
         else{
             throw new Exception('Unknown type '. $type);
         }
@@ -52,20 +57,13 @@ class ChargementCourseController extends Controller
 
     public function filter_cours(Request $request)
     {
-        $training_id = $request->formation;
-        $level_id = $request->level;
         $subject_id = (int)$request->subject;
-
+        $courses = Course::where('subject_id', $subject_id)->get();
         $trainings = Training::all();
-        $levels = Levels::all();
-        $subjects = Subjects::all();
-        $courses = DB::table('courses')->where('subject_id', $subject_id)->get();
         $this->count_courses = $courses->count();
         return view('cours.course', [
             'courses' => $courses,
-            'trainings' => $trainings,
-            'levels' => $levels,
-            'subjects' => $subjects,
+            'trainings'=> $trainings,
             'count_courses' => $this->count_courses
         ]);
     }

@@ -51,7 +51,7 @@ Route::get('/contact',function (){
 Route::resource('course', CourseController::class);
 Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
 Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
-//Route::post('/cours',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
+Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
 Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');
 
 /*
