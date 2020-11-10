@@ -17,8 +17,10 @@ class ChargementCourseController extends Controller
     public function default_cours()
     {
         $trainings = Training::all();
+        $courses = Course::where('subject_id', 0)->get();
         // sur le chargement des cours recupere l'ensemble des cours recent
         return view('cours.course', [
+            'courses' => $courses,
             'trainings' => $trainings,
             'count_courses' => $this->count_courses,
         ]);
