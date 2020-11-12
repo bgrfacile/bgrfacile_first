@@ -48,11 +48,12 @@ Route::get('/contact',function (){
 /*
  * Cours
  * */
-Route::resource('course', CourseController::class);
+Route::resource('course', CourseController::class);//CRUD sauf  show index
+//chargement des cours au niveau de l'utilisateur
 Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
 Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
 Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
-Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');
+Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
 
 /*
  * Astuces
@@ -126,6 +127,10 @@ Route::prefix('dashboard-admin')->group(function () {
     Route::get('/', function (){
         return view('dashboard_admin.home.home');
     })->name('dashboard.index');
+
+    Route::get('/all-users', function (){
+        return view('dashboard_admin.all_users.index');
+    })->name('all_users.index');
 
     Route::get('/options_cours', function (){
         return view('dashboard_admin.options_courses.index');

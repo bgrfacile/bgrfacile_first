@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="flex flex-row-reverse mr-8 hidden md:flex">
-                    <time>12h:00</time>
+{{--                    <time>12h:00</time>--}}
                 </div>
             </div>
         </nav>

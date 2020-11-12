@@ -39,20 +39,17 @@
                         </select>
                     </div>
                     {{--                    matiere--}}
-                    <form action="">
-                        <div class="pt-6 md:pt-0 md:pl-6">
-                            <select
-                                {{--                            style="display: none"--}}
-                                name="subject"
-                                id="subject"
-                                class="border p-2 rounded w-full sm:w-64 "
-                                data-target="#subject"
-                                {{--data-source="{{ route('contenu.level',['type'=>'subject','filter'=>'id']) }}"--}}>
-                                <option value="0">Sélectionner un cours</option>
-                            </select>
-                            <button type="submit">recharger</button>
-                        </div>
-                    </form>
+                    <div class="pt-6 md:pt-0 md:pl-6">
+                        <select
+                            style="display: none"
+                            name="subject"
+                            id="subject"
+                            class="border p-2 rounded w-full sm:w-64 "
+                            data-target="#subject"
+                            data-source="{{ route('contenu.level',['type'=>'subject','filter'=>'id']) }}">
+                            <option value="0">Sélectionner un cours</option>
+                        </select>
+                    </div>
                 </div>
 
                 {{--                nombre de cours trouver--}}

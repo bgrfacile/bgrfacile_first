@@ -86,29 +86,25 @@ class CourseController extends Controller
     public function edit(int $id)
     {
         $course = DB::table('courses')->where('id', $id)->first();
-        return view('cours.edit', ['course' => $course]);
+        $subjects = Subjects::all();
+//        dd($course);
+        return view('cours.edit', [
+            'course' => $course,
+            'subjects'=>$subjects
+            ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Course $course
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function update(Request $request, int $id)
     {
 //        $course = DB::table('courses')->where('id', $id)->first();
         $course = Course::find($id);
         $course->update([
             'name'=>$request->name,
+            'content'=>$request->content,
             'description'=>$request->description,
-            'description'=>$request->description,
-            'auteurs' => $request->auteur,
-            'image' => '',
-            'like' => 6,
+            'auteurs' => $request->auteur
         ]);
-        return Redirect::to('/profil/my_course');
+        return Redirect()->route('profil.myCourses');
     }
 
     /**
