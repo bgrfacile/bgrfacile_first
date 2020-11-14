@@ -104,7 +104,7 @@
                             class="p-1 border-2 border-transparent text-gray-500 rounded-full hover:text-blue-500 focus:outline-none focus:text-white focus:bg-gray-700"
                             aria-label="Notifications">
                             <a href="{{ route('search') }}">
-                                <svg class="h-6 w-6" stroke="currentColor" fill="none"
+                                <svg class="h-4 w-4" stroke="currentColor" fill="none"
                                      viewBox="0 0 52.966 52.966">
                                     <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
                                         c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279

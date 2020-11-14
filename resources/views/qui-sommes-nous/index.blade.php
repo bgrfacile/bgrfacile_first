@@ -128,48 +128,19 @@
     {{--presentation de l'équipe--}}
     <div class="bg-gray-200">
         <div class="mx-auto max-w-4xl py-16 text-center text-gray-700">
-            <h3 class="mb-7 text-2xl font-bold">Rencontrez les 2 fondateurs 👌</h3>
-            <div class="flex justify-center mb-8 w-3/4 mx-auto">
-                <div class="p-2 m-2">
-                    <div class="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
-                        <div class="mb-3">
-                            <img
-                                class="w-auto mx-auto rounded-full"
-                                src="https://i.pravatar.cc/150?img=31"
-                                alt=""
-                            />
+            <h3 class="mb-7 text-2xl font-bold">Notre équipes👌</h3>
+            <div class="md:w-1/3 md:px-4 mt-10 md:mt-0">
+                <div class="bg-white border border-solid max-w-sm mx-auto team-profile">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h2 class="text-xl font-medium text-gray-700">Bénaja Bendo M.</h2>
-                        <span class="text-blue-500 block mb-5">Front End Developer</span>
-                        <a
-                            href="#"
-                            class="px-4 py-2 bg-blue-500 text-white rounded-full">
-                            Contactez-moi
-                        </a>
-                    </div>
-                </div>
-
-                <div class="p-2 m-2">
-                    <div class="bg-white px-6 py-8 rounded-lg shadow-lg text-center">
-                        <div class="mb-3">
-                            <img
-                                class="w-auto mx-auto rounded-full"
-                                src="https://i.pravatar.cc/150?img=31"
-                                alt=""
-                            />
-                        </div>
-                        <h2 class="text-xl font-medium text-gray-700">Styve Lioumba R.</h2>
-                        <span class="text-blue-500 block mb-5">Back End Developer</span>
-
-                        <a
-                            href="#"
-                            class="px-4 py-2 bg-blue-500 text-white rounded-full">
-                            Contactez-moi
-                        </a>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 

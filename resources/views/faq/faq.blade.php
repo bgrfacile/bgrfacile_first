@@ -1,126 +1,141 @@
 @extends('layouts.front')
 
 @section('content')
-    {{--    <div id="bar" class="flex justify-center items-center min-h-screen w-full text-bold text-5xl" >--}}
-    {{--        Cette section est encours de construction--}}
-    {{--    </div>--}}
-
-    <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
-        <div class="flex flex-wrap md:flex-no-wrap justify-center py-10">
-            <aside class="w-1/3 px-3">
-                <h4>Choisissez une catégorie</h4>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#0">
-                                <span>Questions fréquemment posées</span>
-                                <svg class="cr rc fj rn sf ur wn wk xs h_ pt hz he" viewBox="0 0 12 12"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#0" @click.prevent="page = '2'"
-                                                style="outline: none; box-shadow: none;"><span><font
-                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">Qu'est-ce qu'Open PRO</font></font></span>
-                                <svg class="cr rc fj rn sf ur wn wk xs h_ pt hz he" viewBox="0 0 12 12"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"></path>
-                                </svg>
-                            </a></li>
-                        <li class="ub na yv"><a :class="{ 'text-purple-600': page === '3' }"
-                                                class="np nw uk lx lu ww h_ pt hz" href="#0" @click.prevent="page = '3'"
-                                                style="outline: none; box-shadow: none;"><span><font
-                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fonctionnalités du plan Open PRO</font></font></span>
-                                <svg class="cr rc fj rn sf ur wn wk xs h_ pt hz he" viewBox="0 0 12 12"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"></path>
-                                </svg>
-                            </a></li>
-                        <li class="ub na yv"><a :class="{ 'text-purple-600': page === '4' }"
-                                                class="np nw uk lx lu ww h_ pt hz" href="#0" @click.prevent="page = '4'"
-                                                style="outline: none; box-shadow: none;"><span><font
-                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commencer</font></font></span>
-                                <svg class="cr rc fj rn sf ur wn wk xs h_ pt hz he" viewBox="0 0 12 12"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"></path>
-                                </svg>
-                            </a></li>
-                        <li class="ub na yv"><a :class="{ 'text-purple-600': page === '5' }"
-                                                class="np nw uk lx lu ww h_ pt hz" href="#0" @click.prevent="page = '5'"
-                                                style="outline: none; box-shadow: none;"><span><font
-                                        style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAQ sur les paiements</font></font></span>
-                                <svg class="cr rc fj rn sf ur wn wk xs h_ pt hz he" viewBox="0 0 12 12"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"></path>
-                                </svg>
-                            </a></li>
-                    </ul>
-                </nav>
-            </aside>
-            <section class="w-2/3 px-3">
-                <div>
-                    <h2 class="text-3xl">FAQ - Foire aux questions</h2>
-                    <p>Dernière mise à jour - 30 juin 2020</p>
+    <div class="bg-gray-50">
+        <div class="max-w-screen-xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-center text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+                    Frequently asked questions
+                </h2>
+                <div class="mt-6 border-t-2 border-gray-200 pt-6">
+                    <dl>
+                        <div>
+                            <dt class="text-lg leading-7">
+                                <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                <span class="font-medium text-gray-900">
+                  What's the best thing about Switzerland?
+                </span>
+                                    <span class="ml-6 h-7 flex items-center">
+                  <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </span>
+                                </button>
+                            </dt>
+                            <dd class="mt-2 pr-12">
+                                <p class="text-base leading-6 text-gray-500">
+                                    I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                </p>
+                            </dd>
+                        </div>
+                        <div class="mt-6 border-t border-gray-200 pt-6">
+                            <div>
+                                <dt class="text-lg leading-7">
+                                    <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                  <span class="font-medium text-gray-900">
+                    How do you make holy water?
+                  </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                    <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                                    </button>
+                                </dt>
+                                <dd class="mt-2 pr-12 hidden">
+                                    <p class="text-base leading-6 text-gray-500">
+                                        You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.
+                                    </p>
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="mt-6 border-t border-gray-200 pt-6">
+                            <div>
+                                <dt class="text-lg leading-7">
+                                    <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                  <span class="font-medium text-gray-900">
+                    What do you call someone with no body and no nose?
+                  </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                    <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                                    </button>
+                                </dt>
+                                <dd class="mt-2 pr-12 hidden">
+                                    <p class="text-base leading-6 text-gray-500">
+                                        Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.
+                                    </p>
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="mt-6 border-t border-gray-200 pt-6">
+                            <div>
+                                <dt class="text-lg leading-7">
+                                    <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                  <span class="font-medium text-gray-900">
+                    What is the least spoken language in the world?
+                  </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                    <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                                    </button>
+                                </dt>
+                                <dd class="mt-2 pr-12 hidden">
+                                    <p class="text-base leading-6 text-gray-500">
+                                        Sign language. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                                    </p>
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="mt-6 border-t border-gray-200 pt-6">
+                            <div>
+                                <dt class="text-lg leading-7">
+                                    <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                  <span class="font-medium text-gray-900">
+                    Why can't you hear a pterodactyl go to the bathroom?
+                  </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                    <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                                    </button>
+                                </dt>
+                                <dd class="mt-2 pr-12 hidden">
+                                    <p class="text-base leading-6 text-gray-500">
+                                        Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.
+                                    </p>
+                                </dd>
+                            </div>
+                        </div>
+                        <div class="mt-6 border-t border-gray-200 pt-6">
+                            <div>
+                                <dt class="text-lg leading-7">
+                                    <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none focus:text-gray-900">
+                  <span class="font-medium text-gray-900">
+                    Why did the invisible man turn down the job offer?
+                  </span>
+                                        <span class="ml-6 h-7 flex items-center">
+                    <svg class="h-6 w-6 transform -rotate-180" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                                    </button>
+                                </dt>
+                                <dd class="mt-2 pr-12 hidden">
+                                    <p class="text-base leading-6 text-gray-500">
+                                        He couldn't see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.
+                                    </p>
+                                </dd>
+                            </div>
+                        </div>
+                    </dl>
                 </div>
-                <ul class="bh">
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Comment puis-je utiliser Open PRO sans
-                                    inscription?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Puis-je importer mon plan du site dans Open
-                                    PRO?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Comment puis-je basculer mon abonnement entre les
-                                    forfaits essentiels et premium?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Puis-je annuler mon abonnement à tout
-                                    moment?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Y a-t-il un rabais supplémentaire lorsqu'il est
-                                    payé annuellement?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Que se passe-t-il si je ne renouvelle pas ma
-                                    licence après un an?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                    <li class="u_"><h4 class="rz ro sa"><font style="vertical-align: inherit;"><font
-                                    style="vertical-align: inherit;">Quels types de méthodes de paiement
-                                    proposez-vous?</font></font></h4>
-                        <p class="rq lu"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </font><font style="vertical-align: inherit;">Quis
-                                    enim lobortis scelerisque fermentum.</font></font></p></li>
-                </ul>
-            </section>
+            </div>
         </div>
     </div>
 @endsection
