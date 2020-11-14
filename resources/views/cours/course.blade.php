@@ -47,7 +47,7 @@
                             class="border p-2 rounded w-full sm:w-64 "
                             data-target="#subject"
                             data-source="{{ route('contenu.level',['type'=>'subject','filter'=>'id']) }}">
-                            <option value="0">Sélectionner un cours</option>
+                            <option value="0">Sélectionner une matière</option>
                         </select>
                     </div>
                 </div>

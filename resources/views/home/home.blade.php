@@ -25,7 +25,7 @@
                     </a>
                     <a
                         href="{{ route('ecoles.index') }}"
-                        class="ml-2 py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline">
+                        class="ml-2 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
                         Accéder aux écoles
                     </a>
                 </p>
@@ -82,21 +82,22 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                 </g>
             </svg>
-            <span>Étudiants</span>
+            <span>Élèves ou Étudiants</span>
         </h2>
         <p class="text-gray-600 mb-10">
-            Une fois <a href="{{ url('/login') }}"
-                        class="font-bold text-bold text-blue-500 hover:underline">votre compte créé</a> vous avez
-            <strong>le statut étudiant</strong> (c'est le statut par défaut). Le
-            statut étudiant est réservé aux
-            apprenants, veuillez donc compléter toutes
-            les informations nécessaires afin de nous permettre de mettre en votre disposition ce qu’il faut pour votre
-            apprentissage. Chaque étudiant à la possibilité d'accéder aux contenus des cours, des exercices et des
-            solutions (<a href="#price" class="underline italic">cela nécessite d'activation d'un forfait</a>). Les
-            étudiants
-            ont aussi accès à des astuces (aucun
-            forfait n'est nécessaire).
 
+
+            Après création de
+            <a href="{{ url('/login') }}"
+               class="font-bold text-bold text-blue-500 hover:underline">
+                votre compte
+            </a>
+            , vous avez un statut élève ou étudiant (<strong>statut par défaut</strong>). Ce statut est
+            réservé aux apprenants, il est donc nécessaire de remplir toutes les informations demandées afin qu'on
+            puisse mettre à votre disposition ce dont vous avez besoin pour votre apprentissage.Les contenus proposés
+            sont des cours, des exercices, et les corrigés; seules les astuces sont gratuite.
+            Chaque apprenant a la possibilité d'accéder aux contenus des cours, des exercices et des solutions <strong>(accès
+                payant)</strong> et des astuces <strong>(accès gratuit)</strong>.
 
         </p>
         <div class="flex justify-center mb-10 ext-gray-600">
@@ -108,10 +109,14 @@
             <div class="w-full flex-1 pl-5">
                 <p class="mb-2">
                     <strong>Cours </strong><br>
-                    Le cours est ce document rédigé par un professeur agréé et mise en ligne par celui-ci pour les
-                    apprenants afin de parfaire leur connaissance. Les cours sont structurés de la façon suivante : un
-                    cours et liés à une matière qui elle-même est liée à un niveau et sont liés à une formation (sur le
-                    site une formation représente un cycle scolaire)
+                    Ce sont des documents rédigés par un <strong>formateur agréé</strong> mis à la dispositions des apprenants pour
+                    parfaire leurs connaissances.Les cours sont structurés de la manière suivante
+                    <em class="underline">
+                    cours
+                    < matières
+                    < niveaux
+                    < cycle scolaire.
+                    </em>
                 </p>
                 <a
                     class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"

@@ -17,8 +17,8 @@
                    class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-blue-600 text-white">
                     cree son école
                 </a>
-                <a href="#"
-                   class="inline-block mx-auto lg:mx-0 hover:underline bg-gray-50 text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
+                <a href="#recherche_ecole"
+                   class="inline-block mx-auto lg:mx-0 hover:underline bg-gray-200 text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
                     Acceder à une école
                 </a>
             </p>
@@ -499,7 +499,7 @@
     </section>
 
     {{--acceder aux ecole--}}
-    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section id="recherche_ecole" class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="w-full h-72 rounded-lg">
