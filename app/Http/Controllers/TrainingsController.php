@@ -47,7 +47,7 @@ class TrainingsController extends Controller
             'name'=>$request->name,
             'diploma'=>$request->diploma
         ]);
-        return Redirect::to('/dashbord-admin/trainings');
+        return Redirect::to('/dashboard-admin/trainings');
     }
 
     /**

@@ -51,7 +51,7 @@ class LevelsController extends Controller
             'name'=>$request->name,
             'training_id'=>$request->training
         ]);
-        return Redirect::to('/dashbord-admin/levels');
+        return Redirect::to('/dashboard-admin/levels');
     }
 
     /**
@@ -98,6 +98,6 @@ class LevelsController extends Controller
     {
         $levels = Levels::find($id);
         $levels->delete();
-        return Redirect::to('/dashbord-admin/levels');
+        return Redirect::to('/dashboard-admin/levels');
     }
 }

@@ -109,13 +109,14 @@
             <div class="w-full flex-1 pl-5">
                 <p class="mb-2">
                     <strong>Cours </strong><br>
-                    Ce sont des documents rédigés par un <strong>formateur agréé</strong> mis à la dispositions des apprenants pour
+                    Ce sont des documents rédigés par un <strong>formateur agréé</strong> mis à la dispositions des
+                    apprenants pour
                     parfaire leurs connaissances.Les cours sont structurés de la manière suivante
                     <em class="underline">
-                    cours
-                    < matières
-                    < niveaux
-                    < cycle scolaire.
+                        cours
+                        < matières
+                        < niveaux
+                        < cycle scolaire.
                     </em>
                 </p>
                 <a
@@ -133,12 +134,17 @@
             </div>
             <div class="w-full flex-1 pl-5">
                 <p class="mb-2">
-                    <strong>Exercices et solutions </strong>
+                    <strong>Exercices / Corrigés </strong>
                     <br>
-                    Ce sont des entrainements qui aident à mieux comprendre son cours. Les exercices sont la plupart du
-                    temps liés à des cours et chaque solution est liée à son tour à un exercice.Tout comme pour les
-                    cours, les exercices et solutions sont répartis selon l'ordre <em class="underline">formation >
-                        niveaux > matière</em>.
+                    Ce sont des entraînements qui aident à mieux comprendre son cours. Les exercices sont pour la
+                    plupart du temps lié à des cours avec leurs corrigés.Tout comme pour les
+                    cours, les exercices et corrigés sont répartis selon l'ordre
+                    <em class="underline">
+                        exercices ou corrigés
+                        < matières
+                        < niveaux
+                        < cycle scolaire.
+                    </em>
                 </p>
                 <a
                     class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"

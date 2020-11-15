@@ -12,22 +12,18 @@
                 l'école en ligne est un espace virtuel crée pour les écoles traditionnelles.Chaque école le désirant
                 peut créé son espace en ligne.
             </p>
-            <p class="flex justify-center flex-wrap mb-4">
-                <a href="#"
-                   class="mx-auto lg:mx-0 hover:underline font-extrabold rounded my-2 md:my-6 py-4 px-8 shadow-lg w-48 bg-blue-600 text-white">
-                    cree son école
+            <p class="flex justify-center items-center flex-wrap mb-4">
+                <a
+                    href="#"
+                    class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
+                    Créé son école
                 </a>
-                <a href="#recherche_ecole"
-                   class="inline-block mx-auto lg:mx-0 hover:underline bg-gray-200 text-gray-600 font-extrabold my-2 md:my-6 py-2 lg:py-4 px-8">
-                    Acceder à une école
+                <a
+                    href="#recherche_ecole"
+                    class="sm:ml-2 mt-2 sm:mt-0 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
+                    Voir une école
                 </a>
             </p>
-            {{--            <div class="w-11/12 mx-auto">--}}
-            {{--                <iframe class="w-full" width="560" height="315" src="https://www.youtube.com/embed/fS5SyhuIusM"--}}
-            {{--                        frameborder="0"--}}
-            {{--                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"--}}
-            {{--                        allowfullscreen></iframe>--}}
-            {{--            </div>--}}
         </div>
     </section>
 
@@ -69,12 +65,12 @@
     </section>
 
     {{--prof --}}
-    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12">
+    <section class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-2">
         <div class="flex flex-col-reverse md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="w-full h-72 rounded-lg">
                     <img
-                        src="{{ asset('assets/images/bgr dessin1.1.png') }}"
+                        src="{{ asset('assets/images/formateur_ecole.png') }}"
                         alt="..."
                         class="w-full h-full object-cover">
                 </div>
@@ -106,7 +102,7 @@
     </section>
 
     {{--    lier les etapes de la creation d'une ecole aux fonctionnalites lier a une ecole--}}
-    <section id="creeSonEcole" class="bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section id="creeSonEcole" class="bg-gray-100 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
@@ -126,6 +122,12 @@
                 <p class="mb-2 mt-2 leading-relaxed">
                     La création se fait en plusieurs étapes.
                 </p>
+                <div class="w-full h-72 rounded-lg">
+                    <img
+                        src="{{ asset('assets/images/formateur_ecole.png') }}"
+                        alt="..."
+                        class="w-full h-full object-cover">
+                </div>
             </div>
 
             <div class="w-full lg:w-1/2 lg:px-8">

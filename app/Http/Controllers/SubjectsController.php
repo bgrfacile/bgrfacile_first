@@ -51,7 +51,7 @@ class SubjectsController extends Controller
             'name'=>$request->name,
             'level_id'=>$request->level
         ]);
-        return Redirect::to('/dashbord-admin/subjects');
+        return Redirect::to('/dashboard-admin/subjects');
     }
 
     /**
@@ -98,6 +98,6 @@ class SubjectsController extends Controller
     {
         $subjects = Subjects::find($id);
         $subjects->delete();
-        return Redirect::to('/dashbord-admin/subjects');
+        return Redirect::to('/dashboard-admin/subjects');
     }
 }
