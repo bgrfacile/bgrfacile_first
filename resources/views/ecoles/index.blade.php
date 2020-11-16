@@ -45,14 +45,13 @@
                     </svg>
                     <span>Les étudiants</span>
                 </h2>
-                <p class="mt-2 leading-relaxed">
-                    Sur la platforme est present des étudiants de divers horizon sans distinctions.Mais dans le cadre
-                    d'une école en ligne, seul les étudiants possédant les acces nécessaures peuvent y acceder.
-                    un étudiant qui appartient à une école en ligne voir dans son profil de nouvelle fonctionnalité lui
-                    permettant d'intéragir avec sa scolaroté
+                <p class="mt-2 text-gray-600">
+                    Sur la plateforme est présent des étudiants de divers horizon sans distinctions. Mais dans le cadre
+                    d'une école en ligne, seuls les étudiants possédant les accès nécessaires peuvent y accéder. Un
+                    étudiant qui appartient à une école en ligne voit dans son profil de nouvelle fonctionnalité lui
+                    permettant d'interagir avec sa scolarité.
                 </p>
             </div>
-
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="w-full h-72 rounded-lg">
                     <img
@@ -89,13 +88,11 @@
                     </svg>
                     <span>Les professeurs</span>
                 </h2>
-                <p class="mt-2 leading-relaxed">
-                    Sur la platforme, chaque proffesseur inscrit est libre et indépendant de partéger ces compétences
-                    sans aucuns attache.
-                    Mais dans le cadre d'une école en ligne, un professeur à la possibilité d'adere à une ou plusieurs
-                    écoles.
-                    Apres adession à un école un professeur à la possibilté d'administré une classe et d'autre
-                    fonctionnalité propre à une école en ligne.
+                <p class="mt-2 text-gray-600">
+                    Sur la plateforme, chaque formateur inscrit est libre et indépendant de partager ces compétences
+                    sans aucune attache. Mais dans le cadre d'une école en ligne, un professeur a la possibilité
+                    d'adhérer à une ou plusieurs écoles. Après adhésion à une école un professeur a la possibilité
+                    d'administrer une classe et d'autre fonctionnalité propre à une école en ligne.
                 </p>
             </div>
         </div>
@@ -124,7 +121,7 @@
                 </p>
                 <div class="w-full h-72 rounded-lg">
                     <img
-                        src="{{ asset('assets/images/formateur_ecole.png') }}"
+                        src="#"
                         alt="..."
                         class="w-full h-full object-cover">
                 </div>
@@ -306,7 +303,7 @@
         </div>
     </section>
 
-    {{--juste apres lister les pric relatif au differentess offre et fonctionnalite que offre bgrfacile price--}}
+    {{-- offre bgrfacile price--}}
     <section class="bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
             <h2 class="text-3xl leading-tight font-bold text-white">differentes forfait pour les écoles</h2>
@@ -426,61 +423,61 @@
                 </div>
             </div>
 
-{{--            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
-{{--                <div>--}}
-{{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>--}}
-{{--                    <div class="mb-2 flex items-baseline font-bold">--}}
-{{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
-{{--                        <span class="text-gray-500 text-3xl">6000</span>--}}
-{{--                        <span class="text-gray-500 text-base">/an</span>--}}
-{{--                    </div>--}}
-{{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois--}}
-{{--                        exactement</p>--}}
-{{--                    <div class="font-semibold mb-2">vous pouvez:</div>--}}
-{{--                    <ul>--}}
-{{--                        <li class="flex items-center">--}}
-{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path--}}
-{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
-{{--                            </svg>--}}
-{{--                            <span>Accès aux cours</span>--}}
-{{--                        </li>--}}
-{{--                        <li class="flex items-center">--}}
-{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path--}}
-{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
-{{--                            </svg>--}}
-{{--                            <span>Accès aux exercices</span>--}}
-{{--                        </li>--}}
-{{--                        <li class="flex items-center">--}}
-{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path--}}
-{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
-{{--                            </svg>--}}
-{{--                            <span>Accès aux corrige</span>--}}
-{{--                        </li>--}}
-{{--                        <li class="flex items-center">--}}
-{{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
-{{--                                 xmlns="http://www.w3.org/2000/svg">--}}
-{{--                                <path--}}
-{{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
-{{--                            </svg>--}}
-{{--                            <span>Accès aux astuces</span>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
-{{--                <div--}}
-{{--                    class=" border p-3 mt-2 rounded-lg">--}}
-{{--                    <a--}}
-{{--                        href="#"--}}
-{{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
-{{--                        star--}}
-{{--                    </a>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            {{--            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
+            {{--                <div>--}}
+            {{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>--}}
+            {{--                    <div class="mb-2 flex items-baseline font-bold">--}}
+            {{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
+            {{--                        <span class="text-gray-500 text-3xl">6000</span>--}}
+            {{--                        <span class="text-gray-500 text-base">/an</span>--}}
+            {{--                    </div>--}}
+            {{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois--}}
+            {{--                        exactement</p>--}}
+            {{--                    <div class="font-semibold mb-2">vous pouvez:</div>--}}
+            {{--                    <ul>--}}
+            {{--                        <li class="flex items-center">--}}
+            {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+            {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+            {{--                                <path--}}
+            {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+            {{--                            </svg>--}}
+            {{--                            <span>Accès aux cours</span>--}}
+            {{--                        </li>--}}
+            {{--                        <li class="flex items-center">--}}
+            {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+            {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+            {{--                                <path--}}
+            {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+            {{--                            </svg>--}}
+            {{--                            <span>Accès aux exercices</span>--}}
+            {{--                        </li>--}}
+            {{--                        <li class="flex items-center">--}}
+            {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+            {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+            {{--                                <path--}}
+            {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+            {{--                            </svg>--}}
+            {{--                            <span>Accès aux corrige</span>--}}
+            {{--                        </li>--}}
+            {{--                        <li class="flex items-center">--}}
+            {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+            {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+            {{--                                <path--}}
+            {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+            {{--                            </svg>--}}
+            {{--                            <span>Accès aux astuces</span>--}}
+            {{--                        </li>--}}
+            {{--                    </ul>--}}
+            {{--                </div>--}}
+            {{--                <div--}}
+            {{--                    class=" border p-3 mt-2 rounded-lg">--}}
+            {{--                    <a--}}
+            {{--                        href="#"--}}
+            {{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
+            {{--                        star--}}
+            {{--                    </a>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
     </section>
     <section class="px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
@@ -501,7 +498,7 @@
     </section>
 
     {{--acceder aux ecole--}}
-    <section id="recherche_ecole" class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-32">
+    <section id="recherche_ecole" class="bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12">
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <div class="w-full h-72 rounded-lg">

@@ -42154,8 +42154,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\mes-sites\bgrfacile_laravel\resources\sass\app2.scss */"./resources/sass/app2.scss");
+__webpack_require__(/*! D:\mes-sites\bgrfacile\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\mes-sites\bgrfacile\resources\sass\app2.scss */"./resources/sass/app2.scss");
 
 
 /***/ })

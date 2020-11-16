@@ -3,15 +3,31 @@
 @section('ressourceCSS')
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        blockquote {
+            position: relative;
+        }
+
+        blockquote p:first-of-type:before {
+            content: '\201c';
+            position: absolute;
+            left: -.5em;
+        }
+
+        blockquote p:last-of-type:after {
+            content: '\201d';
+            position: absolute;
+        }
+    </style>
 @endsection
 
 @section('baniere')
     <div class="flex flex-col justify-between items-center bg-gray-500 overflow-hidden text-white"
-         style="min-height: 374px;">
+         style='min-height: 374px;background: center / cover no-repeat url("{{ asset('assets/images/bg_about_header.jpg') }}")'>
         <div>
             <h3 class="my-5 pt-5 font-semibold text-4xl">Qui sommes-nous ?</h3>
         </div>
-        <div class="py-3 bg-gray-400 w-full">
+        <div class="py-3 bg-black w-full opacity-25 text-white">
             <h4 class="text-2xl text-center h-12">une communauté de</h4>
             <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
                 <div class="{{--px-10 mx-5--}} text-center flex flex-col">
@@ -46,6 +62,7 @@
             14 langues.
         </p>
     </div>
+
     {{--une image illustration de l'équipe bgrfacile--}}
     <div class="w-full overflow-hidden" style="height: 543px">
         <img
@@ -125,15 +142,125 @@
             </ul>
         </div>
     </div>
+
+    {{--    remerciment et listage du group--}}
     {{--presentation de l'équipe--}}
-    <div class="bg-gray-200">
-        <div class="mx-auto max-w-4xl py-16 text-center text-gray-700">
-            <h3 class="mb-7 text-2xl font-bold">Notre équipes👌</h3>
-            <div class="md:w-1/3 md:px-4 mt-10 md:mt-0">
-                <div class="bg-white border border-solid max-w-sm mx-auto team-profile">
+    <div class="bg-gray-100">
+        <div class="mx-auto max-w-4xl py-16 text-gray-700">
+            <h3 class="mb-7 text-2xl font-bold text-center">Ils ont conçu le site 👌</h3>
+            <div class="flex flex-col md:flex-row lg:-mx-8 items-center">
+                <div class="w-full lg:w-1/2 lg:px-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 md:mx-4">
+                        <div class="bg-white border border-solid max-w-sm mx-auto">
+                            <div class="px-5 py-12 text-center">
+                                <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                                    <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                         class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <h5 class="mt-4 mb-1 text-xl font-bold">Bendo Bénaja</h5>
+                                <p>
+                                    <span class="text-base text-gray-500 font-medium">Fondateur / CEO</span>
+                                </p>
+                                <div class="mt-3">
+                                    <a href="#" target="_blank"
+                                       class="p-4 h-4 w-4 bg-gray-400 flex justify-center items-center mx-auto rounded-full hover:shadow">
+                                        ok
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:px-8 text-justify">
+                    <blockquote>
+                        <p class="mb-2 ">
+                            Je tiens à remercier toutes les personnes qui ont contribué au succès de ce site et qui ont
+                            aidée lors de la réalisation de celle-ci.
+                        </p>
+                        <p class="mb-2 ">
+                            Je voudrais dans un premier temps remercier, mes parents J&B, pour la patience, la
+                            disponibilité
+                            et surtout les judicieux conseils, qui ont contribué à alimenter ma réflexion.
+                        </p>
+                        <p class="mb-2 ">
+                            Je remercie également toute l’équipe essengoGroup et tous les intervenants pour la
+                            contribution.
+                        </p>
+                        <p class="">
+                            Je tiens à témoigner toute ma reconnaissance aux personnes suivantes, pour leur aide dans la
+                            réalisation de ce projet.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+
+            <h3 class="my-7 text-2xl font-bold text-center">l'équipe</h3>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Styve LIOUMBA</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                    </div>
+                </div>
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
                         <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
                         <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>

@@ -2,7 +2,7 @@
 
 
 @section('baniere')
-    <div class="container w-full md:w-3/4 mx-auto mb-20 px-4">
+    <div class="container w-full md:w-3/4 mx-auto mb-2 md:mb-12 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-10">
             <div class="w-full px-3">
                 <strong
@@ -11,21 +11,21 @@
                 </strong>
                 <h1
                     class="mb-2 text-3xl font-bold text-gray-800">
-                    Rien que pour étudier, tout ce qu’il faut.
+                    Pour chaque niveau, chaque cycle. Un apprentissage de marque et un pont vers la connaissance.
                 </h1>
-                <p class="mb-2 text-gray-700">
-                    Découvrez une nouvelle façon d’apprendre,
-                    d’enseigner et partager vos connaissances.
-                </p>
-                <p class="flex">
+                {{--                <p class="mb-2 text-gray-700">--}}
+                {{--                    Découvrez une nouvelle façon d’apprendre,--}}
+                {{--                    d’enseigner et partager vos connaissances.--}}
+                {{--                </p>--}}
+                <p class="flex flex-wrap">
                     <a
                         href="{{ route('contenu.cours') }}"
-                        class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
+                        class="mt-2 sm:mt-0 py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                         Lisez nos cours
                     </a>
                     <a
                         href="{{ route('ecoles.index') }}"
-                        class="ml-2 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
+                        class="sm:ml-2 mt-2 sm:mt-0 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
                         Accéder aux écoles
                     </a>
                 </p>
@@ -94,8 +94,7 @@
             </a>
             , vous avez un statut élève ou étudiant (<strong>statut par défaut</strong>). Ce statut est
             réservé aux apprenants, il est donc nécessaire de remplir toutes les informations demandées afin qu'on
-            puisse mettre à votre disposition ce dont vous avez besoin pour votre apprentissage.Les contenus proposés
-            sont des cours, des exercices, et les corrigés; seules les astuces sont gratuite.
+            puisse mettre à votre disposition ce dont vous avez besoin pour votre apprentissage.
             Chaque apprenant a la possibilité d'accéder aux contenus des cours, des exercices et des solutions <strong>(accès
                 payant)</strong> et des astuces <strong>(accès gratuit)</strong>.
 
@@ -111,7 +110,7 @@
                     <strong>Cours </strong><br>
                     Ce sont des documents rédigés par un <strong>formateur agréé</strong> mis à la dispositions des
                     apprenants pour
-                    parfaire leurs connaissances.Les cours sont structurés de la manière suivante
+                    parfaire leurs connaissances. Les cours sont structurés de la manière suivante
                     <em class="underline">
                         cours
                         < matières
@@ -161,9 +160,10 @@
                 <p class="mb-2">
                     <strong>Astuces</strong>
                     <br>
-                    cette section est réservée pour un ensemble d'element très utilise pour l'apprenant mais qui ne
-                    pourrait pas se retrouver dans une section précédemment cite. Par exemple des polycopies très
-                    utilies dans certaines formations ou des pots Cats audio de certains documents.
+                    cette section est réservée pour un ensemble d'éléments très utile pour l'apprenant mais qui ne
+                    pourrait pas se retrouver dans les sections précédentes. Par exemple <strong>des polycopies</strong>
+                    très
+                    utiles dans certaines formations ou des cours audio (podcast).
                 </p>
                 <a
                     class="py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
@@ -185,18 +185,16 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                 </g>
             </svg>
-            <span>Professeurs</span>
+            <span>Formateurs</span>
         </h2>
         <p class="text-gray-600 mb-5">
-            À la base, toutes personnes inscrites possèdent automatiquement le statut d'étudiant. Mais le site offre la
-            possibilité de changer de status, passer de son statut d'étudiant vers celui de professeurs et bénéficier de
-            nouvelle possibilité. L'utilisateur peut alors créer du contenue sur le site en plus de lire.
-        </p>
-        <p class="text-gray-600 mb-5">
-            Un utilisateur devenu professeurs à la possibilité de <strong>recevoir une rémunération</strong> pour le
-            contenu fourni à la
-            plate-forme, c'est pourquoi il est recommandé de fournir le nécessaire afin de confirmer votre identité
-            entant que formateur avant de mettre en valeur votre savoir-faire.
+            Outre le statut par défaut (élèves ou étudiants), il existe un <strong>statut formateur</strong> dans lequel
+            les utilisateurs
+            peuvent créer des contenus de <em>cours, d’exercices et des corrigés</em>. Ces utilisateurs ont la
+            possibilité de
+            percevoir une <strong>rémunération pour chaque contenu fourni à la plateforme</strong> ; il est donc
+            obligatoire de <strong>confirmer
+                votre profession de formateur avant de mettre des contenus sur ce site</strong>.
         </p>
     </section>
     {{--    écoles ou instituts --}}
@@ -217,10 +215,13 @@
                     </svg>
                     <span>École en ligne</span>
                 </h2>
-                <p class="mb-2 text-gray-700">
-                    Seules les écoles enregistrées sont affichées sur la plateforme. N’oubliez donc pas de vous abonner
-                    sur notre plateforme pour faciliter l’interaction avec vos étudiants, vos professeurs, et de mettre
-                    en avant les bienfondés de votre établissement.
+                <p class="text-gray-600 mb-5">
+                    Chaque établissement a la possibilité de s’inscrire sur notre plateforme. Ceci facilitera
+                    l’interaction entre les élèves ou étudiants et les formateurs, en cas d’urgence (maladie, …)
+                    l’apprenant pourra continuer à suivre ses cours et recevoir ses exercices à distance via notre
+                    plateforme.L’établissement pourra également mettre en avant ses bienfondés afin de permettre à
+                    chaque personne voulant s’y inscrire d’avoir des informations telles que : les niveaux proposés,
+                    les filières et leurs débouchées, les emplois du temps et bien d’autres.
                 </p>
                 <p class="flex mb-4">
                     <a

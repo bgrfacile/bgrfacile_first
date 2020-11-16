@@ -315,7 +315,7 @@
     </main>
 
 
-    <footer class="bg-gray-100">
+    <footer class="bg-gray-200">
         <div class="container max-w-6xl md:max-w-6xl mx-auto px-4 flex flex-wrap">
             <div class="md:w-1/2 w-full">
                 <div>
@@ -357,7 +357,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-gray-100 pt-2 ">
+        <div class="pt-2">
             <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col md:flex-row max-w-6xl">
                 <div class="mt-2">© Copyright 2020. Tous droits réservés.</div>
                 <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
