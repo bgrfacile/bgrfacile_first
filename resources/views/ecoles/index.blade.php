@@ -8,13 +8,13 @@
     <section>
         <div class="container w-full md:w-3/4 mx-auto px-4 py-8 text-center">
             <h1 class="text-5xl font-bold">écoles en ligne</h1>
-            <p class="text-xl mb-8">
+            <p class="mt-2 text-gray-600 text-xl mb-8">
                 l'école en ligne est un espace virtuel crée pour les écoles traditionnelles.Chaque école le désirant
                 peut créé son espace en ligne.
             </p>
             <p class="flex justify-center items-center flex-wrap mb-4">
                 <a
-                    href="#"
+                    href="{{ route('schools.create') }}"
                     class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                     Créé son école
                 </a>
@@ -512,7 +512,7 @@
             </div>
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
-                <h2 class="text-3xl leading-tight font-bold mt-4">Rechercher vos écoles</h2>
+                <h2 class="text-3xl leading-tight font-bold mt-4">Rechercher une école</h2>
                 <p class="my-3 leading-relaxed">
                     Nous vous offrons la possibilité de rechercher une école en particulier et de lire les informations
                     concernant celle-ci.

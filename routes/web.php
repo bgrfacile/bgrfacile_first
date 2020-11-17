@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ChargementCourseController;
 use App\Http\Controllers\LevelsController;
+use App\Http\Controllers\SchoolsController;
 use App\Http\Controllers\SubjectsController;
 use App\Http\Controllers\TrainingsController;
 use Illuminate\Support\Facades\Route;
@@ -146,6 +147,9 @@ Route::prefix('dashboard-admin')->group(function () {
 | Administration des écoles
 |--------------------------------------------------------------------------
 */
+
+Route::resource('schools',SchoolsController::class);
+
 Route::prefix('dashboard-ecole')->group(function () {
     Route::get('/', function (){
         return view('dashboard_ecole.home.home');

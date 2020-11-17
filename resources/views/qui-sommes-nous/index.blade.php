@@ -64,19 +64,18 @@
     </div>
 
     {{--une image illustration de l'équipe bgrfacile--}}
-    <div class="w-full overflow-hidden" style="height: 543px">
+    <div class="w-full overflow-hidden" style="height: 543px;filter: grayscale(80%);">
         <img
             class="w-full"
-            src="https://fotomelia.com/wp-content/uploads/edd/2015/09/fotomelia-site-de-photos-et-images-gratuites-libres-de-droits7-1560x1033.jpg"
+            src="{{ asset('assets/images/banniere_bgrfacile.jpeg') }}"
             {{--            src="{{ asset('assets/images/groupe-essengo.jpeg') }}"--}}
             alt="">
     </div>
-    {{--avis des gens par rapport au site--}}
 
     {{--historique de bgrfcile--}}
     <div class="mx-auto max-w-4xl py-16 px-8">
         <h3 class="mb-7 text-2xl font-bold text-center">L'histoire de bgrfacile</h3>
-        <div class="relative w-full mx-auto">
+        <div class="w-full mx-auto">
             <div class="border-r-2 border-gray-200 border-dotted absolute h-full top-0 z-0" style="left: 7px"></div>
             <ul class="list-none m-0 p-0">
                 <li class="mb-2">
@@ -143,31 +142,19 @@
         </div>
     </div>
 
-    {{--    remerciment et listage du group--}}
     {{--presentation de l'équipe--}}
     <div class="bg-gray-100">
         <div class="mx-auto max-w-4xl py-16 text-gray-700">
-            <h3 class="mb-7 text-2xl font-bold text-center">Ils ont conçu le site 👌</h3>
-            <div class="flex flex-col md:flex-row lg:-mx-8 items-center">
+            <h3 class="mb-7 text-2xl font-bold text-left border-b pb-2">Remerciement</h3>
+            <div class="flex flex-col md:flex-row lg:-mx-8 items-center mb-12 md:mb-20">
                 <div class="w-full lg:w-1/2 lg:px-8">
-                    <div class="bg-white rounded-lg shadow-lg p-8 md:mx-4">
-                        <div class="bg-white border border-solid max-w-sm mx-auto">
-                            <div class="px-5 py-12 text-center">
-                                <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                                    <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                         class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                                </div>
-                                <h5 class="mt-4 mb-1 text-xl font-bold">Bendo Bénaja</h5>
-                                <p>
-                                    <span class="text-base text-gray-500 font-medium">Fondateur / CEO</span>
-                                </p>
-                                <div class="mt-3">
-                                    <a href="#" target="_blank"
-                                       class="p-4 h-4 w-4 bg-gray-400 flex justify-center items-center mx-auto rounded-full hover:shadow">
-                                        ok
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="bg-transparent rounded-lg shadow-lg p-8 md:mx-4">
+                        <div class="w-64 h-64  border border-solid max-w-sm mx-auto">
+                            <img
+                                src="{{ asset('assets/images/bgr_dessin1.png') }}"
+                                alt="garçon qui étudie"
+                                title="#MyArt@Lb14"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -194,76 +181,81 @@
                 </div>
             </div>
 
-            <h3 class="my-7 text-2xl font-bold text-center">l'équipe</h3>
+            <h3 class="my-7 text-2xl font-bold text-left border-b pb-2">L'équipes</h3>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
+                            <img src="{{ asset('assets/images/benaja.jpg') }}" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Bénaja BENDO</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">full stack Dev</span>
+                    </div>
+                </div>
+
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="{{ asset('assets/images/styve.jpg') }}" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
                         <h5 class="mt-4 mb-1 text-xl font-medium">Styve LIOUMBA</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <span class="text-sm text-gray-500 font-medium uppercase">android full Stack</span>
                     </div>
                 </div>
+
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
                             <img src="//via.placeholder.com/100/eee" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Ken</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">full web and android code</span>
                     </div>
                 </div>
+
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
                             <img src="//via.placeholder.com/100/eee" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Chanel</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">full web and full redactor</span>
                     </div>
                 </div>
+
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
                             <img src="//via.placeholder.com/100/eee" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Belinda</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">full redactor</span>
                     </div>
                 </div>
+
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
                             <img src="//via.placeholder.com/100/eee" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">yannick</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">full management</span>
                     </div>
                 </div>
+
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">
                         <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
                             <img src="//via.placeholder.com/100/eee" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
-                    </div>
-                </div>
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Jacqueline Perry</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">UI Designer</span>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">jessica</h5>
                     </div>
                 </div>
             </div>
