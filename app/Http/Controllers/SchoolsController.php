@@ -13,7 +13,7 @@ class SchoolsController extends Controller
      */
     public function index()
     {
-        return view('ecoles.create_school');
+//        return view('ecoles.create_school');
     }
 
     /**
@@ -23,7 +23,6 @@ class SchoolsController extends Controller
      */
     public function create()
     {
-        dd('ok form ');
         return view('ecoles.create_school');
     }
 

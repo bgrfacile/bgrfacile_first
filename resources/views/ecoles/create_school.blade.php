@@ -2,120 +2,296 @@
 
 @section('content')
     <form>
-        <div class="md:flex mb-8">
-            <div class="md:w-1/3">
-                <legend class="uppercase tracking-wide text-sm">Location</legend>
-                <p class="text-xs font-light text-red">This entire section is required.</p>
+        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+            {{--            Présentation de la page--}}
+            <div class="text-center lg:w-2/3 lg:mx-auto w-full py-">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium	 text-black font-mono">
+                    Formulaire de création d'une école en ligne.
+                </h1>
+                <p class=" mb-8 font-normal">
+                    Renseigner toutes les informations demandées et vos donné seront soumise à traitement.
+                </p>
             </div>
-            <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
-                <div class="mb-4">
-                    <label class="block uppercase tracking-wide text-xs font-bold">Name</label>
-                    <input class="w-full shadow-inner p-4 border-0" type="text" name="name" placeholder="Acme Mfg. Co.">
+            <div class="hidden sm:block">
+                <div class="py-8">
+                    <div class="border-t border-gray-200"></div>
                 </div>
-                <div class="md:flex mb-4">
-                    <div class="md:flex-1 md:pr-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Street Address</label>
-                        <input class="w-full shadow-inner p-4 border-0" type="text" name="address_street" placeholder="555 Roadrunner Lane">
-                    </div>
-                    <div class="md:flex-1 md:pl-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Building/Suite No.</label>
-                        <input class="w-full shadow-inner p-4 border-0" type="text" name="address_number" placeholder="#3">
-                        <span class="text-xs mb-4 font-thin">We lied, this isn't required.</span>
-                    </div>
-                </div>
-                <div class="md:flex mb-4">
-                    <div class="md:flex-1 md:pr-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Latitude</label>
-                        <input class="w-full shadow-inner p-4 border-0" type="text" name="lat" placeholder="30.0455542">
-                    </div>
-                    <div class="md:flex-1 md:pl-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Longitude</label>
-                        <input class="w-full shadow-inner p-4 border-0" type="text" name="lon" placeholder="-99.1405168">
+            </div>
+
+            {{--            information de base renseigner l'identité de votre écolex    --}}
+            <div class="md:grid md:grid-cols-3 md:gap-6 ">
+                {{--                gauche--}}
+                <div class="md:col-span-1">
+                    <div class="px-4 sm:px-0">
+                        <h3 class="title-font sm:text-3xl text-2xl mb-4 font-medium	 text-black font-mono">
+                            Informations général sur l'école
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-600">
+                            Les informations renseigner ici seront visibles sur la page de votre école.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="md:flex mb-8">
-            <div class="md:w-1/3">
-                <legend class="uppercase tracking-wide text-sm">Contact</legend>
-            </div>
-            <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
-                <div class="mb-4">
-                    <label class="block uppercase tracking-wide text-xs font-bold">Phone</label>
-                    <input class="w-full shadow-inner p-4 border-0" type="tel" name="phone" placeholder="(555) 555-5555">
-                </div>
-                <div class="mb-4">
-                    <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">URL</label>
-                    <input class="w-full shadow-inner p-4 border-0" type="url" name="url" placeholder="acme.co">
-                </div>
-                <div class="mb-4">
-                    <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Email</label>
-                    <input class="w-full shadow-inner p-4 border-0" type="email" name="email" placeholder="contact@acme.co">
-                </div>
-            </div>
-        </div>
-        <div class="md:flex">
-            <div class="md:w-1/3">
-                <legend class="uppercase tracking-wide text-sm">Social</legend>
-            </div>
-            <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
-                <div class="md:flex mb-4">
-                    <div class="md:flex-1 md:pr-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Facebook</label>
-                        <div class="w-full flex">
-                            <span class="text-xs py-4 px-2 bg-grey-light text-grey-dark">facebook.com/</span>
-                            <input class="flex-1 shadow-inner p-4 border-0" type="text" name="facebook" placeholder="acmeco">
+
+                {{--                droite--}}
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <div class="shadow overflow-hidden sm:rounded-md">
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <div class="grid grid-cols-6 gap-6">
+                                {{--                                nom de la structure--}}
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label
+                                        class="block font-medium text-sm text-gray-700"
+                                        for="nom"><span>Nom de la structure</span>
+                                    </label>
+                                    <input class="form-input rounded-md shadow-sm mt-1 block w-full" id="nom"
+                                           type="text" autocomplete="nom">
+                                    <div class="mt-2" style="display: none;">
+                                        <p class="text-sm text-red-600">
+                                        </p>
+                                    </div>
+                                </div>
+                                {{--                               taille de la structure--}}
+                                <div class="col-span-6 sm:col-span-4">
+                                    <select
+                                        name="level"
+                                        id="level"
+                                        class="border p-2 rounded w-full w-full">
+                                        <option value="0">Taille de la structure</option>
+                                        <option value="1">200-300</option>
+                                        <option value="1">300-400</option>
+                                        <option value="1">500-600</option>
+                                        <option value="1">600-700</option>
+                                    </select>
+                                    <div class="mt-2" style="display: none;">
+                                        <p class="text-sm text-red-600">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-span-6 sm:col-span-4">
+                                    <input type="hidden" name="_token"
+                                           value="v832rg8hAbQ0WiHwc9fqtG4VX0srDxmBzK6oFibg"> <label
+                                        class="block font-medium text-sm text-gray-700" for="photo">
+                                        <span>Logo</span>
+                                    </label>
+                                    <div class="mt-2 h-16 w-16">
+                                        <img class="w-full" src="https://ui-avatars.com/api/?name=benaja"
+                                             alt="benaja">
+                                    </div>
+                                    <div class="mt-2" style="display: none;"><span
+                                            class="block rounded-full w-20 h-20"
+                                            style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(&quot;null&quot;);"></span>
+                                    </div>
+                                    <button type="button"
+                                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2">
+                                        Select A New Photo
+                                    </button>
+                                    <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+
+                                        </p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
                         </div>
                     </div>
-                    <div class="md:flex-1 md:pl-3 mt-2 md:mt-0">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Twitter</label>
-                        <div class="w-full flex">
-                            <span class="text-xs py-4 px-2 bg-grey-light text-grey-dark">twitter.com/</span>
-                            <input class="flex-1 shadow-inner p-4 border-0" type="text" name="twitter" placeholder="acmeco">
+                </div>
+            </div>
+            <div class="hidden sm:block">
+                <div class="py-8">
+                    <div class="border-t border-gray-200"></div>
+                </div>
+            </div>
+
+            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
+                <div class="md:col-span-1">
+                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
+                            Mettre à jour le mot de passe
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-600">
+                            Assurez-vous que votre compte utilise un mot de passe long et aléatoire pour rester
+                            sécurisé.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <form>
+                        <div class="shadow overflow-hidden sm:rounded-md">
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <div class="grid grid-cols-6 gap-6">
+                                    <div class="col-span-6 sm:col-span-4"><label
+                                            class="block font-medium text-sm text-gray-700"
+                                            for="current_password"><span>Current Password</span></label> <input
+                                            class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                            id="current_password" type="password" autocomplete="current-password">
+                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+
+                                            </p></div>
+                                    </div>
+                                    <div class="col-span-6 sm:col-span-4"><label
+                                            class="block font-medium text-sm text-gray-700" for="password"><span>New Password</span></label>
+                                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" id="password"
+                                               type="password" autocomplete="new-password">
+                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+
+                                            </p></div>
+                                    </div>
+                                    <div class="col-span-6 sm:col-span-4"><label
+                                            class="block font-medium text-sm text-gray-700" for="password_confirmation"><span>Confirm Password</span></label>
+                                        <input class="form-input rounded-md shadow-sm mt-1 block w-full"
+                                               id="password_confirmation" type="password" autocomplete="new-password">
+                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+
+                                            </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                <div class="mr-3">
+                                    <div class="text-sm text-gray-600" style="display: none;">
+                                        Saved.
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <div class="hidden sm:block">
+                    <div class="py-8">
+                        <div class="border-t border-gray-200"></div>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
+                    <div class="md:col-span-1">
+                        <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
+                                Les informations supplémentaires sur vous
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-600">
+                                Afin de mieux vous orientez sur la plate-forme il nous est nécessaire de disposser de
+                                suffisament d'information sur vous!
+                            </p></div>
+                    </div>
+                    <div class="mt-5 md:mt-0 md:col-span-2">
+                        <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg"><h3
+                                class="text-lg font-medium text-gray-900">
+                                You have not enabled two factor authentication.
+                            </h3>
+                            <div class="mt-3 max-w-xl text-sm text-gray-600"><p>
+                                    When two factor authentication is enabled, you will be prompted for a secure, random
+                                    token during authentication. You may retrieve this token from your phone's Google
+                                    Authenticator application.
+                                </p></div> <!---->
+                            <div class="mt-5">
+                                <div><span><span><button type="button"
+                                                         class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+                        Enable
+                    </button></span> <div class="v-portal" style="display: none;"></div></span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="md:flex mb-4">
-                    <div class="md:flex-1 md:pr-3">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Instagram</label>
-                        <div class="w-full flex">
-                            <span class="text-xs py-4 px-2 bg-grey-light text-grey-dark">instagram.com/</span>
-                            <input class="flex-1 shadow-inner p-4 border-0" type="text" name="instagram" placeholder="acmeco">
+            </div>
+
+            <div class="hidden sm:block">
+                <div class="py-8">
+                    <div class="border-t border-gray-200"></div>
+                </div>
+            </div>
+
+            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
+                <div class="md:col-span-1">
+                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
+                            Votre école
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-600">
+                            bgrfacile vous offre la possibilité de retrouver des votres écoles si seulement celui si est
+                            enregistrer et membre de bgrfacile.
+                            Ainsi il vous sera donner plusieurs possibilité seulement possible lorque vous faités partie
+                            d'une école.
+                        </p></div>
+                </div>
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
+                        <div class="max-w-xl text-sm text-gray-600">
+                            If necessary, you may logout of all of your other browser sessions across all of your
+                            devices. If you feel your account has been compromised, you should also update your
+                            password.
                         </div>
-                    </div>
-                    <div class="md:flex-1 md:pl-3 mt-2 md:mt-0">
-                        <label class="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Yelp</label>
-                        <div class="w-full flex">
-                            <span class="text-xs py-4 px-2 bg-grey-light text-grey-dark">yelp.com/</span>
-                            <input class="flex-1 shadow-inner p-4 border-0" type="text" name="yelp" placeholder="acmeco">
+                        <div class="mt-5 space-y-6">
+                            <div class="flex items-center">
+                                <div>
+                                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                         viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-gray-500">
+                                        <path
+                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-3">
+                                    <div class="text-sm text-gray-600">
+                                        Windows - Chrome
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-gray-500">
+                                            127.0.0.1,
+
+                                            <span class="text-green-500 font-semibold">This device</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="flex items-center mt-5">
+                            <button type="submit"
+                                    class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
+                                Logout Other Browser Sessions
+                            </button>
+                            <div class="ml-3">
+                                <div class="text-sm text-gray-600" style="display: none;">
+                                    Done.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-portal" style="display: none;"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="md:flex mb-6">
-            <div class="md:w-1/3">
-                <legend class="uppercase tracking-wide text-sm">Description</legend>
-            </div>
-            <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
-                <textarea class="w-full shadow-inner p-4 border-0" placeholder="We build fine acmes." rows="6"></textarea>
-            </div>
-        </div>
-        <div class="md:flex mb-6">
-            <div class="md:w-1/3">
-                <legend class="uppercase tracking-wide text-sm">Cover Image</legend>
-            </div>
-            <div class="md:flex-1 px-3 text-center">
-                <div class="button bg-gold hover:bg-gold-dark text-cream mx-auto cusor-pointer relative">
-                    <input class="opacity-0 absolute pin-x pin-y" type="file" name="cover_image">
-                    Add Cover Image
+
+            <div class="hidden sm:block">
+                <div class="py-8">
+                    <div class="border-t border-gray-200"></div>
                 </div>
             </div>
-        </div>
-        <div class="md:flex mb-6 border border-t-1 border-b-0 border-x-0 border-cream-dark">
-            <div class="md:flex-1 px-3 text-center md:text-right">
-                <input type="hidden" name="sponsor" value="0">
-                <input class="button text-cream-lighter bg-brick hover:bg-brick-dark" type="submit" value="Create Location">
+
+            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
+                <div class="md:col-span-1">
+                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
+                            Supprimer le compte
+                        </h3>
+                        <p class="mt-1 text-sm text-gray-600">
+                            Supprimez définitivement votre compte.
+                        </p></div>
+                </div>
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                    <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
+                        <div class="max-w-xl text-sm text-gray-600">
+                            Une fois votre compte supprimé, toutes ses ressources et données seront définitivement
+                            supprimées. Avant de supprimer votre compte, veuillez télécharger les données ou
+                            informations que vous souhaitez conserver.
+                        </div>
+                        <div class="mt-5">
+                            <button type="button"
+                                    class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-600 transition ease-in-out duration-150">
+                                supprimer le compte
+                            </button>
+                        </div>
+                        <div class="v-portal" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

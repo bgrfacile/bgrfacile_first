@@ -147,18 +147,18 @@
         <div class="mx-auto max-w-4xl py-16 text-gray-700">
             <h3 class="mb-7 text-2xl font-bold text-left border-b pb-2">Remerciement</h3>
             <div class="flex flex-col md:flex-row lg:-mx-8 items-center mb-12 md:mb-20">
-                <div class="w-full lg:w-1/2 lg:px-8">
-                    <div class="bg-transparent rounded-lg shadow-lg p-8 md:mx-4">
-                        <div class="w-64 h-64  border border-solid max-w-sm mx-auto">
-                            <img
-                                src="{{ asset('assets/images/bgr_dessin1.png') }}"
-                                alt="garçon qui étudie"
-                                title="#MyArt@Lb14"
-                                class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 lg:px-8 text-justify">
+{{--                <div class="w-full lg:w-1/2 lg:px-8">--}}
+{{--                    <div class="bg-transparent rounded-lg shadow-lg p-8 md:mx-4">--}}
+{{--                        <div class="w-64 h-64  border border-solid max-w-sm mx-auto">--}}
+{{--                            <img--}}
+{{--                                src="{{ asset('assets/images/bgr_dessin1.png') }}"--}}
+{{--                                alt="garçon qui étudie"--}}
+{{--                                title="#MyArt@Lb14"--}}
+{{--                                class="w-full h-full object-cover">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                <div class="w-full  lg:px-8 text-justify px-4 ">
                     <blockquote>
                         <p class="mb-2 ">
                             Je tiens à remercier toutes les personnes qui ont contribué au succès de ce site et qui ont
