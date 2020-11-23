@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 
 @section('baniere')
     @include('layouts.partials.baniere_profil')

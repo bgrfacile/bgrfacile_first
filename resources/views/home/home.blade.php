@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 
 
 @section('baniere')
@@ -931,7 +931,7 @@
     {{--tarifs--}}
     <section id="price" class=" bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
         <div class="text-center">
-            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le forfait idéal pour vous</h2>
+            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le prix idéal pour vous</h2>
         </div>
 
         <div class="flex flex-col md:flex-row items-start justify-between mt-12">

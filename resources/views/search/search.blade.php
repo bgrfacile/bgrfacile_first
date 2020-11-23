@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 
 @section('content')
 {{--    <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">--}}

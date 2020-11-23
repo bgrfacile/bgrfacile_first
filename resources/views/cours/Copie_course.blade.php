@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 
 @section('baniere')
     <div class="w-full bg-cover bg-center"

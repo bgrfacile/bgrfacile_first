@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 
 @section('content')
     <div class="bg-gray-50">

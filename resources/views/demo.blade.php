@@ -1,4 +1,4 @@
-@extends('layouts.front')
+@extends('layouts.base')
 @section('content')
 
     <div x-data="{ cartOpen: false , isOpen: false }" class="bg-white">
