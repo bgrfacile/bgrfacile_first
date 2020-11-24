@@ -84,7 +84,7 @@
             </svg>
             <span>Élèves ou Étudiants</span>
         </h2>
-        <p class="text-gray-600 mb-10">
+        <p class="text-gray-600 mb-10 text-justify">
 
 
             Après création de
@@ -106,7 +106,7 @@
                     src="{{ asset('assets/images/course.svg') }}">
             </div>
             <div class="w-full flex-1 pl-5">
-                <p class="mb-2">
+                <p class="mb-2 text-justify">
                     <strong>Cours </strong><br>
                     Ce sont des documents rédigés par un <strong>formateur agréé</strong> mis à la dispositions des
                     apprenants pour
@@ -132,7 +132,7 @@
                     src="{{ asset('assets/images/exercise.svg') }}">
             </div>
             <div class="w-full flex-1 pl-5">
-                <p class="mb-2">
+                <p class="mb-2 text-justify">
                     <strong>Exercices / Corrigés </strong>
                     <br>
                     Ce sont des entraînements qui aident à mieux comprendre son cours. Les exercices sont pour la
@@ -157,7 +157,7 @@
                     src="{{ asset('assets/images/solution.svg') }}">
             </div>
             <div class="w-full flex-1 pl-5">
-                <p class="mb-2">
+                <p class="mb-2 text-justify">
                     <strong>Astuces</strong>
                     <br>
                     cette section est réservée pour un ensemble d'éléments très utile pour l'apprenant mais qui ne
@@ -187,7 +187,7 @@
             </svg>
             <span>Formateurs</span>
         </h2>
-        <p class="text-gray-600 mb-5">
+        <p class="text-gray-600 mb-5 text-justify">
             Outre le statut par défaut (élèves ou étudiants), il existe un <strong>statut formateur</strong> dans lequel
             les utilisateurs
             peuvent créer des contenus de <em>cours, d’exercices et des corrigés</em>. Ces utilisateurs ont la
@@ -213,19 +213,19 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                         </g>
                     </svg>
-                    <span>École en ligne</span>
+                    <span>École virtuelle</span>
                 </h2>
-                <p class="text-gray-600 mb-5">
-                    Chaque établissement a la possibilité de s’inscrire sur notre plateforme. Ceci facilitera
-                    l’interaction entre les élèves ou étudiants et les formateurs, en cas d’urgence (maladie, …)
-                    l’apprenant pourra continuer à suivre ses cours et recevoir ses exercices à distance via notre
-                    plateforme.L’établissement pourra également mettre en avant ses bienfondés afin de permettre à
+                <p class="text-gray-600 mb-5 text-justify">
+                    Chaque établissement a la possibilité de s'enregistrer sur la plateforme. Ceci facilitera
+                    l’interaction entre les élèves ou étudiants et les formateurs.
+                    L’apprenant pourra continuer à suivre ses cours et recevoir ses exercices à distance via notre
+                    plateforme. L’établissement pourra également mettre en avant ses bienfondés afin de permettre à
                     chaque personne voulant s’y inscrire d’avoir des informations telles que : les niveaux proposés,
                     les filières et leurs débouchées, les emplois du temps et bien d’autres.
                 </p>
                 <p class="flex mb-4">
                     <a
-                        href="{{ url('/ecoles#creeSonEcole') }}"
+                        href="{{ url('/ecoles') }}"
                         class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
                         En savoir plus >
                     </a>

@@ -16,7 +16,7 @@
         <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
-                <a href="#" class="block bg-white rounded-lg shadow-lg p-8 md:mx-4">
+                <a href="{{ route('astuces.audio') }}" class="block bg-white rounded-lg shadow-lg p-8 md:mx-4">
                     <div class="flex justify-between items-center">
                         <h4 class="text-xl font-bold">Astuces audios</h4>
                         <img
@@ -56,7 +56,7 @@
 
         <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
             <h2 class="text-3xl leading-9 font-extrabold text-gray-900">
-                Notions fréquentes
+                Les plus fréquentes
             </h2>
             <div class="mt-6 border-t-2 border-gray-100 pt-10">
                 <dl class="md:grid md:grid-cols-2 md:gap-8">

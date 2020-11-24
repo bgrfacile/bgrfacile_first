@@ -74,6 +74,7 @@
                 <a href="{{ route('profil.myFavoris') }}"
                    class="text-lg font-bold">Favoris</a>
             </li>
+            @can('create course')
             <li
                 class="{{Route::currentRouteNamed('profil.myCourses')?
             'py-3 px-8  flex justify-center items-center
@@ -90,6 +91,8 @@
                 <a href="{{ route('profil.myCourses') }}"
                    class="text-lg font-bold">Cours</a>
             </li>
+            @endcan
+            @can('create course')
             <li
                 class="{{Route::currentRouteNamed('profil.myExercises')?
             'py-3 px-8  flex justify-center items-center
@@ -106,6 +109,8 @@
                 <a href="{{ route('profil.myExercises') }}"
                    class="text-lg font-bold">Exercice</a>
             </li>
+            @endcan
+            @can('create course')
             <li
                 class="{{Route::currentRouteNamed('profil.myCorrected')?
             'py-3 px-8  flex justify-center items-center
@@ -122,6 +127,8 @@
                 <a href="{{ route('profil.myCorrected') }}"
                    class="text-lg font-bold">Corriger</a>
             </li>
+            @endcan
+            @can('create course')
             <li
                 class="{{Route::currentRouteNamed('profil.mySchool')?
             'py-3 px-8  flex justify-center items-center
@@ -138,6 +145,7 @@
                 <a href="{{ route('profil.mySchool') }}"
                    class="text-lg font-bold">school</a>
             </li>
+            @endcan
             @can('create course')
                 <li
                     class="{{Route::currentRouteNamed('profil.myDashbord')?

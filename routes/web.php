@@ -63,6 +63,10 @@ Route::get('/astuces',function (){
     return view('astuces.astuces');
 })->name('astuces.index');
 
+Route::get('/astuces/audios',function (){
+    return view('astuces.astuces_audios');
+})->name('astuces.audio');
+
 /*
  * Exercices
  * */

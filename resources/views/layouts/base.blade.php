@@ -57,7 +57,7 @@
                                 <a href="{{ route('ecoles.index') }}"
                                    class="{{ Request::segment(1) === 'ecoles' ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
                                'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
-                                    Écoles en ligne
+                                    École virtuelle
                                 </a>
 
                                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
@@ -220,7 +220,7 @@
                     <a href="{{ route('ecoles.index') }}"
                        class="{{ Request::segment(1) === 'ecoles' ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                        Écoles en ligne
+                        École virtuelle
                     </a>
 
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">

@@ -24,7 +24,7 @@
                 <div class="md:col-span-1">
                     <div class="px-4 sm:px-0">
                         <h3 class="title-font sm:text-3xl text-2xl mb-4 font-medium	 text-black font-mono">
-                            Informations général sur l'école
+                            Informations générales sur l'école
                         </h3>
                         <p class="mt-1 text-sm text-gray-600">
                             Les informations renseigner ici seront visibles sur la page de votre école.

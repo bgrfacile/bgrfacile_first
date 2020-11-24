@@ -7,16 +7,15 @@
     {{--presentation--}}
     <section>
         <div class="container w-full md:w-3/4 mx-auto px-4 py-8 text-center">
-            <h1 class="text-5xl font-bold">écoles en ligne</h1>
+            <h1 class="text-5xl font-bold">école virtuelle</h1>
             <p class="mt-2 text-gray-600 text-xl mb-8">
-                l'école en ligne est un espace virtuel crée pour les écoles traditionnelles.Chaque école le désirant
-                peut créé son espace en ligne.
+                Un espace virtuel où vous retrouverez vos écoles en un clic.
             </p>
             <p class="flex justify-center items-center flex-wrap mb-4">
                 <a
                     href="{{ route('schools.create') }}"
                     class="py-2 px-4 bg-blue-600 text-sm text-white rounded-md shadow-lg hover:underline">
-                    Créé son école
+                    Enregistrer son école
                 </a>
                 <a
                     href="#recherche_ecole"
@@ -43,13 +42,11 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                         </g>
                     </svg>
-                    <span>Les étudiants</span>
+                    <span>étudiants / élèves</span>
                 </h2>
                 <p class="mt-2 text-gray-600">
-                    Sur la plateforme est présent des étudiants de divers horizon sans distinctions. Mais dans le cadre
-                    d'une école en ligne, seuls les étudiants possédant les accès nécessaires peuvent y accéder. Un
-                    étudiant qui appartient à une école en ligne voit dans son profil de nouvelle fonctionnalité lui
-                    permettant d'interagir avec sa scolarité.
+                    Sur la plateforme est présent des étudiants ou élèves de divers horizons sans distinctions. Dans le cadre
+                    d'une école virtuelle, seuls les étudiants possédant les accès nécessaires (code individuel) peuvent y accéder.
                 </p>
             </div>
             <div class="w-full lg:w-1/2 lg:px-8">
@@ -86,13 +83,13 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                         </g>
                     </svg>
-                    <span>Les professeurs</span>
+                    <span>formateurs</span>
                 </h2>
                 <p class="mt-2 text-gray-600">
-                    Sur la plateforme, chaque formateur inscrit est libre et indépendant de partager ces compétences
-                    sans aucune attache. Mais dans le cadre d'une école en ligne, un professeur a la possibilité
-                    d'adhérer à une ou plusieurs écoles. Après adhésion à une école un professeur a la possibilité
-                    d'administrer une classe et d'autre fonctionnalité propre à une école en ligne.
+                    Sur la plateforme, chaque formateur inscrit est libre et indépendant de partager ses compétences
+                    sans aucune attache. Dans le cadre d'une école virtuelle, un formateur a la possibilité
+                    d'adhérer à une ou plusieurs écoles. Après adhésion, il a la possibilité
+                    d'enseigner une classe.
                 </p>
             </div>
         </div>
@@ -103,7 +100,7 @@
         <div class="flex flex-col md:flex-row lg:-mx-8">
             <div class="w-full lg:w-1/2 lg:px-8">
                 <h6 class="text-sm uppercase font-semibold tracking-widest"></h6>
-                <h2 class="flex items-center  text-3xl leading-tight font-bold mt-4">
+                <h2 class="flex items-center  text-3xl leading-tight font-bold mt-4 mb-4">
                     <svg class="h-4 w-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                          viewBox="0 0 444.819 444.819">
                         <g>
@@ -114,14 +111,12 @@
 		c7.046-7.423,10.571-16.084,10.571-25.981C362.597,212.321,359.071,203.755,352.025,196.712z"/>
                         </g>
                     </svg>
-                    <span>Comment créé son école en ligne</span>
+                    <span>Comment enregistrer son école virtuelle</span>
                 </h2>
-                <p class="mb-2 mt-2 leading-relaxed">
-                    La création se fait en plusieurs étapes.
-                </p>
+
                 <div class="w-full h-72 rounded-lg">
                     <img
-                        src="#"
+                        src="{{ asset('assets/images/bgr_dessin1.png') }}"
                         alt="..."
                         class="w-full h-full object-cover">
                 </div>
@@ -136,11 +131,10 @@
                         </div>
                     </div>
                     <div class="ml-8">
-                        <h4 class="text-xl font-bold">Remplir les informations nécessaires</h4>
+                        <h4 class="text-xl font-bold">Remplir le formulaire</h4>
                         <p class="mt-2 leading-relaxed">
-                            un formulaire de création est fourni lorsqu'une école traditionnelle désirée crée son espace
-                            en ligne. Renseigner les informations exactes sur votre structure est une étape essentielle
-                            lors de la création de son espace en ligne.
+                             Renseigner les informations exactes sur votre structure est une étape essentielle
+                            lors de la création de son espace virtuel.
                         </p>
                     </div>
                 </div>
@@ -155,9 +149,8 @@
                     <div class="ml-8">
                         <h4 class="text-xl font-bold">Validation de la demande</h4>
                         <p class="mt-2 leading-relaxed">
-                            Après le remplissage du formulaire une demande est envoyée à <strong>l'équipe
-                                bgrfacile</strong>. La seconde
-                            étape consiste au traitement et la validation de ces données par l'équipe.
+                            Après le remplissage du formulaire, une demande est envoyée à <strong>l'équipe
+                                bgrfacile</strong> afin de traiter et valider la création de l'espace virtuel.
                         </p>
                     </div>
                 </div>
@@ -170,11 +163,11 @@
                         </div>
                     </div>
                     <div class="ml-8">
-                        <h4 class="text-xl font-bold">La rencontre</h4>
+                        <h4 class="text-xl font-bold">Entrevue</h4>
                         <p class="mt-2 leading-relaxed">
-                            Une fois qu'une demande est acceptée, un <strong>mail</strong> est envoyé à l'établissement
+                            Une fois la demande validée, un <strong>mail</strong> est envoyé à l'établissement
                             pour une
-                            rencontre avec <strong>l'équipe bgrfacile.</strong>
+                            entrevue avec <strong>l'équipe bgrfacile</strong> et une formation sur l'utilisation de l'espace virtuel.
                         </p>
                     </div>
                 </div>
@@ -199,7 +192,7 @@
 
             <div class="block bg-white rounded-lg shadow-lg p-8 md:mx-4">
                 <div class="flex justify-between items-center">
-                    <h4 class="text-xl font-bold">Gestion des emploies du temps</h4>
+                    <h4 class="text-xl font-bold">Gestion des emplois du temps</h4>
                     <img
                         src="{{ asset('assets/svg/pencil.svg') }}">
                 </div>
