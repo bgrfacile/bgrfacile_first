@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-les audios
+les audios que nous proposant
 @endsection
