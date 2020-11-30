@@ -101,6 +101,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="primary tw-flex-1 w-full" style="max-width: 1100px;">
                     <div class="lesson-list">
                         <div class="ais-results">
