@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AstucesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ChargementCourseController;
 use App\Http\Controllers\LevelsController;
@@ -59,13 +60,14 @@ Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('co
 /*
  * Astuces
  * */
-Route::get('/astuces',function (){
-    return view('astuces.astuces');
-})->name('astuces.index');
+Route::get('/astuces',[AstucesController::class,'index'])->name('astuces.index');
 
-Route::get('/astuces/audios',function (){
-    return view('astuces.astuces_audios');
-})->name('astuces.audio');
+Route::get('/astuces/audios',[AstucesController::class,'audios'])->name('astuces.audio');
+
+Route::get('/astuces/mathematique',[AstucesController::class,'maths'])->name('astuces.maths');
+
+Route::get('/astuces/chimie',[AstucesController::class,'chimie'])->name('astuces.chimie');
+
 
 /*
  * Exercices

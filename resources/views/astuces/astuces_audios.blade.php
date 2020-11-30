@@ -1,15 +1,24 @@
 @extends('layouts.base')
+@section('title')
+    astuces audios | bgrfacile.com
+@endsection
 
 @section('baniere')
     <div class="w-full bg-gray-200 bg-cover bg-center flex items-center justify-center h-full w-full"
          style="height:25rem; ">
         <h2 class="text-3xl font-extrabold text-gray-900 text-center">
-            Une sélection de raccourcis traduit en fichier audio pour vous.
+            des potcast de vos cours
         </h2>
     </div>
 @endsection
 
 @section('content')
+    <div class="container grid grid-cols-3 gap-4">
+        <div>
+
+        </div>
+    </div>
+
     <section class="my-10">
         <div class="container mx-auto" style="max-width: 1166px;">
             <div class="flex  w-full" style="max-width: 1200px;">
