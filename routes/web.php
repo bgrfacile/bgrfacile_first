@@ -64,6 +64,8 @@ Route::get('/astuces',[AstucesController::class,'index'])->name('astuces.index')
 
 Route::get('/astuces/audios',[AstucesController::class,'audios'])->name('astuces.audio');
 
+Route::get('/astuces/fiches',[AstucesController::class,'fiches'])->name('astuces.fiche');
+
 Route::get('/astuces/mathematique',[AstucesController::class,'maths'])->name('astuces.maths');
 
 Route::get('/astuces/chimie',[AstucesController::class,'chimie'])->name('astuces.chimie');

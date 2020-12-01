@@ -32,7 +32,7 @@
                     </p>
                 </a>
 
-                <a href="#" class="block bg-white rounded-lg shadow-lg p-8 md:mx-4">
+                <a href="{{ route('astuces.fiche') }}" class="block bg-white rounded-lg shadow-lg p-8 md:mx-4">
                     <div class="flex justify-between items-center">
                         <h4 class="text-xl font-bold">Astuces en fichier</h4>
                         <img src="https://cdn.perl.org/perlweb/images/icons/ic_highlight_docs.svg">
@@ -58,87 +58,57 @@
             </div>
         </div>
 
-
-
         <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
             <h2 class="text-3xl leading-9 font-extrabold text-gray-900">
                 Des astuces populaires
             </h2>
             <p>
-                Dans chaque matière il existe des problèmes recuperant ou des elements qui reviennent souvent. Nous les
-                avos classé pour vous. Reste plus à vous de consulté à utilisé à bonne usage.
+                Dans chaque matière il existe des problèmes recuperant, des élements qui reviennent souvent. Nous les
+                avons classé pour vous. Reste plus à vous de consulté et utilisé à bonne usage.
             </p>
-            <div class="mt-6 border-t-2 border-gray-100 pt-10">
-                <dl class="md:grid md:grid-cols-2 md:gap-8">
-                    <div>
-                        <div>
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                En philosophie
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Une liste de question qui reviennent souvent en philosophie.
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {{--                mathematique--}}
+                <div class="w-full py-6 md:p-6">
+                    <a href="{{ route('astuces.maths') }}">
+                        <div class="shadow-md hover:shadow-xl mx-auto rounded">
+                            <figure class="border-b">
+                                <script
+                                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_nIhxTu.json"
+                                               background="#fff" speed="1" loop autoplay></lottie-player>
+                                <figcaption class="bg-black text-white font-semibold px-4">
+                                    En mathématique
+                                </figcaption>
+                            </figure>
+                            <div class="p-4 ml-auto">
+                                <p class="text-sm text-gray-900 font-black">
+                                    Des formules recurentes, des théorèmes populaires et d'autres astuces.
                                 </p>
-                            </dd>
+                            </div>
                         </div>
-
-                        <div class="mt-12">
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                <a href="{{ route('astuces.maths') }}">En mathématique</a>
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Une sélection de formule recurente en mathématique.
+                    </a>
+                </div>
+                {{--                chimie--}}
+                <div class="w-full py-6 md:p-6">
+                    <a href="{{ route('astuces.chimie') }}">
+                        <div class="shadow-md hover:shadow-xl mx-auto rounded">
+                            <figure class="border-b">
+                                <script
+                                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_nIhxTu.json"
+                                               background="#fff" speed="1" loop autoplay></lottie-player>
+                                <figcaption class="bg-black text-white font-semibold px-4">
+                                    En chimie
+                                </figcaption>
+                            </figure>
+                            <div class="p-4 ml-auto">
+                                <p class="text-sm text-gray-900 font-black">
+                                    Des notions à absolument connaitre en chimie.
                                 </p>
-                            </dd>
+                            </div>
                         </div>
-
-                        <div class="mt-12">
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                <a href="{{ route('astuces.chimie') }}">En chimie</a>
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Les formules à connaitre absoluments.
-                                </p>
-                            </dd>
-                        </div>
-                    </div>
-                    <div class="mt-12 md:mt-0">
-                        <div>
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                Histoire
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Selèction de date à connaitre.
-                                </p>
-                            </dd>
-                        </div>
-
-                        <div class="mt-12">
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                Géographie
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Ce qu'il faut abolument connaitre.
-                                </p>
-                            </dd>
-                        </div>
-
-                        <div class="mt-12">
-                            <dt class="text-lg leading-6 font-medium text-gray-900">
-                                Chimie
-                            </dt>
-                            <dd class="mt-2">
-                                <p class="text-base leading-6 text-gray-500">
-                                    Ce que tout le monde doit savoir!
-                                </p>
-                            </dd>
-                        </div>
-                    </div>
-                </dl>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

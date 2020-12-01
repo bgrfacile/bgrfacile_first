@@ -13,6 +13,9 @@ class AstucesController extends Controller
     public function audios(){
         return view('astuces.astuces_audios');
     }
+    public function fiches(){
+        return view('astuces.astuces_fiches');
+    }
 
     public function maths(){
         return view('astuces.pages.mathematique');
