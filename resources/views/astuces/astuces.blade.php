@@ -23,7 +23,7 @@
                     <div class="flex justify-between items-center">
                         <h4 class="text-xl font-bold">Astuces en audios</h4>
                         <img
-                            src="{{ asset('assets/svg/pencil.svg') }}">
+                            src="{{ asset('assets/svg/Perldoc.svg') }}">
                     </div>
 
                     <p class="mt-4">

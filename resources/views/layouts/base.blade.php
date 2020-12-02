@@ -28,7 +28,7 @@
 
 </head>
 <body>
-<div class="flex flex-col min-h-screen items-stretch">
+<div id="app" class="flex flex-col min-h-screen items-stretch">
     <header class="sticky top-0 bg-white">
         <nav x-data="{ open: false }"
              @keydown.window.escape="open = false"
