@@ -34,8 +34,8 @@
              @keydown.window.escape="open = false"
              class="text-gray-800 shadow">
             <div
-                class="container w-full mx-auto max-w-7xl px-2 relative">
-                <div class="flex items-center justify-between h-16 relative">
+                class="container w-full mx-auto max-w-7xl px-2 ">
+                <div class="flex items-center justify-between h-16 ">
                     <div class="flex items-center justify-between flex-1">
                         <div>
                             <a href="{{ url('/') }}" class="h-auto w-32 flex justify-center items-center mb-2">
