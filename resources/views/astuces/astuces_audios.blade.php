@@ -21,17 +21,19 @@
 @section('content')
     <div class="min-h-screen text-gray-800">
         <div class="container mx-auto grid grid-cols-3 gap-4 px-6 mb-8">
-            <div class="col-span-3 md:col-span-2 bg-gray-100">
+            <div class="col-span-3 md:col-span-2">
                 <div class="bg-white border rounded-lg w-full mb-8 p-8">
+                    <h3 class="font-black text-2xl"><span class="text-red-600">Chapitre I</span> Un commerçant failli
+                    </h3>
                     <div class="flex flex-col">
                         {{--                        items chapitre--}}
                         <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
                             <div class="flex-1 flex flex-col">
                                 <div>
-                                    <span>Chapitre 1</span>
-                                    <span class="font-black">LOUZOLO</span>
+                                    <span>Partie 1</span>
+                                    {{--                                    <span class="font-black">Un commerçant failli</span>--}}
                                 </div>
-                                <p>Petit mot sur la lecture </p>
+                                <p></p>
                             </div>
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
@@ -46,15 +48,51 @@
                         <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
                             <div class="flex-1 flex flex-col">
                                 <div>
-                                    <span>Chapitre 2</span>
-                                    <span class="font-black">----</span>
+                                    <span>Partie 2</span>
+                                    {{--                                    <span class="font-black">Un voyage pour rien</span>--}}
                                 </div>
-                                <p>Petit mot sur la lecture </p>
+                                <p></p>
                             </div>
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
                                     <source
                                         src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P2.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 3</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P3.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 4</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P4.mp3') }}"
                                         type="audio/mpeg">
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
@@ -72,11 +110,21 @@
                             alt="couverture du livre chronique congolaise">
                     </div>
                     <div class="p-0 md:p-4">
-                        <h5 class="pb-3 font-bold text-2xl">Chromique Congolaise</h5>
-                        <p class="pb-3">résumer sur le livre</p>
+                        <h5 class="pb-3 font-bold text-2xl">Chronique Congolaise</h5>
+                        <p class="pb-3 text-justify">Le chroniqueur raconte le quotidien de l'histoire des hommes, le temps vécu
+                            lui-même, cela dont l'historien, en quête d'une intelligibilité plus abstraite, ne parle pas
+                            : le fait divers, l'événement singulier, et, plus fugaces encore, ces riens, ces
+                            impressions, tristes ou drôles, vagues ou inoubliables, dont une vie est faite, et qui
+                            donnent à toute existence humaine, si modeste, si anonyme qu'elle soit, son irréductible
+                            gravité. J. B. Tati Loutard, en cette douzaine de nouvelles - genre par excellence de la
+                            litote - rend manifeste, par la maîtrise de la plus discrète et la plus juste des écritures,
+                            une authentique sensibilité à ce qui constitue le pathétique de toute existence, qu'elle
+                            soit celle du riche ou du pauvre, de l'accablé ou du puissant ; il apporte aussi, sur le
+                            monde congolais, un document plein de tendresse et de lucidité.</p>
                         <p class="flex flex-col">
-                            <span>Auteur : <strong>----</strong></span>
-                            <span>Lecteur : <strong>----</strong></span>
+                            <span>Auteur : <strong>Jean Baptiste Tati-Loutard</strong></span>
+                            <span>Type d'ouvrage : <strong>Nouvelles</strong></span>
+                            <span>Lectrice : <strong>POUATHY stella exaucée victoire</strong></span>
                         </p>
                     </div>
                 </div>
