@@ -38,7 +38,7 @@
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
                                     <source
-                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P1.mp3') }}"
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P1.mp3') }}"
                                         type="audio/mpeg">
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
@@ -56,7 +56,7 @@
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
                                     <source
-                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P2.mp3') }}"
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P2.mp3') }}"
                                         type="audio/mpeg">
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
@@ -74,7 +74,7 @@
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
                                     <source
-                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P3.mp3') }}"
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P3.mp3') }}"
                                         type="audio/mpeg">
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
@@ -92,7 +92,79 @@
                             <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
                                 <audio id="myAudio" controls>
                                     <source
-                                        src="{{ asset('assets/audios/chronique congolaise/Chronique Congolaise chap1.P4.mp3') }}"
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P4.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 5</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P5.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 6</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P6.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 7</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P7.mp3') }}"
+                                        type="audio/mpeg">
+                                    Votre navigateur ne supporte pas l'élément audio.
+                                </audio>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center pb-3 border-b mb-4">
+                            <div class="flex-1 flex flex-col">
+                                <div>
+                                    <span>Partie 8</span>
+                                    {{--                                    <span class="font-black">L'intégration</span>--}}
+                                </div>
+                                <p></p>
+                            </div>
+                            <div class="text-white p-2 rounded-full bg-gray-300 shadow-lg ml-0 md:ml-6">
+                                <audio id="myAudio" controls>
+                                    <source
+                                        src="{{ asset('assets/audios/chronique congolaise/CCg-chap1-P8.mp3') }}"
                                         type="audio/mpeg">
                                     Votre navigateur ne supporte pas l'élément audio.
                                 </audio>
