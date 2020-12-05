@@ -24,4 +24,8 @@ class AstucesController extends Controller
     public function chimie(){
         return view('astuces.pages.chimie');
     }
+
+    public function physique(){
+        return view('astuces.pages.physique');
+    }
 }

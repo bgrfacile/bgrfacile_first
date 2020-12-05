@@ -64,6 +64,7 @@
                                 <div class="md:flex-shrink-0">
                                     <img
                                         src='https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
+{{--                                        src='$'--}}
                                         alt=""
                                         class="object-fill w-full rounded-lg rounded-b-none md:h-56">
                                 </div>

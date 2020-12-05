@@ -70,6 +70,8 @@ Route::get('/astuces/mathematique',[AstucesController::class,'maths'])->name('as
 
 Route::get('/astuces/chimie',[AstucesController::class,'chimie'])->name('astuces.chimie');
 
+Route::get('/astuces/physique',[AstucesController::class,'physique'])->name('astuces.physique');
+
 
 /*
  * Exercices

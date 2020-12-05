@@ -1,10 +1,85 @@
 @extends('layouts.base')
 @section('title')
-astuces mathematique | bgrfacile.com
+    astuces mathematique | bgrfacile.com
 @endsection
 
 
 @section('content')
+    <div class="min-h-screen">
+        <h2 class="text-2xl font-bold text-center py-6">Les principales formules utilisées en physique</h2>
+        <div class="container mx-auto">
+            <table class="text-left w-full">
+                <thead class="bg-black flex items-center text-white w-full">
+                <tr class="flex w-full mb-4">
+                    <th class="p-4 w-1/4">Description</th>
+                    <th class="p-4 w-1/4">formule</th>
+                    <th class="p-4 w-1/4">auteur</th>
+                    <th class="p-4 w-1/4">niveau enseigner</th>
+                </tr>
+                </thead>
+                <tbody class="bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full"
+                       style="height: 50vh;">
+                <tr class="flex w-full mb-4">
+                    <td class="p-4 w-1/4">
+                        <strong>Le carré de l’hippopotame</strong>
+                        (le théorème de Pythagore)
+                    </td>
+                    <td class="p-4 w-1/4">
+                        <span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style=""><nobr><span
+                                    class="math" id="MathJax-Span-1"
+                                    style="width: 6.484em; display: inline-block;"><span
+                                        style="display: inline-block; position: relative; width: 5.228em; height: 0px; font-size: 124%;"><span
+                                            style="position: absolute; clip: rect(1.359em, 1005.23em, 2.615em, -999.997em); top: -2.359em; left: 0em;"><span
+                                                class="mrow" id="MathJax-Span-2"><span class="msubsup"
+                                                                                       id="MathJax-Span-3"><span
+                                                        style="display: inline-block; position: relative; width: 0.957em; height: 0px;"><span
+                                                            style="position: absolute; clip: rect(3.419em, 1000.5em, 4.173em, -999.997em); top: -4.017em; left: 0em;"><span
+                                                                class="mi" id="MathJax-Span-4"
+                                                                style="font-family: MathJax_Math-italic;">a</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span
+                                                            style="position: absolute; top: -4.369em; left: 0.555em;"><span
+                                                                class="mn" id="MathJax-Span-5"
+                                                                style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span></span></span><span
+                                                    class="mo" id="MathJax-Span-6"
+                                                    style="font-family: MathJax_Main; padding-left: 0.203em;">+</span><span
+                                                    class="msubsup" id="MathJax-Span-7"
+                                                    style="padding-left: 0.203em;"><span
+                                                        style="display: inline-block; position: relative; width: 0.857em; height: 0px;"><span
+                                                            style="position: absolute; clip: rect(3.168em, 1000.4em, 4.173em, -999.997em); top: -4.017em; left: 0em;"><span
+                                                                class="mi" id="MathJax-Span-8"
+                                                                style="font-family: MathJax_Math-italic;">b</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span
+                                                            style="position: absolute; top: -4.369em; left: 0.455em;"><span
+                                                                class="mn" id="MathJax-Span-9"
+                                                                style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span></span></span><span
+                                                    class="mo" id="MathJax-Span-10"
+                                                    style="font-family: MathJax_Main; padding-left: 0.304em;">=</span><span
+                                                    class="msubsup" id="MathJax-Span-11" style="padding-left: 0.304em;"><span
+                                                        style="display: inline-block; position: relative; width: 0.857em; height: 0px;"><span
+                                                            style="position: absolute; clip: rect(3.419em, 1000.46em, 4.173em, -999.997em); top: -4.017em; left: 0em;"><span
+                                                                class="mi" id="MathJax-Span-12"
+                                                                style="font-family: MathJax_Math-italic;">c</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span><span
+                                                            style="position: absolute; top: -4.369em; left: 0.455em;"><span
+                                                                class="mn" id="MathJax-Span-13"
+                                                                style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span
+                                                                style="display: inline-block; width: 0px; height: 4.022em;"></span></span></span></span></span><span
+                                                style="display: inline-block; width: 0px; height: 2.364em;"></span></span></span><span
+                                        style="display: inline-block; overflow: hidden; vertical-align: -0.184em; border-left: 0px solid; width: 0px; height: 1.249em;"></span></span></nobr></span>
+                    </td>
+                    <td class="p-4 w-1/4">Pythagore</td>
+                    <td class="p-4 w-1/4">Dès la 3eme</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
     <div class="my-12">
         <table class="w-10/12 mx-auto">
             <tbody>
@@ -206,6 +281,7 @@ astuces mathematique | bgrfacile.com
                                     style="display: inline-block; overflow: hidden; vertical-align: -0.994em; border-left: 0px solid; width: 0px; height: 2.495em;"></span></span></nobr></span>
                     <script type="math/tex" id="MathJax-Element-3">
                         \frac{df}{dt}=\lim\limits_{h \to 0}=\frac{f(t+h)-f(t)}{h}
+
 
                     </script>
                 </td>

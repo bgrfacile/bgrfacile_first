@@ -14,7 +14,6 @@
 
 
 @section('content')
-
     <div class="bg-white">
         <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -109,13 +108,31 @@
                         </div>
                     </a>
                 </div>
+                {{--                chimie--}}
+                <div class="w-full py-6 md:p-6">
+                    <a href="{{ route('astuces.physique') }}">
+                        <div class="shadow-md hover:shadow-xl mx-auto rounded">
+                            <figure class="border-b">
+                                <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_nIhxTu.json"
+                                               background="#fff" speed="1" loop autoplay></lottie-player>
+                                <figcaption class="bg-black text-white font-semibold px-4">
+                                    En Physique
+                                </figcaption>
+                            </figure>
+                            <div class="p-4 ml-auto">
+                                <p class="text-sm text-gray-900 font-black">
+                                    Des formules physique et leur explication.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-
 @endsection
 
 
 @section('script')
-
+    <script src="{{ asset('js/lottie-player.js') }}" defer></script>
 @endsection

@@ -21,9 +21,9 @@ class CreateCoursesTable extends Migration
             $table->string('description')->nullable();
             $table->longText('content');
             $table->string('image')->nullable();
-            $table->float('note', 8, 2)->nullable();
+//            $table->float('note', 8, 2)->nullable();
             $table->integer('liker')->default(0);
-            $table->enum('enligne', [0, 1, 2]);//0: brouillon 1:en ligne 2:semblant de suppression
+            $table->enum('enligne', [0, 1, 2])->default(0);//0: brouillon 1:en ligne 2:semblant de suppression
             $table->timestamps();
 //            $table->unsignedBigInteger('user_id');
 //            $table->foreign('user_id')->references('id')->on('users');
