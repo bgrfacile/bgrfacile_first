@@ -25,13 +25,6 @@
 
 
 <body>
-
-
-
 @yield('main')
-
-{{--<div class="absolute w-full text-right text-sm bottom-0 p-3 mx-auto text-gray-400">--}}
-{{--    cours écrit par--}}
-{{--</div>--}}
 </body>
 </html>

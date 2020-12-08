@@ -1,10 +1,17 @@
 @extends('layouts.readCourse')
 
 @section('main')
-    <div class="w-full border-b flex flex-row flex-wrap items-center justify-center">
+    <header class="w-full border-b flex flex-row flex-wrap items-center justify-between">
+        <div class="px-1 md:px-6 flex">
+            <a
+                href="/"
+                class="text-3xl font-bold text-gray-800">
+                bgrfacile
+            </a>
+        </div>
         <div class="flex flex-row flex-wrap">
             <a
-                class="p-4 bg-blue-600 hover:bg-blue-300 flex items-center justify-center"
+                class="p-4 hover:bg-gray-300 flex items-center justify-center"
                 href="#comments">
                 <svg class="h-4 w-4" viewBox="-21 -47 682.66669 682" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -13,38 +20,43 @@
                     <path d="m171.292969 211.171875h297.414062v37.5h-297.414062zm0 0"/>
                     <path d="m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"/>
                 </svg>
-                <span class="px-1">123450</span>
+                <span class="px-1">{{ $course->liker }}</span>
             </a>
-        </div>
-        <div class="w-3/5 flex-1 text-center">
             <a
-                href="/"
-                class="text-3xl font-bold text-gray-800">
-                bgrfacile
+                class="p-4  hover:bg-gray-300 flex items-center justify-center"
+                href="#comments">
+                <i class="fas fa-thumbs-up mr-2"></i>
+                <span class="px-1">{{ $course->liker }}</span>
             </a>
         </div>
-    </div>
+    </header>
 
-    {{--    contenue--}}
-    <div class="w-full md:w-7/12 mx-auto mt-6">
-        {{--        titre--}}
-        <div class="w-full h-72 rounded-lg border">
-            <img
-                src="{{ asset('assets/images/bgr dessin3.3.png') }}"
-                alt="garçon qui étudie"
-                title="#MyArt@Lb14"
-                class="w-full h-full object-cover">
-        </div>
+    <main>
+        <div class="w-full md:w-7/12 mx-auto mt-6">
+            {{--            titre--}}
+            <div class="py-3 mb-2 border-b">
+                <h1 class="text-gray-800 text-4xl font-bold">{{ $course->name }}</h1>
+            </div>
+            {{--        image--}}
+            <div class="w-full h-72 border mt-4">
+                <img
+                    src="{{ asset('assets/images/bgr dessin3.3.png') }}"
+                    alt="garçon qui étudie"
+                    title="#MyArt@Lb14"
+                    class="w-full h-full object-cover">
+            </div>
+            {{--            info sur le cours--}}
+            <div class="flex justify-between items-center text-sm text-gray-800 mb-3 mt-2">
+                <div>Matiere</div>
+                <div>Pulier par: <a href="#" class="hover:underline">name auteur</a></div>
+            </div>
 
-        <div class="mx-5 my-3 text-sm">
-            {{--            La <a href="" class="text-red-600 font-bold tracking-widest">matière du cours</a>--}}
+            {{--    contenue--}}
+            <div class="w-full mx-auto border-b pb-6 mb-6">
+                {!! $course->content !!}
+            </div>
+            {{--        commentaire--}}
+            <div></div>
         </div>
-        <div class="w-full text-gray-800 text-4xl font-bold leading-none py-3">
-            {{ $course->name }}
-        </div>
-        <div class="w-full mx-auto">
-            {!! $course->content !!}
-        </div>
-{{--        commentaire--}}
-    </div>
+    </main>
 @endsection

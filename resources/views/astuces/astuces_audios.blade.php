@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('title')
-    astuces audios | bgrfacile.com
+    astuces audios
 @endsection
 
 
@@ -8,13 +8,13 @@
 @section('baniere')
     <div class="w-full h-36 bg-gray-200 bg-cover bg-center flex items-center justify-between px-4 md:px-36 mb-6">
         <h2 class="text-3xl font-extrabold text-gray-900 text-center">
-            Des potcast pour vous
+            Des podcasts pour vous
         </h2>
-        <div>
-            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_NsCkXA/music.json"
-                           background="transparent" speed="1" class="h-24 w-24" loop
-                           autoplay></lottie-player>
-        </div>
+{{--        <div>--}}
+{{--            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_NsCkXA/music.json"--}}
+{{--                           background="transparent" speed="1" class="h-24 w-24" loop--}}
+{{--                           autoplay></lottie-player>--}}
+{{--        </div>--}}
     </div>
 @endsection
 
@@ -257,7 +257,7 @@
                     <div class="w-full h-32">
                         <img
                             class="w-full h-full object-cover"
-                            src="https://miro.medium.com/max/5000/1*jFyawcsqoYctkTuZg6wQ1A.jpeg"
+                            src="{{ asset('assets/images/couverture1.png') }}"
                             alt="couverture du livre chronique congolaise">
                     </div>
                     <div class="p-0 md:p-4">

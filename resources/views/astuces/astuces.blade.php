@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('title')
-    astuces | bgrfacile.com
+    astuces
 @endsection
 
 @section('baniere')

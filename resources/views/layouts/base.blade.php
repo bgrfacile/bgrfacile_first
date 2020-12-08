@@ -11,7 +11,7 @@
     <meta name="author" content="LEFT4CODE">
 
     @yield('head')
-    <title>@yield('title')</title>
+    <title>@yield('title')| bgrfacile.com</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -155,7 +155,7 @@
 
                                             <a href="{{ route('profil.index') }}"
                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                               role="menuitem">Ton profil</a>
+                                               role="menuitem">Mon profil</a>
 
                                             <form method="POST" action="{{ url('/logout') }}">
                                                 @csrf
@@ -176,7 +176,7 @@
                                     </a>
                                     <a href="{{ url('/register') }}"
                                        class="block bg-blue-600 text-white font-bold py-2 px-3 rounded  hover:bg-transparent hover:text-gray-900 hover:bg-gray-100">
-                                        crée un compte
+                                        créer un compte
                                     </a>
                                 </div>
                             @endif
@@ -287,8 +287,9 @@
                         </div>
                         <div class="mt-3 px-2 space-y-1">
                             <a href="{{ route('profil.index') }}"
-                               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Votre
-                                profil</a>
+                               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                                Mon profil
+                            </a>
 
                             <form method="POST" action="{{ url('/logout') }}">
                                 @csrf
