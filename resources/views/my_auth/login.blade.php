@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bgrfacile</title>
+    <title>connexion| bgrfacile.com</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,18 +15,100 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/app2.css') }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
+    <meta name="theme-color" content="#ffffff">
+    <script src="../../Tassets/js/config.navbar-vertical.js"></script>
 
-    <style>
-        body {
-            font-family: 'Nunito';
+    <link href="../../Tassets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl" />
+    <link href="../../Tassets/css/theme.min.css" rel="stylesheet" id="style-default" />
+    <script>
+        var isRTL = JSON.parse(localStorage.getItem('isRTL'));
+        if (isRTL) {
+            var linkDefault = document.getElementById('style-default');
+            linkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            linkRTL.setAttribute('disabled', true);
         }
-    </style>
+    </script>
 </head>
 
-<body class="antialiased bg-white font-family-karla h-screen">
+<body class="bg-white ">
+
+<main class="main" id="top">
+    <div class="container-fluid">
+        <script>
+            var isFluid = JSON.parse(localStorage.getItem('isFluid'));
+            if (isFluid) {
+                var container = document.querySelector('[data-layout]');
+                container.classList.remove('container');
+                container.classList.add('container-fluid');
+            }
+        </script>
+        <div class="row min-vh-100 bg-100">
+            <div class="col-6 d-none d-lg-block position-relative">
+                <div class="bg-holder" style="background-image:url(../../Tassets/img/generic/14.jpg);background-position: 50% 20%;"></div>
+                <!--/.bg-holder-->
+            </div>
+            <div class="col-sm-10 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+                <div class="row justify-content-center g-0">
+                    <div class="col-lg-9 col-xl-8 col-xxl-6">
+                        <div class="card">
+                            <div class="card-header bg-circle-shape text-center p-2">
+                                <a class="font-sans-serif font-weight-bolder fs-4 z-index-1 position-relative link-light" href="#">
+                                    bgrfacile
+                                </a>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto">
+                                        <h3>Connexion</h3>
+                                    </div>
+                                    <div class="col-auto fs--1 text-600"><span><a href="#">Créer un compte</a></span></div>
+                                </div>
+                                <form>
+                                    <div class="mb-3"><label class="form-label" for="split-login-email">Email address</label><input class="form-control" id="split-login-email" type="email" /></div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between"><label class="form-label" for="split-login-password">Password</label><a class="fs--1" href="forgot-password.html">Forgot Password?</a></div><input class="form-control" id="split-login-password" type="password" />
+                                    </div>
+                                    <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="split-checkbox" /><label class="form-check-label" for="split-checkbox">Remember me</label></div>
+                                    <div class="mb-3"><button class="btn btn-primary btn-block mt-3" type="submit" name="submit">Log in</button></div>
+                                </form>
+                                <div class="position-relative mt-4">
+                                    <hr class="bg-300" />
+                                    <div class="position-absolute top-50 left-50 translate-middle px-3 bg-white font-sans-serif fs--1 text-500 text-nowrap">or log in with</div>
+                                </div>
+                                <div class="row g-2 mt-2">
+                                    <div class="col-sm-4">
+                                        <a class="btn btn-outline-google-plus btn-sm btn-block" href="#">
+                                            <span class="fab fa-google-plus-g mr-2" data-fa-transform="grow-8"></span>
+                                            <div>google</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <a class="btn btn-outline-github btn-sm btn-block" href="#">
+                                            <span class="fab fa-github mr-2" data-fa-transform="grow-8"></span>
+                                            <div>GitHub</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <a class="btn btn-outline-facebook btn-sm btn-block" href="#">
+                                            <span class="fab fa-facebook-square mr-2" data-fa-transform="grow-8"></span>
+                                            <div>facebook</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
 
 <div class="w-full flex flex-wrap">
 
@@ -207,6 +289,19 @@
         <img class="object-cover w-full h-screen hidden md:block" src="https://source.unsplash.com/IXUM4cJynP0">
     </div>
 </div>
+
+
+
+<script src="../../vendors/popper/popper.min.js"></script>
+<script src="../../vendors/bootstrap/bootstrap.min.js"></script>
+<script src="../../vendors/anchorjs/anchor.min.js"></script>
+<script src="../../vendors/is/is.min.js"></script>
+<script src="../../vendors/fontawesome/all.min.js"></script>
+<script src="../../vendors/lodash/lodash.min.js"></script>
+<script src="../../../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
+<script src="../../vendors/list.js/list.min.js"></script>
+<script src="../../Tassets/js/theme.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
 
 </body>
 

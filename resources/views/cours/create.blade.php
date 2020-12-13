@@ -2,30 +2,50 @@
 
 
 @section('content')
-    <div class="min-h-screen px-5 bg-gray-100">
-        <div class="flex items-center py-3 border-b">
-            Profil > créer un cours
-        </div>
-
-        <div class="flex justify-between items-center py-4">
-            <h2 class="text-2xl font-bold text-gray-800">
-                Créer un nouveau cours
-            </h2>
-            <div class="flex items-center">
-                <button class="flex items-center text-gray-700 bg-white p-2 shadow-md rounded ">Annuler</button>
-                <button class="flex items-center text-gray-700 bg-white p-2 shadow-md rounded mx-2">Créer un brouillons</button>
-                <button class="flex items-center text-gray-700 bg-white p-2 shadow-md rounded ">Publier</button>
+    <div class="bg-gray-100">
+        <div class="min-h-screen px-5 container mx-auto">
+            <div class="flex items-center py-3 border-b">
+                Profil > créer un cours
             </div>
-        </div>
 
-        <div class="grid grid-cols-3 gap-4">
-            <div class="col-span-2">
-                <input type="text" class="w-full bg-white rounded shadow-sm p-3">
-                wizzi
+            <div class="flex justify-between items-center py-4">
+                <h2 class="text-2xl font-bold text-gray-800">
+                    Créer un nouveau cours
+                </h2>
+                <div class="flex items-center">
+                    <button class="flex items-center text-gray-700 bg-white p-2 shadow rounded ">Annuler</button>
+                    <button class="flex items-center text-gray-700 bg-white p-2 shadow rounded mx-2">Créer un brouillons
+                    </button>
+                    <button class="flex items-center text-gray-700 bg-white p-2 shadow rounded ">Publier</button>
+                </div>
             </div>
-            <div class=" h-5 bg-gray-200">info</div>
+
+            {{--        main--}}
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-2">
+                    <input type="text" class="w-full bg-white rounded shadow-sm p-3" placeholder="titre">
+                    <div class="mt-2 p-2 bg-white">
+                        <div class="h-96 w-full">
+                        <textarea id="myeditor"
+                                  class="appearance-none block w-full h-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+                                  name="content"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="px-2 py-4 bg-white shadow rounded">
+                    <div class="mx-auto">
+                        <label for="matiere" class="text-sm text-gray-400">La matiere</label>
+                        <select name="" id="" class="border w-full rounded p-2 mx-auto my-2">
+                            <option value="1">MATHEMATIQUE</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
     {{--    <form action="#">--}}
     {{--        @csrf--}}

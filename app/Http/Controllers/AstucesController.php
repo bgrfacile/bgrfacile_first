@@ -13,8 +13,12 @@ class AstucesController extends Controller
     public function audios(){
         return view('astuces.astuces_audios');
     }
+    public function readAudios($id){
+        return view('astuces.readAudios');
+    }
+
     public function fiches(){
-        return view('astuces.astuces_fiches');
+        return view('astuces.astuces_formule');
     }
 
     public function maths(){

@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+    école virtuelle
+@endsection
+
 @section('baniere')
 @endsection
 
@@ -118,7 +122,7 @@
 
                 <div class="w-full h-72 rounded-lg">
                     <img
-                        src="{{ asset('assets/images/bgr_dessin1.png') }}"
+                        src="{{ asset('assets/images/bgr_reflexion.png') }}"
                         alt="..."
                         class="w-full h-full object-cover">
                 </div>

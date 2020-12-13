@@ -5,8 +5,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="description"
+          content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords"
+          content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
 
     <meta name="author" content="LEFT4CODE">
 
@@ -21,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Mitr|Roboto+Slab|Source+Sans+Pro&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/bgr.ico') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app2.css') }}">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -29,7 +32,8 @@
 </head>
 <body class="relative">
 <div id="app" class="flex flex-col min-h-screen items-stretch">
-    <header class="sticky top-0 bg-white">
+    {{--    sticky top-0--}}
+    <header class="bg-white">
         <nav x-data="{ open: false }"
              @keydown.window.escape="open = false"
              class="text-gray-800 shadow">
@@ -46,79 +50,79 @@
 
                         {{--liste pour grand ecran--}}
                         <div class="md:flex-1 flex justify-between">
-                        <div class="hidden md:block">
-                            <div class="ml-5 flex items-center space-x-4">
-                                <a href="{{ url('/') }}"
-                                   class="{{ Route::currentRouteNamed('home') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                            <div class="hidden md:block">
+                                <div class="ml-5 flex items-center space-x-4">
+                                    <a href="{{ url('/') }}"
+                                       class="{{ Route::currentRouteNamed('home') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
                                'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
-                                    Accueil
-                                </a>
+                                        Accueil
+                                    </a>
 
-                                <a href="{{ route('ecoles.index') }}"
-                                   class="{{ Request::segment(1) === 'ecoles' ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                                    <a href="{{ route('ecoles.index') }}"
+                                       class="{{ Request::segment(1) === 'ecoles' ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
                                'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
-                                    École virtuelle
-                                </a>
+                                        École virtuelle
+                                    </a>
 
-                                <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                                    <button @click="open = !open"
-                                            class="{{ Request::segment(1) === 'cours' ? 'bg-transparent flex items-center justify-center px-3 py-2 text-sm font-bold text-blue-500':
+                                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                                        <button @click="open = !open"
+                                                class="{{ Request::segment(1) === 'cours' ? 'bg-transparent flex items-center justify-center px-3 py-2 text-sm font-bold text-blue-500':
                                'bg-transparent flex items-center justify-center px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500 hover:bg-gray-50' }}">
-                                        <span>Contenus</span>
-                                        <svg fill="currentColor" viewBox="0 0 20 20"
-                                             :class="{'rotate-180': open, 'rotate-0': !open}"
-                                             class="block w-4 h-4 ml-1 transition-transform duration-200 transform">
-                                            <path fill-rule="evenodd"
-                                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                  clip-rule="evenodd"></path>
-                                        </svg>
-                                    </button>
-                                    <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                                         x-transition:enter-start="transform opacity-0 scale-95"
-                                         x-transition:enter-end="transform opacity-100 scale-100"
-                                         x-transition:leave="transition ease-in duration-75"
-                                         x-transition:leave-start="transform opacity-100 scale-100"
-                                         x-transition:leave-end="transform opacity-0 scale-95"
-                                         class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
-                                        <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                                            <a href="{{ route('contenu.cours') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                                Cours</a>
-                                            <a href="{{ route('exercices.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                                Exercices</a>
-                                            <a href="{{ route('corriges.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                                Corrigés</a>
-                                            <a href="{{ route('astuces.index') }}"
-                                               class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                                                Astuces</a>
+                                            <span>Contenus</span>
+                                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                                 :class="{'rotate-180': open, 'rotate-0': !open}"
+                                                 class="block w-4 h-4 ml-1 transition-transform duration-200 transform">
+                                                <path fill-rule="evenodd"
+                                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                      clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                             x-transition:enter-start="transform opacity-0 scale-95"
+                                             x-transition:enter-end="transform opacity-100 scale-100"
+                                             x-transition:leave="transition ease-in duration-75"
+                                             x-transition:leave-start="transform opacity-100 scale-100"
+                                             x-transition:leave-end="transform opacity-0 scale-95"
+                                             class="absolute right-0 w-full mt-4 origin-top-right rounded-md shadow-lg md:w-48">
+                                            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                                <a href="{{ route('contenu.cours') }}"
+                                                   class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                                    Cours</a>
+                                                <a href="{{ route('exercices.index') }}"
+                                                   class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                                    Exercices</a>
+                                                <a href="{{ route('corriges.index') }}"
+                                                   class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                                    Corrigés</a>
+                                                <a href="{{ route('astuces.index') }}"
+                                                   class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-500 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                                                    Astuces</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <a href="{{ route('qui-sommes-nous') }}"
-                                   class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
+                                    <a href="{{ route('qui-sommes-nous') }}"
+                                       class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-transparent flex px-3 py-2 text-sm font-bold text-blue-500':
                                'bg-transparent flex px-3 py-2 text-sm font-bold text-gray-500 hover:text-blue-500' }}">
-                                    Qui sommes nous?
-                                </a>
+                                        Qui sommes nous?
+                                    </a>
 
+                                </div>
                             </div>
-                        </div>
-                        <button
-                            class="p-1 border-2 border-transparent text-gray-500 rounded-full hover:text-blue-500 focus:outline-none focus:text-white focus:bg-gray-700"
-                            aria-label="Notifications">
-                            <a href="{{ route('search') }}">
-                                <svg class="h-4 w-4" stroke="currentColor" fill="none"
-                                     viewBox="0 0 52.966 52.966">
-                                    <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+                            <button
+                                class="p-1 border-2 border-transparent text-gray-500 rounded-full hover:text-blue-500 focus:outline-none focus:text-white focus:bg-gray-700"
+                                aria-label="Notifications">
+                                <a href="{{ route('search') }}">
+                                    <svg class="h-4 w-4" stroke="currentColor" fill="none"
+                                         viewBox="0 0 52.966 52.966">
+                                        <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
                                         c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
                                         C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
                                         S32.459,40,21.983,40z"/>
 
-                                </svg>
-                            </a>
-                        </button>
+                                    </svg>
+                                </a>
+                            </button>
                         </div>
                     </div>
                     {{--                contenue sur grand ecran--}}
@@ -261,7 +265,6 @@
                     </div>
 
 
-
                     <a href="{{ route('qui-sommes-nous') }}"
                        class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
@@ -311,9 +314,9 @@
             </div>
         </nav>
     </header>
-        <div>
-            @yield('baniere')
-        </div>
+    <div>
+        @yield('baniere')
+    </div>
 
 
     <main class="flex-1" role="main">

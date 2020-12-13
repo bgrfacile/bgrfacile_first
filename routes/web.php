@@ -63,6 +63,7 @@ Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('co
 Route::get('/astuces',[AstucesController::class,'index'])->name('astuces.index');
 
 Route::get('/astuces/audios',[AstucesController::class,'audios'])->name('astuces.audio');
+Route::get('/astuces/audios/{id}',[AstucesController::class,'readAudios'])->name('astuces.audioread');
 
 Route::get('/astuces/fiches',[AstucesController::class,'fiches'])->name('astuces.fiche');
 

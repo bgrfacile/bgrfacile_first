@@ -20,6 +20,7 @@ class CreateNewUser implements CreatesNewUsers
      *
      * @param array $input
      * @return \App\Models\User
+     * @throws \Illuminate\Validation\ValidationException
      */
 
     public function create(array $input)

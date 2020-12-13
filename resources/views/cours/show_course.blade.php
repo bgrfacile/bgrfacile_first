@@ -1,4 +1,8 @@
 @extends('layouts.readCourse')
+@section('ressourceCSS')
+    <link href="{{ asset('dist/assets/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl" />
+    <link href="../../Tassets/css/theme.min.css" rel="stylesheet" id="style-default" />
+@endsection
 
 @section('main')
     <header class="w-full border-b flex flex-row flex-wrap items-center justify-between">
@@ -35,7 +39,7 @@
         <div class="w-full md:w-7/12 mx-auto mt-6">
             {{--            titre--}}
             <div class="py-3 mb-2 border-b">
-                <h1 class="text-gray-800 text-4xl font-bold">{{ $course->name }}</h1>
+                <h3 class="text-gray-800 text-4xl font-bold" data-anchor="data-anchor">{{ $course->name }}</h3>
             </div>
             {{--        image--}}
             <div class="w-full h-72 border mt-4">
@@ -59,4 +63,17 @@
             <div></div>
         </div>
     </main>
+
+    <script src="../../vendors/popper/popper.min.js"></script>
+    <script src="../../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../../vendors/anchorjs/anchor.min.js"></script>
+    <script src="../../vendors/is/is.min.js"></script>
+    <script src="../../vendors/fontawesome/all.min.js"></script>
+    <script src="../../vendors/lodash/lodash.min.js"></script>
+    <script src="../../../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
+    <script src="../../vendors/list.js/list.min.js"></script>
+    <script src="{{ asset('dist/assets/js/theme.js') }}"></script>
+{{--    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">--}}
+
 @endsection
+
