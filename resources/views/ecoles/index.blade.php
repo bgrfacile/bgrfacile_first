@@ -23,7 +23,7 @@
                 </a>
                 <a
                     href="#recherche_ecole"
-                    class="sm:ml-2 mt-2 sm:mt-0 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
+                    class="sm:ml-2 sm:mt-0 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
                     Voir une école
                 </a>
             </p>

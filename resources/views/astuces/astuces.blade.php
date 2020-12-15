@@ -20,7 +20,7 @@
                     <p>
                         <a
                             href="#"
-                            class="mt-2 sm:mt-0 py-2 px-4 bg-transparent font-bold text-xl text-gray-900 rounded-md hover:shadow-lg">
+                            class="mt-2 sm:mt-0 py-2 px-4 bg-transparent font-bold text-xl text-gray-900 rounded-md shadow hover:shadow-lg">
                             Faites des propositions
                         </a>
                     </p>
