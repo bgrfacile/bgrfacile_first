@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+    cours
+@endsection
+
 @section('baniere')
 
 @endsection
