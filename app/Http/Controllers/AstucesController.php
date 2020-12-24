@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class AstucesController extends Controller
 {
+    public function indexAdmin(){
+        return view('dashboard_admin.astuces.index');
+    }
+
+
     public function index(){
         return view('astuces.astuces');
     }

@@ -151,6 +151,8 @@ Route::prefix('dashboard-admin')->group(function () {
     Route::resource('trainings', TrainingsController::class);
     Route::resource('levels', LevelsController::class);
     Route::resource('subjects', SubjectsController::class);
+
+    Route::get('astuces',[AstucesController::class,'indexAdmin'])->name('dashboard.astuces');
 });
 
 /*

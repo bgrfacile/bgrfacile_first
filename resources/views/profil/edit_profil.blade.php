@@ -5,273 +5,124 @@
 @endsection
 
 @section('content')
-    <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            <div class="md:grid md:grid-cols-3 md:gap-6">
-                <div class="md:col-span-1">
-                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
-                            Informations sur le profil
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-600">
-                            Mettez à jour les informations de profil et l'adresse e-mail de votre compte.
-                        </p>
-                    </div>
-                </div>
-                <div class="mt-5 md:mt-0 md:col-span-2">
-                    <form>
-                        <div class="shadow overflow-hidden sm:rounded-md">
-                            <div class="px-4 py-5 bg-white sm:p-6">
-                                <div class="grid grid-cols-6 gap-6">
-                                    <div class="col-span-6 sm:col-span-4">
-                                        @csrf
-                                        <label
-                                            class="block font-medium text-sm text-gray-700"
-                                            for="photo">
-                                            <span>Photo</span>
-                                        </label>
-                                        <div class="mt-2 h-16 w-16">
-                                            <img
-                                                class="w-full"
-                                                src="{{ auth()->user()->profile_photo_path }}"
-                                                alt="{{ auth()->user()->name }}">
-                                        </div>
-                                        <div class="mt-2" style="display: none;"><span
-                                                class="block rounded-full w-20 h-20"
-                                                style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(&quot;null&quot;);"></span>
-                                        </div>
-                                        <button type="button"
-                                                class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2">
-                                            Select A New Photo
-                                        </button>
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+{{--    <style>--}}
+{{--        .bg-dots{--}}
+{{--            background-image: url(https://assets-global.website-files.com/5b5a66e9f3166b36708705fa/5dea7a12bb83ab1f13040de5_cx-dots.svg);--}}
+{{--            background-repeat: no-repeat--}}
+{{--        }--}}
+{{--    </style>--}}
 
-                                            </p></div>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-4"><label
-                                            class="block font-medium text-sm text-gray-700" for="name"><span>Name</span></label>
-                                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" id="name"
-                                               type="text" autocomplete="name">
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
+{{--    <div class="m-auto max-w-6xl p-12">--}}
+{{--        <div class="flex flex-col md:flex-row">--}}
+{{--            <div class="md:w-1/2 max-w-md flex flex-col justify-center">--}}
+{{--                <div class="md:text-5xl text-2xl uppercase font-black">Awesome tool for your future team</div>--}}
+{{--                <div class="text-xl mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>--}}
+{{--                <div class="my-5 h-16">--}}
+{{--                    <div class="shadow-md font-medium py-2 px-4 text-yellow-100--}}
+{{--               cursor-pointer bg-yellow-600 hover:bg-yellow-500 rounded text-lg text-center w-48">Join us now</div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="flex md:justify-end w-full md:w-1/2 -mt-5">--}}
+{{--                <div class="bg-dots">--}}
+{{--                    <div class="shadow-2xl max-w-md z-10 rounded-full mt-6 ml-4">--}}
+{{--                        <img alt="card img" class="rounded-t" src="https://s.spielwarenmesse.de/fileadmin/data_archive/Relaunch_Spielwarenmesse/magazine/header/20190618_Header_Memes.jpg">--}}
+{{--                        <div class="text-2xl p-10 bg-white"><img alt="quote" class="float-left mr-1" src="https://assets-global.website-files.com/5b5a66e9f3166b36708705fa/5cf8fb1f994fb7168d0d66fb_quote-intro.svg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
-                                            </p></div>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-4"><label
-                                            class="block font-medium text-sm text-gray-700"
-                                            for="email"><span>Email</span></label> <input
-                                            class="form-input rounded-md shadow-sm mt-1 block w-full" id="email"
-                                            type="email">
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
 
-                                            </p></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <div class="mr-3">
-                                    <div class="text-sm text-gray-600" style="display: none;">
-                                        Saved.
-                                    </div>
-                                </div>
-                                <button type="submit"
-                                        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                    Save
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+    <div class="py-10 bg-gray-100  bg-opacity-50">
+        <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
+            <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t">
+                <div class="max-w-sm mx-auto md:w-full md:mx-0">
+
                 </div>
             </div>
-            <div class="hidden sm:block">
-                <div class="py-8">
-                    <div class="border-t border-gray-200"></div>
-                </div>
-            </div>
-            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
-                <div class="md:col-span-1">
-                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
-                            Mettre à jour le mot de passe
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-600">
-                            Assurez-vous que votre compte utilise un mot de passe long et aléatoire pour rester
-                            sécurisé.
-                        </p>
-                    </div>
-                </div>
-                <div class="mt-5 md:mt-0 md:col-span-2">
-                    <form>
-                        <div class="shadow overflow-hidden sm:rounded-md">
-                            <div class="px-4 py-5 bg-white sm:p-6">
-                                <div class="grid grid-cols-6 gap-6">
-                                    <div class="col-span-6 sm:col-span-4"><label
-                                            class="block font-medium text-sm text-gray-700"
-                                            for="current_password"><span>Current Password</span></label> <input
-                                            class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                            id="current_password" type="password" autocomplete="current-password">
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
-
-                                            </p></div>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-4"><label
-                                            class="block font-medium text-sm text-gray-700" for="password"><span>New Password</span></label>
-                                        <input class="form-input rounded-md shadow-sm mt-1 block w-full" id="password"
-                                               type="password" autocomplete="new-password">
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
-
-                                            </p></div>
-                                    </div>
-                                    <div class="col-span-6 sm:col-span-4"><label
-                                            class="block font-medium text-sm text-gray-700" for="password_confirmation"><span>Confirm Password</span></label>
-                                        <input class="form-input rounded-md shadow-sm mt-1 block w-full"
-                                               id="password_confirmation" type="password" autocomplete="new-password">
-                                        <div class="mt-2" style="display: none;"><p class="text-sm text-red-600">
-
-                                            </p></div>
-                                    </div>
-                                </div>
+            <div class="bg-white space-y-6">
+                <div class="md:inline-flex space-y-4 md:space-y-0 w-full p-4 text-gray-500 items-center">
+                    <h2 class="md:w-1/3 max-w-sm mx-auto">Account</h2>
+                    <div class="md:w-2/3 max-w-sm mx-auto">
+                        <label class="text-sm text-gray-400">Email</label>
+                        <div class="w-full inline-flex border">
+                            <div class="pt-2 w-1/12 bg-gray-100 bg-opacity-50">
+                                <svg fill="none" class="w-6 text-gray-400 mx-auto" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
                             </div>
-                            <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <div class="mr-3">
-                                    <div class="text-sm text-gray-600" style="display: none;">
-                                        Saved.
-                                    </div>
-                                </div>
-                                <button type="submit"
-                                        class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                    Save
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div>
-                <div class="hidden sm:block">
-                    <div class="py-8">
-                        <div class="border-t border-gray-200"></div>
-                    </div>
-                </div>
-                <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
-                    <div class="md:col-span-1">
-                        <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
-                                Les informations supplémentaires sur vous
-                            </h3>
-                            <p class="mt-1 text-sm text-gray-600">
-                                Afin de mieux vous orientez sur la plate-forme il nous est nécessaire de disposser de
-                                suffisament d'information sur vous!
-                            </p></div>
-                    </div>
-                    <div class="mt-5 md:mt-0 md:col-span-2">
-                        <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg"><h3
-                                class="text-lg font-medium text-gray-900">
-                                You have not enabled two factor authentication.
-                            </h3>
-                            <div class="mt-3 max-w-xl text-sm text-gray-600"><p>
-                                    When two factor authentication is enabled, you will be prompted for a secure, random
-                                    token during authentication. You may retrieve this token from your phone's Google
-                                    Authenticator application.
-                                </p></div> <!---->
-                            <div class="mt-5">
-                                <div><span><span><button type="button"
-                                                         class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                        Enable
-                    </button></span> <div class="v-portal" style="display: none;"></div></span></div>
-                            </div>
+                            <input type="email" class="w-11/12 focus:outline-none focus:text-gray-600 p-2" placeholder="email@example.com" disabled="">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="hidden sm:block">
-                <div class="py-8">
-                    <div class="border-t border-gray-200"></div>
-                </div>
-            </div>
-            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
-                <div class="md:col-span-1">
-                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
-                            Votre école
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-600">
-                            bgrfacile vous offre la possibilité de retrouver des votres écoles si seulement celui si est
-                            enregistrer et membre de bgrfacile.
-                            Ainsi il vous sera donner plusieurs possibilité seulement possible lorque vous faités partie
-                            d'une école.
-                        </p></div>
-                </div>
-                <div class="mt-5 md:mt-0 md:col-span-2">
-                    <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
-                        <div class="max-w-xl text-sm text-gray-600">
-                            If necessary, you may logout of all of your other browser sessions across all of your
-                            devices. If you feel your account has been compromised, you should also update your
-                            password.
-                        </div>
-                        <div class="mt-5 space-y-6">
-                            <div class="flex items-center">
-                                <div>
-                                    <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                         viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-gray-500">
-                                        <path
-                                            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+
+                <hr>
+                <div class="md:inline-flex  space-y-4 md:space-y-0  w-full p-4 text-gray-500 items-center">
+                    <h2 class="md:w-1/3 mx-auto max-w-sm">Personal info</h2>
+                    <div class="md:w-2/3 mx-auto max-w-sm space-y-5">
+                        <div>
+                            <label class="text-sm text-gray-400">Full name</label>
+                            <div class="w-full inline-flex border">
+                                <div class="w-1/12 pt-2 bg-gray-100">
+                                    <svg fill="none" class="w-6 text-gray-400 mx-auto" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                     </svg>
                                 </div>
-                                <div class="ml-3">
-                                    <div class="text-sm text-gray-600">
-                                        Windows - Chrome
-                                    </div>
-                                    <div>
-                                        <div class="text-xs text-gray-500">
-                                            127.0.0.1,
+                                <input type="text" class="w-11/12 focus:outline-none focus:text-gray-600 p-2" placeholder="Charly Olivas">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-sm text-gray-400">Phone number</label>
+                            <div class="w-full inline-flex border">
+                                <div class="pt-2 w-1/12 bg-gray-100">
+                                    <svg fill="none" class="w-6 text-gray-400 mx-auto" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" class="w-11/12 focus:outline-none focus:text-gray-600 p-2" placeholder="12341234">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                            <span class="text-green-500 font-semibold">This device</span></div>
-                                    </div>
-                                </div>
+                <hr>
+                <div class="md:inline-flex w-full space-y-4 md:space-y-0 p-8 text-gray-500 items-center">
+                    <h2 class="md:w-4/12 max-w-sm mx-auto">Change password</h2>
+
+                    <div class="md:w-5/12 w-full md:pl-9 max-w-sm mx-auto space-y-5 md:inline-flex pl-2">
+                        <div class="w-full inline-flex border-b">
+                            <div class="w-1/12 pt-2">
+                                <svg fill="none" class="w-6 text-gray-400 mx-auto" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
                             </div>
+                            <input type="password" class="w-11/12 focus:outline-none focus:text-gray-600 p-2 ml-4" placeholder="New">
                         </div>
-                        <div class="flex items-center mt-5">
-                            <button type="submit"
-                                    class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150">
-                                Logout Other Browser Sessions
-                            </button>
-                            <div class="ml-3">
-                                <div class="text-sm text-gray-600" style="display: none;">
-                                    Done.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="v-portal" style="display: none;"></div>
+                    </div>
+
+                    <div class="md:w-3/12 text-center md:pl-6">
+                        <button class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
+                            <svg fill="none" class="w-4 text-white mr-2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                            Update
+                        </button>
                     </div>
                 </div>
-            </div>
-            <div class="hidden sm:block">
-                <div class="py-8">
-                    <div class="border-t border-gray-200"></div>
-                </div>
-            </div>
-            <div class="md:grid md:grid-cols-3 md:gap-6 mt-10 sm:mt-0">
-                <div class="md:col-span-1">
-                    <div class="px-4 sm:px-0"><h3 class="text-lg font-medium text-gray-900">
-                            Supprimer le compte
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-600">
-                            Supprimez définitivement votre compte.
-                        </p></div>
-                </div>
-                <div class="mt-5 md:mt-0 md:col-span-2">
-                    <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
-                        <div class="max-w-xl text-sm text-gray-600">
-                            Une fois votre compte supprimé, toutes ses ressources et données seront définitivement
-                            supprimées. Avant de supprimer votre compte, veuillez télécharger les données ou
-                            informations que vous souhaitez conserver.
-                        </div>
-                        <div class="mt-5">
-                            <button type="button"
-                                    class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-600 transition ease-in-out duration-150">
-                                supprimer le compte
-                            </button>
-                        </div>
-                        <div class="v-portal" style="display: none;"></div>
-                    </div>
+
+                <hr>
+                <div class="w-full p-4 text-right text-gray-500">
+                    <button class="inline-flex items-center focus:outline-none mr-4">
+                        <svg fill="none" class="w-4 mr-2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        </svg>
+                        Delete account
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+
 @endsection

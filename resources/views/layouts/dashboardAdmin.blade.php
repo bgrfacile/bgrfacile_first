@@ -90,7 +90,7 @@
                 <div class="navbar-vertical-content scrollbar">
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="{{ route('dashboard.index') }}">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-chart-pie"></span>
@@ -145,7 +145,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('dashboard.astuces') }}">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-superscript"></span>
@@ -983,6 +983,8 @@
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
     rel="stylesheet">
+
+@yield('script')
 </body>
 
 
