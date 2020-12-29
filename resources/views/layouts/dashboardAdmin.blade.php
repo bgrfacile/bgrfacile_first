@@ -145,7 +145,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dashboard.astuces') }}">
+                            <a class="nav-link dropdown-indicator" href="#astuces" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="astuces">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-superscript"></span>
@@ -153,7 +153,17 @@
                                     <span class="nav-link-text">Astuces</span>
                                 </div>
                             </a>
+                            <ul class="nav collapse" id="astuces" data-parent="#navbarVerticalCollapse">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('dashboard.astuces.categoriebook.index') }}">categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('books.index') }}">books</a>
+                                </li>
+                            </ul>
                         </li>
+
+
                     </ul>
                 </div>
             </div>
@@ -702,8 +712,8 @@
                     <span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                 <a class="navbar-brand mr-1 mr-sm-3" href="#">
                     <div class="d-flex align-items-center">
-                        <img class="mr-2" src="{{ asset('dist/assets/img/illustrations/falcon.png') }}"
-                             alt="" width="40"/>
+{{--                        <img class="mr-2" src="{{ asset('dist/assets/img/illustrations/falcon.png') }}"--}}
+                        {{--                             alt="" width="40"/>--}}
                         <span class="font-sans-serif">bgrfacile</span></div>
                 </a>
                 <ul class="navbar-nav align-items-center d-none d-lg-block">

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AstucesController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
@@ -152,7 +154,16 @@ Route::prefix('dashboard-admin')->group(function () {
     Route::resource('levels', LevelsController::class);
     Route::resource('subjects', SubjectsController::class);
 
+//    Astuces backend
     Route::get('astuces',[AstucesController::class,'indexAdmin'])->name('dashboard.astuces');
+    Route::get('astuces/categories',[CategorieBookController::class,'index'])->name('dashboard.astuces.categoriebook.index');
+    Route::get('astuces/categories/create',[CategorieBookController::class,'create'])->name('dashboard.astuces.categoriebook.create');
+    Route::post('astuces/categories/create',[CategorieBookController::class,'store'])->name('dashboard.astuces.categoriebook.store');
+    Route::get('astuces/categories/{categorieBook}/edit',[CategorieBookController::class,'edit'])->name('dashboard.astuces.categoriebook.edit');
+    Route::put('astuces/categories/{categorieBook}',[CategorieBookController::class,'update'])->name('dashboard.astuces.categoriebook.update');
+    Route::delete('astuces/categories/{categorieBook}',[CategorieBookController::class,'destroy'])->name('dashboard.astuces.categoriebook.destroy');
+
+    Route::resource('books',BookController::class);
 });
 
 /*

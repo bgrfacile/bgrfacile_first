@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Course;
+use App\Models\Categorie_book;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // User::factory(10)->create();
-         Course::factory(30)->create();
+         Categorie_book::factory(10)->create();
     }
 }
