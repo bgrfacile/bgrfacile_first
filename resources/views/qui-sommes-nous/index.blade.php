@@ -32,7 +32,7 @@
         </div>
         <div class="py-3 bg-black w-full opacity-25 text-white">
             <h4 class="text-2xl text-center h-12">une communauté de</h4>
-            <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
+            <div class="grid grid-cols-2 divide-x divide-gray-400 mx-auto max-w-6xl">
                 <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                     <strong class="text-xl md:text-4xl count">12.828.959</strong>
                     <p class="font-bold text-base md:text-xl text-gray-800">professeurs</p>
@@ -43,10 +43,10 @@
                     <p class="font-bold text-base md:text-xl text-gray-800">étudiant</p>
                 </div>
 
-                <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                    <strong class="text-xl md:text-4xl count">12.828.959</strong>
-                    <p class="font-bold text-base md:text-xl text-gray-800">école</p>
-                </div>
+                {{--                <div class="--}}{{--px-10 mx-5--}}{{-- text-center flex flex-col">--}}
+                {{--                    <strong class="text-xl md:text-4xl count">12.828.959</strong>--}}
+                {{--                    <p class="font-bold text-base md:text-xl text-gray-800">école</p>--}}
+                {{--                </div>--}}
             </div>
         </div>
     </div>
@@ -54,10 +54,13 @@
 
 @section('content')
     {{--    parler de bgrfacile--}}
-    <div class="mx-auto max-w-3xl py-16 text-center">
-        <h3 class="mb-7 text-2xl font-bold">bgrfacile</h3>
-        <p class="text-gray-800">
-{{--            Un ensemble--}}
+    <div class="mx-auto max-w-3xl pt-16 pb-6 text-center">
+        <p class="text-gray-800 text-xl">
+            Bgrfacile est un site web, mais aussi une application mobile qui permet de promouvoir l’éducation et
+            l’apprentissage dans le milieu scolaire. Il donne la possibilité aux élèves et étudiants de faire des
+            recherches ciblées en ligne et d’avoir tout le contenu possible en fonction du programme établi par le
+            Ministère en place. Ce site web permet non seulement de lire mais aussi de télécharger les cours, les
+            exercices et leurs corrections faites par les Professeurs qualifiés et agrées par l’état.
         </p>
     </div>
 
@@ -66,108 +69,17 @@
         <img
             class="w-full"
             src="{{ asset('assets/images/banniere_bgrfacile.jpeg') }}"
-            {{--            src="{{ asset('assets/images/groupe-essengo.jpeg') }}"--}}
             alt="">
     </div>
 
     {{--historique de bgrfcile--}}
-    <div class="mx-auto max-w-4xl py-16 px-8">
-        <h3 class="mb-7 text-2xl font-bold text-center">L'histoire de bgrfacile</h3>
-{{--        <div class="w-full mx-auto">--}}
-{{--            <div class="border-r-2 border-gray-200 border-dotted absolute h-full top-0 z-0" style="left: 7px"></div>--}}
-{{--            <ul class="list-none m-0 p-0">--}}
-{{--                <li class="mb-2">--}}
-{{--                    <div class="flex items-center mb-1">--}}
-{{--                        <div class="bg-indigo-600 rounded-full h-4 w-4 border-gray-200 border-2 z-10">--}}
-{{--                        </div>--}}
-{{--                        <div class="flex-1 ml-4 font-semibold">Juin 2019 - Lancement de la version du project</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="ml-12">--}}
-{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur, suscipit atque et--}}
-{{--                        nulla dolores unde maiores doloribus nemo possimus commodi totam consectetur temporibus odit--}}
-{{--                        velit illo repellendus provident vitae.--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--                <li class="mb-2">--}}
-{{--                    <div class="flex items-center mb-1">--}}
-{{--                        <div class="bg-indigo-600 rounded-full h-4 w-4 border-gray-200 border-2 z-10">--}}
-{{--                        </div>--}}
-{{--                        <div class="flex-1 ml-4 font-semibold">May 2019 - Learn Golang</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="ml-12">--}}
-{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur, suscipit atque et--}}
-{{--                        nulla dolores unde maiores doloribus nemo possimus commodi totam consectetur temporibus odit--}}
-{{--                        velit illo repellendus provident vitae.--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--                <li class="mb-2">--}}
-{{--                    <div class="flex items-center mb-1">--}}
-{{--                        <div class="bg-indigo-600 rounded-full h-4 w-4 border-gray-200 border-2 z-10">--}}
-{{--                        </div>--}}
-{{--                        <div class="flex-1 ml-4 font-semibold">April 2019 - Learn Photography</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="ml-12">--}}
-{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur, suscipit atque et--}}
-{{--                        nulla dolores unde maiores doloribus nemo possimus commodi totam consectetur temporibus odit--}}
-{{--                        velit illo repellendus provident vitae.--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--                <li class="mb-2">--}}
-{{--                    <div class="flex items-center mb-1">--}}
-{{--                        <div class="bg-indigo-600 rounded-full h-4 w-4 border-gray-200 border-2 z-10">--}}
-{{--                        </div>--}}
-{{--                        <div class="flex-1 ml-4 font-medium">Feb 2018 - Learn Laravel</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="ml-12">--}}
-{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur, suscipit atque et--}}
-{{--                        nulla dolores unde maiores doloribus nemo possimus commodi totam consectetur temporibus odit--}}
-{{--                        velit illo repellendus provident vitae.--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--                <li class="mb-2">--}}
-{{--                    <div class="flex items-center mb-1">--}}
-{{--                        <div class="bg-indigo-600 rounded-full h-4 w-4 border-gray-200 border-2 z-10">--}}
-{{--                        </div>--}}
-{{--                        <div class="flex-1 ml-4 font-semibold">May 2017 - Learn PHP</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="ml-12">--}}
-{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos tenetur, suscipit atque et--}}
-{{--                        nulla dolores unde maiores doloribus nemo possimus commodi totam consectetur temporibus odit--}}
-{{--                        velit illo repellendus provident vitae.--}}
-{{--                    </div>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-    </div>
+    {{--    <div class="mx-auto max-w-4xl py-16 px-8">--}}
+    {{--        <h3 class="mb-7 text-2xl font-bold text-center">L'histoire de bgrfacile</h3>--}}
+    {{--    </div>--}}
 
     {{--presentation de l'équipe--}}
     <div class="bg-gray-100">
         <div class="mx-auto max-w-4xl py-16 text-gray-700">
-            <h3 class="mb-7 text-2xl font-bold text-left border-b pb-2">Remerciement</h3>
-            <div class="flex flex-col md:flex-row lg:-mx-8 items-center mb-12 md:mb-20">
-{{--                <div class="w-full  lg:px-8 text-justify px-4 ">--}}
-{{--                    <blockquote>--}}
-{{--                        <p class="mb-2 ">--}}
-{{--                            Je tiens à remercier toutes les personnes qui ont contribué au succès de ce site et qui ont--}}
-{{--                            aidée lors de la réalisation de celle-ci.--}}
-{{--                        </p>--}}
-{{--                        <p class="mb-2 ">--}}
-{{--                            Je voudrais dans un premier temps remercier, mes parents J&B, pour la patience, la--}}
-{{--                            disponibilité--}}
-{{--                            et surtout les judicieux conseils, qui ont contribué à alimenter ma réflexion.--}}
-{{--                        </p>--}}
-{{--                        <p class="mb-2 ">--}}
-{{--                            Je remercie également toute l’équipe essengoGroup et tous les intervenants pour la--}}
-{{--                            contribution.--}}
-{{--                        </p>--}}
-{{--                        <p class="">--}}
-{{--                            Je tiens à témoigner toute ma reconnaissance aux personnes suivantes, pour leur aide dans la--}}
-{{--                            réalisation de ce projet.--}}
-{{--                        </p>--}}
-{{--                    </blockquote>--}}
-{{--                </div>--}}
-            </div>
-
             <h3 class="my-7 text-2xl font-bold text-left border-b pb-2">L'équipes</h3>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
@@ -192,59 +104,60 @@
                     </div>
                 </div>
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Ken</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">full web and android code</span>
-                    </div>
-                </div>
+{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+{{--                    <div class="px-5 py-12 text-center">--}}
+{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+{{--                        </div>--}}
+{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Ken</h5>--}}
+{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and android code</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Chanel</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">full web and full redactor</span>
-                    </div>
-                </div>
+{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+{{--                    <div class="px-5 py-12 text-center">--}}
+{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+{{--                        </div>--}}
+{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Chanel</h5>--}}
+{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and full redactor</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Belinda</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">full redactor</span>
-                    </div>
-                </div>
+{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+{{--                    <div class="px-5 py-12 text-center">--}}
+{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+{{--                        </div>--}}
+{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Belinda</h5>--}}
+{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full redactor</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">yannick</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">full management</span>
-                    </div>
-                </div>
+{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+{{--                    <div class="px-5 py-12 text-center">--}}
+{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+{{--                        </div>--}}
+{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">yannick</h5>--}}
+{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full management</span>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="//via.placeholder.com/100/eee" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">jessica</h5>
-                    </div>
-                </div>
+{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+{{--                    <div class="px-5 py-12 text-center">--}}
+{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+{{--                        </div>--}}
+{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">jessica</h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
             </div>
 
         </div>

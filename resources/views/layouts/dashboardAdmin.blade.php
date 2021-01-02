@@ -15,13 +15,11 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    {{--    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('dist/assets/img/favicons/apple-touch-icon.png') }}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('dist/assets/img/favicons/favicon-32x32.png') }}">--}}
-    {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('dist/assets/img/favicons/favicon-16x16.png.png') }}">--}}
-    {{--    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('dist/assets/img/favicons/favicon.ico') }}">--}}
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/bgr.ico') }}">
-    {{--    <link rel="manifest" href="../assets/img/favicons/manifest.json">--}}
-    {{--    <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">--}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('assets/favicon/site.webmanifest') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script src="{{ asset('dist/assets/js/config.navbar-vertical.js') }}"></script>
 

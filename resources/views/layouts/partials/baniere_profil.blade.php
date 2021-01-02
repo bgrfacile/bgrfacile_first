@@ -192,6 +192,7 @@
 {{--</div>--}}
 <div class="bg-gray-100 px-8">
     <div class="container w-full mx-auto max-w-7xl px-2">
+
         <!-- header profil -->
         <div class="flex items-center justify-between py-4">
             <div class="flex items-center">
@@ -352,6 +353,7 @@
             </ul>
         </nav>
         <!-- End of repo nav -->
+
     </div>
 </div>
 

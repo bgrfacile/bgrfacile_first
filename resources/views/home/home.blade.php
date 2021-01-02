@@ -24,9 +24,10 @@
                         Lisez nos cours
                     </a>
                     <a
-                        href="{{ route('ecoles.index') }}"
+                        href="{{ route('astuces.index') }}"
                         class="sm:ml-2 mt-2 sm:mt-0 py-2 px-4 bg-gray-200 text-sm text-blue-600 rounded-md hover:underline">
-                        Accéder aux écoles
+                        {{--                        Accéder aux écoles--}}
+                        Accéder aux astuces
                     </a>
                 </p>
             </div>
@@ -51,16 +52,16 @@
             class="uppercase text-xl  md:text-2xl  font-bold mb-6 text-center text-gray-800">
             NOUS AVONS TOUT CE DONT VOUS AVEZ BESOIN
         </h3>
-        <div class="grid grid-cols-3 divide-x divide-gray-400 mx-auto max-w-6xl">
+        <div class="grid grid-cols-2 divide-x divide-gray-400 mx-auto max-w-6xl">
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                 <strong class="text-xl md:text-4xl count">12828959</strong>
                 <p class="font-bold text-base md:text-xl text-gray-800">Cours</p>
             </div>
 
-            <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-xl md:text-4xl count">182959</strong>
-                <p class="font-bold text-base md:text-xl text-gray-800">Exercises et solutions</p>
-            </div>
+            {{--            <div class="--}}{{--px-10 mx-5--}}{{-- text-center flex flex-col">--}}
+            {{--                <strong class="text-xl md:text-4xl count">182959</strong>--}}
+            {{--                <p class="font-bold text-base md:text-xl text-gray-800">Exercises et solutions</p>--}}
+            {{--            </div>--}}
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
                 <strong class="text-xl md:text-4xl count">12895</strong>
@@ -68,6 +69,7 @@
             </div>
         </div>
     </section>
+
     {{--    Etudiants--}}
     <section class="container w-full md:w-3/4 mx-auto mb-2 px-4">
         <h2
@@ -145,9 +147,9 @@
                         < cycle scolaire.
                     </em>
                 </p>
-                <a
-                    class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"
-                    href="{{ route('exercices.index') }}">Accéder</a>
+                {{--                <a--}}
+                {{--                    class=" py-2 px-4 bg-gray-50 text-sm text-blue-600 rounded-md hover:underline"--}}
+                {{--                    href="{{ route('exercices.index') }}">Accéder</a>--}}
             </div>
         </div>
         <div class="flex justify-center mb-10 ext-gray-600">
@@ -928,189 +930,198 @@
             </div>
         </div>
     </section>
+
+
     {{--tarifs--}}
-    <section id="price" class=" bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">
-        <div class="text-center">
-            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le prix idéal pour vous</h2>
-        </div>
 
-        <div class="flex flex-col md:flex-row items-start justify-between mt-12">
-            <div class="w-full bg-white shadow-lg rounded-lg p-8 md:mx-2 lg:mx-4">
-                <div>
-                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Journalier</h4>
-                    <div class="mb-2 flex items-baseline font-bold">
-                        <span class="text-gray-500 text-xl">Frcfa</span>
-                        <span class="text-gray-500 text-3xl">100</span>
-                        <span class="text-gray-500 text-base">/jour</span>
-                    </div>
-                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 1 jour
-                        exactement</p>
-                    <div class="font-semibold mb-2">Vous pouvez:</div>
-                    <ul>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux cours</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux exercices</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux corrige</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux astuces</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class=" border p-3 mt-2 rounded-lg">
-                    <a
-                        href="#"
-                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
-                        star
-                    </a>
-                </div>
-            </div>
+    {{--    <section id="price" class=" bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-20 pb-40">--}}
+    {{--        <div class="text-center">--}}
+    {{--            <h2 class="text-3xl leading-tight font-bold text-white">choisissez le prix idéal pour vous</h2>--}}
+    {{--        </div>--}}
 
-            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
-                <div>
-                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Mensuel</h4>
-                    <div class="mb-2 flex items-baseline font-bold">
-                        <span class="text-gray-500 text-xl">Frcfa</span>
-                        <span class="text-gray-500 text-3xl">500</span>
-                        <span class="text-gray-500 text-base">/mois</span>
-                    </div>
-                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 30 jours
-                        exactement</p>
-                    <div class="font-semibold mb-2">vous pouvez:</div>
-                    <ul>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux cours</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux exercices</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux corrige</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux astuces</span>
-                        </li>
-                    </ul>
-                </div>
-                <div
-                    class=" border p-3 mt-2 rounded-lg">
-                    <a
-                        href="#"
-                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
-                        star
-                    </a>
-                </div>
-            </div>
+    {{--        <div class="flex flex-col md:flex-row items-start justify-between mt-12">--}}
+    {{--            <div class="w-full bg-white shadow-lg rounded-lg p-8 md:mx-2 lg:mx-4">--}}
+    {{--                <div>--}}
+    {{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Journalier</h4>--}}
+    {{--                    <div class="mb-2 flex items-baseline font-bold">--}}
+    {{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
+    {{--                        <span class="text-gray-500 text-3xl">100</span>--}}
+    {{--                        <span class="text-gray-500 text-base">/jour</span>--}}
+    {{--                    </div>--}}
+    {{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 1 jour--}}
+    {{--                        exactement</p>--}}
+    {{--                    <div class="font-semibold mb-2">Vous pouvez:</div>--}}
+    {{--                    <ul>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux cours</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux exercices</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux corrige</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux astuces</span>--}}
+    {{--                        </li>--}}
+    {{--                    </ul>--}}
+    {{--                </div>--}}
+    {{--                <div class=" border p-3 mt-2 rounded-lg">--}}
+    {{--                    <a--}}
+    {{--                        href="#"--}}
+    {{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
+    {{--                        star--}}
+    {{--                    </a>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
 
-            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">
-                <div>
-                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>
-                    <div class="mb-2 flex items-baseline font-bold">
-                        <span class="text-gray-500 text-xl">Frcfa</span>
-                        <span class="text-gray-500 text-3xl">6000</span>
-                        <span class="text-gray-500 text-base">/an</span>
-                    </div>
-                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois
-                        exactement</p>
-                    <div class="font-semibold mb-2">vous pouvez:</div>
-                    <ul>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux cours</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux exercices</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux corrige</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>
-                            </svg>
-                            <span>Accès aux astuces</span>
-                        </li>
-                    </ul>
-                </div>
-                <div
-                    class=" border p-3 mt-2 rounded-lg">
-                    <a
-                        href="#"
-                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">
-                        star
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class=" px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">
+    {{--            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
+    {{--                <div>--}}
+    {{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Mensuel</h4>--}}
+    {{--                    <div class="mb-2 flex items-baseline font-bold">--}}
+    {{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
+    {{--                        <span class="text-gray-500 text-3xl">500</span>--}}
+    {{--                        <span class="text-gray-500 text-base">/mois</span>--}}
+    {{--                    </div>--}}
+    {{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 30 jours--}}
+    {{--                        exactement</p>--}}
+    {{--                    <div class="font-semibold mb-2">vous pouvez:</div>--}}
+    {{--                    <ul>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux cours</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux exercices</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux corrige</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux astuces</span>--}}
+    {{--                        </li>--}}
+    {{--                    </ul>--}}
+    {{--                </div>--}}
+    {{--                <div--}}
+    {{--                    class=" border p-3 mt-2 rounded-lg">--}}
+    {{--                    <a--}}
+    {{--                        href="#"--}}
+    {{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
+    {{--                        star--}}
+    {{--                    </a>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+
+    {{--            <div class="w-full bg-white shadow-lg rounded-lg px-4 py-6 lg:p-8 md:mx-2 lg:mx-4 mt-4 md:mt-0">--}}
+    {{--                <div>--}}
+    {{--                    <h4 class="text-2xl text-blue-600 font-bold leading-tight mb-2">Annuel</h4>--}}
+    {{--                    <div class="mb-2 flex items-baseline font-bold">--}}
+    {{--                        <span class="text-gray-500 text-xl">Frcfa</span>--}}
+    {{--                        <span class="text-gray-500 text-3xl">6000</span>--}}
+    {{--                        <span class="text-gray-500 text-base">/an</span>--}}
+    {{--                    </div>--}}
+    {{--                    <p class="pb-5 border-b">Vous offre un accès illimité aux contenus pour une durée de 12 mois--}}
+    {{--                        exactement</p>--}}
+    {{--                    <div class="font-semibold mb-2">vous pouvez:</div>--}}
+    {{--                    <ul>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux cours</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux exercices</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux corrige</span>--}}
+    {{--                        </li>--}}
+    {{--                        <li class="flex items-center">--}}
+    {{--                            <svg fill="currentColor" class="h-3 w-3 mr-2 text-green-500" viewBox="0 0 12 12"--}}
+    {{--                                 xmlns="http://www.w3.org/2000/svg">--}}
+    {{--                                <path--}}
+    {{--                                    d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z"></path>--}}
+    {{--                            </svg>--}}
+    {{--                            <span>Accès aux astuces</span>--}}
+    {{--                        </li>--}}
+    {{--                    </ul>--}}
+    {{--                </div>--}}
+    {{--                <div--}}
+    {{--                    class=" border p-3 mt-2 rounded-lg">--}}
+    {{--                    <a--}}
+    {{--                        href="#"--}}
+    {{--                        class="block text-center bg-blue-600 p-2 text-white font-medium rounded hover:bg-blue-800">--}}
+    {{--                        star--}}
+    {{--                    </a>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </section>--}}
+
+    {{--    <section class="px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 text-center md:text-left -mt-32">--}}
+    <section class="container w-full md:w-3/4 mx-auto my-24 px-4">
         <div
             class="flex flex-col md:flex-row items-center justify-between bg-blue-300 px-12 py-10 rounded-lg shadow-lg">
             <div class="w-full md:w-2/3">
                 <h2 class="text-3xl leading-tight font-bold">Soutenez-nous! faites un don</h2>
+                {{--                <p class="mt-2 md:max-w-md">--}}
+                {{--                    Si vous souhaitez soutenir le site, autrement qu'en souscrivant à un forfait, vous pouvez--}}
+                {{--                    aussi faire un don.--}}
+                {{--                </p>--}}
                 <p class="mt-2 md:max-w-md">
-                    Si vous souhaitez soutenir le site, autrement qu'en souscrivant à un forfait, vous pouvez
-                    aussi faire un don.
+                    Si vous souhaitez soutenir le site, vous pouvez faire un don.
+                </p>
             </div>
 
             <div class="w-full md:w-1/3 md:text-right mt-6 md:mt-0">
@@ -1120,6 +1131,7 @@
     </section>
 
     {{--    Disponible sur mobile--}}
+
     <section class="container w-full md:w-3/4 mx-auto mb-4 px-4">
         <div class="flex flex-wrap md:flex-no-wrap justify-center items-center py-4">
             <div class="w-full px-3">
@@ -1127,34 +1139,49 @@
                     class="mb-2 text-3xl font-bold text-gray-800">
                     Disponible sur mobile
                 </h2>
+                {{--                <p class="mb-2 text-gray-700">--}}
+                {{--                    bgrfacile est aussi disponible sur les appareils mobiles <strong>android</strong> et--}}
+                {{--                    <strong>IOS</strong>.--}}
+                {{--                    télecharger gratuitement sur les marchés respectifs.--}}
+                {{--                </p>--}}
                 <p class="mb-2 text-gray-700">
-                    bgrfacile est aussi disponible sur les appareils mobiles <strong>android</strong> et
-                    <strong>IOS</strong>.
-                    télecharger gratuitement sur les marchés respectifs.
+                    Retrouver l'ensemble du contenus de bgrfacile sur une application mobile. <br>
                 </p>
                 <div class="flex justify-around mb-4">
+                    {{--                    <p class="flex flex-col justify-center items-center">--}}
+                    {{--                        <a--}}
+                    {{--                            href="#"--}}
+                    {{--                            class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">--}}
+                    {{--                            <img--}}
+                    {{--                                class="w-full"--}}
+                    {{--                                src="{{ asset('assets/images/google-play.svg') }}">--}}
+                    {{--                        </a>--}}
+                    {{--                        <span class="font-bold text-lg text-gray-600">--}}
+                    {{--                            Google Play--}}
+                    {{--                        </span>--}}
+                    {{--                    </p>--}}
+                    {{--                    <p class="flex flex-col justify-center items-center">--}}
+                    {{--                        <a--}}
+                    {{--                            href="#"--}}
+                    {{--                            class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">--}}
+                    {{--                            <img--}}
+                    {{--                                class="w-full"--}}
+                    {{--                                src="{{ asset('assets/images/app-store.svg') }}">--}}
+                    {{--                        </a>--}}
+                    {{--                        <span class="font-bold text-lg text-gray-600">--}}
+                    {{--                            App Store--}}
+                    {{--                        </span>--}}
+                    {{--                    </p>--}}
                     <p class="flex flex-col justify-center items-center">
                         <a
                             href="#"
                             class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">
                             <img
                                 class="w-full"
-                                src="{{ asset('assets/images/google-play.svg') }}">
+                                src="{{ asset('assets/svg/down-arrow.svg') }}">
                         </a>
                         <span class="font-bold text-lg text-gray-600">
-                            Google Play
-                        </span>
-                    </p>
-                    <p class="flex flex-col justify-center items-center">
-                        <a
-                            href="#"
-                            class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">
-                            <img
-                                class="w-full"
-                                src="{{ asset('assets/images/app-store.svg') }}">
-                        </a>
-                        <span class="font-bold text-lg text-gray-600">
-                            App Store
+                            telecharger
                         </span>
                     </p>
                 </div>

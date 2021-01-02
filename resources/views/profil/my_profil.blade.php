@@ -1,5 +1,9 @@
 @extends('layouts.base')
 
+@section('title')
+    Mon compte
+@endsection
+
 @section('baniere')
     @include('layouts.partials.baniere_profil')
 @endsection
