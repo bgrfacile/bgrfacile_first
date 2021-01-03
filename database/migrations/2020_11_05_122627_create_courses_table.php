@@ -18,15 +18,12 @@ class CreateCoursesTable extends Migration
             $table->string('name');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('subject_id')->constrained();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->longText('content');
-            $table->string('image')->nullable();
-//            $table->float('note', 8, 2)->nullable();
+            $table->text('image_path')->nullable();
             $table->integer('liker')->default(0);
             $table->enum('enligne', [0, 1, 2])->default(0);//0: brouillon 1:en ligne 2:semblant de suppression
             $table->timestamps();
-//            $table->unsignedBigInteger('user_id');
-//            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

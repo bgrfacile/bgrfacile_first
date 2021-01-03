@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class CreateNewUser implements CreatesNewUsers
@@ -25,37 +26,36 @@ class CreateNewUser implements CreatesNewUsers
 
     public function create(array $input)
     {
+
+        if (!Role::where('name','etudiant')->first()){
+            Role::create(['name' => 'etudiant']);
+        }
+        if (!Role::where('name','admin')->first()){
+            Role::create(['name' => 'admin']);
+        }
+
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
+            'condition' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'image' => ['image', 'max:5000'],
             'password' => $this->passwordRules(),
         ])->validate();
 
-
-        $nbUser = DB::table('users')->count();
-        if ($nbUser === 0) {
-            $user = $this->saveUser($input);
-            return $user->assignRole('super-admin');
-        } else {
-            $user = $this->saveUser($input);
+        $user = User::create([
+            'name' => $input['name'],
+            'email' => $input['email'],
+            'condition' => '1',
+            'telephone' => $input['email'],
+            'password' => Hash::make($input['password']),
+            'profile_photo_path' => "https://ui-avatars.com/api/?name={$input['name']}",
+        ]);
+        $countUser =  User::all()->count();
+        if ($countUser === 1){
+            return $user->assignRole('admin');
+        }else{
             return $user->assignRole('etudiant');
         }
+
     }
 
-    private function saveUser(array $input)
-    {
-        $user = new User();
-        $user->name = $input['name'];
-        $user->email = $input['email'];
-        $user->password = Hash::make($input['password']);
-        if (request()->hasFile('image')) {
-//            $user->profile_photo_path = request('image')->store('profile-photos', 'public');
-            $user->profile_photo_path ='storage/' . $input['image']->store('profile-photos', 'public');
-        }else{
-            $user->profile_photo_path = "https://ui-avatars.com/api/?name={$input['name']}";
-        }
-        $user->save();
-        return $user;
-    }
 }

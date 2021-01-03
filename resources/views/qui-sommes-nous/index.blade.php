@@ -34,12 +34,12 @@
             <h4 class="text-2xl text-center h-12">une communauté de</h4>
             <div class="grid grid-cols-2 divide-x divide-gray-400 mx-auto max-w-6xl">
                 <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                    <strong class="text-xl md:text-4xl count">12.828.959</strong>
+                    <strong class="text-xl md:text-4xl count">-</strong>
                     <p class="font-bold text-base md:text-xl text-gray-800">professeurs</p>
                 </div>
 
                 <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                    <strong class="text-xl md:text-4xl count">12.82.959</strong>
+                    <strong class="text-xl md:text-4xl count">{{ $userCount }}</strong>
                     <p class="font-bold text-base md:text-xl text-gray-800">étudiant</p>
                 </div>
 

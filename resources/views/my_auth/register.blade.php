@@ -1,52 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr-FR" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.baseTemplate')
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title>Register | bgrfacile.com</title>
+@section('title')
+    creation de compte
+@endsection
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/bgr.ico') }}">
-    <meta name="theme-color" content="#ffffff">
-    <script src="{{ asset('dist/assets/js/config.navbar-vertical.js') }}"></script>
-
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="{{ asset('dist/assets/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl"/>
-    <link href="{{ asset('dist/assets/css/theme.min.css') }}" rel="stylesheet" id="style-default"/>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
-    <script>
-        var isRTL = JSON.parse(localStorage.getItem('isRTL'));
-        if (isRTL) {
-            var linkDefault = document.getElementById('style-default');
-            linkDefault.setAttribute('disabled', true);
-            document.querySelector('html').setAttribute('dir', 'rtl');
-        } else {
-            var linkRTL = document.getElementById('style-rtl');
-            linkRTL.setAttribute('disabled', true);
-        }
-    </script>
-</head>
-
-<body>
-<!-- ===============================================-->
-<!--    Main Content-->
-<!-- ===============================================-->
-
-
-<main class="main" id="top">
-    <div class="container" data-layout="container">
+@section('contenue')
+    <div class="container-fluid">
         <script>
             var isFluid = JSON.parse(localStorage.getItem('isFluid'));
             if (isFluid) {
@@ -55,81 +14,121 @@
                 container.classList.add('container-fluid');
             }
         </script>
-        <div class="row flex-center min-vh-100 py-6">
-            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-                <a class="d-flex flex-center mb-4" href="{{ route('home') }}">
-                    <img class="mr-2" src="{{ asset('assets/images/BGRfacile3.png') }}" alt="logo de bgrfacile"
-                         width="150"/>
-                    {{--                    <span class="font-sans-serif font-weight-bolder fs-5 d-inline-block">falcon</span>--}}
-                </a>
-                <div class="card">
-                    <div class="card-body p-4 p-sm-5">
-                        <div class="row flex-between-center mb-2">
-                            <div class="col-auto">
-                                <h5>S'inscrire</h5>
-                            </div>
-                            <div class="col-auto fs--1 text-600"><span class="mb-0 undefined">Déjà un compte?</span>
-                                <span><a href="{{ route('login') }}" class="text-blue-600">S'identifier</a></span>
-                            </div>
-                        </div>
-                        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
-                            @csrf
-                            <div class="mb-3">
-                                <input class="form-control" type="text" placeholder="Name"/>
-                            </div>
-                            <div class="mb-3">
-                                <input class="form-control" type="email" placeholder="Email address"/>
-                            </div>
-                            {{--                            <div class="row gx-3">--}}
-                            <div class="mb-3">
-                                <input class="form-control"
-                                       type="password"
-                                       placeholder="Password"/>
-                            </div>
-                            <div class="mb-3 ">
-                                <input class="form-control"
-                                       type="password"
-                                       placeholder="Confirm Password"/>
-                            </div>
-                            {{--                            </div>--}}
-                            <div class="form-check">
-                                <input class="form-check-input"
-                                       type="checkbox"
-                                       id="basic-register-checkbox"
-                                       required/>
-                                <label class="form-label"
-                                       for="basic-register-checkbox">
-                                    J'accepte les <a href="{{ route('faq') }}" class="text-blue-600">conditions </a>et
-                                    <a href="{{ route('faq') }}"
-                                       class="text-blue-600">
-                                        la politique de confidentialité</a>
-                                </label>
-                            </div>
-                            <div class="mb-3">
-                                <button class="btn btn-primary btn-block mt-3" type="submit" name="submit">
-                                    S'inscrire
-                                </button>
-                            </div>
-                        </form>
-                        <div class="position-relative mt-4">
-                            <hr class="bg-300"/>
-                            <div
-                                class="position-absolute top-50 left-50 translate-middle px-3 bg-white font-sans-serif fs--1 text-500 text-nowrap">
-                                ou inscrivez-vous avec
-                            </div>
-                        </div>
-                        <div class="row g-2 mt-2">
-                            <div class="col-sm-6">
-                                <a class="btn btn-outline-google-plus btn-sm btn-block"
-                                   href="{{ route('login.google') }}">
-                                    <span class="fab fa-google-plus-g mr-2" data-fa-transform="grow-8"></span>
-                                    google
-                                </a></div>
-                            <div class="col-sm-6">
-                                <a class="btn btn-outline-dark btn-sm btn-block" href="{{ route('login.github') }}">
-                                    <span class="fab fa-github mr-2" data-fa-transform="grow-8"></span>
-                                    GitHub
-                                </a>
+        <div class="row min-vh-100 bg-100">
+            <div class="col-6 d-none d-lg-block position-relative">
+                <div class="bg-holder"
+                     style="background-image:url({{ asset('dist/assets/img/generic/19.jpg') }});"></div>
+                <!--/.bg-holder-->
+            </div>
+            <div class="col-sm-10 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+                <div class="row justify-content-center g-0">
+                    <div class="col-lg-9 col-xl-8 col-xxl-6">
+                        <div class="card">
+                            <div class="card-header bg-circle-shape text-center p-2"><a
+                                    class="font-sans-serif font-weight-bolder fs-4 z-index-1 position-relative link-light"
+                                    href="{{ route('home') }}">bgrfacile</a></div>
+                            <div class="card-body p-4">
+                                <div class="row flex-between-center">
+                                    <div class="col-auto">
+                                        <h3>S'inscrire</h3>
+                                    </div>
+                                    <div class="col-auto fs--1 text-600">
+                                        <span class="mb-0 font-weight-semi-bold">Déjà utilisateur?</span>
+                                        <span><a href="{{ route('login') }}">S'identifier</a></span>
+                                    </div>
+                                </div>
+                                <form action="{{ route('register') }}" method="post">
+                                    @csrf
+                                    <div class="mb-3">
+                                        <label class="form-label" for="split-name">Nom</label>
+                                        <input name="name" value="{{ old('name') }}"
+                                               class="form-control @if($errors->has('name'))is-invalid @endif"
+                                               type="text" id="split-name"/>
+                                        @if($errors->has('name'))
+                                            <div class="invalid-feedback">
+                                                {{ $errors->first('name') }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="split-email">Adresse e-mail</label>
+                                        <input name="email" value="{{ old('email') }}"
+                                               class="form-control @if($errors->has('email'))is-invalid @endif"
+                                               type="email"
+                                               id="split-email"/>
+                                        @if($errors->has('email'))
+                                            <div class="invalid-feedback">
+                                                {{ $errors->first('email') }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="mb-3 col-sm-12">
+                                            <label class="form-label" for="split-password">Mot de passe</label>
+                                            <input name="password"
+                                                   class="form-control @if($errors->has('password'))is-invalid @endif"
+                                                   type="password" id="split-password"/>
+                                            @if($errors->has('password'))
+                                                <div class="invalid-feedback">
+                                                    {{ $errors->first('password') }}
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <div class="mb-3 col-sm-12">
+                                            <label class="form-label"
+                                                   for="split-confirm-password">Confirmez mot de passe</label>
+                                            <input name="password_confirmation"
+                                                   class="form-control "
+                                                   type="password"
+                                                   id="split-confirm-password"/>
+
+                                        </div>
+                                    </div>
+                                    conditions et la politique de confidentialité
+                                    <div class="form-check">
+                                        <input name="condition"
+                                               class="form-check-input @if($errors->has('condition'))is-invalid @endif"
+                                               type="checkbox"
+                                               id="cover-register-checkbox"/>
+                                        <label class="form-label" for="cover-register-checkbox">J'accepte les <a
+                                                href="#!">conditions </a>et
+                                            <a href="#!">la politique de confidentialité</a>
+                                        </label>
+                                        @if($errors->has('condition'))
+                                            <div class="invalid-feedback">
+                                                {{ $errors->first('condition') }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3">
+                                        <button class="btn btn-primary btn-block mt-3" type="submit" name="submit">
+                                            S'inscrire
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="position-relative mt-4">
+                                    <hr class="bg-300"/>
+                                    <div
+                                        class="position-absolute top-50 left-50 translate-middle px-3 bg-white font-sans-serif fs--1 text-500 text-nowrap">
+                                        ou inscrivez-vous avec
+                                    </div>
+                                </div>
+                                <div class="row g-2 mt-2">
+                                    <div class="col-sm-6">
+                                        <a class="btn btn-outline-google-plus btn-sm btn-block"
+                                           href="{{ route('login.google') }}">
+                                            <span class="fab fa-google mr-2" data-fa-transform="grow-8"></span>
+                                            google
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a class="btn btn-outline-dark btn-sm btn-block"
+                                           href="{{ route('login.github') }}">
+                                            <span class="fab fa-github mr-2" data-fa-transform="grow-8"></span>
+                                            GitHub
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -137,22 +136,4 @@
             </div>
         </div>
     </div>
-</main>
-
-
-<!-- ===============================================-->
-<!--    JavaScripts-->
-<!-- ===============================================-->
-<script src="{{ asset('dist/vendors/popper/popper.min.js') }}"></script>
-<script src="{{ asset('dist/vendors/bootstrap/bootstrap.min.js') }}"></script>
-<script src="{{ asset('dist/vendors/is/is.min.js') }}"></script>
-<script src="{{ asset('dist/vendors/fontawesome/all.min.js') }}"></script>
-<script src="{{ asset('dist/vendors/lodash/lodash.min.js') }}"></script>
-{{--<script src="../../../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>--}}
-<script src="{{ asset('dist/vendors/list.js/list.min.js') }}"></script>
-<script src="{{ asset('dist/assets/js/theme.js') }}"></script>
-<link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
-    rel="stylesheet">
-</body>
-</html>
+@endsection

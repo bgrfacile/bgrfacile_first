@@ -54,7 +54,8 @@
         </h3>
         <div class="grid grid-cols-2 divide-x divide-gray-400 mx-auto max-w-6xl">
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-xl md:text-4xl count">12828959</strong>
+{{--                <strong class="text-xl md:text-4xl count">12828959</strong>--}}
+                <strong class="text-xl md:text-4xl count">{{ $countCourse }}</strong>
                 <p class="font-bold text-base md:text-xl text-gray-800">Cours</p>
             </div>
 
@@ -64,7 +65,8 @@
             {{--            </div>--}}
 
             <div class="{{--px-10 mx-5--}} text-center flex flex-col">
-                <strong class="text-xl md:text-4xl count">12895</strong>
+{{--                <strong class="text-xl md:text-4xl count">12895</strong>--}}
+                <strong class="text-xl md:text-4xl count">{{ $pists }}</strong>
                 <p class="font-bold text-base md:text-xl text-gray-800">Astuces</p>
             </div>
         </div>

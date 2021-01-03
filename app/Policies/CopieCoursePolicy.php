@@ -6,7 +6,7 @@ use App\Models\Course;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class CoursePolicy
+class CopieCoursePolicy
 {
     use HandlesAuthorization;
 
@@ -28,9 +28,22 @@ class CoursePolicy
      * @param  \App\Models\Course  $course
      * @return mixed
      */
-    public function view(User $user, Course $course)
+    public function view(?User $user, Course $course)
     {
-        //
+        if ($course->published) {
+            return true;
+        }
+        //les visiteurs ne peuvent pas voir les éléments non publiés
+        if ($user === null) {
+            return false;
+        }
+        // L'administrateur remplace le statut publié
+        if ($user->can('view unpublished posts')) {
+            return true;
+        }
+
+        // les auteurs peuvent afficher leurs propres articles non publiés
+        return true;
     }
 
     /**
@@ -41,7 +54,9 @@ class CoursePolicy
      */
     public function create(User $user)
     {
-        //
+        if ($user->can('create posts')) {
+            return true;
+        }
     }
 
     /**
@@ -53,7 +68,13 @@ class CoursePolicy
      */
     public function update(User $user, Course $course)
     {
-        //
+        if ($user->can('edit own posts')) {
+            return $user->id == $course->user_id;
+        }
+
+        if ($user->can('edit all posts')) {
+            return true;
+        }
     }
 
     /**
@@ -65,7 +86,13 @@ class CoursePolicy
      */
     public function delete(User $user, Course $course)
     {
-        //
+        if ($user->can('delete own posts')) {
+            return $user->id == $course->user_id;
+        }
+
+        if ($user->can('delete any post')) {
+            return true;
+        }
     }
 
     /**

@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AstucesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
 use App\Http\Controllers\SubjectsController;
@@ -17,9 +19,8 @@ use App\Http\Controllers\ProfilController;
 /*
  * home Page
  * */
-Route::get('/', function () {
-    return view('home.home');
-})->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home');
+
 Route::get('/demo', function () {
     return view('demo');
 })->name('demo');
@@ -38,9 +39,7 @@ Route::get('/ecoles',function (){
    return view('ecoles.index');
 })->name('ecoles.index');
 
-Route::get('/qui-sommes-nous',function (){
-    return view('qui-sommes-nous.index');
-})->name('qui-sommes-nous');
+Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-sommes-nous');
 
 Route::get('/politique-de-confidentialite',function (){
     return view('politique-de-confidentialite.index');
@@ -99,6 +98,7 @@ Route::prefix('profil')->group(function () {
     Route::get('/',[ProfilController::class, 'index'])->name('profil.index');
 
     Route::get('/edit',[ProfilController::class, 'edit'])->name('profil.edit');
+    Route::post('/edit/{user}',[ProfilController::class, 'editPost'])->name('profil.edit.post');
 
     Route::get('/myFavoris',[ProfilController::class, 'myFavoris'])->name('profil.myFavoris');
 

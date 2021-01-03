@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Fortify\UpdateUserProfileInformation;
 use App\Models\Favory;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProfilController extends Controller
@@ -25,7 +29,25 @@ class ProfilController extends Controller
     }
 
     public function edit(){
-        return view('profil.edit_profil');
+        $user = User::find(Auth::user()->id);
+        return view('profil.edit_profil',[
+            'user'=>$user,
+        ]);
+    }
+
+    public function editPost(Request $request,  $id){
+        $user = User::find($id);
+        $input = $request->all();
+        $update = new UpdateUserProfileInformation();
+        $update->update($user,$input);
+
+//        Validator::make($input,[
+//            'name' => ['required', 'string', 'max:255'],
+//            'prenom' => ['nullable', 'string', 'max:255'],
+//            'numero' => ['nullable', 'max:255'],
+//            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+//        ])->validate();
+        return back()->with('success', 'Information modifier avec succes');
     }
 
     public function myFavoris(){
