@@ -22,6 +22,9 @@ class CreatePistesTable extends Migration
             $table->foreignId('podcast_id')
                 ->constrained()
                 ->onDelete('cascade');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -82,7 +82,7 @@
                                     </div>
                                 </td>
                                 <th class="align-middle white-space-nowrap name">
-                                    <a href={{ route('books.show',['book'=>$book->book_id]) }}"" class="font-weight-bolder">{{ $book->book_title }}</a>
+                                    <a href="{{ route('books.show',['book'=>$book->book_id]) }}" class="font-weight-bolder">{{ $book->book_title }}</a>
                                 </th>
                                 <td class="align-middle white-space-nowrap email">{{ $book->auteur }}</td>
                                 <td style="max-width: 200px;overflow: hidden" class="align-middle white-space-nowrap product">

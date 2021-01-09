@@ -78,4 +78,8 @@ class User extends Authenticatable implements HasMedia
     {
         // TODO: Implement clearMediaCollection() method.
     }
+
+    public function podcasts(){
+        return $this->hasMany(Podcast::class)->orderBy('created_at','DESC');
+    }
 }

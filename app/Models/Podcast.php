@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
 
 class Podcast extends Model
 {
@@ -23,5 +24,10 @@ class Podcast extends Model
     public function book()
     {
         return $this->belongsTo(Book::class);
+    }
+    public function piste()
+    {
+        return $this->hasMany(Podcast::class)
+            ->orderBy('podcasts.created_at','DESC');
     }
 }

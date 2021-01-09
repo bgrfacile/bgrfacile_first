@@ -52,33 +52,32 @@
                             </tr>
                             </thead>
                             <tbody class="list" id="table-customers-body">
-                            <tr class="btn-reveal-trigger">
-
-                                <td class="name align-middle white-space-nowrap py-2">
-                                    <a href="#">
-                                        <div class="d-flex d-flex align-items-center">
-                                            <div class="flex-1">
-                                                <h5 class="mb-0 fs--1">Ricky Antony</h5>
+                            @foreach($pistes as $piste)
+                                <tr class="btn-reveal-trigger">
+                                    <td class="name align-middle white-space-nowrap py-2">
+                                        <a href="#">
+                                            <div class="d-flex d-flex align-items-center">
+                                                <div class="flex-1">
+                                                    <h5 class="mb-0 fs--1">{{ $piste['name'] }}</h5>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="name align-middle white-space-nowrap py-2">
-                                    <h5 class="mb-0 fs--1 text-info">Chapitre 1</h5>
-                                </td>
-                                <td class="address align-middle white-space-nowrap pl-5 py-2">
-                                    2392 Main Avenue,
-                                    Penasauka, New Jersey 02139
-                                </td>
-                                <td class="joined align-middle py-2">30/03/2018</td>
-                                <td class="align-middle white-space-nowrap py-2 text-right">
-                                    <button class="btn btn-light btn-sm py-0 mt-1 border shadow-none" type="button">
-                                        <img src="{{ asset('dist/assets/img/icons/play.svg') }}" alt="" width="15">
-                                        <span class="fs--1">play</span>
-                                    </button>
-                                </td>
-                            </tr>
-
+                                        </a>
+                                    </td>
+                                    <td class="name align-middle white-space-nowrap py-2">
+                                        <h5 class="mb-0 fs--1 text-info">{{ $piste['title'] }}</h5>
+                                    </td>
+                                    <td class="address align-middle white-space-nowrap pl-5 py-2">
+                                        {{ $piste['description'] }}
+                                    </td>
+                                    <td class="joined align-middle py-2"> {{ \Carbon\Carbon::parse($piste['piste_create'])->format('d M. Y')}}</td>
+                                    <td class="align-middle white-space-nowrap py-2 text-right">
+                                        <button class="btn btn-light btn-sm py-0 mt-1 border shadow-none" type="button">
+                                            <img src="{{ asset('dist/assets/img/icons/play.svg') }}" alt="" width="15">
+                                            <span class="fs--1">play</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -98,7 +97,8 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <h5 class="mb-0" id="followers">
-                                Participant <span class="d-none d-sm-inline-block">(1)</span>
+                                Ils ont crée des podcasts
+                                {{--                                Participant <span class="d-none d-sm-inline-block">(1)</span>--}}
                             </h5>
                         </div>
                         <div class="col">
@@ -108,23 +108,24 @@
                 </div>
                 <div class="card-body bg-light p-0">
                     <div class="row g-0 text-center fs--1">
-                        <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-1">
-
-                            <div class="bg-white p-3 h-100">
-                                <a href="profile.html">
-                                    <img class="img-thumbnail img-fluid rounded-circle mb-3 shadow-sm"
-                                         src="{{ asset('dist/assets/img/team/1.jpg') }}" alt="" width="100"/>
-                                </a>
-                                <h6 class="mb-1">
-                                    <a href="#">Emilia Clarke</a>
-                                </h6>
-                                <p class="fs--2 mb-1">
-                                    <span class="d-none d-sm-inline-block">(1)</span>
-                                    <span class="text-700">Piste</span>
-                                </p>
+                        @foreach($users as $user)
+                            <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-1">
+                                <div class="bg-white p-3 h-100">
+                                    <a href="#">
+                                        <img class="img-thumbnail img-fluid rounded-circle mb-3 shadow-sm"
+                                             {{--                                             src="{{ asset('dist/assets/img/team/1.jpg') }}" alt="" width="100"/>--}}
+                                             src="{{ $user->profile_photo_path }}" alt="{{ $user->name }}" width="100"/>
+                                    </a>
+                                    <h6 class="mb-1">
+                                        <a href="{{ route('users.show',['user'=>$user->id]) }}">{{ $user->name }}</a>
+                                    </h6>
+                                    <p class="fs--2 mb-1">
+                                        <span class="d-none d-sm-inline-block">(1)</span>
+                                        <span class="text-700">Piste</span>
+                                    </p>
+                                </div>
                             </div>
-
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

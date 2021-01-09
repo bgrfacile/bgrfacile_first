@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\admin\AdminUserController;
 use App\Http\Controllers\AstucesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
+use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
@@ -141,6 +143,9 @@ Route::prefix('dashboard-admin')->group(function () {
     Route::get('/', function (){
         return view('dashboard_admin.home.home');
     })->name('dashboard.index');
+
+//    Route::get('/users',[AdminUserController::class,'index'])->name('users.index');
+    Route::resource('users',AdminUserController::class);
 
     Route::get('/all-users', function (){
         return view('dashboard_admin.all_users.index');

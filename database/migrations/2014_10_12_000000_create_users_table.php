@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('prenom')->nullable();
             $table->string('telephone')->nullable();
+            $table->text('bio')->nullable();
             $table->enum('condition', [0, 1])->default(0);//0: non 1:ok
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

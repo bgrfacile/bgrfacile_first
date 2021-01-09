@@ -28,6 +28,8 @@ class Book extends Model
     }
     public function podcast()
     {
-        return $this->hasMany(Podcast::class)->orderBy('created_at','DESC');
+        return $this->hasMany(Podcast::class)
+            ->leftJoin('users', 'users.id', '=', 'podcasts.user_id')
+            ->orderBy('podcasts.created_at','DESC');
     }
 }
