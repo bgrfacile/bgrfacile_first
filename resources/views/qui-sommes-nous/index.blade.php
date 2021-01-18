@@ -80,7 +80,7 @@
     {{--presentation de l'équipe--}}
     <div class="bg-gray-100">
         <div class="mx-auto max-w-4xl py-16 text-gray-700">
-            <h3 class="my-7 text-2xl font-bold text-left border-b pb-2">L'équipes</h3>
+            <h3 class="my-7 text-2xl font-bold text-left border-b pb-2">L'équipe</h3>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
                     <div class="px-5 py-12 text-center">

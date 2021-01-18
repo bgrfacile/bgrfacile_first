@@ -25,76 +25,99 @@ class ProfilController extends Controller
 
     public function index()
     {
-        return view('profil.my_profil');
-    }
-
-    public function edit(){
-        $user = User::find(Auth::user()->id);
-        return view('profil.edit_profil',[
-            'user'=>$user,
+        $user = User::where('id', Auth::user()->id)->first();
+        return view('profil.my_profil', [
+            'user' => $user
         ]);
     }
 
-    public function editPost(Request $request,  $id){
-        $user = User::find($id);
-        $input = $request->all();
-        $update = new UpdateUserProfileInformation();
-        $update->update($user,$input);
-
-//        Validator::make($input,[
-//            'name' => ['required', 'string', 'max:255'],
-//            'prenom' => ['nullable', 'string', 'max:255'],
-//            'numero' => ['nullable', 'max:255'],
-//            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
-//        ])->validate();
-        return back()->with('success', 'Information modifier avec succes');
+    public function edit()
+    {
+        $user = User::where('id', Auth::user()->id)->first();
+        return view('profil.edit_profil', [
+            'user' => $user,
+        ]);
     }
 
-    public function myFavoris(){
+    public function editPost(Request $request, $id)
+    {
+//        dd($request->all());
+        $user = User::findOrFail($id);
+        Validator::make($request->all(), [
+            'name' => ['required','string', 'max:255'],
+            'prenom' => ['required','string', 'max:500'],
+            'bio' => ['required','string', 'max:255'],
+            'telephone' => ['required|regex:/(06)[0-9]{9}/'],
+            'email' => ['required','email', 'max:255'],
+            'profile_photo_path' => ['file' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'],
+        ]);
+
+        $user->name = $request->name;
+        $user->prenom = $request->prenom;
+        $user->telephone = $request->telephone;
+        $user->email = $request->email;
+        $user->bio = $request->bio;
+        if (request()->hasFile('profile_photo_path')) {
+            $user->profile_photo_path  = '/storage/' . $request->profile_photo_path->store('photos-profil', 'public');
+        }
+//        dd($user);
+        if ($user->save()) {
+            return back()->with('success', 'Information modifier avec succes');
+        }
+    }
+
+    public function myFavoris()
+    {
         $favories = DB::table('favories')
             ->leftJoin('courses', 'favories.user_id', '=', 'courses.id')
 //            ->leftJoin('subjects', 'courses.subject_id', '=', 'subjects.id')
-            ->where('favories.user_id','=',auth()->id())
+            ->where('favories.user_id', '=', auth()->id())
             ->get();
-        return view('profil.myFavoris_profil',[
-            'favories'=>$favories
+        return view('profil.myFavoris_profil', [
+            'favories' => $favories
         ]);
     }
 
-    public function myCourses(){
+    public function myCourses()
+    {
 //        $courses = User::find(auth()->user()->id)->courses;
         $courses = DB::table('courses')
-            ->leftJoin('subjects','courses.subject_id','=','subjects.id')
+            ->leftJoin('subjects', 'courses.subject_id', '=', 'subjects.id')
             ->select(
                 'courses.id AS id_cours',
                 'courses.name AS nom_cours',
                 'subjects.name AS nom_subjects',
                 'subjects.name AS nom_subjects',
                 'enligne',
-            )->get();
+                )->get();
 //        dd($courses);
         return view('profil.myCourses_profil', [
             'courses' => $courses
         ]);
     }
 
-    public function myExercises(){
+    public function myExercises()
+    {
         return view('profil.myExercises_profil');
     }
 
-    public function myCorrected(){
+    public function myCorrected()
+    {
         return view('profil.myCorrected_profil');
     }
 
-    public function mySchool(){
+    public function mySchool()
+    {
         return view('profil.mySchool_profil');
     }
 
-    public function myDashbord(){
+    public function myDashbord()
+    {
         return view('profil.myDashbord_profil');
     }
 
-    public function myFactures(){
+    public function myFactures()
+    {
         return view('profil.myFactures_profil');
     }
 

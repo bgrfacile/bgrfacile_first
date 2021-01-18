@@ -16,18 +16,18 @@
                             Tableau de bord
                         </span>
                     </a>
-{{--                    <a href="#" class="flex justify-between items-center px-3 py-2 rounded-lg">--}}
-{{--                        <span class="text-sm font-medium text-gray-700 ">--}}
-{{--                            En ligne--}}
-{{--                        </span>--}}
-{{--                        <span class="text-xs font-semibold text-gray-700 ">22</span>--}}
-{{--                    </a>--}}
-{{--                    <a href="#" class="flex justify-between items-center px-3 py-2 rounded-lg">--}}
-{{--                        <span class="text-sm font-medium text-gray-700 ">--}}
-{{--                            Brouillant--}}
-{{--                        </span>--}}
-{{--                        <span class="text-xs font-semibold text-gray-700 ">12</span>--}}
-{{--                    </a>--}}
+                    <a href="#" class="flex justify-between items-center px-3 py-2 rounded-lg">
+                        <span class="text-sm font-medium text-gray-700 ">
+                            Astuces
+                        </span>
+                        <span class="text-xs font-semibold text-gray-700 ">22</span>
+                    </a>
+                    <a href="#" class="flex justify-between items-center px-3 py-2 rounded-lg">
+                        <span class="text-sm font-medium text-gray-700 ">
+                            Cours
+                        </span>
+                        <span class="text-xs font-semibold text-gray-700 ">12</span>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -40,14 +40,14 @@
                             <h2 class="text-2xl font-semibold text-gray-900 leading-tight">Tableau de bord</h2>
                         </div>
                         <div class="flex">
-                            <a href="{{ route('course.create') }}"
-                               class="ml-5 flex items-center pl-2 pr-4 py-3 text-sm font-medium text-white bg-blue-800 rounded hover:bg-blue-700">
-                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
-                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                          d="M12 7v10m5-5H7"></path>
-                                </svg>
-                                <span class="ml-1">New cours</span>
-                            </a>
+{{--                            <a href="{{ route('course.create') }}"--}}
+{{--                               class="ml-5 flex items-center pl-2 pr-4 py-3 text-sm font-medium text-white bg-blue-800 rounded hover:bg-blue-700">--}}
+{{--                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">--}}
+{{--                                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round"--}}
+{{--                                          d="M12 7v10m5-5H7"></path>--}}
+{{--                                </svg>--}}
+{{--                                <span class="ml-1">New cours</span>--}}
+{{--                            </a>--}}
                         </div>
                     </div>
                 </header>

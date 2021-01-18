@@ -13,8 +13,9 @@
             {{ session('success') }}
         </div>
     @endif
-    <form action="{{ route('profil.edit.post',['user'=>Auth::user()->id]) }}" method="post">
+    <form action="{{ route('profil.edit.post',['user'=>$user->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('put')
         <div class="py-10 bg-gray-100  bg-opacity-50">
             <div class="mx-auto container max-w-2xl md:w-3/4 shadow-md">
                 <div class="bg-gray-100 p-4 border-t-2 bg-opacity-5 border-indigo-400 rounded-t">
@@ -22,13 +23,12 @@
                         Mes informations
                     </div>
                 </div>
-                <div class="bg-white space-y-6">
 
+                <div class="bg-white space-y-6">
                     <div class="md:inline-flex space-y-4 md:space-y-0 w-full p-4 text-gray-500 items-center">
                         <div class="md:w-1/3 max-w-sm mx-auto">
-                            {{--                            <h2>Informations personnelles</h2>--}}
                             <div class="text-center">
-                                <button type="submit" value="info_perso"
+                                <button type="submit"
                                         class="text-white w-full mx-auto max-w-sm rounded-md text-center bg-indigo-400 py-2 px-4 inline-flex items-center focus:outline-none md:float-right">
                                     <svg fill="none" class="w-4 text-white mr-2" viewBox="0 0 24 24"
                                          stroke="currentColor">
@@ -89,19 +89,20 @@
                                                   d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                         </svg>
                                     </div>
-                                    <input name="numero" type="tel" value="{{ $user->telephone }}"
-                                           class="w-11/12 focus:outline-none focus:text-gray-600 p-2 border-2 @if($errors->has('password')) border-red-400 @endif"
+                                    <input name="telephone" type="tel" value="{{ $user->telephone }}"
+                                           class="w-11/12 focus:outline-none focus:text-gray-600 p-2 border-2 @if($errors->has('telephone')) border-red-400 @endif"
                                            id="number_phone">
                                 </div>
-                                @if($errors->has('numero'))
+                                @if($errors->has('telephone'))
                                     <div class="text-red-400">
-                                        {{ $errors->first('numero') }}
+                                        {{ $errors->first('telephone') }}
                                     </div>
                                 @endif
                             </div>
                             <div>
-                                <label class="text-sm text-gray-400">Mon Email <span
-                                        class="text-red-400">* connexion</span></label>
+                                <label class="text-sm text-gray-400">
+                                    Mon Email <span class="text-red-400">* connexion</span>
+                                </label>
                                 <div class="w-full inline-flex border">
                                     <div class="pt-2 w-1/12 bg-gray-100 bg-opacity-50">
                                         <svg fill="none" class="w-6 text-gray-400 mx-auto" viewBox="0 0 24 24"
@@ -122,7 +123,8 @@
                             <div>
                                 <label for="bio" class="text-sm text-gray-400">Quelque chose sur moi</label>
                                 <div class="w-full inline-flex border">
-                                    <textarea id="bio" cols="30" rows="10"></textarea>
+                                    <textarea name="bio" class="h-full w-full p-3" id="bio" cols="30"
+                                              rows="10">{{ $user->bio }}</textarea>
                                 </div>
                                 @if($errors->has('name'))
                                     <div class="text-red-400">
@@ -154,7 +156,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <input type="file" class="w-11/12 focus:outline-none focus:text-gray-600 p-2">
+                                    <input name="profile_photo_path" type="file" class="w-11/12 focus:outline-none focus:text-gray-600 p-2">
                                 </div>
                             </div>
                         </div>

@@ -146,7 +146,7 @@
                             <a class="nav-link dropdown-indicator" href="#astuces" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="astuces">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
-                                        <span class="fas fa-superscript"></span>
+                                        <span class="fas fa-stream"></span>
                                     </span>
                                     <span class="nav-link-text">Astuces</span>
                                 </div>

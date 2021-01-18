@@ -4,61 +4,23 @@
 
 @section('contenue')
 
-    <script>
-        var navbarPosition = localStorage.getItem('navbarPosition');
-        var navbarVertical = document.querySelector('.navbar-vertical');
-        var navbarTopVertical = document.querySelector('.content .navbar-top');
-        var navbarTop = document.querySelector('[data-layout] .navbar-top');
-        var navbarTopCombo = document.querySelector('.content [data-navbar-top="combo"]');
-
-        if (navbarPosition === 'top') {
-            navbarTop.removeAttribute('style');
-            navbarTopVertical.remove(navbarTopVertical);
-            navbarVertical.remove(navbarVertical);
-            navbarTopCombo.remove(navbarTopCombo);
-        } else if (navbarPosition === 'combo') {
-            navbarVertical.removeAttribute('style');
-            navbarTopCombo.removeAttribute('style');
-            navbarTop.remove(navbarTop);
-            navbarTopVertical.remove(navbarTopVertical);
-        } else {
-            navbarVertical.removeAttribute('style');
-            navbarTopVertical.removeAttribute('style');
-            navbarTop.remove(navbarTop);
-            navbarTopCombo.remove(navbarTopCombo);
-        }
-    </script>
     <div class="card mb-3">
         <div class="card-header position-relative min-vh-25 mb-7">
-            <div class="bg-holder rounded-lg rounded-bottom-0" style="background-image:url(../assets/img/generic/4.jpg);"></div>
+            <div class="bg-holder rounded-lg rounded-bottom-0" style="background-image:url({{ asset('dist/assets/img/generic/4.jpg') }});"></div>
             <!--/.bg-holder-->
-            <div class="avatar avatar-5xl avatar-profile"><img class="rounded-circle img-thumbnail shadow-sm" src="../assets/img/team/2.jpg" width="200" alt="" /></div>
+            <div class="avatar avatar-5xl avatar-profile"><img class="rounded-circle img-thumbnail shadow-sm" src="{{ asset('dist/assets/img/team/2.jpg') }}" width="200" alt="" /></div>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-8">
-                    <h4 class="mb-1"> Anthony Hopkins<span data-toggle="tooltip" data-placement="right" title="Verified"><small class="fa fa-check-circle text-primary" data-fa-transform="shrink-4 down-2"></small></span></h4>
+                    <h4 class="mb-1"> {{ $user->name }}<span data-toggle="tooltip" data-placement="right" title="Verified"><small class="fa fa-check-circle text-primary" data-fa-transform="shrink-4 down-2"></small></span></h4>
                     <h5 class="fs-0 font-weight-normal">Senior Software Engineer at Technext Limited</h5>
                     <p class="text-500">New York, USA</p><button class="btn btn-falcon-primary btn-sm px-3" type="button">Following</button><button class="btn btn-falcon-default btn-sm px-3 ml-2" type="button">Message</button>
                     <div class="border-dashed-bottom my-4 d-lg-none"></div>
                 </div>
-                <div class="col pl-2 pl-lg-3"><a class="d-flex align-items-center mb-2" href="#"><span class="fas fa-user-circle fs-4 mr-2 text-700"></span>
-                        <div class="flex-1">
-                            <h6 class="mb-0">See followers (330)</h6>
-                        </div>
-                    </a><a class="d-flex align-items-center mb-2" href="#"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/g.png" alt="Generic placeholder image" width="30" />
-                        <div class="flex-1">
-                            <h6 class="mb-0">Google</h6>
-                        </div>
-                    </a><a class="d-flex align-items-center mb-2" href="#"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/apple.png" alt="Generic placeholder image" width="30" />
-                        <div class="flex-1">
-                            <h6 class="mb-0">Apple</h6>
-                        </div>
-                    </a><a class="d-flex align-items-center mb-2" href="#"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/hp.png" alt="Generic placeholder image" width="30" />
-                        <div class="flex-1">
-                            <h6 class="mb-0">Hewlett Packard</h6>
-                        </div>
-                    </a></div>
+                <div class="col pl-2 pl-lg-3">
+
+                </div>
             </div>
         </div>
     </div>
@@ -78,115 +40,7 @@
                 </div>
                 <div class="card-footer bg-light p-0 border-top"><button class="btn btn-link btn-block btn-intro-collapse" type="button" data-toggle="collapse" data-target="#profile-intro" aria-expanded="true" aria-controls="profile-intro">Show <span class="less">less<span class="fas fa-chevron-up ml-2 fs--2"></span></span><span class="full">full<span class="fas fa-chevron-down ml-2 fs--2"></span></span></button></div>
             </div>
-            <div class="card mb-3">
-                <div class="card-header bg-light d-flex justify-content-between">
-                    <h5 class="mb-0">Associations</h5><a class="font-sans-serif" href="associations.html">All Associations</a>
-                </div>
-                <div class="card-body fs--1 pb-0">
-                    <div class="row">
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex position-relative align-items-center mb-2"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/apple.png" alt="" width="50" />
-                                <div class="flex-1">
-                                    <h6 class="fs-0 mb-0"><a class="stretched-link" href="#!">Apple</a></h6>
-                                    <p class="mb-1">3243 associates</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex position-relative align-items-center mb-2"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/g.png" alt="" width="50" />
-                                <div class="flex-1">
-                                    <h6 class="fs-0 mb-0"><a class="stretched-link" href="#!">Google</a></h6>
-                                    <p class="mb-1">34598 associates</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex position-relative align-items-center mb-2"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/intel.png" alt="" width="50" />
-                                <div class="flex-1">
-                                    <h6 class="fs-0 mb-0"><a class="stretched-link" href="#!">Intel</a></h6>
-                                    <p class="mb-1">7652 associates</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex position-relative align-items-center mb-2"><img class="d-flex align-self-center mr-2" src="../assets/img/logos/nike.png" alt="" width="50" />
-                                <div class="flex-1">
-                                    <h6 class="fs-0 mb-0"><a class="stretched-link" href="#!">Nike</a></h6>
-                                    <p class="mb-1">765 associates</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="card-header bg-light d-flex justify-content-between">
-                    <h5 class="mb-0">Activity log</h5><a class="font-sans-serif" href="activity.html">All logs</a>
-                </div>
-                <div class="card-body fs--1 p-0">
-                    <a class="border-bottom-0 notification rounded-0 border-x-0 border border-300" href="#!">
-                        <div class="notification-avatar">
-                            <div class="avatar avatar-xl mr-3">
-                                <div class="avatar-emoji rounded-circle "><span role="img" aria-label="Emoji">🎁</span></div>
-                            </div>
-                        </div>
-                        <div class="notification-body">
-                            <p class="mb-1"><strong>Jennifer Kent</strong> Congratulated <strong>Anthony Hopkins</strong></p>
-                            <span class="notification-time">November 13, 5:00 Am</span>
-                        </div>
-                    </a>
 
-                    <a class="border-bottom-0 notification rounded-0 border-x-0 border border-300" href="#!">
-                        <div class="notification-avatar">
-                            <div class="avatar avatar-xl mr-3">
-                                <div class="avatar-emoji rounded-circle "><span role="img" aria-label="Emoji">🏷️</span></div>
-                            </div>
-                        </div>
-                        <div class="notification-body">
-                            <p class="mb-1"><strong>California Institute of Technology</strong> tagged <strong>Anthony Hopkins</strong> in a post.</p>
-                            <span class="notification-time">November 8, 5:00 PM</span>
-                        </div>
-                    </a>
-
-                    <a class="border-bottom-0 notification rounded-0 border-x-0 border border-300" href="#!">
-                        <div class="notification-avatar">
-                            <div class="avatar avatar-xl mr-3">
-                                <div class="avatar-emoji rounded-circle "><span role="img" aria-label="Emoji">📋️</span></div>
-                            </div>
-                        </div>
-                        <div class="notification-body">
-                            <p class="mb-1"><strong>Anthony Hopkins</strong> joined <strong>Victory day cultural Program</strong> with <strong>Tony Stark</strong></p>
-                            <span class="notification-time">November 01, 11:30 AM</span>
-                        </div>
-                    </a>
-
-                    <a class="notification border-x-0 border-bottom-0 border-300 rounded-top-0" href="#!">
-                        <div class="notification-avatar">
-                            <div class="avatar avatar-xl mr-3">
-                                <div class="avatar-emoji rounded-circle "><span role="img" aria-label="Emoji">📅️</span></div>
-                            </div>
-                        </div>
-                        <div class="notification-body">
-                            <p class="mb-1"><strong>Massachusetts Institute of Technology</strong> invited <strong>Anthony Hopkin</strong> to an event</p>
-                            <span class="notification-time">October 28, 12:00 PM</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="card mb-3 mb-lg-0">
-                <div class="card-header bg-light">
-                    <h5 class="mb-0">Photos</h5>
-                </div>
-                <div class="card-body overflow-hidden">
-                    <div class="row g-0">
-                        <div class="col-6 p-1"><a class="glightbox" href="../assets/img/generic/4.jpg" data-gallery="gallery1" data-glightbox="data-glightbox"><img class="img-fluid rounded" src="../assets/img/generic/4.jpg" alt="..." /></a></div>
-                        <div class="col-6 p-1"><a class="glightbox" href="../assets/img/generic/5.jpg" data-gallery="gallery1" data-glightbox="data-glightbox"><img class="img-fluid rounded" src="../assets/img/generic/5.jpg" alt="..." /></a></div>
-                        <div class="col-4 p-1"><a class="glightbox" href="../assets/img/gallery/4.jpg" data-gallery="gallery1" data-glightbox="data-glightbox"><img class="img-fluid rounded" src="../assets/img/gallery/4.jpg" alt="..." /></a></div>
-                        <div class="col-4 p-1"><a class="glightbox" href="../assets/img/gallery/5.jpg" data-gallery="gallery1" data-glightbox="data-glightbox"><img class="img-fluid rounded" src="../assets/img/gallery/5.jpg" alt="..." /></a></div>
-                        <div class="col-4 p-1"><a class="glightbox" href="../assets/img/gallery/3.jpg" data-gallery="gallery1" data-glightbox="data-glightbox"><img class="img-fluid rounded" src="../assets/img/gallery/3.jpg" alt="..." /></a></div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="col-lg-4 pl-lg-2">
             <div class="sticky-sidebar">
@@ -223,78 +77,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <div class="card-header bg-light">
-                        <h5 class="mb-0">Education</h5>
-                    </div>
-                    <div class="card-body fs--1">
-                        <div class="d-flex"><a href="#!">
-                                <div class="avatar avatar-3xl">
-                                    <div class="avatar-name rounded-circle"><span>SU</span></div>
-                                </div>
-                            </a>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"> <a href="#!">Stanford University<span data-toggle="tooltip" data-placement="top" title="Verified"><small class="fa fa-check-circle text-primary" data-fa-transform="shrink-4 down-2"></small></span></a></h6>
-                                <p class="mb-1">Computer Science and Engineering</p>
-                                <p class="text-1000 mb-0">2010 - 2014 • 4 yrs</p>
-                                <p class="text-1000 mb-0">California, USA</p>
-                                <div class="border-dashed-bottom my-3"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex"><a href="#!"> <img class="img-fluid" src="../assets/img/logos/staten.png" alt="" width="56" /></a>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"> <a href="#!">Staten Island Technical High School<span data-toggle="tooltip" data-placement="top" title="Verified"><small class="fa fa-check-circle text-primary" data-fa-transform="shrink-4 down-2"></small></span></a></h6>
-                                <p class="mb-1">Higher Secondary School Certificate, Science</p>
-                                <p class="text-1000 mb-0">2008 - 2010 &bull; 2 yrs</p>
-                                <p class="text-1000 mb-0">New York, USA</p>
-                                <div class="border-dashed-bottom my-3"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex"><a href="#!"> <img class="img-fluid" src="../assets/img/logos/tj-heigh-school.png" alt="" width="56" /></a>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"> <a href="#!">Thomas Jefferson High School for Science and Technology<span data-toggle="tooltip" data-placement="top" title="Verified"><small class="fa fa-check-circle text-primary" data-fa-transform="shrink-4 down-2"></small></span></a></h6>
-                                <p class="mb-1">Secondary School Certificate, Science</p>
-                                <p class="text-1000 mb-0">2003 - 2008 &bull; 5 yrs</p>
-                                <p class="text-1000 mb-0">Alexandria, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mb-3 mb-lg-0">
-                    <div class="card-header bg-light">
-                        <h5 class="mb-0">Events</h5>
-                    </div>
-                    <div class="card-body fs--1">
-                        <div class="d-flex btn-reveal-trigger">
-                            <div class="calendar"><span class="calendar-month">Feb</span><span class="calendar-day">21</span></div>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"><a href="event-detail.html">Newmarket Nights</a></h6>
-                                <p class="mb-1">Organized by <a href="#!" class="text-700">University of Oxford</a></p>
-                                <p class="text-1000 mb-0">Time: 6:00AM</p>
-                                <p class="text-1000 mb-0">Duration: 6:00AM - 5:00PM</p>Place: Cambridge Boat Club, Cambridge<div class="border-dashed-bottom my-3"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex btn-reveal-trigger">
-                            <div class="calendar"><span class="calendar-month">Dec</span><span class="calendar-day">31</span></div>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"><a href="event-detail.html">31st Night Celebration</a></h6>
-                                <p class="mb-1">Organized by <a href="#!" class="text-700">Chamber Music Society</a></p>
-                                <p class="text-1000 mb-0">Time: 11:00PM</p>
-                                <p class="text-1000 mb-0">280 people interested</p>Place: Tavern on the Greend, New York<div class="border-dashed-bottom my-3"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex btn-reveal-trigger">
-                            <div class="calendar"><span class="calendar-month">Dec</span><span class="calendar-day">16</span></div>
-                            <div class="flex-1 position-relative pl-3">
-                                <h6 class="fs-0 mb-0"><a href="event-detail.html">Folk Festival</a></h6>
-                                <p class="mb-1">Organized by <a href="#!" class="text-700">Harvard University</a></p>
-                                <p class="text-1000 mb-0">Time: 9:00AM</p>
-                                <p class="text-1000 mb-0">Location: Cambridge Masonic Hall Association</p>Place: Porter Square, North Cambridge
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-light p-0 border-top"><a class="btn btn-link btn-block" href="events.html">All Events<span class="fas fa-chevron-right ml-1 fs--2"></span></a></div>
-                </div>
+
+
             </div>
         </div>
     </div>

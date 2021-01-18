@@ -260,18 +260,18 @@
                         <span>Editer profil</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('profil.myFavoris') }}"
-                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
-                        <span class="text-gray-600">
-                            <svg class="h-4 fill-current" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>
-                                </svg>
-                        </span>
-                        <span>Favoris</span>
-                        {{--                    <span class="px-2 rounded-full bg-gray-300 text-gray-700">12</span>--}}
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('profil.myFavoris') }}"--}}
+{{--                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">--}}
+{{--                        <span class="text-gray-600">--}}
+{{--                            <svg class="h-4 fill-current" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                                    <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"></path>--}}
+{{--                                </svg>--}}
+{{--                        </span>--}}
+{{--                        <span>Favoris</span>--}}
+{{--                        --}}{{--                    <span class="px-2 rounded-full bg-gray-300 text-gray-700">12</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{ route('profil.myCourses') }}"
                        class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
@@ -285,58 +285,58 @@
                         <span>Cours</span>
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('profil.myExercises') }}"
-                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
-                        <span class="text-gray-600">
-                            <svg class="h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
-                            </svg>
-                        </span>
-                        <span>Exercices</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('profil.myCorrected') }}  "
-                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
-                        <span class="text-gray-600">
-                            <svg class="h-4 fill-current" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                      d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span>Corriger</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('profil.mySchool') }}"
-                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
-                        <span class="text-gray-600">
-                            <svg class="h-4 fill-current" aria-hidden="true"
-                                 focusable="false" data-prefix="fas" data-icon="school" role="img"
-                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path
-                                    fill="currentColor"
-                                    d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"></path></svg>
-                        </span>
-                        <span>Ecoles</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">
-                        <span class="text-gray-600">
-                            <svg class="h-4 fill-current" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                      d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z">
-                                </path>
-                            </svg>
-                        </span>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
+{{--                <li>--}}
+{{--                    <a href="{{ route('profil.myExercises') }}"--}}
+{{--                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">--}}
+{{--                        <span class="text-gray-600">--}}
+{{--                            <svg class="h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"--}}
+{{--                                 stroke="currentColor">--}}
+{{--                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"--}}
+{{--                                      d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>--}}
+{{--                            </svg>--}}
+{{--                        </span>--}}
+{{--                        <span>Exercices</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('profil.myCorrected') }}  "--}}
+{{--                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">--}}
+{{--                        <span class="text-gray-600">--}}
+{{--                            <svg class="h-4 fill-current" viewBox="0 0 16 16">--}}
+{{--                                <path fill-rule="evenodd"--}}
+{{--                                      d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z">--}}
+{{--                                </path>--}}
+{{--                            </svg>--}}
+{{--                        </span>--}}
+{{--                        <span>Corriger</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="{{ route('profil.mySchool') }}"--}}
+{{--                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">--}}
+{{--                        <span class="text-gray-600">--}}
+{{--                            <svg class="h-4 fill-current" aria-hidden="true"--}}
+{{--                                 focusable="false" data-prefix="fas" data-icon="school" role="img"--}}
+{{--                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path--}}
+{{--                                    fill="currentColor"--}}
+{{--                                    d="M0 224v272c0 8.84 7.16 16 16 16h80V192H32c-17.67 0-32 14.33-32 32zm360-48h-24v-40c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v64c0 4.42 3.58 8 8 8h48c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zm137.75-63.96l-160-106.67a32.02 32.02 0 0 0-35.5 0l-160 106.67A32.002 32.002 0 0 0 128 138.66V512h128V368c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v144h128V138.67c0-10.7-5.35-20.7-14.25-26.63zM320 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zm288-64h-64v320h80c8.84 0 16-7.16 16-16V224c0-17.67-14.33-32-32-32z"></path></svg>--}}
+{{--                        </span>--}}
+{{--                        <span>Ecoles</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                <li>--}}
+{{--                    <a href="#"--}}
+{{--                       class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">--}}
+{{--                        <span class="text-gray-600">--}}
+{{--                            <svg class="h-4 fill-current" viewBox="0 0 16 16">--}}
+{{--                                <path fill-rule="evenodd"--}}
+{{--                                      d="M1.5 1.75a.75.75 0 00-1.5 0v12.5c0 .414.336.75.75.75h14.5a.75.75 0 000-1.5H1.5V1.75zm14.28 2.53a.75.75 0 00-1.06-1.06L10 7.94 7.53 5.47a.75.75 0 00-1.06 0L3.22 8.72a.75.75 0 001.06 1.06L7 7.06l2.47 2.47a.75.75 0 001.06 0l5.25-5.25z">--}}
+{{--                                </path>--}}
+{{--                            </svg>--}}
+{{--                        </span>--}}
+{{--                        <span>Dashboard</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li>
                     <a href="{{ route('profil.myFactures') }}"
                        class="flex items-center space-x-2 py-2 px-3 border-b-2 border-transparent hover:border-gray-400 transition ease-in-out duration-150">

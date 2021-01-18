@@ -100,7 +100,7 @@ Route::prefix('profil')->group(function () {
     Route::get('/',[ProfilController::class, 'index'])->name('profil.index');
 
     Route::get('/edit',[ProfilController::class, 'edit'])->name('profil.edit');
-    Route::post('/edit/{user}',[ProfilController::class, 'editPost'])->name('profil.edit.post');
+    Route::put('/edit/{user}',[ProfilController::class, 'editPost'])->name('profil.edit.post');
 
     Route::get('/myFavoris',[ProfilController::class, 'myFavoris'])->name('profil.myFavoris');
 
@@ -139,7 +139,7 @@ Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])-
 | Administration du site
 |--------------------------------------------------------------------------
 */
-Route::prefix('dashboard-admin')->group(function () {
+Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->group(function () {
     Route::get('/', function (){
         return view('dashboard_admin.home.home');
     })->name('dashboard.index');
