@@ -17,11 +17,11 @@ class ChargementCourseController extends Controller
     public function default_cours()
     {
         $trainings = Training::all();
-//        $courses = Course::where('subject_id', 0)->get();
+//        $cours = Course::where('subject_id', 0)->get();
         $courses = Course::all();
         // sur le chargement des cours recupere l'ensemble des cours recent
         return view('cours.course', [
-            'courses' => $courses,
+            'cours' => $courses,
             'trainings' => $trainings,
             'count_courses' => $this->count_courses,
         ]);
@@ -65,7 +65,7 @@ class ChargementCourseController extends Controller
         $trainings = Training::all();
         $this->count_courses = $courses->count();
         return view('cours.course', [
-            'courses' => $courses,
+            'cours' => $courses,
             'trainings'=> $trainings,
             'count_courses' => $this->count_courses
         ]);
@@ -73,7 +73,7 @@ class ChargementCourseController extends Controller
 
     public function show(int $id)
     {
-        $course = DB::table('courses')->where('id', $id)->first();
+        $course = DB::table('cours')->where('id', $id)->first();
         return view('cours.show_course', ['course' => $course]);
     }
 

@@ -26,6 +26,7 @@
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
+    <link href="{{ asset('dist/vendors/glightbox/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/vendors/flatpickr/flatpickr.min.css') }}" rel="stylesheet">
     <link href=" {{ asset('dist/vendors/dropzone/dropzone.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/assets/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl"/>
@@ -99,7 +100,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('user.index') }}">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-user"></span>
@@ -110,7 +111,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link dropdown-indicator" href="#cours" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="cours">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-book-open"></span>
@@ -118,6 +119,18 @@
                                     <span class="nav-link-text">Cours</span>
                                 </div>
                             </a>
+                            <ul class="nav collapse" id="cours" data-parent="#navbarVerticalCollapse">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('training.index') }}">
+                                        <span class="far fa-compass"></span> Cycles
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="far fa-file"></span> Cours
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
                         <li class="nav-item">
@@ -988,6 +1001,7 @@
 <script src="../../../../polyfill.io/v3/polyfill.min58be.js?features=window.scroll"></script>
 <script src="{{ asset('dist/vendors/list.js/list.min.js') }}"></script>
 <script src="{{ asset('dist/assets/js/theme.js') }}"></script>
+<script src="{{ asset('dist/vendors/glightbox/glightbox.min.js') }}"></script>
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
     rel="stylesheet">

@@ -45,7 +45,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'email' => $input['email'],
             'condition' => '1',
-            'telephone' => $input['email'],
+//            'telephone' => $input['email'],
             'password' => Hash::make($input['password']),
             'profile_photo_path' => "https://ui-avatars.com/api/?name={$input['name']}",
         ]);

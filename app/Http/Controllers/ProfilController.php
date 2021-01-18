@@ -69,8 +69,8 @@ class ProfilController extends Controller
     public function myFavoris()
     {
         $favories = DB::table('favories')
-            ->leftJoin('courses', 'favories.user_id', '=', 'courses.id')
-//            ->leftJoin('subjects', 'courses.subject_id', '=', 'subjects.id')
+            ->leftJoin('cours', 'favories.user_id', '=', 'cours.id')
+//            ->leftJoin('subjects', 'cours.subject_id', '=', 'subjects.id')
             ->where('favories.user_id', '=', auth()->id())
             ->get();
         return view('profil.myFavoris_profil', [
@@ -80,19 +80,19 @@ class ProfilController extends Controller
 
     public function myCourses()
     {
-//        $courses = User::find(auth()->user()->id)->courses;
-        $courses = DB::table('courses')
-            ->leftJoin('subjects', 'courses.subject_id', '=', 'subjects.id')
+//        $cours = User::find(auth()->user()->id)->cours;
+        $courses = DB::table('cours')
+            ->leftJoin('subjects', 'cours.subject_id', '=', 'subjects.id')
             ->select(
-                'courses.id AS id_cours',
-                'courses.name AS nom_cours',
+                'cours.id AS id_cours',
+                'cours.name AS nom_cours',
                 'subjects.name AS nom_subjects',
                 'subjects.name AS nom_subjects',
                 'enligne',
                 )->get();
-//        dd($courses);
+//        dd($cours);
         return view('profil.myCourses_profil', [
-            'courses' => $courses
+            'cours' => $courses
         ]);
     }
 

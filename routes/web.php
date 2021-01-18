@@ -1,34 +1,40 @@
 <?php
 
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\admin\AdminUserController;
+use App\Http\Controllers\admin\CoursController;
+use App\Http\Controllers\admin\TrainingController;
+use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\AstucesController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
-use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
 use App\Http\Controllers\SubjectsController;
-use App\Http\Controllers\TrainingsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfilController;
 
 
 /*
- * home Page
- * */
+|--------------------------------------------------------------------------
+| Hone site
+|--------------------------------------------------------------------------
+*/
 Route::get('/',[HomeController::class,'index'])->name('home');
 
 Route::get('/demo', function () {
     return view('demo');
 })->name('demo');
+
 /*
- * autres pages
- * */
+|--------------------------------------------------------------------------
+| pages
+|--------------------------------------------------------------------------
+*/
 Route::get('/faq',function (){
     return view('faq.faq');
 })->name('faq');
@@ -46,13 +52,16 @@ Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-somme
 Route::get('/politique-de-confidentialite',function (){
     return view('politique-de-confidentialite.index');
 })->name('politique');
+
 Route::get('/contact',function (){
     return view('contact.contact');
 })->name('contact');
 
 /*
- * Cours
- * */
+|--------------------------------------------------------------------------
+| Cours
+|--------------------------------------------------------------------------
+*/
 Route::resource('course', CourseController::class);//CRUD sauf  show index
 //chargement des cours au niveau de l'utilisateur
 Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
@@ -61,8 +70,10 @@ Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->
 Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
 
 /*
- * Astuces
- * */
+|--------------------------------------------------------------------------
+| Astuces
+|--------------------------------------------------------------------------
+*/
 Route::get('/astuces',[AstucesController::class,'index'])->name('astuces.index');
 
 Route::get('/astuces/audios',[AstucesController::class,'audios'])->name('astuces.audio');
@@ -80,23 +91,45 @@ Route::get('/astuces/physique',[AstucesController::class,'physique'])->name('ast
 /*
  * Exercices
  * */
-Route::get('/exercices',function (){
-    return view('exercices.exercices');
-})->name('exercices.index');
+//Route::get('/exercices',function (){
+//    return view('exercices.exercices');
+//})->name('exercices.index');
 
 
 /*
  * Corriges
  * */
-Route::get('/corriges',function (){
-    return view('corriges.corriges');
-})->name('corriges.index');
+//Route::get('/corriges',function (){
+//    return view('corriges.corriges');
+//})->name('corriges.index');
 
 
 /*
- * Profil
- * */
-Route::prefix('profil')->group(function () {
+|--------------------------------------------------------------------------
+| Authentificqtion
+|--------------------------------------------------------------------------
+*/
+
+//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//    return Inertia\Inertia::render('Dashboard');
+//})->name('dashboard');
+
+Route::get('login/github', [LoginController::class, 'github'])->name('login.github');
+Route::get('login/github/callback', [LoginController::class, 'githubRedirect'])->name('callback.github');
+
+Route::get('login/facebook', [LoginController::class, 'facebook'])->name('login.facebook');
+Route::get('login/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('callback.facebook');
+
+Route::get('login/google', [LoginController::class, 'google'])->name('login.google');
+Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])->name('callback.google');
+
+
+/*
+|--------------------------------------------------------------------------
+| Profil
+|--------------------------------------------------------------------------
+*/
+Route::middleware(['auth:sanctum', 'verified'])->prefix('profil')->group(function () {
     Route::get('/',[ProfilController::class, 'index'])->name('profil.index');
 
     Route::get('/edit',[ProfilController::class, 'edit'])->name('profil.edit');
@@ -117,45 +150,21 @@ Route::prefix('profil')->group(function () {
     Route::get('/myFactures',[ProfilController::class, 'myFactures'])->name('profil.myFactures');
 });
 
-
-/*
- * Auth
- * */
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia\Inertia::render('Dashboard');
-})->name('dashboard');
-
-Route::get('login/github', [LoginController::class, 'github'])->name('login.github');
-Route::get('login/github/callback', [LoginController::class, 'githubRedirect'])->name('callback.github');
-
-Route::get('login/facebook', [LoginController::class, 'facebook'])->name('login.facebook');
-Route::get('login/facebook/callback', [LoginController::class, 'facebookRedirect'])->name('callback.facebook');
-
-Route::get('login/google', [LoginController::class, 'google'])->name('login.google');
-Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])->name('callback.google');
-
 /*
 |--------------------------------------------------------------------------
 | Administration du site
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->group(function () {
-    Route::get('/', function (){
-        return view('dashboard_admin.home.home');
-    })->name('dashboard.index');
 
-//    Route::get('/users',[AdminUserController::class,'index'])->name('users.index');
-    Route::resource('users',AdminUserController::class);
+    Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
 
-    Route::get('/all-users', function (){
-        return view('dashboard_admin.all_users.index');
-    })->name('all_users.index');
+    Route::resource('user',UserController::class);
 
-    Route::get('/options_cours', function (){
-        return view('dashboard_admin.options_courses.index');
-    })->name('option.index');
+    Route::resource('training',TrainingController::class);
 
-    Route::resource('trainings', TrainingsController::class);
+    Route::resource('cours',CoursController::class);
+
     Route::resource('levels', LevelsController::class);
     Route::resource('subjects', SubjectsController::class);
 
@@ -176,12 +185,10 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->grou
 | Administration des écoles
 |--------------------------------------------------------------------------
 */
-
-Route::resource('schools',SchoolsController::class);
-
-Route::prefix('dashboard-ecole')->group(function () {
-    Route::get('/', function (){
-        return view('dashboard_ecole.home.home');
-    });
-
-});
+//Route::resource('schools',SchoolsController::class);
+//
+//Route::prefix('dashboard-ecole')->group(function () {
+//    Route::get('/', function (){
+//        return view('dashboard_ecole.home.home');
+//    });
+//});

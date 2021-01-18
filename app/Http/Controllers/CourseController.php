@@ -25,7 +25,7 @@ class CourseController extends Controller
         $subjects = Subjects::all();
         $courses = Course::all();
         return view('cours.course', [
-            'courses' => $courses,
+            'cours' => $courses,
             'trainings' => $trainings,
             'levels' => $levels,
             'subjects' => $subjects,
@@ -73,7 +73,7 @@ class CourseController extends Controller
      */
     public function show(int $id)
     {
-        $course = DB::table('courses')->where('id', $id)->first();
+        $course = DB::table('cours')->where('id', $id)->first();
         return view('cours.show_course', ['course' => $course]);
     }
 
@@ -85,7 +85,7 @@ class CourseController extends Controller
      */
     public function edit(int $id)
     {
-        $course = DB::table('courses')->where('id', $id)->first();
+        $course = DB::table('cours')->where('id', $id)->first();
         $subjects = Subjects::all();
 //        dd($course);
         return view('cours.edit', [
@@ -96,7 +96,7 @@ class CourseController extends Controller
 
     public function update(Request $request, int $id)
     {
-//        $course = DB::table('courses')->where('id', $id)->first();
+//        $course = DB::table('cours')->where('id', $id)->first();
         $course = Course::find($id);
         $course->update([
             'name'=>$request->name,

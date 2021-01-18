@@ -19,7 +19,7 @@ class PermissionsSeeder extends Seeder
         //Réinitialiser les rôles et les autorisations mis en cache
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
-        //créer des autorisations pour les courses
+        //créer des autorisations pour les cours
         Permission::create(['name' => 'create course']);
         Permission::create(['name' => 'view course']);
         Permission::create(['name' => 'update course']);

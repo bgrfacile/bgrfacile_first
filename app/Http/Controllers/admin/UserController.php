@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
-use App\Models\Training;
+use App\Http\Controllers\Controller;
+use App\Models\Podcast;
+use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
-class TrainingsController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +16,11 @@ class TrainingsController extends Controller
      */
     public function index()
     {
-        $this->middleware(['auth:sanctum', 'verified']);
-        $trainings = Training::all();
-        return view('dashboard_admin.trainings.index',
-            [
-                'trainings'=>$trainings
-            ]);
+        $users = User::all();
+
+        return view('dashboard_admin.users.index',[
+            'users'=>$users,
+        ]);
     }
 
     /**
@@ -30,24 +30,18 @@ class TrainingsController extends Controller
      */
     public function create()
     {
-        $this->middleware(['auth:sanctum', 'verified']);
-        return view('dashboard_admin.trainings.create');
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $this->middleware(['auth:sanctum', 'verified']);
-        $trainings = Training::create([
-            'name'=>$request->name,
-            'diploma'=>$request->diploma
-        ]);
-        return Redirect::to('/dashboard-admin/trainings');
+        //
     }
 
     /**
@@ -58,7 +52,12 @@ class TrainingsController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        $podcasts = Podcast::where('user_id',$id)->get();
+       return view('dashboard_admin.users.show',[
+           'user'=>$user,
+           'podcasts'=>$podcasts,
+       ]);
     }
 
     /**

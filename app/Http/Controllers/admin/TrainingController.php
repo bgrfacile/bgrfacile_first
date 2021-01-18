@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Training;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
-class AdminUserController extends Controller
+class TrainingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,10 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        return view('dashboard_admin.users.index');
+        $trainings = Training::all();
+        return view('dashboard_admin.trainings.index',[
+            'trainings'=>$trainings
+        ]);
     }
 
     /**
@@ -36,7 +40,15 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'diploma' => ['required', 'image'],
+        ]);
+        $training = Training::create([
+            'name' => $request->name,
+            'diploma' => $request->diploma,
+        ]);
+        return back()->with('success', 'creation avec success');
     }
 
     /**
@@ -47,8 +59,7 @@ class AdminUserController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-       return view('dashboard_admin.users.show')->with('user',$user);
+        //
     }
 
     /**
@@ -71,7 +82,16 @@ class AdminUserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+            'diploma' => ['required', 'image'],
+        ]);
+        $training = Training::findOrFail($id);
+        $training->name = $request->name;
+        $training->diploma = $request->diploma;
+        if ($training->save()) {
+            return back()->with('success', 'modification avec success');
+        }
     }
 
     /**
@@ -82,6 +102,9 @@ class AdminUserController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $training = Training::findOrFail($id);
+        if ($training->delete()) {
+            return back();
+        }
     }
 }

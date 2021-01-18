@@ -12,7 +12,7 @@
     <div class="w-full px-3 py-6">
         <div class="w-full h-full rounded-lg">
             <img
-                src="{{ asset('assets/images/courses/tableau-periodique-elements-1200x793.jpg') }}"
+                src="{{ asset('cours') }}"
                 alt="garçon qui étudie"
                 title="#MyArt@Lb14"
                 class="w-full h-full object-cover">

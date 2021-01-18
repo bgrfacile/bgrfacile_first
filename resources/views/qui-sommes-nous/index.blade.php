@@ -104,6 +104,17 @@
                     </div>
                 </div>
 
+                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                    <div class="px-5 py-12 text-center">
+                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+                            <img src="{{ asset('assets/images/stella.jpeg') }}" alt="profile image"
+                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Stella victoire</h5>
+                        <span class="text-sm text-gray-500 font-medium uppercase">Rédactrice-lectrice</span>
+                    </div>
+                </div>
+
 {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
 {{--                    <div class="px-5 py-12 text-center">--}}
 {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
