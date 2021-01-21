@@ -163,10 +163,12 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->grou
 
     Route::resource('training',TrainingController::class);
 
+    Route::resource('levels', LevelsController::class);
+
+    Route::resource('subject', SubjectsController::class);
+
     Route::resource('cours',CoursController::class);
 
-    Route::resource('levels', LevelsController::class);
-    Route::resource('subjects', SubjectsController::class);
 
 //    Astuces backend
     Route::get('astuces',[AstucesController::class,'indexAdmin'])->name('dashboard.astuces');

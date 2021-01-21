@@ -13,13 +13,13 @@ class CreateCoursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cours', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('subject_id')->constrained();
             $table->text('description')->nullable();
-            $table->longText('content');
+            $table->longText('contenue')->nullable();
             $table->text('image_path')->nullable();
             $table->integer('liker')->default(0);
             $table->enum('enligne', [0, 1, 2])->default(0);//0: brouillon 1:en ligne 2:semblant de suppression

@@ -77,10 +77,8 @@
                 </div>
                 <a class="navbar-brand" href="/">
                     <div class="d-flex align-items-center py-3">
-                        {{--                        <img class="mr-2"--}}
-                        {{--                             src="assets/img/illustrations/falcon.png" alt=""--}}
-                        {{--                             width="40"/>--}}
-                        <span class="font-sans-serif">bgrfacile</span></div>
+                        <span class="font-sans-serif">bgrfacile</span>
+                    </div>
                 </a>
             </div>
 
@@ -103,7 +101,7 @@
                             <a class="nav-link" href="{{ route('user.index') }}">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
-                                        <span class="fas fa-user"></span>
+                                        <span class="fas fa-user-friends"></span>
                                     </span>
                                     <span class="nav-link-text">Utilisateurs</span>
                                 </div>
@@ -111,7 +109,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link dropdown-indicator" href="#cours" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="cours">
+                            <a class="nav-link dropdown-indicator" href="#cours" data-toggle="collapse" role="button"
+                               aria-expanded="false" aria-controls="cours">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-book-open"></span>
@@ -126,7 +125,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('cours.index') }}">
                                         <span class="far fa-file"></span> Cours
                                     </a>
                                 </li>
@@ -156,7 +155,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link dropdown-indicator" href="#astuces" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="astuces">
+                            <a class="nav-link dropdown-indicator" href="#astuces" data-toggle="collapse" role="button"
+                               aria-expanded="false" aria-controls="astuces">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon">
                                         <span class="fas fa-stream"></span>
@@ -723,7 +723,7 @@
                     <span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
                 <a class="navbar-brand mr-1 mr-sm-3" href="#">
                     <div class="d-flex align-items-center">
-{{--                        <img class="mr-2" src="{{ asset('dist/assets/img/illustrations/falcon.png') }}"--}}
+                        {{--                        <img class="mr-2" src="{{ asset('dist/assets/img/illustrations/falcon.png') }}"--}}
                         {{--                             alt="" width="40"/>--}}
                         <span class="font-sans-serif">bgrfacile</span></div>
                 </a>
@@ -931,7 +931,8 @@
                                                      role="button" data-toggle="dropdown" aria-haspopup="true"
                                                      aria-expanded="false">
                             <div class="avatar avatar-xl">
-                                <img class="rounded-circle" src="{{ asset('dist/assets/img/team/3-thumb.png') }}" alt=""/>
+                                <img class="rounded-circle" src="{{ asset('dist/assets/img/team/3-thumb.png') }}"
+                                     alt=""/>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right py-0" aria-labelledby="navbarDropdownUser">
@@ -1002,13 +1003,12 @@
 <script src="{{ asset('dist/vendors/list.js/list.min.js') }}"></script>
 <script src="{{ asset('dist/assets/js/theme.js') }}"></script>
 <script src="{{ asset('dist/vendors/glightbox/glightbox.min.js') }}"></script>
+{{--<script src="{{ asset('dist/vendors/tinymce/tinymce.min.js') }}"></script>--}}
+
 <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
     rel="stylesheet">
 
 @yield('script')
 </body>
-
-
-<!-- Mirrored from prium.github.io/falcon/v3.0.0-alpha10/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Dec 2020 14:27:33 GMT -->
 </html>

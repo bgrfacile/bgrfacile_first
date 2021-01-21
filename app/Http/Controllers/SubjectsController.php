@@ -6,6 +6,7 @@ use App\Models\Levels;
 use App\Models\Subjects;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class SubjectsController extends Controller
 {
@@ -46,12 +47,14 @@ class SubjectsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->middleware(['auth:sanctum', 'verified']);
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+        ]);
         $subjects = Subjects::create([
             'name'=>$request->name,
-            'level_id'=>$request->level
+            'level_id'=>$request->level_id
         ]);
-        return Redirect::to('/dashboard-admin/subjects');
+        return back()->with('success', 'creation avec success');
     }
 
     /**
@@ -85,7 +88,14 @@ class SubjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+        $subject = Subjects::findOrFail($id);
+        $subject->name = $request->name;
+        if ($subject->save()){
+            return back()->with('success', 'modification avec success');
+        }
     }
 
     /**
@@ -98,6 +108,6 @@ class SubjectsController extends Controller
     {
         $subjects = Subjects::find($id);
         $subjects->delete();
-        return Redirect::to('/dashboard-admin/subjects');
+        return back()->with('success', 'supression ac');
     }
 }

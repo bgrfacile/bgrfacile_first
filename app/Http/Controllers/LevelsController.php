@@ -6,6 +6,7 @@ use App\Models\Levels;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class LevelsController extends Controller
 {
@@ -16,7 +17,7 @@ class LevelsController extends Controller
      */
     public function index()
     {
-        $this->middleware(['auth:sanctum', 'verified']);
+//        $this->middleware(['auth:sanctum', 'verified']);
         $levels = Levels::all();
         return view('dashboard_admin.levels.index',
             [
@@ -46,12 +47,14 @@ class LevelsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->middleware(['auth:sanctum', 'verified']);
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+        ]);
         $levels = Levels::create([
             'name'=>$request->name,
-            'training_id'=>$request->training
+            'training_id'=>$request->training_id
         ]);
-        return Redirect::to('/dashboard-admin/levels');
+        return back()->with('success', 'creation avec success');
     }
 
     /**
@@ -85,7 +88,14 @@ class LevelsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+        $level = Levels::findOrFail($id);
+        $level->name = $request->name;
+        if ($level->save()){
+            return back()->with('success', 'modification avec success');
+        }
     }
 
     /**
@@ -98,6 +108,6 @@ class LevelsController extends Controller
     {
         $levels = Levels::find($id);
         $levels->delete();
-        return Redirect::to('/dashboard-admin/levels');
+        return back()->with('success', 'supression avec success');
     }
 }
