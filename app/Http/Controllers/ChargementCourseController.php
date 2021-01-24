@@ -8,6 +8,7 @@ use App\Models\Subjects;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use mysql_xdevapi\Exception;
 
 class ChargementCourseController extends Controller
@@ -18,12 +19,12 @@ class ChargementCourseController extends Controller
     {
         $trainings = Training::all();
 //        $cours = Course::where('subject_id', 0)->get();
-        $courses = Course::all();
-        // sur le chargement des cours recupere l'ensemble des cours recent
+//        $courses = Course::all()->take(10);
+        $courses = Course::select('*')->orderBy('created_at', 'desc')
+            ->paginate(6);
         return view('cours.course', [
-            'cours' => $courses,
+            'courses' => $courses,
             'trainings' => $trainings,
-            'count_courses' => $this->count_courses,
         ]);
     }
 
@@ -34,22 +35,19 @@ class ChargementCourseController extends Controller
         if ($type === 'formation') {
             $items = Levels::where('training_id', (int)$request->filter)->get();
             $items = $items->toArray();
-        }
-        elseif ($type === 'level'){
+        } elseif ($type === 'level') {
             $items = Subjects::where('level_id', (int)$request->filter)->get();
             $items = $items->toArray();
-        }
-        elseif ($type === 'subject'){
+        } elseif ($type === 'subject') {
             $items = Course::where('subject_id', (int)$request->filter)->get();
             return view('cours.course');
 //            $items = $items->toArray();
-        }
-        else{
-            throw new Exception('Unknown type '. $type);
+        } else {
+            throw new Exception('Unknown type ' . $type);
         }
 
         header('Content-Type:application/json');
-         return json_encode(array_map(function ($items){
+        return json_encode(array_map(function ($items) {
             return [
                 'name' => $items['name'],
                 'id' => $items['id'],
@@ -66,16 +64,40 @@ class ChargementCourseController extends Controller
         $this->count_courses = $courses->count();
         return view('cours.course', [
             'cours' => $courses,
-            'trainings'=> $trainings,
+            'trainings' => $trainings,
             'count_courses' => $this->count_courses
         ]);
     }
 
     public function show(int $id)
     {
-        $course = DB::table('cours')->where('id', $id)->first();
-        return view('cours.show_course', ['course' => $course]);
+        $course = Course::where('id', $id)->first();
+
+        return view('cours.show_course2', ['course' => $course]);
     }
 
+    public function viewCourse(Request $request)
+    {
+
+        $formation = Training::find($request->formation);
+        $level = Levels::find($request->level);
+        $subject = Subjects::find($request->subject);
+
+//        return redirect('/cours/'.Str::slug($formation->name).'/'.Str::slug($level->name).'/'.Str::slug($subject->name));
+        return redirect()->route('cours.list',[
+            'training'=>Str::slug($formation->name),
+            'level'=>Str::slug($level->name),
+            'subject'=>Str::slug($subject->name),
+            'subject_id'=>Str::slug($subject->id),
+        ]);
+    }
+
+    public function listCourse($training,$level,$subject,$subject_id)
+    {
+        $courses = Course::where('subject_id', $subject_id)->get();
+        return view('cours.liste_course',[
+            'courses'=>$courses
+        ]);
+    }
 
 }

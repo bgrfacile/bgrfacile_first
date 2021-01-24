@@ -1,7 +1,5 @@
 @extends('layouts.readCourse')
 @section('ressourceCSS')
-{{--    <link href="{{ asset('dist/assets/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl" />--}}
-{{--    <link href="{{ asset('dist/assets/css/theme.min.css') }}" rel="stylesheet" id="style-default" />--}}
 @endsection
 
 @section('main')

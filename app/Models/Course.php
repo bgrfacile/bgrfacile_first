@@ -8,10 +8,10 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Laravel\Scout\Searchable;
 
-class Course extends Model implements HasMedia
+class Course extends Model //implements HasMedia
 {
     use HasFactory;
-    use InteractsWithMedia;
+//    use InteractsWithMedia;
 //    use Searchable;
 
     protected $fillable = [

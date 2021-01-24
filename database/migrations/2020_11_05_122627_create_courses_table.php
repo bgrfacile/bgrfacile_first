@@ -16,12 +16,13 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('subject_id')->constrained();
             $table->text('description')->nullable();
             $table->longText('contenue')->nullable();
             $table->text('image_path')->nullable();
-            $table->integer('liker')->default(0);
+//            $table->integer('liker')->default(0);
             $table->enum('enligne', [0, 1, 2])->default(0);//0: brouillon 1:en ligne 2:semblant de suppression
             $table->timestamps();
         });

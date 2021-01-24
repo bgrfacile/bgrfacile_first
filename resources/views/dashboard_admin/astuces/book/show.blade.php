@@ -150,31 +150,11 @@
         </div>
     </div>
 
-    {{--    footer--}}
-    <div class="card mt-3">
-        <div class="card-body">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-md">
-                    <h5 class="mb-2 mb-md-0">{{ $book->title }}</h5>
-                </div>
-                <div class="col-auto">
-                    <a href="{{ route('books.edit',['book'=>$book->id]) }}" class="btn btn-falcon-default btn-sm mr-2"
-                       role="button">
-                        modifier le book
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 
 @section('script')
-@endsection
-<script>
-    import Button from "../../../../js/Jetstream/Button";
 
-    export default {
-        components: {Button}
-    }
-</script>
+
+
+@endsection

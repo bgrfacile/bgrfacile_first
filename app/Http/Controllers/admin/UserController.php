@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 use App\Models\Podcast;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -91,6 +92,17 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        if ($user->delete()){
+            return back();
+        }
+    }
+
+    public function changeStatut(Request $request,$id){
+        $course = Course::findOrFail($id);
+        $course->enligne = $request->etat == 'on'?'1':'0';
+        if ($course->save()) {
+            return back()->with('success', 'modification avec success');
+        }
     }
 }

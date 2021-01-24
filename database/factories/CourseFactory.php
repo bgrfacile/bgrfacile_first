@@ -27,10 +27,8 @@ class CourseFactory extends Factory
             'user_id' => 1,
             'subject_id' => 1,
             'description' => $this->faker->sentence(),
-            'content' => $this->faker->randomHtml(),
-            'image' => $this->faker->imageUrl($width = 200, $height = 200),
-            'liker' => $this->faker->randomNumber(),
-//            'enligne' => 0,
+            'contenue' => $this->faker->randomHtml(),
+            'image_path' => $this->faker->imageUrl($width = 200, $height = 200),
         ];
     }
 }

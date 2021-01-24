@@ -109,7 +109,7 @@
                                             <a class="dropdown-item" href="{{ route('books.show',['book'=>$book->book_id]) }}">Voir</a>
                                             <a class="dropdown-item" href="{{ route('books.edit',['book'=>$book->book_id]) }}">Modifier</a>
                                             <div class="dropdown-divider"></div>
-                                            <form action="" method="post">
+                                            <form action="{{ route('books.destroy',['book'=>$book->book_id]) }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="dropdown-item text-danger">Delete</button>

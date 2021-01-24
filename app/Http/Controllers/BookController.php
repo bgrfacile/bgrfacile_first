@@ -86,19 +86,17 @@ class BookController extends Controller
         $book = Book::find($id);
         $users = $book->podcast;
         $podcasts = Podcast::where('book_id', $id)->get();
-        $arrayPiste=[];
 
-        foreach ($podcasts->toArray() as $podcast){
-//            $arrayPiste[] = array_merge(Piste::where('podcast_id', $podcast['id'])->get()->toArray());
-            $arrayPiste  = Arr::add($arrayPiste,'Pistes',Piste::select('*','pistes.created_at as piste_create')->where('podcast_id', $podcast['id'])
+        $arrayPiste['Pistes'] = [];
+        foreach ($podcasts->toArray() as $podcast) {
+            $arrayPiste = Arr::add($arrayPiste, 'Pistes', Piste::select('*', 'pistes.created_at as piste_create')->where('podcast_id', $podcast['id'])
                 ->leftJoin('users', 'users.id', '=', 'pistes.user_id')->get()->toArray());
         }
 
-//        dd($arrayPiste['Pistes']);
         return view('dashboard_admin.astuces.book.show', [
             'book' => $book,
             'users' => $users,
-            'pistes'=>$arrayPiste['Pistes']
+            'pistes' => $arrayPiste['Pistes']
         ]);
     }
 
@@ -152,6 +150,10 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book= Book::findOrFail($id);
+        if ($book->delete()){
+            return back();
+        }
+
     }
 }

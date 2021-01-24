@@ -68,6 +68,8 @@ Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('
 Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
 Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
 Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
+Route::post('/cours/training',[ChargementCourseController::class,'viewCourse'])->name('cours.view');// show d'un cours
+Route::get('/cours/{training}/{level}/{subject}/{subject_id}',[ChargementCourseController::class,'listCourse'])->name('cours.list');// show d'un cours
 
 /*
 |--------------------------------------------------------------------------
@@ -159,7 +161,8 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->grou
 
     Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
 
-    Route::resource('user',UserController::class);
+    Route::put('users/etat/{cour}',[UserController::class,'changeStatut'])->name('etat.cours');
+    Route::resource('users',UserController::class);
 
     Route::resource('training',TrainingController::class);
 

@@ -7,6 +7,7 @@ use App\Models\Course;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class CoursController extends Controller
 {
@@ -17,11 +18,19 @@ class CoursController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
-//        $courses = Course::where('');
+        $courses_enligne = Course::select('*','courses.name as courses_name','users.name as user_name','courses.id as courses_id')
+            ->leftjoin('users','users.id','=','courses.user_id')
+            ->where('courses.enligne','1')
+            ->get();
+
+        $courses_horsligne = Course::select('*','courses.name as courses_name','users.name as user_name','courses.id as courses_id')
+            ->leftjoin('users','users.id','=','courses.user_id')
+            ->where('courses.enligne','0')
+            ->get();
+
         return view('dashboard_admin.cours.index', [
-            'courses_enligne' => $courses,
-            'courses_brouiilon' => $courses,
+            'courses_enligne' => $courses_enligne,
+            'courses_brouiilon' => $courses_horsligne,
         ]);
     }
 
@@ -54,8 +63,9 @@ class CoursController extends Controller
             'content' => ['string'],
             'image' => ['image','mimes:jpeg,jpg,png,gif|required|max:10000'],
         ]);
+        $chemin = 'image-'.Str::slug($request->name, '-');
         if (request()->hasFile('image')) {
-            $image_path = '/storage/' . $request->image->store('image-'.$request->name , 'public');
+            $image_path = '/storage/' . $request->image->store($chemin , 'public');
         }
         $cours = Course::create([
             'name'=>$request->name,
@@ -71,7 +81,7 @@ class CoursController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param int $idcourses
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -87,7 +97,7 @@ class CoursController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard_admin.cours.edit');
     }
 
     /**
@@ -110,6 +120,9 @@ class CoursController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $cours = Course::findOrFail($id);
+       if ($cours->delete()){
+           return back();
+       }
     }
 }

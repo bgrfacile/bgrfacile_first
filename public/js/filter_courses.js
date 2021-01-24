@@ -98,8 +98,8 @@ let $selects = document.querySelectorAll('.linked-select');
 $selects.forEach(function ($select) {
     new LinkedSelect($select);
 });
-
-let $selectCharger = document.querySelector('.subject');
-$selectCharger.addEventListener('change', function () {
-    location
-});
+//
+// let $selectCharger = document.querySelector('.subject');
+// $selectCharger.addEventListener('change', function () {
+//     location
+// });

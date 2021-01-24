@@ -14,7 +14,7 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements HasMedia
+class User extends Authenticatable //implements HasMedia
 {
     use HasApiTokens;
     use HasFactory;
@@ -22,7 +22,7 @@ class User extends Authenticatable implements HasMedia
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasRoles;
-    use InteractsWithMedia;
+//    use InteractsWithMedia;
 //    use Searchable;
 
     /**
@@ -74,10 +74,10 @@ class User extends Authenticatable implements HasMedia
         return $this->hasMany('App\Models\Course');
     }
     //media method
-    public function clearMediaCollection(string $collectionName = 'default'): HasMedia
-    {
-        // TODO: Implement clearMediaCollection() method.
-    }
+//    public function clearMediaCollection(string $collectionName = 'default'): HasMedia
+//    {
+//        // TODO: Implement clearMediaCollection() method.
+//    }
 
     public function podcasts(){
         return $this->hasMany(Podcast::class)->orderBy('created_at','DESC');

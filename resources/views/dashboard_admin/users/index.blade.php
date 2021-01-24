@@ -67,7 +67,7 @@
                                         data-bulk-select-row="data-bulk-select-row"/></div>
                             </td>
                             <td class="name align-middle white-space-nowrap py-2">
-                                <a href="{{ route('user.show',['user'=>$user->id]) }}">
+                                <a href="{{ route('users.show',['user'=>$user->id]) }}">
                                     <div class="d-flex d-flex align-items-center">
                                         <div class="avatar avatar-xl mr-2">
                                             {{--                                            <div class="avatar-name rounded-circle"><span>RA</span></div>--}}
@@ -99,9 +99,10 @@
                                          aria-labelledby="customer-dropdown-0">
                                         <div class="bg-white py-2">
                                             <a class="dropdown-item"
-                                               href="{{ route('user.show',['user'=>$user->id]) }}">Voir profil</a>
-                                            {{--                                            <a class="dropdown-item" href="{{ route('user.edit',['user'=>$user->id]) }}">Edit</a>--}}
-                                            <form action="{{ route('user.destroy',['user'=>$user->id]) }}" method="post">
+                                               href="{{ route('users.show',['user'=>$user->id]) }}">
+                                                Voir profil
+                                            </a>
+                                            <form action="{{ route('users.destroy',['user'=>$user->id]) }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="dropdown-item text-danger">Supprimer</button>
