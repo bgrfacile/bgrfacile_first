@@ -86,7 +86,7 @@
                                                             @foreach($courses_enligne as $course)
                                                                 <tr class="btn-reveal-trigger">
                                                                     <th class="align-middle white-space-nowrap name">
-                                                                        <a href="{{ route('contenu.cours.show',['cour'=>$course->courses_id]) }}"
+                                                                        <a href="{{ route('contenu.cours.show',['slug'=>$course->slug,'cour'=>$course->id]) }}"
                                                                            class="font-weight-bolder">
                                                                             {{ $course->courses_name }}
                                                                         </a>
@@ -192,7 +192,7 @@
                                                                             <div
                                                                                 class="dropdown-menu dropdown-menu-right border py-2"
                                                                                 aria-labelledby="dropdown0">
-                                                                                <a class="dropdown-item" href="{{ route('contenu.cours.show',['cour'=>$course->courses_id]) }}">
+                                                                                <a class="dropdown-item" href="{{ route('contenu.cours.show',['slug'=>$course->slug,'cour'=>$course->id]) }}">
                                                                                     Lire
                                                                                     le cours
                                                                                 </a>
@@ -294,7 +294,7 @@
                                                         @foreach($courses_brouiilon as $course)
                                                             <tr class="btn-reveal-trigger">
                                                                 <th class="align-middle white-space-nowrap name">
-                                                                    <a href="{{ route('contenu.cours.show',['cour'=>$course->id]) }}"
+                                                                    <a href="{{ route('contenu.cours.show',['slug'=>$course->slug,'cour'=>$course->id]) }}"
                                                                        class="font-weight-bolder">
                                                                         {{ $course->courses_name }}
                                                                     </a>
@@ -408,7 +408,7 @@
                                                                         <div
                                                                             class="dropdown-menu dropdown-menu-right border py-2"
                                                                             aria-labelledby="dropdown0">
-                                                                            <a class="dropdown-item" href="{{ route('contenu.cours.show',['cour'=>$course->courses_id]) }}">
+                                                                            <a class="dropdown-item" href="{{ route('contenu.cours.show',['slug'=>$course->slug,'cour'=>$course->id]) }}">
                                                                                 Lire
                                                                                 le cours</a>
                                                                             <a class="dropdown-item" href="{{ route('cours.edit',['cour'=>$course->courses_id]) }}">Modifier

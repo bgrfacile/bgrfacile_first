@@ -17,6 +17,7 @@ use App\Http\Controllers\SubjectsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\ProfilController;
+use Tabuna\Breadcrumbs\Trail;
 
 
 /*
@@ -24,7 +25,9 @@ use App\Http\Controllers\ProfilController;
 | Hone site
 |--------------------------------------------------------------------------
 */
-Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/',[HomeController::class,'index'])->name('home')->breadcrumbs(fn (Trail $trail) =>
+$trail->push('Accueil', route('home'))
+);
 
 Route::get('/demo', function () {
     return view('demo');
@@ -41,13 +44,17 @@ Route::get('/faq',function (){
 
 Route::get('/search',function (){
    return view('search.search');
-})->name('search');
+})->name('search')->breadcrumbs(fn (Trail $trail) =>
+$trail->parent('home')->push('recherche', route('search'))
+);
 
 Route::get('/ecoles',function (){
    return view('ecoles.index');
 })->name('ecoles.index');
 
-Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-sommes-nous');
+Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-sommes-nous')->breadcrumbs(fn (Trail $trail) =>
+$trail->parent('home')->push('About', route('qui-sommes-nous'))
+);
 
 Route::get('/politique-de-confidentialite',function (){
     return view('politique-de-confidentialite.index');
@@ -67,7 +74,7 @@ Route::resource('course', CourseController::class);//CRUD sauf  show index
 Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
 Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
 Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
-Route::get('/cours/{cour}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
+Route::get('/contenue/{cour}/{slug}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
 Route::post('/cours/training',[ChargementCourseController::class,'viewCourse'])->name('cours.view');// show d'un cours
 Route::get('/cours/{training}/{level}/{subject}/{subject_id}',[ChargementCourseController::class,'listCourse'])->name('cours.list');// show d'un cours
 

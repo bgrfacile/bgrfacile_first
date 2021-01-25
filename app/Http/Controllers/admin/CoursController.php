@@ -69,6 +69,7 @@ class CoursController extends Controller
         }
         $cours = Course::create([
             'name'=>$request->name,
+            'slug'=>Str::slug($request->name),
             'user_id'=>$request->user_id,
             'subject_id'=>$request->subject_id,
             'description'=>$request->description,

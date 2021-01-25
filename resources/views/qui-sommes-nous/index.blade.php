@@ -55,6 +55,28 @@
 @section('content')
     {{--    parler de bgrfacile--}}
     <div class="mx-auto max-w-3xl pt-16 pb-6 text-center">
+
+        <nav class="bg-gray-200 p-3 rounded font-sans w-full m-4">
+            <ol class="list-reset flex text-grey-dark">
+                @if(Breadcrumbs::has())
+                    @foreach (Breadcrumbs::current() as $crumbs)
+                        @if ($crumbs->url() && !$loop->last)
+                            <li class="breadcrumb-item text-blue font-bold">
+                                <a href="{{ $crumbs->url() }}">
+                                    {{ $crumbs->title() }}
+                                </a>
+                            </li>
+                            <li><span class="mx-2">/</span></li>
+                        @else
+                            <li class="breadcrumb-item active">
+                                {{ $crumbs->title() }}
+                            </li>
+                        @endif
+                    @endforeach
+                @endif
+            </ol>
+        </nav>
+
         <p class="text-gray-800 text-xl">
             Bgrfacile est un site web, mais aussi une application mobile qui permet de promouvoir l’éducation et
             l’apprentissage dans le milieu scolaire. Il donne la possibilité aux élèves et étudiants de faire des

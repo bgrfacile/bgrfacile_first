@@ -19,7 +19,6 @@ class ChargementCourseController extends Controller
     {
         $trainings = Training::all();
 //        $cours = Course::where('subject_id', 0)->get();
-//        $courses = Course::all()->take(10);
         $courses = Course::select('*')->orderBy('created_at', 'desc')
             ->paginate(6);
         return view('cours.course', [
@@ -69,11 +68,19 @@ class ChargementCourseController extends Controller
         ]);
     }
 
-    public function show(int $id)
+    public function show(int $id, $slug)
     {
         $course = Course::where('id', $id)->first();
+        $subject= Subjects::find($course->subject_id);
+        $level= Levels::find($subject->level_id);
+        $cycle= Training::find($level->training_id);
 
-        return view('cours.show_course2', ['course' => $course]);
+        return view('cours.show_course2', [
+            'course' => $course,
+            'subject' => $subject,
+            'level' => $level,
+            'cycle' => $cycle,
+        ]);
     }
 
     public function viewCourse(Request $request)
@@ -84,19 +91,20 @@ class ChargementCourseController extends Controller
         $subject = Subjects::find($request->subject);
 
 //        return redirect('/cours/'.Str::slug($formation->name).'/'.Str::slug($level->name).'/'.Str::slug($subject->name));
-        return redirect()->route('cours.list',[
-            'training'=>Str::slug($formation->name),
-            'level'=>Str::slug($level->name),
-            'subject'=>Str::slug($subject->name),
-            'subject_id'=>Str::slug($subject->id),
+        return redirect()->route('cours.list', [
+            'training' => Str::slug($formation->name),
+            'level' => Str::slug($level->name),
+            'subject' => Str::slug($subject->name),
+            'subject_id' => Str::slug($subject->id),
         ]);
     }
 
-    public function listCourse($training,$level,$subject,$subject_id)
+    public function listCourse($training, $level, $subject, $subject_id)
     {
         $courses = Course::where('subject_id', $subject_id)->get();
-        return view('cours.liste_course',[
-            'courses'=>$courses
+
+        return view('cours.liste_course', [
+            'courses' => $courses
         ]);
     }
 
