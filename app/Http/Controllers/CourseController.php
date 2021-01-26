@@ -58,7 +58,7 @@ class CourseController extends Controller
         $courses = Course::create([
             'name' => $request->name,
             'description' => $request->description,
-            'content' => $request->content,
+            'content' => $request->contenue,
             'user_id'=> auth()->user()->id,
             'subject_id'=>$request->subject,
         ]);
@@ -100,7 +100,7 @@ class CourseController extends Controller
         $course = Course::find($id);
         $course->update([
             'name'=>$request->name,
-            'content'=>$request->content,
+            'content'=>$request->contenue,
             'description'=>$request->description,
             'auteurs' => $request->auteur
         ]);

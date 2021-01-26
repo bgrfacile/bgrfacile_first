@@ -1,7 +1,12 @@
 @extends('layouts.baseTemplate')
 
+@section('title')
+    {{ $course->name }}
+@endsection
+
 @section('contenue')
     <div class="container">
+        {{--        breancrud--}}
         <div class="card-body">
             <div class="row justify-content-between align-items-center">
                 <div class="col-md">
@@ -16,23 +21,20 @@
                 </div>
                 <div class="col-auto">
                     <button class="btn btn-falcon-success btn-sm mb-2 mb-sm-0" type="button">
-                        <span
-                                class="fas fa-arrow-down mr-1"> </span>Download (.pdf)
+                        <span class="fas fa-arrow-down mr-1"> </span>Download (.pdf)
                     </button>
                 </div>
             </div>
         </div>
         {{--        header--}}
-        <div class="card mb-3"><img class="card-img-top" src="../assets/img/generic/13.jpg" alt=""/>
+        <div class="card mb-3">
             <div class="card-body">
                 <div class="row justify-content-between align-items-center">
                     <div class="col">
                         <div class="d-flex">
-                            {{--                            <div class="calendar mr-2"><span class="calendar-month">Dec</span><span--}}
-                            {{--                                        class="calendar-day">31 </span></div>--}}
                             <div class="flex-1 fs--1">
-                                <h5 class="fs-0">{{ $course->name }}</h5>
-                                <p class="mb-0">écrit par <a href="#!">bgrfqcile</a></p>
+                                <h1>{{ $course->name }}</h1>
+                                <p class="mb-0">écrit par <a href="#">bgrfacile</a></p>
                             </div>
                         </div>
                     </div>
@@ -40,9 +42,6 @@
                         <button class="btn btn-falcon-default btn-sm mr-2" type="button">
                             <span class="fas fa-heart text-danger mr-1"></span>
                         </button>
-                        {{--                        <button disabled class="btn btn-falcon-default btn-sm mr-2" type="button">--}}
-                        {{--                            <span>12</span> <span class="far fa-comment-alt mr-1"></span>--}}
-                        {{--                        </button>--}}
                         <a href="#comment" class="btn btn-falcon-primary btn-sm px-4 px-sm-5">commenter</a>
                     </div>
                 </div>
@@ -52,15 +51,77 @@
         <div class="row g-0">
             {{--            gauche--}}
             <div class="col-lg-8 pr-lg-2">
-                <div class="card mb-3 mb-lg-0">
-                    <div class="card-body">
+                <div class="card mb-3 ">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0" id="rights">Cours</h5>
+                    </div>
+                    <div class="card-body min-vh-50" id="app_cours">
                         {!! $course->contenue !!}
 
-                        <div class="googlemap min-vh-50 rounded-lg mt-5">
-
-                        </div>
                     </div>
                 </div>
+                {{--                card contenue--}}
+{{--                <div class="card mb-3">--}}
+{{--                    <div class="card-header bg-light">--}}
+{{--                        <h5 class="mb-0" id="liability">Commentaires</h5>--}}
+{{--                    </div>--}}
+{{--                    <div class="card-body">--}}
+{{--                        <div class="card-footer bg-light pt-0">--}}
+{{--                            <div class="border-bottom border-200 fs--1 py-3"><a class="text-700" href="#!">345 Likes</a>--}}
+{{--                                &bull; <a class="text-700" href="#!">34 Comments</a></div>--}}
+{{--                            <div class="row g-0 font-weight-semi-bold text-center py-2 fs--1">--}}
+{{--                                <div class="col-auto"><a class="rounded d-flex align-items-center mr-3" href="#!"><img--}}
+{{--                                                src="assets/img/illustrations/like-active.png" width="20" alt=""/><span--}}
+{{--                                                class="ml-1">Like</span></a></div>--}}
+{{--                                <div class="col-auto"><a class="rounded d-flex align-items-center mr-3" href="#!"><img--}}
+{{--                                                src="assets/img/illustrations/comment-active.png" width="20"--}}
+{{--                                                alt=""/><span class="ml-1">Comment</span></a></div>--}}
+{{--                                <div class="col-auto d-flex align-items-center"><a--}}
+{{--                                            class="rounded text-700 d-flex align-items-center" href="#!"><img--}}
+{{--                                                src="assets/img/illustrations/share-inactive.png" width="20"--}}
+{{--                                                alt=""/><span class="ml-1">Share</span></a></div>--}}
+{{--                            </div>--}}
+{{--                            <form class="d-flex align-items-center border-top border-200 pt-3">--}}
+{{--                                <div class="avatar avatar-xl">--}}
+{{--                                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt=""/>--}}
+{{--                                </div>--}}
+{{--                                <input class="form-control rounded-pill ml-2 fs--1" type="text"--}}
+{{--                                       placeholder="Write a comment..."/>--}}
+{{--                            </form>--}}
+{{--                            <div class="d-flex mt-3">--}}
+{{--                                <div class="avatar avatar-xl">--}}
+{{--                                    <img class="rounded-circle" src="assets/img/team/4.jpg" alt=""/>--}}
+{{--                                </div>--}}
+{{--                                <div class="flex-1 ml-2 fs--1">--}}
+{{--                                    <p class="mb-1 bg-200 rounded-lg p-2"><a class="font-weight-semi-bold"--}}
+{{--                                                                             href="pages/profile.html">Rowan--}}
+{{--                                            Atkinson</a> She starred as Jane Porter in The <a href="#!">@Legend of--}}
+{{--                                            Tarzan (2016)</a>, Tanya Vanderpoel in Whiskey Tango Foxtrot (2016) and as--}}
+{{--                                        DC comics villain Harley Quinn in Suicide Squad (2016), for which she was--}}
+{{--                                        nominated for a Teen Choice Award, and many other awards.</p>--}}
+{{--                                    <div class="px-2"><a href="#!">Like</a> &bull; <a href="#!">Reply</a> &bull; 23min--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="d-flex mt-3">--}}
+{{--                                <div class="avatar avatar-xl">--}}
+{{--                                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt=""/>--}}
+{{--                                </div>--}}
+{{--                                <div class="flex-1 ml-2 fs--1">--}}
+{{--                                    <p class="mb-1 bg-200 rounded-lg p-2"><a class="font-weight-semi-bold"--}}
+{{--                                                                             href="pages/profile.html">Jessalyn--}}
+{{--                                            Gilsig</a> Jessalyn Sarah Gilsig is a Canadian-American actress known for--}}
+{{--                                        her roles in television series, e.g., as Lauren Davis in Boston Public, Gina--}}
+{{--                                        Russo in Nip/Tuck, Terri Schuester in Glee, and as Siggy Haraldson on the--}}
+{{--                                        History Channel series Vikings. 🏆</p>--}}
+{{--                                    <div class="px-2"><a href="#!">Like</a> &bull; <a href="#!">Reply</a> &bull; 3hrs--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <a class="fs--1 text-700 d-inline-block mt-2" href="#!">Load more comments (2 of 34)</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
             {{--            droite--}}
             <div class="col-lg-4 pl-lg-2">
@@ -88,4 +149,24 @@
         </div>
 
     </div>
+@endsection
+
+@section('script')
+    <script src="{{ asset('dist/vendors/anchorjs/anchor.min.js') }}"></script>
+    <script>
+        // anchors.options = {
+        //     placement: 'left'
+        // };
+        anchors.add('#app_cours h1');
+
+        const titles = document.querySelectorAll('#app_cours h1');
+        titles.forEach((title) => {
+            title.setAttribute("data-anchor", "data-anchor");
+            title.setAttribute("class", "pl-3");
+        });
+        const p = document.querySelectorAll('#app_cours p');
+        p.forEach((para) => {
+            para.setAttribute("class", "mb-0 pl-3");
+        });
+    </script>
 @endsection

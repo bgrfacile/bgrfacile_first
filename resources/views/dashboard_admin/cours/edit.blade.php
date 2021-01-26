@@ -5,8 +5,9 @@
 @endsection
 
 @section('contenue')
-    <form action="{{ route('cours.store') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('cours.update',['cour'=>$course->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('put')
         <input name="user_id" type="hidden" value="{{ \Illuminate\Support\Facades\Auth::user()->id }}">
         <div class="card mb-3">
             <div class="card-body">
@@ -70,14 +71,16 @@
                                         class="border form-select"
                                         data-target="#subject"
                                         data-source="{{ route('contenu.level',['type'=>'subject','filter'=>'id']) }}">
-                                    <option value="0">Sélectionner une matière</option>
+                                    <option value="{{ $subject->id }}" selected>Sélectionner une matière</option>
+{{--                                    @if('')--}}
+{{--                                    @endif--}}
                                 </select>
                             </div>
 
                             <div class="col-12 min-vh-50">
                                 <label class="form-label" for="contenue">Contenue du cours</label>
                                 <textarea name="contenue" class="form-control tinymce" id="contenue"
-                                          rows="6"></textarea>
+                                          rows="6">{{ $course->contenue }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -94,7 +97,8 @@
                             <div>
                                 <div class="col-12 mb-3">
                                     <label class="form-label" for="name">Nom du cours</label>
-                                    <input name="name" class="form-control form-control-sm" id="name" type="text">
+                                    <input name="name" value="{{ $course->name }}" class="form-control form-control-sm"
+                                           id="name" type="text">
                                 </div>
                             </div>
                             <div>
@@ -111,7 +115,7 @@
                             <div class="col-12">
                                 <label class="form-label" for="description">Description du cours</label>
                                 <textarea name="description" class="form-control" id="description"
-                                          rows="6"></textarea>
+                                          rows="6">{{ $course->description }}</textarea>
                             </div>
                         </div>
                     </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Levels;
+use App\Models\Subjects;
 use App\Models\Training;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -18,14 +20,14 @@ class CoursController extends Controller
      */
     public function index()
     {
-        $courses_enligne = Course::select('*','courses.name as courses_name','users.name as user_name','courses.id as courses_id')
-            ->leftjoin('users','users.id','=','courses.user_id')
-            ->where('courses.enligne','1')
+        $courses_enligne = Course::select('*', 'courses.name as courses_name', 'users.name as user_name', 'courses.id as courses_id')
+            ->leftjoin('users', 'users.id', '=', 'courses.user_id')
+            ->where('courses.enligne', '1')
             ->get();
 
-        $courses_horsligne = Course::select('*','courses.name as courses_name','users.name as user_name','courses.id as courses_id')
-            ->leftjoin('users','users.id','=','courses.user_id')
-            ->where('courses.enligne','0')
+        $courses_horsligne = Course::select('*', 'courses.name as courses_name', 'users.name as user_name', 'courses.id as courses_id')
+            ->leftjoin('users', 'users.id', '=', 'courses.user_id')
+            ->where('courses.enligne', '0')
             ->get();
 
         return view('dashboard_admin.cours.index', [
@@ -42,8 +44,8 @@ class CoursController extends Controller
     public function create()
     {
         $trainings = Training::all();
-        return view('dashboard_admin.cours.create',[
-            'trainings'=>$trainings
+        return view('dashboard_admin.cours.create', [
+            'trainings' => $trainings
         ]);
     }
 
@@ -61,20 +63,20 @@ class CoursController extends Controller
             'subject_id' => ['required'],
             'description' => ['string'],
             'content' => ['string'],
-            'image' => ['image','mimes:jpeg,jpg,png,gif|required|max:10000'],
+            'image' => ['image', 'mimes:jpeg,jpg,png,gif|required|max:10000'],
         ]);
-        $chemin = 'image-'.Str::slug($request->name, '-');
+        $chemin = 'image-' . Str::slug($request->name, '-');
         if (request()->hasFile('image')) {
-            $image_path = '/storage/' . $request->image->store($chemin , 'public');
+            $image_path = '/storage/' . $request->image->store($chemin, 'public');
         }
         $cours = Course::create([
-            'name'=>$request->name,
-            'slug'=>Str::slug($request->name),
-            'user_id'=>$request->user_id,
-            'subject_id'=>$request->subject_id,
-            'description'=>$request->description,
-            'contenue'=>$request->contenue,
-            'image_path'=>$image_path,
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'user_id' => $request->user_id,
+            'subject_id' => $request->subject_id,
+            'description' => $request->description,
+            'contenue' => $request->contenue,
+            'image_path' => $image_path,
         ]);
         return redirect()->route('cours.index')->with('success', 'creation avec success');
     }
@@ -98,7 +100,17 @@ class CoursController extends Controller
      */
     public function edit($id)
     {
-        return view('dashboard_admin.cours.edit');
+        $course = Course::find($id);
+        $subject = Subjects::find($course->subject_id);
+        $level = Levels::find($subject->level_id);
+        $trainings = Training::all();
+
+        return view('dashboard_admin.cours.edit', [
+            'trainings' => $trainings,
+            'level' => $level,
+            'subject' => $subject,
+            'course' => $course,
+        ]);
     }
 
     /**
@@ -110,7 +122,31 @@ class CoursController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+//            'user_id' => ['required'],
+            'subject_id' => ['required'],
+            'description' => ['string'],
+            'content' => ['string'],
+            'image' => ['image', 'mimes:jpeg,jpg,png,gif|required|max:10000'],
+        ]);
+
+        $course = Course::findOrFail($id);
+        $image_path = $course->image_path;
+        $chemin = 'image-' . Str::slug($request->name);
+        if (request()->hasFile('image')) {
+            $image_path = '/storage/' . $request->image->store($chemin, 'public');
+        }
+        $course->update([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'subject_id' => $request->subject_id,
+            'description' => $request->description,
+            'contenue' => $request->contenue,
+            'image_path' => $image_path,
+        ]);
+
+        return redirect()->route('cours.index')->with('success', 'modification du cours avec success');
     }
 
     /**
@@ -121,9 +157,9 @@ class CoursController extends Controller
      */
     public function destroy($id)
     {
-       $cours = Course::findOrFail($id);
-       if ($cours->delete()){
-           return back();
-       }
+        $cours = Course::findOrFail($id);
+        if ($cours->delete()) {
+            return back();
+        }
     }
 }

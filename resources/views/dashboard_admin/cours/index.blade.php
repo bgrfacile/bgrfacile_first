@@ -411,8 +411,9 @@
                                                                             <a class="dropdown-item" href="{{ route('contenu.cours.show',['slug'=>$course->slug,'cour'=>$course->id]) }}">
                                                                                 Lire
                                                                                 le cours</a>
-                                                                            <a class="dropdown-item" href="{{ route('cours.edit',['cour'=>$course->courses_id]) }}">Modifier
-                                                                                ce cours</a>
+                                                                            <a class="dropdown-item" href="{{ route('cours.edit',['cour'=>$course->courses_id]) }}">
+                                                                                Modifier ce cours
+                                                                            </a>
                                                                             <div class="dropdown-divider"></div>
                                                                             <form action="{{ route('cours.destroy',['cour'=>$course->courses_id]) }}" method="post">
                                                                                 @csrf
