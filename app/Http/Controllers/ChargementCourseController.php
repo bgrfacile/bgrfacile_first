@@ -13,13 +13,12 @@ use mysql_xdevapi\Exception;
 
 class ChargementCourseController extends Controller
 {
-    public $count_courses = 0;
 
     public function default_cours()
     {
         $trainings = Training::all();
 //        $cours = Course::where('subject_id', 0)->get();
-        $courses = Course::select('*')->orderBy('created_at', 'desc')
+        $courses = Course::where('enligne','1')->orderBy('created_at', 'desc')
             ->paginate(6);
         return view('cours.course', [
             'courses' => $courses,
@@ -101,7 +100,9 @@ class ChargementCourseController extends Controller
 
     public function listCourse($training, $level, $subject, $subject_id)
     {
-        $courses = Course::where('subject_id', $subject_id)->get();
+        $courses = Course::where('subject_id', $subject_id)
+            ->where('enligne', '1')
+            ->get();
 
         return view('cours.liste_course', [
             'courses' => $courses
