@@ -132,7 +132,7 @@
                             <img src="{{ asset('assets/images/stella.jpeg') }}" alt="profile image"
                                  class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Stella victoire</h5>
+                        <h5 class="mt-4 mb-1 text-xl font-medium">Stella POUATHY</h5>
                         <span class="text-sm text-gray-500 font-medium uppercase">Rédactrice-lectrice</span>
                     </div>
                 </div>

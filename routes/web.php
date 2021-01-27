@@ -52,7 +52,7 @@ Route::get('/ecoles',function (){
    return view('ecoles.index');
 })->name('ecoles.index');
 
-Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-sommes-nous')->breadcrumbs(fn (Trail $trail) =>
+Route::get('/about',[AboutController::class,'index'])->name('qui-sommes-nous')->breadcrumbs(fn (Trail $trail) =>
 $trail->parent('home')->push('About', route('qui-sommes-nous'))
 );
 
