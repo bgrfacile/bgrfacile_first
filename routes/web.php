@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
@@ -60,9 +61,8 @@ Route::get('/politique-de-confidentialite',function (){
     return view('politique-de-confidentialite.index');
 })->name('politique');
 
-Route::get('/contact',function (){
-    return view('contact.contact');
-})->name('contact');
+Route::get('/contact',[ContactController::class,'index'])->name('contact');
+Route::post('/contact',[ContactController::class,'sendEmail'])->name('contact.send');
 
 /*
 |--------------------------------------------------------------------------
