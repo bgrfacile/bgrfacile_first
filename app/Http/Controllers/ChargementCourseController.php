@@ -100,12 +100,14 @@ class ChargementCourseController extends Controller
 
     public function listCourse($training, $level, $subject, $subject_id)
     {
+        $trainings = Training::all();
         $courses = Course::where('subject_id', $subject_id)
             ->where('enligne', '1')
             ->get();
 
         return view('cours.liste_course', [
-            'courses' => $courses
+            'courses' => $courses,
+            'trainings' => $trainings,
         ]);
     }
 
