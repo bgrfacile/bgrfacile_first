@@ -81,11 +81,11 @@ class ProfilController extends Controller
     public function myCourses()
     {
 //        $cours = User::find(auth()->user()->id)->cours;
-        $courses = DB::table('cours')
-            ->leftJoin('subjects', 'cours.subject_id', '=', 'subjects.id')
+        $courses = DB::table('courses')
+            ->leftJoin('subjects', 'courses.subject_id', '=', 'subjects.id')
             ->select(
-                'cours.id AS id_cours',
-                'cours.name AS nom_cours',
+                'courses.id AS id_cours',
+                'courses.name AS nom_cours',
                 'subjects.name AS nom_subjects',
                 'subjects.name AS nom_subjects',
                 'enligne',
