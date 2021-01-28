@@ -6,7 +6,7 @@
 
 
 @section('content')
-    <div class="w-10/12 mx-auto container ">
+    <div class="w-10/12 mx-auto container py-10">
         {{--        <nav class="bg-gray-200 p-3 rounded font-sans w-full m-4">--}}
         {{--            <ol class="list-reset flex text-grey-dark">--}}
         {{--                <li><a href="#" class="text-blue font-bold">Home</a></li>--}}
@@ -18,14 +18,13 @@
         {{--        </nav>--}}
 
 
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-4 sm:gap-y-6 md:grid-cols-3 md:gap-8 py-8 items-center">
+        <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">
             @foreach($courses as $course)
-
-                <div class="m bg-gray-50 shadow-lg overflow-hidden border-2">
-                    <div>
+                <div class="bg-gray-50 shadow-lg overflow-hidden border-2 mx-auto" style="width: 300px">
+                    <div class="h-56 overflow-hidden">
                         <img src="{{ $course->image_path }}"
-                             class="object-cover w-full h-full rounded-lg rounded-b-none md:h-56"
-                             alt=""/>
+                             class="object-fill w-full"
+                             alt="{{ $course->name }}"/>
                     </div>
                     <div class="p-3 space-y-3">
                         <h3 class="text-gray-700 font-semibold text-xl">
@@ -73,5 +72,6 @@
                 </div>
             @endforeach
         </div>
+
     </div>
 @endsection

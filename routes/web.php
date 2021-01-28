@@ -14,6 +14,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
 use App\Http\Controllers\SchoolsController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SubjectsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
@@ -26,8 +27,7 @@ use Tabuna\Breadcrumbs\Trail;
 | Hone site
 |--------------------------------------------------------------------------
 */
-Route::get('/',[HomeController::class,'index'])->name('home')->breadcrumbs(fn (Trail $trail) =>
-$trail->push('Accueil', route('home'))
+Route::get('/', [HomeController::class, 'index'])->name('home')->breadcrumbs(fn (Trail $trail) => $trail->push('Accueil', route('home'))
 );
 
 Route::get('/demo', function () {
@@ -39,30 +39,28 @@ Route::get('/demo', function () {
 | pages
 |--------------------------------------------------------------------------
 */
-Route::get('/faq',function (){
+Route::get('/faq', function () {
     return view('faq.faq');
 })->name('faq');
 
-Route::get('/search',function (){
-   return view('search.search');
-})->name('search')->breadcrumbs(fn (Trail $trail) =>
-$trail->parent('home')->push('recherche', route('search'))
-);
+//Route::get('/search', [SearchController::class, 'index'])->name('search')->breadcrumbs(fn (Trail $trail) => $trail->parent('home')->push('recherche', route('search'))
+//);
 
-Route::get('/ecoles',function (){
-   return view('ecoles.index');
+Route::get('/search',[SearchController::class,'search'])->name('search');
+
+Route::get('/ecoles', function () {
+    return view('ecoles.index');
 })->name('ecoles.index');
 
-Route::get('/qui-sommes-nous',[AboutController::class,'index'])->name('qui-sommes-nous')->breadcrumbs(fn (Trail $trail) =>
-$trail->parent('home')->push('About', route('qui-sommes-nous'))
+Route::get('/qui-sommes-nous', [AboutController::class, 'index'])->name('qui-sommes-nous')->breadcrumbs(fn (Trail $trail) => $trail->parent('home')->push('About', route('qui-sommes-nous'))
 );
 
-Route::get('/politique-de-confidentialite',function (){
+Route::get('/politique-de-confidentialite', function () {
     return view('politique-de-confidentialite.index');
 })->name('politique');
 
-Route::get('/contact',[ContactController::class,'index'])->name('contact');
-Route::post('/contact',[ContactController::class,'sendEmail'])->name('contact.send');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.send');
 
 /*
 |--------------------------------------------------------------------------
@@ -71,30 +69,30 @@ Route::post('/contact',[ContactController::class,'sendEmail'])->name('contact.se
 */
 Route::resource('course', CourseController::class);//CRUD sauf  show index
 //chargement des cours au niveau de l'utilisateur
-Route::get('/cours',[ChargementCourseController::class,'default_cours'])->name('contenu.cours');
-Route::get('/cours/{type}/{filter}',[ChargementCourseController::class,'chargementType'])->name('contenu.level');
-Route::get('/cours_filtre',[ChargementCourseController::class,'filter_cours'])->name('cours.filter');
-Route::get('/contenue/{cour}/{slug}',[ChargementCourseController::class,'show'])->name('contenu.cours.show');// show d'un cours
-Route::post('/cours/training',[ChargementCourseController::class,'viewCourse'])->name('cours.view');// show d'un cours
-Route::get('/cours/{training}/{level}/{subject}/{subject_id}',[ChargementCourseController::class,'listCourse'])->name('cours.list');// show d'un cours
+Route::get('/cours', [ChargementCourseController::class, 'default_cours'])->name('contenu.cours');
+Route::get('/cours/{type}/{filter}', [ChargementCourseController::class, 'chargementType'])->name('contenu.level');
+Route::get('/cours_filtre', [ChargementCourseController::class, 'filter_cours'])->name('cours.filter');
+Route::get('/contenue/{cour}/{slug}', [ChargementCourseController::class, 'show'])->name('contenu.cours.show');// show d'un cours
+Route::post('/cours/training', [ChargementCourseController::class, 'viewCourse'])->name('cours.view');// show d'un cours
+Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourseController::class, 'listCourse'])->name('cours.list');// show d'un cours
 
 /*
 |--------------------------------------------------------------------------
 | Astuces
 |--------------------------------------------------------------------------
 */
-Route::get('/astuces',[AstucesController::class,'index'])->name('astuces.index');
+Route::get('/astuces', [AstucesController::class, 'index'])->name('astuces.index');
 
-Route::get('/astuces/audios',[AstucesController::class,'audios'])->name('astuces.audio');
-Route::get('/astuces/audios/{id}',[AstucesController::class,'readAudios'])->name('astuces.audioread');
+Route::get('/astuces/audios', [AstucesController::class, 'audios'])->name('astuces.audio');
+Route::get('/astuces/audios/{id}', [AstucesController::class, 'readAudios'])->name('astuces.audioread');
 
-Route::get('/astuces/fiches',[AstucesController::class,'fiches'])->name('astuces.fiche');
+Route::get('/astuces/fiches', [AstucesController::class, 'fiches'])->name('astuces.fiche');
 
-Route::get('/astuces/mathematique',[AstucesController::class,'maths'])->name('astuces.maths');
+Route::get('/astuces/mathematique', [AstucesController::class, 'maths'])->name('astuces.maths');
 
-Route::get('/astuces/chimie',[AstucesController::class,'chimie'])->name('astuces.chimie');
+Route::get('/astuces/chimie', [AstucesController::class, 'chimie'])->name('astuces.chimie');
 
-Route::get('/astuces/physique',[AstucesController::class,'physique'])->name('astuces.physique');
+Route::get('/astuces/physique', [AstucesController::class, 'physique'])->name('astuces.physique');
 
 
 /*
@@ -139,24 +137,24 @@ Route::get('login/google/callback', [LoginController::class, 'googleRedirect'])-
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth:sanctum', 'verified'])->prefix('profil')->group(function () {
-    Route::get('/',[ProfilController::class, 'index'])->name('profil.index');
+    Route::get('/', [ProfilController::class, 'index'])->name('profil.index');
 
-    Route::get('/edit',[ProfilController::class, 'edit'])->name('profil.edit');
-    Route::put('/edit/{user}',[ProfilController::class, 'editPost'])->name('profil.edit.post');
+    Route::get('/edit', [ProfilController::class, 'edit'])->name('profil.edit');
+    Route::put('/edit/{user}', [ProfilController::class, 'editPost'])->name('profil.edit.post');
 
-    Route::get('/myFavoris',[ProfilController::class, 'myFavoris'])->name('profil.myFavoris');
+    Route::get('/myFavoris', [ProfilController::class, 'myFavoris'])->name('profil.myFavoris');
 
-    Route::get('/myCourses',[ProfilController::class, 'myCourses'])->name('profil.myCourses');
+    Route::get('/myCourses', [ProfilController::class, 'myCourses'])->name('profil.myCourses');
 
-    Route::get('/myExercises',[ProfilController::class, 'myExercises'])->name('profil.myExercises');
+    Route::get('/myExercises', [ProfilController::class, 'myExercises'])->name('profil.myExercises');
 
-    Route::get('/myCorrected',[ProfilController::class, 'myCorrected'])->name('profil.myCorrected');
+    Route::get('/myCorrected', [ProfilController::class, 'myCorrected'])->name('profil.myCorrected');
 
-    Route::get('/mySchool',[ProfilController::class, 'mySchool'])->name('profil.mySchool');
+    Route::get('/mySchool', [ProfilController::class, 'mySchool'])->name('profil.mySchool');
 
-    Route::get('/myDashbord',[ProfilController::class, 'myDashbord'])->name('profil.myDashbord');
+    Route::get('/myDashbord', [ProfilController::class, 'myDashbord'])->name('profil.myDashbord');
 
-    Route::get('/myFactures',[ProfilController::class, 'myFactures'])->name('profil.myFactures');
+    Route::get('/myFactures', [ProfilController::class, 'myFactures'])->name('profil.myFactures');
 });
 
 /*
@@ -166,30 +164,30 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('profil')->group(functio
 */
 Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->group(function () {
 
-    Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
-    Route::put('users/etat/{cour}',[UserController::class,'changeStatut'])->name('etat.cours');
-    Route::resource('users',UserController::class);
+    Route::put('users/etat/{cour}', [UserController::class, 'changeStatut'])->name('etat.cours');
+    Route::resource('users', UserController::class);
 
-    Route::resource('training',TrainingController::class);
+    Route::resource('training', TrainingController::class);
 
     Route::resource('levels', LevelsController::class);
 
     Route::resource('subject', SubjectsController::class);
 
-    Route::resource('cours',CoursController::class);
+    Route::resource('cours', CoursController::class);
 
 
 //    Astuces backend
-    Route::get('astuces',[AstucesController::class,'indexAdmin'])->name('dashboard.astuces');
-    Route::get('astuces/categories',[CategorieBookController::class,'index'])->name('dashboard.astuces.categoriebook.index');
-    Route::get('astuces/categories/create',[CategorieBookController::class,'create'])->name('dashboard.astuces.categoriebook.create');
-    Route::post('astuces/categories/create',[CategorieBookController::class,'store'])->name('dashboard.astuces.categoriebook.store');
-    Route::get('astuces/categories/{categorieBook}/edit',[CategorieBookController::class,'edit'])->name('dashboard.astuces.categoriebook.edit');
-    Route::put('astuces/categories/{categorieBook}',[CategorieBookController::class,'update'])->name('dashboard.astuces.categoriebook.update');
-    Route::delete('astuces/categories/{categorieBook}',[CategorieBookController::class,'destroy'])->name('dashboard.astuces.categoriebook.destroy');
+    Route::get('astuces', [AstucesController::class, 'indexAdmin'])->name('dashboard.astuces');
+    Route::get('astuces/categories', [CategorieBookController::class, 'index'])->name('dashboard.astuces.categoriebook.index');
+    Route::get('astuces/categories/create', [CategorieBookController::class, 'create'])->name('dashboard.astuces.categoriebook.create');
+    Route::post('astuces/categories/create', [CategorieBookController::class, 'store'])->name('dashboard.astuces.categoriebook.store');
+    Route::get('astuces/categories/{categorieBook}/edit', [CategorieBookController::class, 'edit'])->name('dashboard.astuces.categoriebook.edit');
+    Route::put('astuces/categories/{categorieBook}', [CategorieBookController::class, 'update'])->name('dashboard.astuces.categoriebook.update');
+    Route::delete('astuces/categories/{categorieBook}', [CategorieBookController::class, 'destroy'])->name('dashboard.astuces.categoriebook.destroy');
 
-    Route::resource('books',BookController::class);
+    Route::resource('books', BookController::class);
 });
 
 /*
