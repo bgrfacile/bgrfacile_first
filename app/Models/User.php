@@ -82,4 +82,8 @@ class User extends Authenticatable //implements HasMedia
     public function podcasts(){
         return $this->hasMany(Podcast::class)->orderBy('created_at','DESC');
     }
+
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
 }

@@ -23,4 +23,11 @@ class Course extends Model //implements HasMedia
         'contenue',
         'image_path',
     ];
+
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
+    public function likebyloggedInUser(){
+        return $this->likes->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
+    }
 }

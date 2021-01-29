@@ -13,6 +13,7 @@ use App\Http\Controllers\ChargementCourseController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
+use App\Http\Controllers\LikesController;
 use App\Http\Controllers\SchoolsController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SubjectsController;
@@ -75,6 +76,13 @@ Route::get('/cours_filtre', [ChargementCourseController::class, 'filter_cours'])
 Route::get('/contenue/{cour}/{slug}', [ChargementCourseController::class, 'show'])->name('contenu.cours.show');// show d'un cours
 Route::post('/cours/training', [ChargementCourseController::class, 'viewCourse'])->name('cours.view');// show d'un cours
 Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourseController::class, 'listCourse'])->name('cours.list');// show d'un cours
+
+/*
+|--------------------------------------------------------------------------
+| like
+|--------------------------------------------------------------------------
+*/
+Route::post('/like',[LikesController::class,'like'])->name('course.like');
 
 /*
 |--------------------------------------------------------------------------

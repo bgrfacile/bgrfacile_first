@@ -83,7 +83,7 @@
         <h2 class="text-2xl text-secondary font-bold flex-1 my-8 pb-2 border-b">
             <span>Les Derniers cours mis en ligne sur le site</span>
         </h2>
-{{--        <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">--}}
+        {{--        <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">--}}
         <div class="flex flex-wrap items-stretch">
             @foreach($courses as $course)
                 <div class=" flex flex-col shadow-lg overflow-hidden border-2 mx-auto mb-4" style="width: 300px">
@@ -114,10 +114,14 @@
                                     </svg>
                                     <span>25</span>
                                 </div>
-                                <a href="#" class="flex items-center justify-center text-gray-400">
-                                    <i class="fas fa-thumbs-up mr-2"></i>
-                                    <div class="">0</div>
-                                </a>
+                                <form class="mb-0 flex" action="{{ route('course.like') }}" id="form_js" method="post">
+                                    @csrf
+                                    <input type="hidden" id="course_id_js" value="{{ $course->id }}">
+                                    <button type="submit" class="flex items-center justify-center text-gray-400">
+                                        <i class="fas fa-thumbs-up mr-2"></i>
+                                    </button>
+                                    <div id="count_js" class="">{{ $course->likes->count() }}</div>
+                                </form>
                                 <a href="#" class="text-gray-400">
                                     <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 212.045 212.045" fill="currentColor"
@@ -146,7 +150,7 @@
     <script src="{{ asset('js/filter_courses.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
-        var typed = new Typed('#typed', {
+        let typed = new Typed('#typed', {
             stringsElement: '#typed-strings',
             strings: ['First ^1000 sentence.', 'Second sentence.']
         });
@@ -165,4 +169,8 @@
         });
     </script>
 
+    <script>
+
+
+    </script>
 @endsection
