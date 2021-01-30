@@ -71,9 +71,9 @@ Route::post('/contact', [ContactController::class, 'sendEmail'])->name('contact.
 Route::resource('course', CourseController::class);//CRUD sauf  show index
 //chargement des cours au niveau de l'utilisateur
 Route::get('/cours', [ChargementCourseController::class, 'default_cours'])->name('contenu.cours');
-Route::get('/cours/{type}/{filter}', [ChargementCourseController::class, 'chargementType'])->name('contenu.level');
+Route::get('/contenue/{type}/{filter}', [ChargementCourseController::class, 'chargementType'])->name('contenu.level');
 Route::get('/cours_filtre', [ChargementCourseController::class, 'filter_cours'])->name('cours.filter');
-Route::get('/contenue/{cour}/{slug}', [ChargementCourseController::class, 'show'])->name('contenu.cours.show');// show d'un cours
+Route::get('/cours/{cour}/{slug}', [ChargementCourseController::class, 'show'])->name('contenu.cours.show');// show d'un cours
 Route::post('/cours/training', [ChargementCourseController::class, 'viewCourse'])->name('cours.view');// show d'un cours
 Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourseController::class, 'listCourse'])->name('cours.list');// show d'un cours
 
@@ -82,7 +82,7 @@ Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourse
 | like
 |--------------------------------------------------------------------------
 */
-Route::post('/like',[LikesController::class,'like'])->name('course.like');
+Route::post('/like',[LikesController::class,'like'])->middleware(['auth:sanctum', 'verified'])->name('course.like');
 
 /*
 |--------------------------------------------------------------------------

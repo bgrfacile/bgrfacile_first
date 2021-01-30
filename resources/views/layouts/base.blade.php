@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+          content="site de cours">
     <meta name="keywords"
           content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
 

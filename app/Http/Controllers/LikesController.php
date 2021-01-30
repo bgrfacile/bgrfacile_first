@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Like;
-use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\JsonResponse;
 
 class LikesController extends Controller
 {
-    public function like(): JsonResource
+    public function like(): JsonResponse
     {
         $course = Course::find(request()->id);
 
@@ -21,6 +20,7 @@ class LikesController extends Controller
 
             if ($res) {
                 return response()->json([
+//                        'error' => 'Unauthorized',
                         'count' => Course::find(request()->id)->likes->count()
                     ]
                 );
@@ -33,7 +33,7 @@ class LikesController extends Controller
             $like->save();
             return response()->json([
                     'count' => Course::find(request()->id)->likes->count()
-                ]
+                ],200
             );
         }
     }
