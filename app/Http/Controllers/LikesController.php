@@ -8,6 +8,10 @@ use Illuminate\Http\JsonResponse;
 
 class LikesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function like(): JsonResponse
     {
         $course = Course::find(request()->id);

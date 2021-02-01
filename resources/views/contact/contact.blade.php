@@ -356,6 +356,15 @@
                         {{ Session::get('message_sent') }}
                     </div>
                 @endif
+                <div
+                        style="color: #65c57a;
+                                padding: 2rem;
+                                background: aliceblue;
+                                border-radius: 6px;
+                                font-size: 16px;">
+                    L'envoie d'email est temporellement indisponible.Nous vous invitons à envoyer vos mails sur l'adresse
+                    <strong class="font-bold">contact@bgrfacile.com</strong>
+                </div>
                 <div class="form-input-max">
                     <p class="form-text">Votre nom*</p>
                     <div class="form-input-wrapper flexbox-left">
@@ -382,7 +391,7 @@
                 </div>
                 <div class="form-input-max flexbox-left">
                     <div class="button-wrapper">
-                        <button id="form-button" type="submit" class="button btn-primary"><i
+                        <button disabled id="form-button" type="submit" class="button btn-primary"><i
                                     class="uil uil-envelope-heart"></i> envoyer
                         </button>
                     </div>

@@ -20,9 +20,9 @@
                     </nav>
                 </div>
                 <div class="col-auto">
-                    <button class="btn btn-falcon-success btn-sm mb-2 mb-sm-0" type="button">
-                        <span class="fas fa-arrow-down mr-1"> </span>Download (.pdf)
-                    </button>
+                    {{--                    <button class="btn btn-falcon-success btn-sm mb-2 mb-sm-0" type="button">--}}
+                    {{--                        <span class="fas fa-arrow-down mr-1"> </span>Download (.pdf)--}}
+                    {{--                    </button>--}}
                 </div>
             </div>
         </div>
@@ -60,68 +60,47 @@
 
                     </div>
                 </div>
-                {{--                card contenue--}}
-{{--                <div class="card mb-3">--}}
-{{--                    <div class="card-header bg-light">--}}
-{{--                        <h5 class="mb-0" id="liability">Commentaires</h5>--}}
-{{--                    </div>--}}
-{{--                    <div class="card-body">--}}
-{{--                        <div class="card-footer bg-light pt-0">--}}
-{{--                            <div class="border-bottom border-200 fs--1 py-3"><a class="text-700" href="#!">345 Likes</a>--}}
-{{--                                &bull; <a class="text-700" href="#!">34 Comments</a></div>--}}
-{{--                            <div class="row g-0 font-weight-semi-bold text-center py-2 fs--1">--}}
-{{--                                <div class="col-auto"><a class="rounded d-flex align-items-center mr-3" href="#!"><img--}}
-{{--                                                src="assets/img/illustrations/like-active.png" width="20" alt=""/><span--}}
-{{--                                                class="ml-1">Like</span></a></div>--}}
-{{--                                <div class="col-auto"><a class="rounded d-flex align-items-center mr-3" href="#!"><img--}}
-{{--                                                src="assets/img/illustrations/comment-active.png" width="20"--}}
-{{--                                                alt=""/><span class="ml-1">Comment</span></a></div>--}}
-{{--                                <div class="col-auto d-flex align-items-center"><a--}}
-{{--                                            class="rounded text-700 d-flex align-items-center" href="#!"><img--}}
-{{--                                                src="assets/img/illustrations/share-inactive.png" width="20"--}}
-{{--                                                alt=""/><span class="ml-1">Share</span></a></div>--}}
-{{--                            </div>--}}
-{{--                            <form class="d-flex align-items-center border-top border-200 pt-3">--}}
-{{--                                <div class="avatar avatar-xl">--}}
-{{--                                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt=""/>--}}
-{{--                                </div>--}}
-{{--                                <input class="form-control rounded-pill ml-2 fs--1" type="text"--}}
-{{--                                       placeholder="Write a comment..."/>--}}
-{{--                            </form>--}}
-{{--                            <div class="d-flex mt-3">--}}
-{{--                                <div class="avatar avatar-xl">--}}
-{{--                                    <img class="rounded-circle" src="assets/img/team/4.jpg" alt=""/>--}}
-{{--                                </div>--}}
-{{--                                <div class="flex-1 ml-2 fs--1">--}}
-{{--                                    <p class="mb-1 bg-200 rounded-lg p-2"><a class="font-weight-semi-bold"--}}
-{{--                                                                             href="pages/profile.html">Rowan--}}
-{{--                                            Atkinson</a> She starred as Jane Porter in The <a href="#!">@Legend of--}}
-{{--                                            Tarzan (2016)</a>, Tanya Vanderpoel in Whiskey Tango Foxtrot (2016) and as--}}
-{{--                                        DC comics villain Harley Quinn in Suicide Squad (2016), for which she was--}}
-{{--                                        nominated for a Teen Choice Award, and many other awards.</p>--}}
-{{--                                    <div class="px-2"><a href="#!">Like</a> &bull; <a href="#!">Reply</a> &bull; 23min--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div class="d-flex mt-3">--}}
-{{--                                <div class="avatar avatar-xl">--}}
-{{--                                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt=""/>--}}
-{{--                                </div>--}}
-{{--                                <div class="flex-1 ml-2 fs--1">--}}
-{{--                                    <p class="mb-1 bg-200 rounded-lg p-2"><a class="font-weight-semi-bold"--}}
-{{--                                                                             href="pages/profile.html">Jessalyn--}}
-{{--                                            Gilsig</a> Jessalyn Sarah Gilsig is a Canadian-American actress known for--}}
-{{--                                        her roles in television series, e.g., as Lauren Davis in Boston Public, Gina--}}
-{{--                                        Russo in Nip/Tuck, Terri Schuester in Glee, and as Siggy Haraldson on the--}}
-{{--                                        History Channel series Vikings. 🏆</p>--}}
-{{--                                    <div class="px-2"><a href="#!">Like</a> &bull; <a href="#!">Reply</a> &bull; 3hrs--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <a class="fs--1 text-700 d-inline-block mt-2" href="#!">Load more comments (2 of 34)</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                card commentaire--}}
+                <div class="card mb-3">
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0" id="liability">Commentaires</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-footer bg-light pt-0">
+                            <div class="border-bottom border-200 fs--1 py-3">
+                                <a class="text-700" href="#!">34 Comments</a>
+                            </div>
+                            <form class="d-flex align-items-center border-top border-200 pt-3">
+                                <div class="avatar avatar-xl">
+                                    <img class="rounded-circle" src="{{ asset('dist/assets/img/team/3.jpg') }}" alt=""/>
+                                </div>
+                                <input class="form-control rounded-pill ml-2 fs--1" type="text"
+                                       placeholder="ecrire un commentaire..."/>
+                            </form>
+                            <div class="d-flex mt-3">
+                                <div class="avatar avatar-xl">
+                                    <img class="rounded-circle" src="assets/img/team/4.jpg" alt=""/>
+                                </div>
+                                <div class="flex-1 ml-2 fs--1">
+                                    <p class="mb-1 bg-200 rounded-lg p-2">
+                                        <a class="font-weight-semi-bold"
+                                           href="pages/profile.html">
+                                            Rowan Atkinson
+                                        </a>
+                                        She starred as Jane Porter in The Tanya Vanderpoel in Whiskey Tango Foxtrot
+                                        (2016) and as
+                                        DC comics villain Harley Quinn in Suicide Squad (2016), for which she was
+                                        nominated for a Teen Choice Award, and many other awards.
+                                    </p>
+                                    <div class="px-2">
+                                         23min
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="fs--1 text-700 d-inline-block mt-2" href="#!">Load more comments (2 of 34)</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             {{--            droite--}}
             <div class="col-lg-4 pl-lg-2">

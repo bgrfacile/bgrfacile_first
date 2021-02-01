@@ -30,4 +30,8 @@ class Course extends Model //implements HasMedia
     public function likebyloggedInUser(){
         return $this->likes->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
     }
+
+    public function comments(){
+        return $this->morphMany(Comment::class,'commentable')->latest();
+    }
 }

@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategorieBookController;
 use App\Http\Controllers\ChargementCourseController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LevelsController;
@@ -82,7 +83,15 @@ Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourse
 | like
 |--------------------------------------------------------------------------
 */
-Route::post('/like',[LikesController::class,'like'])->middleware(['auth:sanctum', 'verified'])->name('course.like');
+Route::post('/like',[LikesController::class,'like'])->name('course.like');
+
+/*
+|--------------------------------------------------------------------------
+| comment
+|--------------------------------------------------------------------------
+*/
+Route::post('/comments/{course}',[CommentController::class,'store'])->name('course.comments');
+
 
 /*
 |--------------------------------------------------------------------------
