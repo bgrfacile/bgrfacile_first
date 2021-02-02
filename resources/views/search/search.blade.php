@@ -72,20 +72,20 @@
                 @endif
             </ol>
         </nav>
-        <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             @foreach($courses as $course)
-                <div class="bg-gray-50 shadow-lg overflow-hidden border-2 mx-auto" style="width: 300px">
+                <div class=" flex flex-col shadow-lg overflow-hidden border-2 mx-auto mb-4" style="width: 300px">
                     <div class="h-56 overflow-hidden">
                         <img src="{{ $course->image_path }}"
                              class="object-fill w-full"
                              alt="{{ $course->name }}"/>
                     </div>
-                    <div class="p-3 space-y-3">
+                    <div class="p-3 space-y-3 flex-1 flex flex-col">
                         <h3 class="text-gray-700 font-semibold text-xl">
                             {{ $course->name }}
                         </h3>
                         <hr>
-                        <p class="text-sm text-gray-900 leading-sm">
+                        <p class="text-sm text-gray-900 leading-sm flex-1">
                             {{ $course->description }}
                         </p>
                         <hr>
@@ -102,10 +102,14 @@
                                     </svg>
                                     <span>25</span>
                                 </div>
-                                <a href="#" class="flex items-center justify-center text-gray-400">
-                                    <i class="fas fa-thumbs-up mr-2"></i>
-                                    <div class="">0</div>
-                                </a>
+                                <form class="mb-0 flex" action="{{ route('course.like') }}" id="form_js" method="post">
+                                    @csrf
+                                    <input type="hidden" id="course_id_js" value="{{ $course->id }}">
+                                    <button type="submit" class="flex items-center justify-center text-gray-400">
+                                        <i class="fas fa-thumbs-up mr-2"></i>
+                                    </button>
+                                    <div id="count_js" class="">{{ $course->likes->count() }}</div>
+                                </form>
                                 <a href="#" class="text-gray-400">
                                     <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg"
                                          viewBox="0 0 212.045 212.045" fill="currentColor"

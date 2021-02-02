@@ -100,7 +100,7 @@ Route::post('/comments/{course}',[CommentController::class,'store'])->name('cour
 */
 Route::get('/astuces', [AstucesController::class, 'index'])->name('astuces.index');
 
-Route::get('/astuces/audios', [AstucesController::class, 'audios'])->name('astuces.audio');
+Route::get('/astuces/podcast', [AstucesController::class, 'podcast'])->name('astuces.podcast');
 Route::get('/astuces/audios/{id}', [AstucesController::class, 'readAudios'])->name('astuces.audioread');
 
 Route::get('/astuces/fiches', [AstucesController::class, 'fiches'])->name('astuces.fiche');

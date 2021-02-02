@@ -15,8 +15,8 @@ class AstucesController extends Controller
         return view('astuces.astuces');
     }
 
-    public function audios(){
-        return view('astuces.astuces_audios');
+    public function podcast(){
+        return view('astuces.podcast.index');
     }
     public function readAudios($id){
         return view('astuces.readAudios');

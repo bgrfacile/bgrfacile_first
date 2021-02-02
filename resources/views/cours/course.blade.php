@@ -84,7 +84,8 @@
             <span>Les Derniers cours mis en ligne sur le site</span>
         </h2>
         {{--        <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center">--}}
-        <div class="flex flex-wrap items-stretch">
+        {{--            <div class="flex flex-wrap items-stretch">--}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             @foreach($courses as $course)
                 <div class=" flex flex-col shadow-lg overflow-hidden border-2 mx-auto mb-4" style="width: 300px">
                     <div class="h-56 overflow-hidden">

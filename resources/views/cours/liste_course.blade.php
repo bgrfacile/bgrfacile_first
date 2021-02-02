@@ -10,8 +10,8 @@
 
 
 @section('content')
-<div class="flex w-10/12 mx-auto container my-5">
-    <div class="w-1/3">
+<div class="flex flex-col md:flex-row w-10/12 mx-auto container my-5">
+    <div class="w-full md:w-1/3">
         <form action="{{ route('cours.view') }}" method="post"
               class="flex flex-col md:flex-col text-gray-700 text-lg font-medium mb-4 p-2 border-4 border-dashed">
             @csrf
@@ -66,7 +66,8 @@
             <h2 class="border-b text-2xl text-secondary font-bold ">Liste des cours de </h2>
         </div>
         <div class="">
-            <div class="flex flex-wrap items-stretch">
+{{--            <div class="flex flex-wrap items-stretch">--}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 @foreach($courses as $course)
                     <div class=" flex flex-col shadow-lg overflow-hidden border-2 mx-auto mb-4" style="width: 300px">
                         <div class="h-56 overflow-hidden">
@@ -96,19 +97,23 @@
                                         </svg>
                                         <span>25</span>
                                     </div>
-                                    <a href="#" class="flex items-center justify-center text-gray-400">
-                                        <i class="fas fa-thumbs-up mr-2"></i>
-                                        <div class="">0</div>
-                                    </a>
+                                    <form class="mb-0 flex" action="{{ route('course.like') }}" id="form_js" method="post">
+                                        @csrf
+                                        <input type="hidden" id="course_id_js" value="{{ $course->id }}">
+                                        <button type="submit" class="flex items-center justify-center text-gray-400">
+                                            <i class="fas fa-thumbs-up mr-2"></i>
+                                        </button>
+                                        <div id="count_js" class="">{{ $course->likes->count() }}</div>
+                                    </form>
                                     <a href="#" class="text-gray-400">
                                         <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg"
                                              viewBox="0 0 212.045 212.045" fill="currentColor"
                                              stroke="currentColor"
                                              xml:space="preserve">
-                                            <path d="M167.871,0H44.84C34.82,0,26.022,8.243,26.022,18v182c0,3.266,0.909,5.988,2.374,8.091c1.752,2.514,4.573,3.955,7.598,3.954
-                                             c2.86,0,5.905-1.273,8.717-3.675l55.044-46.735c1.7-1.452,4.142-2.284,6.681-2.284c2.538,0,4.975,0.832,6.68,2.288l54.86,46.724
-                                             c2.822,2.409,5.657,3.683,8.512,3.683c4.828,0,9.534-3.724,9.534-12.045V18C186.022,8.243,177.891,0,167.871,0z"/>
-                                        </svg>
+                                        <path d="M167.871,0H44.84C34.82,0,26.022,8.243,26.022,18v182c0,3.266,0.909,5.988,2.374,8.091c1.752,2.514,4.573,3.955,7.598,3.954
+                                         c2.86,0,5.905-1.273,8.717-3.675l55.044-46.735c1.7-1.452,4.142-2.284,6.681-2.284c2.538,0,4.975,0.832,6.68,2.288l54.86,46.724
+                                         c2.822,2.409,5.657,3.683,8.512,3.683c4.828,0,9.534-3.724,9.534-12.045V18C186.022,8.243,177.891,0,167.871,0z"/>
+                                    </svg>
                                     </a>
                                 </div>
                             </div>
