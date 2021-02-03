@@ -136,9 +136,9 @@
         // anchors.options = {
         //     placement: 'left'
         // };
-        anchors.add('#app_cours h1');
+        anchors.add('#app_cours h2');
 
-        const titles = document.querySelectorAll('#app_cours h1');
+        const titles = document.querySelectorAll('#app_cours h2');
         titles.forEach((title) => {
             title.setAttribute("data-anchor", "data-anchor");
             title.setAttribute("class", "pl-3");
