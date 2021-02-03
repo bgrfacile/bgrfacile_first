@@ -81,7 +81,7 @@
                             </h3>
                             <hr>
                             <p class="text-sm text-gray-900 leading-sm flex-1">
-                                {{ Str::limit($course->description, 120, ' (...)') }}
+                                {{ Str::limit($course->description, 120, '...') }}
                             </p>
                             <hr>
                             <div class="flex items-center justify-between px-4 py-2 overflow-hidden">
