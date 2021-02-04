@@ -47,11 +47,14 @@
         </div>
     </div>
     <div class="max-w-screen-xl mx-auto pt-8 pb-16 sm:pt-8 sm:pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
+
         <nav class="bg-gray-100 p-3 rounded font-sans w-full m-4 flex justify-between">
             @if($count_courses != null)
                 <span>{{ $count_courses }} @if($count_courses>1) Résultats @else Résultat @endif</span>
-            @else
-                <span>Acune recherche effèctue</span>
+            @elseif($count_courses === 0)
+                <span>Aucune resultat pour votre recherche</span>
+            @elseif($count_courses === null  )
+                <span>Aucune recherche n'effectue</span>
             @endif
             <ol class="list-reset flex text-grey-dark">
                 @if(Breadcrumbs::has())
@@ -72,6 +75,7 @@
                 @endif
             </ol>
         </nav>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             @foreach($courses as $course)
                 <div class=" flex flex-col shadow-lg overflow-hidden border-2 mx-auto mb-4" style="width: 300px">
