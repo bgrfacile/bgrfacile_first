@@ -19,6 +19,13 @@
     <div class="py-5">
         {{--        presentation--}}
         <div class="grid col-span-1 md:flex items-center mt-5 justify-center">
+            @if(session('success'))
+                <div class="bg-green-300 text-green-800 p-4">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+        <div class="grid col-span-1 md:flex items-center mt-5 justify-center">
             <div class="md:mr-4">
                 <img class="md:w-40"
                      src="{{ $user->profile_photo_path }}"

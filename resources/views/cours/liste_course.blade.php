@@ -1,11 +1,11 @@
 @extends('layouts.base')
 
 @section('title')
-
+cours
 @endsection
 
-@section('ressourceCSS')
 
+@section('ressourceCSS')
 @endsection
 
 
@@ -128,8 +128,6 @@
         </div>
     </div>
 </div>
-
-
 @endsection
 
 
@@ -137,7 +135,7 @@
     <script src="{{ asset('js/filter_courses.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
-        var typed = new Typed('#typed', {
+        let typed = new Typed('#typed', {
             stringsElement: '#typed-strings',
             strings: ['First ^1000 sentence.', 'Second sentence.']
         });
@@ -155,5 +153,4 @@
 
         });
     </script>
-
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('title')
-    contactez-nous
+    contact
 @endsection
 
 @section('ressourceCSS')

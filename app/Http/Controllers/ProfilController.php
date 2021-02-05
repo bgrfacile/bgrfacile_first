@@ -62,7 +62,7 @@ class ProfilController extends Controller
         }
 //        dd($user);
         if ($user->save()) {
-            return back()->with('success', 'Information modifier avec succes');
+            return redirect()->route('profil.index')->with('success', 'Information modifier avec succes');
         }
     }
 

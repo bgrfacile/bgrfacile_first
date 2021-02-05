@@ -1,4 +1,6 @@
 @extends('layouts.base')
+@section('meta.description') bgrfacile un travail rendu possible grace à la contribution de plusieurs personne. @endsection
+
 @section('title')
     About
 @endsection

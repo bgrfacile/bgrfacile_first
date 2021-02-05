@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('meta.description') bgrfacile un site de cours congolais,vous permet de cree une ecole virtuel et ainsi rendre votre stucture virtuel. @endsection
 @section('title')
     école virtuelle
 @endsection

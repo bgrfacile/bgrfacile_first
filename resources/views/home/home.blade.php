@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('meta.description') bgrfacile un site de cours congolais,il a pour but de promouvoir l’éducation et l’apprentissage dans le milieu scolaire @endsection
 @section('title') bgrfacile @endsection
 
 @section('baniere')
