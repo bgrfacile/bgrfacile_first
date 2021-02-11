@@ -144,8 +144,12 @@
             title.setAttribute("class", "pl-3");
         });
         const p = document.querySelectorAll('#app_cours p');
+        const img = document.querySelectorAll('img');
         p.forEach((para) => {
             para.setAttribute("class", "mb-0 pl-3");
+        });
+        img.forEach((img) => {
+            img.setAttribute("class", "img-fluid");
         });
     </script>
 @endsection

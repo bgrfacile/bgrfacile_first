@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\admin\CoursController;
+use App\Http\Controllers\admin\TeamController;
 use App\Http\Controllers\admin\TrainingController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\DashboardController;
@@ -48,7 +49,7 @@ Route::get('/faq', function () {
 //Route::get('/search', [SearchController::class, 'index'])->name('search')->breadcrumbs(fn (Trail $trail) => $trail->parent('home')->push('recherche', route('search'))
 //);
 
-Route::get('/search',[SearchController::class,'search'])->name('search');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/ecoles', function () {
     return view('ecoles.index');
@@ -83,14 +84,14 @@ Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourse
 | like
 |--------------------------------------------------------------------------
 */
-Route::post('/like',[LikesController::class,'like'])->name('course.like');
+Route::post('/like', [LikesController::class, 'like'])->name('course.like');
 
 /*
 |--------------------------------------------------------------------------
 | comment
 |--------------------------------------------------------------------------
 */
-Route::post('/comments/{course}',[CommentController::class,'store'])->name('course.comments');
+Route::post('/comments/{course}', [CommentController::class, 'store'])->name('course.comments');
 
 
 /*
@@ -194,8 +195,12 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard-admin')->grou
 
     Route::resource('cours', CoursController::class);
 
+    Route::get('equipe', [TeamController::class, 'index'])->name('team.index');
+    Route::post('equipe', [TeamController::class, 'store'])->name('team.store');
+    Route::put('equipe/{id}', [TeamController::class, 'update'])->name('team.update');
+    Route::delete('equipe/{id}', [TeamController::class, 'delete'])->name('team.delete');
 
-//    Astuces backend
+    //Astuces backend
     Route::get('astuces', [AstucesController::class, 'indexAdmin'])->name('dashboard.astuces');
     Route::get('astuces/categories', [CategorieBookController::class, 'index'])->name('dashboard.astuces.categoriebook.index');
     Route::get('astuces/categories/create', [CategorieBookController::class, 'create'])->name('dashboard.astuces.categoriebook.create');

@@ -109,6 +109,17 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('team.index') }}">
+                                <div class="d-flex align-items-center">
+                                    <span class="nav-link-icon">
+                                        <span class="fas fa-user-friends"></span>
+                                    </span>
+                                    <span class="nav-link-text">Equipes</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link dropdown-indicator" href="#cours" data-toggle="collapse" role="button"
                                aria-expanded="false" aria-controls="cours">
                                 <div class="d-flex align-items-center">

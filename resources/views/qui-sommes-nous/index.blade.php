@@ -91,9 +91,9 @@
     {{--une image illustration de l'équipe bgrfacile--}}
     <div class="w-full overflow-hidden" style="height: 543px;filter: grayscale(80%);">
         <img
-            class="w-full"
-            src="{{ asset('assets/images/banniere_bgrfacile.jpeg') }}"
-            alt="">
+                class="w-full"
+                src="{{ asset('assets/images/banniere_bgrfacile.jpeg') }}"
+                alt="">
     </div>
 
     {{--historique de bgrfcile--}}
@@ -106,92 +106,107 @@
         <div class="mx-auto max-w-4xl py-16 text-gray-700">
             <h3 class="my-7 text-2xl font-bold text-left border-b pb-2">L'équipe</h3>
             <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="{{ asset('assets/images/benaja.jpg') }}" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                @foreach($equipes as $equipe)
+                    <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
+                        <div class="px-5 py-12 text-center">
+                            <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
+{{--                                <img src="{{ asset('assets/images/benaja.jpg') }}" alt="profile image"--}}
+                                <img src="{{ $equipe->imagePath }}" alt="{{ $equipe->nom }}"
+                                     class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <h5 class="mt-4 mb-1 text-xl font-medium">{{ $equipe->nom }}</h5>
+                            <span class="text-sm text-gray-500 font-medium uppercase">{{ $equipe->role }}</span>
                         </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Bénaja BENDO</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">full stack Dev</span>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="{{ asset('assets/images/styve.jpg') }}" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Styve LIOUMBA</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">android full Stack</span>
-                    </div>
-                </div>
+                {{--                --}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="{{ asset('assets/images/benaja.jpg') }}" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Bénaja BENDO</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">full stack Dev</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">
-                    <div class="px-5 py-12 text-center">
-                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">
-                            <img src="{{ asset('assets/images/stella.jpeg') }}" alt="profile image"
-                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">
-                        </div>
-                        <h5 class="mt-4 mb-1 text-xl font-medium">Stella POUATHY</h5>
-                        <span class="text-sm text-gray-500 font-medium uppercase">Rédactrice-lectrice</span>
-                    </div>
-                </div>
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="{{ asset('assets/images/styve.jpg') }}" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Styve LIOUMBA</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">android full Stack</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
-{{--                    <div class="px-5 py-12 text-center">--}}
-{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
-{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
-{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Ken</h5>--}}
-{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and android code</span>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="{{ asset('assets/images/stella.jpeg') }}" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Stella POUATHY</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">Rédactrice-lectrice</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
-{{--                    <div class="px-5 py-12 text-center">--}}
-{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
-{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
-{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Chanel</h5>--}}
-{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and full redactor</span>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Ken</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and android code</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
-{{--                    <div class="px-5 py-12 text-center">--}}
-{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
-{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
-{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Belinda</h5>--}}
-{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full redactor</span>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Chanel</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">full web and full redactor</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
-{{--                    <div class="px-5 py-12 text-center">--}}
-{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
-{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
-{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">yannick</h5>--}}
-{{--                        <span class="text-sm text-gray-500 font-medium uppercase">full management</span>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">Belinda</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">full redactor</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
-{{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
-{{--                    <div class="px-5 py-12 text-center">--}}
-{{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
-{{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
-{{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4 mb-1 text-xl font-medium">jessica</h5>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">yannick</h5>--}}
+                {{--                        <span class="text-sm text-gray-500 font-medium uppercase">full management</span>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
+
+                {{--                <div class="w-64 bg-white border border-solid max-w-sm mx-auto">--}}
+                {{--                    <div class="px-5 py-12 text-center">--}}
+                {{--                        <div class="w-24 h-24 rounded-full mx-auto overflow-hidden">--}}
+                {{--                            <img src="//via.placeholder.com/100/eee" alt="profile image"--}}
+                {{--                                 class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500">--}}
+                {{--                        </div>--}}
+                {{--                        <h5 class="mt-4 mb-1 text-xl font-medium">jessica</h5>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
 
             </div>
 
