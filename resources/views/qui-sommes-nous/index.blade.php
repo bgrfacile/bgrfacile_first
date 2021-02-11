@@ -2,7 +2,7 @@
 @section('meta.description') bgrfacile un travail rendu possible grace à la contribution de plusieurs personne. @endsection
 
 @section('title')
-    About
+    Qui sommes-nous?
 @endsection
 
 @section('ressourceCSS')
@@ -30,7 +30,7 @@
     <div class="flex flex-col justify-between items-center bg-gray-500 overflow-hidden text-white"
          style='min-height: 374px;background: center / cover no-repeat url("{{ asset('assets/images/bg_about_header.jpg') }}")'>
         <div>
-            <h3 class="my-5 pt-5 font-semibold text-4xl">Qui sommes-nous ?</h3>
+            <h3 class="my-5 pt-5 font-semibold text-4xl">Qui sommes-nous?</h3>
         </div>
         <div class="py-3 bg-black w-full opacity-25 text-white">
             <h4 class="text-2xl text-center h-12">une communauté de</h4>
