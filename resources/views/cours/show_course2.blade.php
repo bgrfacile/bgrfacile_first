@@ -39,10 +39,11 @@
                         </div>
                     </div>
                     <div class="col-md-auto mt-4 mt-md-0">
-                        <button class="btn btn-falcon-default btn-sm mr-2" type="button">
+                        <button disabled class="btn btn-falcon-default btn-sm mr-2" type="button">
+                            {{ $course->likes->count() }}
                             <span class="fas fa-heart text-danger mr-1"></span>
                         </button>
-                        <a href="#comment" class="btn btn-falcon-primary btn-sm px-4 px-sm-5">commenter</a>
+{{--                        <a href="#comment" class="btn btn-falcon-primary btn-sm px-4 px-sm-5">commenter</a>--}}
                     </div>
                 </div>
             </div>
