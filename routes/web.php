@@ -75,7 +75,7 @@ Route::resource('course', CourseController::class);//CRUD sauf  show index
 Route::get('/cours', [ChargementCourseController::class, 'default_cours'])->name('contenu.cours');
 Route::get('/contenue/{type}/{filter}', [ChargementCourseController::class, 'chargementType'])->name('contenu.level');
 Route::get('/cours_filtre', [ChargementCourseController::class, 'filter_cours'])->name('cours.filter');
-Route::get('/cours/{cour}/{slug}', [ChargementCourseController::class, 'show'])->name('contenu.cours.show');// show d'un cours
+Route::get('/cours/{cour}/{slug}', [ChargementCourseController::class, 'show'])->middleware(['auth:sanctum', 'verified'])->name('contenu.cours.show');// show d'un cours
 Route::post('/cours/training', [ChargementCourseController::class, 'viewCourse'])->name('cours.view');// show d'un cours
 Route::get('/cours/{training}/{level}/{subject}/{subject_id}', [ChargementCourseController::class, 'listCourse'])->name('cours.list');// show d'un cours
 

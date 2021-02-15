@@ -275,7 +275,7 @@
                     <a href="{{ route('qui-sommes-nous') }}"
                        class="{{ Route::currentRouteNamed('qui-sommes-nous') ? 'bg-gray-900 flex px-3 py-2 rounded-md text-sm font-medium text-gray-300':
                                'flex px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700' }}">
-                        Qui sommes nous?
+                        Qui sommes-nous?
                     </a>
 
                 </div>
@@ -296,6 +296,10 @@
                             </div>
                         </div>
                         <div class="mt-3 px-2 space-y-1">
+                            <span
+                               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
+                                {{ auth()->user()->name }}
+                            </span>
                             <a href="{{ route('profil.index') }}"
                                class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">
                                 Mon profil
@@ -350,7 +354,8 @@
                         Qui sommes-nous
                     </a>
                     <a class="my-3 block text-gray-800 hover:text-gray-400"
-                       href="{{ route('politique') }}">
+                       href="https://www.privacypolicies.com/live/562116b9-e00f-49ac-8863-65ee8c073019">
+{{--                       href="{{ route('politique') }}">--}}
                         Politique de confidentialité
                     </a>
                 </div>

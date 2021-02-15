@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
 
 class ProfilController extends Controller
 {
@@ -59,8 +60,19 @@ class ProfilController extends Controller
         $user->bio = $request->bio;
         if (request()->hasFile('profile_photo_path')) {
             $user->profile_photo_path  = '/storage/' . $request->profile_photo_path->store('photos-profil', 'public');
+            $lien_photo = public_path() . $user->profile_photo_path;
+            // Image::make($lien_photo)->resize(200,200)->save($lien_photo .'.min.jpg',60);
+            // Image::make($lien_photo)->resize(200,200,function($constraint){
+            //     $constraint->aspectRatio();
+            //     $constraint->upsize();
+            // })->save($lien_photo .'.min.jpg',60);
+            // Image::make($lien_photo)->crop(500,500,50,50)->save($lien_photo .'.min.jpg',60);
+            Image::make($lien_photo)->fit(200)->save($lien_photo .'.min.jpg',60);
+            // Image::make($lien_photo)->resize(400,400,function($constraint){
+            //     $constraint->aspectRatio();
+            //     $constraint->upsize();
+            // })->save($lien_photo .'.min.jpg',60);
         }
-//        dd($user);
         if ($user->save()) {
             return redirect()->route('profil.index')->with('success', 'Information modifier avec succes');
         }

@@ -28,7 +28,7 @@
         <div class="grid col-span-1 md:flex items-center mt-5 justify-center">
             <div class="md:mr-4">
                 <img class="md:w-40"
-                     src="{{ $user->profile_photo_path }}"
+                     src="{{ $user->profile_photo_path }}.min.jpg"
                      alt="{{ $user->name }}">
             </div>
             <div class="md:border-l-2 pl-4 p-2 col-span-2 text-justify md:w-1/2 mt-10 md:mt-0">
