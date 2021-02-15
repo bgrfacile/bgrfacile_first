@@ -144,7 +144,7 @@
                                                 id="user-menu" aria-label="User menu" aria-haspopup="true"
                                                 x-bind:aria-expanded="open">
                                             <img class="h-8 w-8 rounded-full"
-                                                 src="{{ auth()->user()->profile_photo_path }}"
+                                                 src="{{ auth()->user()->profile_photo_path }}.min.jpg"
                                                  alt="{{ auth()->user()->name }}">
                                             <div
                                                     class="bg-green-500 rounded-full w-3 h-3 absolute bottom-0 right-0"></div>
