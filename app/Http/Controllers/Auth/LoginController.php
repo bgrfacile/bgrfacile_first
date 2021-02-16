@@ -36,7 +36,10 @@ class LoginController extends Controller
     }
     public function facebookRedirect(){
         $user = Socialite::driver('facebook')->user();
-        dd($user);
+//        dd($user);
+        $user= $this->roleUser($user);
+        Auth::login( $user,true);
+        return redirect('/profil');
     }
 
 
