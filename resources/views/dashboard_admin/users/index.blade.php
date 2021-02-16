@@ -71,7 +71,7 @@
                                     <div class="d-flex d-flex align-items-center">
                                         <div class="avatar avatar-xl mr-2">
                                             {{--                                            <div class="avatar-name rounded-circle"><span>RA</span></div>--}}
-                                            <img class="rounded-circle" src="{{ asset('dist/assets/img/team/2.jpg') }}"
+                                            <img class="rounded-circle" src="{{ $user->profile_photo_path }}"
                                                  alt="">
                                         </div>
                                         <div class="flex-1">
