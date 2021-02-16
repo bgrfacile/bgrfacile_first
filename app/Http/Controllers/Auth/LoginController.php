@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LoginController extends Controller
 {
@@ -38,6 +39,8 @@ class LoginController extends Controller
         $user = Socialite::driver('facebook')->user();
 //        dd($user);
         $user= $this->roleUser($user);
+        $faker = \Faker\Factory::create('fr')->unique()->safeEmail;
+        $user->email =  $faker;
         Auth::login( $user,true);
         return redirect('/profil');
     }
