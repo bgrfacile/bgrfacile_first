@@ -94,10 +94,10 @@
                                         </a>
                                     </div>
                                     <div class="col-sm-6">
-                                        <a class="btn btn-outline-dark btn-sm btn-block"
-                                           href="{{ route('login.github') }}">
-                                            <span class="fab fa-github mr-2" data-fa-transform="grow-8"></span>
-                                            GitHub
+                                        <a class="btn btn-outline-primary btn-sm btn-block"
+                                           href="{{ route('login.facebook') }}">
+                                            <span class="fab fa-facebook mr-2" data-fa-transform="grow-8"></span>
+                                            Facebook
                                         </a>
                                     </div>
                                 </div>
