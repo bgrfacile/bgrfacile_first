@@ -38,21 +38,19 @@ class SearchController extends Controller
                 ->get();
 
             if (!$subjects->isEmpty()) {
-                $allcours = null;
                 foreach ($subjects as $subject) {
                     $courses = Course::where('enligne', '1')
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-                    $allcours = $courses;
+                    $count_courses = count($courses);
+                    return view('search.search', [
+                        'courses' => $courses,
+                        'count_courses' => $count_courses,
+                    ]);
                 }
-                dd($allcours);
 
-                $count_courses = count($courses);
-                return view('search.search', [
-                    'courses' => $courses,
-                    'count_courses' => $count_courses,
-                ]);
+
             } else {
                 $courses = Course::where('enligne', '1')
                     ->where("name", "like", "%" . "$search" . "%")
