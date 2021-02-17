@@ -31,8 +31,7 @@ class SearchController extends Controller
                 'courses' => $courses,
                 'count_courses' => $count_courses,
             ]);
-        }
-        elseif ($search) {
+        } elseif ($search) {
 
             $subjects = Subjects::where("name", "like", "%" . "$search" . "%")
                 ->orderBy('created_at', 'desc')
@@ -42,30 +41,31 @@ class SearchController extends Controller
 
                 $new_collect = collect();
                 foreach ($subjects as $subject) {
-
                     $courses = Course::where('enligne', '1')
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-
                 }
-                $coursesAll = $courses;
-//                $courses->collect();
+                $count_courses = count($courses);
+                return view('search.search', [
+                    'courses' => $courses,
+                    'count_courses' => $count_courses,
+                ]);
             } else {
                 $courses = Course::where('enligne', '1')
                     ->where("name", "like", "%" . "$search" . "%")
                     ->orderBy('created_at', 'desc')
                     ->paginate(10);
+                $count_courses = count($courses);
+                return view('search.search', [
+                    'courses' => $courses,
+                    'count_courses' => $count_courses,
+                ]);
             }
 
 
         }
+        return 'ok';
 
-        $count_courses = count($courses);
-        dd($coursesAll);
-        return view('search.search', [
-            'courses' => $courses,
-            'count_courses' => $count_courses,
-        ]);
     }
 }
