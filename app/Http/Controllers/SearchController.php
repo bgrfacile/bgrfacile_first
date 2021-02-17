@@ -36,7 +36,6 @@ class SearchController extends Controller
             $subjects = Subjects::where("name", "like", "%" . "$search" . "%")
                 ->orderBy('created_at', 'desc')
                 ->get();
-            dd($subjects);
 
             if (!$subjects->isEmpty()) {
 
@@ -47,6 +46,7 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
+                    dd($courses);
                     $courses = $new_collect->merge($courses);
 
                 }
