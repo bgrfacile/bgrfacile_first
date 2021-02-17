@@ -22,28 +22,34 @@ class SearchController extends Controller
 
     public function search()
     {
+        $courses = collect();
         $search = request()->query('q');
         if ($search == null) {
-            $courses = collect();
+
             $count_courses = null;
             return view('search.search', [
                 'courses' => $courses,
                 'count_courses' => $count_courses,
             ]);
         } elseif ($search) {
-            $courses = [];
+//            $courses = [];
             $subjects = Subjects::where("name", "like", "%" . "$search" . "%")
                 ->orderBy('created_at', 'desc')
                 ->get();
 
             if (!$subjects->isEmpty()) {
 
+                $new_collect = collect();
                 foreach ($subjects as $subject) {
+
                     $courses = Course::where('enligne', '1')
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
+                    $combined = $new_collect->merge($courses);
+
                 }
+                $courses = $combined;
             } else {
                 $courses = Course::where('enligne', '1')
                     ->where("name", "like", "%" . "$search" . "%")
