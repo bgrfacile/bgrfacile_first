@@ -46,7 +46,6 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-//                    dd($courses);
 //                    $courses = $new_collect->merge($courses);
 
                 }
@@ -58,6 +57,7 @@ class SearchController extends Controller
                     ->paginate(10);
             }
             $count_courses = count($courses);
+            dd($courses);
             return view('search.search', [
                 'courses' => $courses,
                 'count_courses' => $count_courses,
