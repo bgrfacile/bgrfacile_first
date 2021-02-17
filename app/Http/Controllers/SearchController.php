@@ -37,7 +37,7 @@ class SearchController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->get();
 
-            if (!$subjects->isEmpty()) {
+            if ($subjects->isEmpty()) {
 
                 $new_collect = collect();
                 foreach ($subjects as $subject) {
