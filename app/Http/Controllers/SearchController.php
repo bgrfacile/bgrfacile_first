@@ -47,7 +47,6 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-//                    $courses = $new_collect->merge($courses);
 
                 }
                 $coursesAll = $courses;
@@ -63,7 +62,7 @@ class SearchController extends Controller
         }
 
         $count_courses = count($courses);
-        dd($courses);
+        dd($coursesAll);
         return view('search.search', [
             'courses' => $courses,
             'count_courses' => $count_courses,
