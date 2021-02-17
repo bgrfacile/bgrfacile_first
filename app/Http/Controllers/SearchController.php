@@ -46,11 +46,11 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-                    dd($courses);
-                    $courses = $new_collect->merge($courses);
+//                    dd($courses);
+//                    $courses = $new_collect->merge($courses);
 
                 }
-                $courses->collect();
+//                $courses->collect();
             } else {
                 $courses = Course::where('enligne', '1')
                     ->where("name", "like", "%" . "$search" . "%")
