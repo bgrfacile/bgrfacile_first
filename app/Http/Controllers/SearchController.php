@@ -43,8 +43,9 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
+                    dd($courses);
                 }
-                dd($courses);
+
                 $count_courses = count($courses);
                 return view('search.search', [
                     'courses' => $courses,
