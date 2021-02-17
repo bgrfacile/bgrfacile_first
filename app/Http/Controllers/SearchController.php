@@ -32,7 +32,7 @@ class SearchController extends Controller
                 'count_courses' => $count_courses,
             ]);
         } elseif ($search) {
-//            $courses = [];
+
             $subjects = Subjects::where("name", "like", "%" . "$search" . "%")
                 ->orderBy('created_at', 'desc')
                 ->get();
@@ -46,10 +46,10 @@ class SearchController extends Controller
                         ->where("subject_id", $subject->id)
                         ->orderBy('created_at', 'desc')
                         ->get();
-                    $combined = $new_collect->merge($courses);
+                    $courses = $new_collect->merge($courses);
 
                 }
-                $courses = $combined;
+                $courses->collect();
             } else {
                 $courses = Course::where('enligne', '1')
                     ->where("name", "like", "%" . "$search" . "%")
