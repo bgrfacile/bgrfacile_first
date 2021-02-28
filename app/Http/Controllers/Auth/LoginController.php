@@ -44,8 +44,7 @@ class LoginController extends Controller
             'password' => Hash::make(Str::random(24))
         ]);
 //        Auth::login( $user,true);
-//        return redirect('/profil');
-        return back()->with('success','connexion avec success');
+        return redirect('/profil')->with('success','connexion avec success');
     }
 
 
