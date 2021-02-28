@@ -39,12 +39,23 @@ class LoginController extends Controller
         $user = Socialite::driver('facebook')->user();
 //        dd($user->getId());
 //        $user->email =  $faker;
-        Auth::attempt([
-            'email' => $user->getId(),
-            'password' => Hash::make(Str::random(24))
-        ]);
+        $userVerif = User::where('email',$user->getId())->first();
+        if ($userVerif){
+            Auth::login($userVerif,true);
+        }
+        else{
+            $newuser = User::create([
+                'email'=>$user->getId(),
+                'password' => Hash::make(Str::random(24)),
+                'name'=>$user->getName(),
+                'prenom'=>'',
+                'telephone'=>'',
+                'profile_photo_path'=>$user->getAvatar(),
+            ]);
+            Auth::login($newuser,true);
+        }
 //        Auth::login( $user,true);
-        return redirect('/profil')->with('success','connexion avec success');
+        return redirect()->route('profil.index')->with('success','connexion avec success');
     }
 
 
