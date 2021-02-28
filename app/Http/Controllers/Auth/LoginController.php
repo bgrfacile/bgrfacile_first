@@ -37,10 +37,8 @@ class LoginController extends Controller
     }
     public function facebookRedirect(){
         $user = Socialite::driver('facebook')->user();
-//        dd($user);
-//        $user= $this->roleUser($user);
-//        $faker = \Faker\Factory::create('fr')->unique()->safeEmail;
-        $user->email =  $faker;
+        dd($user);
+//        $user->email =  $faker;
         Auth::login( $user,true);
         return redirect('/profil');
     }
