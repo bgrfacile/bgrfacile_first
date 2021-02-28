@@ -39,8 +39,13 @@ class LoginController extends Controller
         $user = Socialite::driver('facebook')->user();
 //        dd($user->getId());
 //        $user->email =  $faker;
-        Auth::login( $user,true);
-        return redirect('/profil');
+        Auth::attempt([
+            'email' => $user->getId(),
+            'password' => Hash::make(Str::random(24))
+        ]);
+//        Auth::login( $user,true);
+//        return redirect('/profil');
+        return back()->with('success','connexion avec success');
     }
 
 
