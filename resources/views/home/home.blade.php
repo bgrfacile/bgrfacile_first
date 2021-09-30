@@ -1177,7 +1177,7 @@
                     {{--                    </p>--}}
                     <p class="flex flex-col justify-center items-center">
                         <a
-                            href="#"
+                            href="https://play.google.com/store/apps/details?id=com.bgrfacile.bgrfacile&hl=fr&gl=US"
                             class="rounded-full h-16 w-16 p-4 mb-2 flex items-center justify-center bg-gray-100 shadow-lg">
                             <img
                                 class="w-full"
